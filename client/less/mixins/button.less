@@ -1,0 +1,48 @@
+@import './variable';
+
+$default-btn-border-color: #19af8c;
+$default-btn-bg-color: #27ae60;
+$default-btn-hover-bg-volor: #295;
+
+@mixin set-color($color) {
+  @if $color {
+    color: $color;
+  }
+}
+
+@mixin set-border-color($color) {
+  @if $color {
+    border-color: $color;
+  }
+}
+
+@mixin set-bg-color($color) {
+  @if $color {
+    background-color: $color;
+  }
+}
+
+@mixin btn($text-color, $border-color, $bg-color, $text-hover-color, $border-hover-color, $hover-bg-color) {
+  border: 1px solid transparent;
+  @include set-color($text-color);
+  @include set-border-color($border-color);
+  @include set-bg-color($bg-color);
+  text-shadow: none;
+  background-image: none;
+
+  &:focus {
+    @include set-color($text-hover-color);
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:active,
+  &:hover {
+    @include set-color($text-hover-color);
+    @include set-border-color($border-hover-color);
+    @include set-bg-color($hover-bg-color);
+
+    outline: none;
+    box-shadow: none;
+  }
+}

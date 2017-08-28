@@ -1,0 +1,8 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "at-rule-empty-line-before": null,
+    "comment-empty-line-before": "never",
+    "selector-pseudo-element-colon-notation": null
+  }
+}

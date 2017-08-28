@@ -1,0 +1,86 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "rules": {
+    "valid-jsdoc": "off", // valid document it
+    "default-case": "off",
+    "no-fallthrough": "off",
+    "no-return-assign": "off",
+    "consistent-return": "off",
+    "no-restricted-syntax": ["off", "iterators/generators"],
+    "class-methods-use-this": "off",
+    // Disable comma-dangle unless need to support it
+    "comma-dangle": "off",
+    "func-names": "off",
+    "id-length": "off",
+    "no-param-reassign": "off",
+    "arrow-body-style": "off",
+    "no-loop-func": "off",
+    "guard-for-in": "warn",
+
+    // error rules
+    "linebreak-style": ["error", "unix"],
+    "semi": ["error", "always"],
+    "max-len": ["error", 250, 2],
+    "no-mixed-operators": ["error", {
+      "groups": [
+        ["+", "-", "*", "/", "%", "**"],
+        ["&", "|", "^", "~", "<<", ">>", ">>>"],
+        ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
+        ["&&", "||"],
+        ["in", "instanceof"]
+      ],
+      "allowSamePrecedence": true
+      }],
+
+    // https://github.com/benmosher/eslint-plugin-import: import rules
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+
+    // https://github.com/yannickcr/eslint-plugin-react: react rules
+    "react/no-did-mount-set-state": "off",
+    "react/jsx-no-bind": "off",
+    "react/prop-types": "off",
+    "react/no-array-index-key": "off",
+    "react/sort-comp": [1, {
+      "order": [
+        "static-methods",
+        "lifecycle",
+        "/^fetch.+$/",
+        "/^handle.+$/",
+        "everything-else",
+        "render"
+      ]
+    }],
+    "react/forbid-prop-types": ["off", { "forbid": ["array"] }],
+    "react/require-default-props": "off",
+
+    // https://github.com/evcohen/eslint-plugin-jsx-a11y: jsx-a11y rules
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/label-has-for": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/alt-text": "off",
+    "jsx-a11y/anchor-has-content": "off" // a 标签必须有子元素
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "experimentalObjectRestSpread": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "globals": {
+    "localStorage": true,
+    "location": true
+  }
+}
