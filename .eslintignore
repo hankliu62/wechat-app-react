@@ -1,3 +1,2 @@
 /node_modules/*
-client/deps/*
-client/utils/DeviceUtils.js
+dist/*

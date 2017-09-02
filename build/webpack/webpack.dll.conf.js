@@ -6,7 +6,7 @@ const UglifyJsParallelPlugin = require('webpack-parallel-uglify-plugin');
 const config = require('../../config/config');
 const lib = require('../../config/lib.dependencies');
 
-const pathsUtils = config.utils_paths;
+// const pathsUtils = config.utils_paths;
 const isDebug = process.env.NODE_ENV === 'development';
 const outputPath = isDebug ? config.dev.dll.basePath : config.build.dll.basePath;
 

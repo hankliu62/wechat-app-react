@@ -1,0 +1,93 @@
+.certificate-main {
+  background-color: #fafafa;
+  min-height: 100%;
+  padding-bottom: 20px;
+
+  .certificate-header {
+    padding-top: 15px;
+    margin: 0 18px;
+    display: flex;
+
+    .switch-langauge {
+      flex: 1;
+      padding-top: 8px;
+      font-size: 14px;
+      line-height: 21px;
+
+      .switch-langauge-label {
+        font-size: 1rem;
+      }
+
+      .langauge-item {
+        color: #9e9e9e;
+        font-size: .8rem;
+      }
+
+      .modal-trigger {
+        .new-lever {
+          content: "";
+          display: inline-block;
+          position: relative;
+          width: 40px;
+          height: 15px;
+          background-color: #84c7c1;
+          border-radius: 15px;
+          transition: background .3s ease;
+          vertical-align: middle;
+          margin: 0 12px;
+
+          .lever-cilcle {
+            position: absolute;
+            display: inline-block;
+            width: 21px;
+            height: 21px;
+            background-color: #26a69a;
+            border-radius: 21px;
+            box-shadow: 0 1px 3px 1px rgba(0, 0, 0, .4);
+            left: -5px;
+            top: -3px;
+            transition: left .3s ease, background .3s ease, box-shadow .1s ease;
+          }
+        }
+      }
+    }
+
+    .btn-print {
+      width: 35px;
+      height: 35px;
+      background-image: url('./images/search_pdf.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .certificate-body {
+    .certificate-title {
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 1.1;
+      text-align: center;
+      margin: 20px 0 24px;
+    }
+
+    .certificate-avatar {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  .lean-overlay {
+    z-index: 1002;
+    display: block;
+    opacity: 0;
+    position: fixed;
+    top: -100px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 125%;
+    width: 100%;
+    background: #000;
+    will-change: opacity;
+  }
+}

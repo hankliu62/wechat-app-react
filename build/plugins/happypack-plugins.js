@@ -1,37 +1,51 @@
+const os = require('os');
 const HappyPackPlugin = require('happypack');
-// const happyThreadPool = HappyPackPlugin.ThreadPool({ size: os.cpus().length });
+
+const happyThreadPool = HappyPackPlugin.ThreadPool({ size: os.cpus().length });
 
 // generate happypack plugins Object
 const HappyPackPluginsMap = {
   js: new HappyPackPlugin({
     id: 'js',
     loaders: ['babel-loader?cacheDirectory=true&sourceMap'],
+    threadPool: happyThreadPool,
     cache: true,
+    verbose: true
   }),
   babel: new HappyPackPlugin({
     id: 'babel',
     loaders: ['babel-loader?cacheDirectory=true&sourceMap'],
+    threadPool: happyThreadPool,
     cache: true,
+    verbose: true
   }),
   css: new HappyPackPlugin({
     id: 'css',
     loaders: ['css-loader?importLoaders=1&sourceMap'],
+    threadPool: happyThreadPool,
     cache: true,
+    verbose: true
   }),
-  sass: new HappyPackPlugin({
-    id: 'sass',
-    loaders: ['sass-loader?sourceMap'],
+  less: new HappyPackPlugin({
+    id: 'less',
+    loaders: ['css-loader', 'less-loader?sourceMap'],
+    threadPool: happyThreadPool,
     cache: true,
+    verbose: true
   }),
   style: new HappyPackPlugin({
     id: 'style',
     loaders: ['style-loader?sourceMap'],
+    threadPool: happyThreadPool,
     cache: true,
+    verbose: true
   }),
   eslint: new HappyPackPlugin({
     id: 'eslint',
     loaders: ['eslint-loader'],
+    threadPool: happyThreadPool,
     cache: false,
+    verbose: true
   })
 };
 

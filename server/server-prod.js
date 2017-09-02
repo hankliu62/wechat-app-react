@@ -8,7 +8,7 @@ const statics = require('koa-static');
 
 const app = require('./app');
 const errorHandler = require('./error-handler');
-// const clientRoute = require('./middlewares/clientRoute');
+// const clientRoute = require('./middlewares/client-route');
 
 // use webpack to build and package client codes
 const config = require('../build/webpack/webpack.prod.conf');

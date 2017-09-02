@@ -1,11 +1,11 @@
-const os = require('os');
 const path = require('path');
+// const os = require('os');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const VisualizerPlugin = require('webpack-visualizer-plugin');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
-const HappyPackPlugin = require('happypack');
+// const HappyPackPlugin = require('happypack');
 const webpackConfig = require('./webpack.base.conf');
 const config = require('../../config/config');
 const cssLoaders = require('../loaders/css-loaders');
@@ -17,13 +17,15 @@ const pathsUtils = config.utils_paths;
 webpackConfig.devtool = 'eval';
 
 // add hot-reload related code to entry chunks
-const polyfill = 'eventsource-polyfill';  // 兼容ie
+const polyfill = 'eventsource-polyfill'; // 兼容ie
 const devClient = './build/dev/dev-client';
 const entry = webpackConfig.entry;
 for (const key in entry) {
-  const isVendorEntry = key === config.compiler_vendor_key;
-  const extras = isVendorEntry ? [polyfill, devClient] : [devClient];
-  entry[key] = extras.concat(entry[key]);
+  if (({}).hasOwnProperty.call(entry, key)) {
+    const isVendorEntry = key === config.compiler_vendor_key;
+    const extras = isVendorEntry ? [polyfill, devClient] : [devClient];
+    entry[key] = extras.concat(entry[key]);
+  }
 }
 
 // 默认的webpack会将require("style.css")文件嵌入js文件中，使用该插件会将css从js中提取出来

@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import classNames from 'classnames';
 
-import './NoenReport.scss';
+import './NoenReport';
 
 class NoenReport extends Component {
   static propTypes = {
@@ -24,7 +24,7 @@ class NoenReport extends Component {
   }
 
   onClickDocument = (event) => {
-    const isClickOutside = !this.isChildOf(event.target, this.refs.root);
+    const isClickOutside = !this.isChildOf(event.target, this.refRoot);
     if (isClickOutside) {
       this.props.onHide();
     }
@@ -46,13 +46,13 @@ class NoenReport extends Component {
     const { isOpen } = this.props;
 
     return (
-      <div ref="root" className={ classNames('noenreport-modal', { 'm-show': isOpen, 'm-hidden': isOpen }) }>
+      <div ref={refRoot => this.refRoot = refRoot} className={classNames('noenreport-modal', { 'm-show': isOpen, 'm-hidden': isOpen })}>
         <div className="modal-content">
           该备案表尚无对应的英文版，
           <a href="http://www.chsi.com.cn/xlcx/rhsq.jsp#rhsqxl_en" className="nr-detail">如何申请</a>
         </div>
         <div className="modal-footer clearfix">
-          <span className="modal-action modal-close btn-flat" onClick={ this.props.onHide }>关闭</span>
+          <span className="modal-action modal-close btn-flat" onClick={this.props.onHide}>关闭</span>
         </div>
       </div>
     );

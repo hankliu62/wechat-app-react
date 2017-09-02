@@ -32,8 +32,6 @@ app.use(timeout('15s'));
 app.use(AV.koa());
 
 app.use(bodyParser());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // router.get('/', async (ctx) => {

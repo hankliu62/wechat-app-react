@@ -16,12 +16,15 @@
     "no-param-reassign": "off",
     "arrow-body-style": "off",
     "no-loop-func": "off",
+    "global-require": "off",
+    "no-self-compare": "off",
     "guard-for-in": "warn",
 
     // error rules
     "linebreak-style": ["error", "unix"],
     "semi": ["error", "always"],
     "max-len": ["error", 250, 2],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "no-mixed-operators": ["error", {
       "groups": [
         ["+", "-", "*", "/", "%", "**"],
@@ -37,6 +40,7 @@
     "import/no-extraneous-dependencies": "off",
     "import/prefer-default-export": "off",
     "import/no-unresolved": ["error", { "commonjs": false }],
+    "import/no-dynamic-require": "off",
 
     // https://github.com/yannickcr/eslint-plugin-react: react rules
     "react/no-did-mount-set-state": "off",

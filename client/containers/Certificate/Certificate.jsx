@@ -4,16 +4,16 @@ import { bindActionCreators } from 'redux';
 
 import * as homepageActions from '../../actions/homepage';
 import ObjectUtils from '../../utils/ObjectUtils';
-import CollectionCard from './components/CollectionCard/CollectionCard.jsx';
-import NoenReport from './components/NoenReport/NoenReport.jsx';
+import CollectionCard from './components/CollectionCard/CollectionCard';
+import NoenReport from './components/NoenReport/NoenReport';
 
 import Avatar from './images/avatar.jpg';
 
-import './Certificate.scss';
+import './Certificate';
 
 class Certificate extends Component {
   static propTypes = {
-    content: PropTypes.string.isRequired,
+    // content: PropTypes.string.isRequired,
     setState: PropTypes.func.isRequired
   }
 
@@ -86,13 +86,13 @@ class Certificate extends Component {
         <header className="certificate-header">
           <div className="switch-langauge">
             <label className="switch-langauge-label">报告语种：</label>
-            <span className="langauge-item" onClick={ () => window.location.reload() }>中文</span>
-            <a className="modal-trigger" onClick={ this.onTriggerSwitch }>
+            <span className="langauge-item" onClick={() => window.location.reload()}>中文</span>
+            <a className="modal-trigger" onClick={this.onTriggerSwitch}>
               <span className="new-lever">
                 <span className="lever-cilcle" />
               </span>
             </a>
-            <span className="langauge-item" onClick={ this.onTriggerSwitch }>英文</span>
+            <span className="langauge-item" onClick={this.onTriggerSwitch}>英文</span>
           </div>
           <a className="btn-print" href="http://www.chsi.com.cn/report/xueli/download.do?vcode=811764836712&rid=91787196644925384073491000421032&ln=cn" />
         </header>
@@ -100,14 +100,14 @@ class Certificate extends Component {
         <div className="certificate-body">
           <h5 className="certificate-title">教育部学历证书电子注册备案表</h5>
           <div className="certificate-avatar">
-            <img src={ Avatar } alt="个人头像" />
+            <img src={Avatar} alt="个人头像" />
           </div>
 
           { collections.map((collection, index) => (
-            <CollectionCard key={`collectioncard-${index}`} collection={ collection } />)) }
+            <CollectionCard key={`collectioncard-${index}`} collection={collection} />)) }
         </div>
 
-        { isOpenNoenReport && <NoenReport isOpen={ isOpenNoenReport } onHide={ this.onTriggerSwitch } /> }
+        { isOpenNoenReport && <NoenReport isOpen={isOpenNoenReport} onHide={this.onTriggerSwitch} /> }
         { isOpenNoenReport && <div className="lean-overlay" /> }
       </div>
     );

@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connectAdvanced } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getLang } from 'redux-pagan';
@@ -6,13 +7,17 @@ import { getLang } from 'redux-pagan';
 import * as loginActions from '../../actions/login';
 import ObjectUtils from '../../utils/ObjectUtils';
 
-import './Login.scss';
+import './Login';
 
 class Login extends Component {
   static propTypes = {
-    content: PropTypes.string.isRequired,
-    setState: PropTypes.func.isRequired,
+    // content: PropTypes.string.isRequired,
+    // setState: PropTypes.func.isRequired,
     i18n: PropTypes.func.isRequired
+  }
+
+  componentDidMount() {
+    console.log(123);
   }
 
   render() {

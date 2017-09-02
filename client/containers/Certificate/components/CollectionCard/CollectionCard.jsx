@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 
-import './CollectionCard.scss';
+import './CollectionCard';
 
 class CollectionCard extends Component {
   static propTypes = {

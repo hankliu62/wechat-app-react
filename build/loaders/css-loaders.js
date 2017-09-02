@@ -2,7 +2,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = function (options) {
   function generateLoaders(test, loaders) {
-    const sourceLoaders = loaders.map(function (loader) {
+    const sourceLoaders = loaders.map((loader) => {
       let extraParamChar;
 
       if (/\?/.test(loader)) {
@@ -32,8 +32,8 @@ module.exports = function (options) {
   return [
     generateLoaders(/\.css$/, ['css']),
     generateLoaders(/\.less$/, ['css', 'less']),
-    generateLoaders(/\.sass$/, ['css', 'sass?indentedSyntax']),
-    generateLoaders(/\.scss$/, ['css', 'sass']),
+    // generateLoaders(/\.sass$/, ['css', 'sass?indentedSyntax']),
+    // generateLoaders(/\.scss$/, ['css', 'sass']),
     generateLoaders(/\.stylus$/, ['css', 'stylus']),
     generateLoaders(/\.styl$/, ['css', 'stylus'])
   ];
