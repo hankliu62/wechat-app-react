@@ -3,12 +3,14 @@ require('babel-polyfill');
 const AV = require('leanengine');
 const path = require('path');
 const webpack = require('webpack');
-const express = require('express');
+const statics = require('koa-static');
+const convert = require('koa-convert');
+const koaWebpackMiddleware = require('koa-webpack-middleware');
 
 const app = require('./app');
 const webpackConfig = require('../build/webpack/webpack.dev.conf');
 const config = require('../config/config');
-const exec = require('child_process').exec;
+// const exec = require('child_process').exec;
 
 AV.init({
   appId: process.env.LEANCLOUD_APP_ID,
@@ -19,18 +21,21 @@ AV.init({
 // 如果不希望使用 masterKey 权限，可以将下面一行删除
 AV.Cloud.useMasterKey();
 
+const webpackDevMiddleware = koaWebpackMiddleware.devMiddleware;
+const webpackHotMiddleware = koaWebpackMiddleware.hotMiddleware;
 const compiler = webpack(webpackConfig);
 
+// use lint-staged and husky to replace pre-commit
 // 移动pre-commit到.git/hooks目录下
-exec('cp ./pre-commit ./.git/hooks/pre-commit', (err) => {
-  if (err) {
-    console.error('Caught exception:', err.stack);
-  } else {
-    console.log('moved pre-commit to path ./.git/hooks');
-  }
-});
+// exec('cp ./pre-commit ./.git/hooks/pre-commit', (err) => {
+//   if (err) {
+//     console.error('Caught exception:', err.stack);
+//   } else {
+//     console.log('moved pre-commit to path ./.git/hooks');
+//   }
+// });
 
-const devMiddleware = require('webpack-dev-middleware')(compiler, {
+const devMiddleware = webpackDevMiddleware(compiler, {
   noInfo: false,
   publicPath: webpackConfig.output.publicPath,
   stats: {
@@ -39,7 +44,7 @@ const devMiddleware = require('webpack-dev-middleware')(compiler, {
   }
 });
 
-const hotMiddleware = require('webpack-hot-middleware')(compiler);
+const hotMiddleware = webpackHotMiddleware(compiler);
 // force page reload when html-webpack-plugin template changes
 compiler.plugin('compilation', (compilation) => {
   compilation.plugin('html-webpack-plugin-after-emit', (data, cb) => {
@@ -52,11 +57,11 @@ compiler.plugin('compilation', (compilation) => {
 app.use(require('connect-history-api-fallback')());
 
 // serve webpack bundle output
-app.use(devMiddleware);
+app.use(convert(devMiddleware));
 
 // enable hot-reload and state-preserving
 // compilation error display
-app.use(hotMiddleware);
+app.use(convert(hotMiddleware));
 
 
 // error  handlers
@@ -66,8 +71,7 @@ app.use(errorHandler(app));
 
 // serve pure static assets
 const staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory);
-app.use(staticPath, express.static(path.resolve(__dirname, config.dev.staticPath)));
-
+app.use(staticPath, statics(path.resolve(__dirname, config.dev.staticPath)));
 
 // 端口一定要从环境变量 `LEANCLOUD_APP_PORT` 中获取。
 // LeanEngine 运行时会分配端口并赋值到该变量。

@@ -1,37 +1,35 @@
-$default-border-color: #e2e2e2;
-$default-focus-border-color: #27ae60;
-$default-focus-shadow-color: #27ae60;
+@default-border-color: #e2e2e2;
+@default-focus-border-color: #27ae60;
+@default-focus-shadow-color: #27ae60;
 
-@mixin text($border-color: $default-border-color, $focus-border-color: $default-focus-border-color,
-    $focus-shadow-color: $default-focus-shadow-color) {
+.text(@border-color: @default-border-color, @focus-border-color: @default-focus-border-color, @focus-shadow-color: @default-focus-shadow-color) {
   width: 100%;
   height: 250px;
   padding: 10px;
-  border: 1px solid $border-color;
+  border: 1px solid @border-color;
   border-radius: 2px;
   resize: vertical;
   box-shadow: none;
 
   &:focus {
-    border-color: $focus-border-color;
-    box-shadow: 0 0 3px $focus-shadow-color;
+    border-color: @focus-border-color;
+    box-shadow: 0 0 3px @focus-shadow-color;
     outline: 0;
   }
 }
 
-@mixin input($border-color: $default-border-color, $focus-border-color: $default-focus-border-color,
-    $focus-shadow-color: $default-focus-shadow-color) {
+.input(@border-color: @default-border-color, @focus-border-color: @default-focus-border-color, @focus-shadow-color: @default-focus-shadow-color) {
   width: 100%;
   height: 30px;
-  border: 1px solid $border-color;
+  border: 1px solid @border-color;
   border-radius: 2px;
   box-shadow: none;
   padding: 5px 10px;
   font-size: 14px;
 
   &:focus {
-    border-color: $focus-border-color;
-    box-shadow: 0 0 3px $focus-shadow-color;
+    border-color: @focus-border-color;
+    box-shadow: 0 0 3px @focus-shadow-color;
     outline: 0;
   }
 }

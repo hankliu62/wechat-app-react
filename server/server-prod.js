@@ -4,10 +4,10 @@ const AV = require('leanengine');
 const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
-const express = require('express');
-const ejs = require('ejs');
+const statics = require('koa-static');
 
 const app = require('./app');
+const errorHandler = require('./error-handler');
 // const clientRoute = require('./middlewares/clientRoute');
 
 // use webpack to build and package client codes
@@ -26,17 +26,13 @@ const createServer = function () {
   // create server
   const clientPath = path.resolve(config.output.path);
 
-  app.set('views', clientPath);
-  app.engine('.html', ejs.__express);
-  app.set('view engine', 'html');
+  app.use(statics(clientPath));
 
-  app.use(express.static(clientPath));
-
-  app.get('*', (req, res) => {
-    res.render('index');
+  app.get('/', async (ctx) => {
+    ctx.state.currentTime = new Date();
+    await ctx.render('./index.ejs');
   });
 
-  const errorHandler = require('./error-handler');
   // error handlers
   app.use(errorHandler(app));
 
@@ -44,7 +40,7 @@ const createServer = function () {
   // LeanEngine 运行时会分配端口并赋值到该变量。
   const PORT = parseInt(process.env.LEANCLOUD_APP_PORT || process.env.PORT || 3000, 10);
 
-  app.listen(PORT, (err) => {
+  app.listen(PORT, () => {
     console.log('Node app is running on port:', PORT);
 
     // 注册全局未捕获异常处理器

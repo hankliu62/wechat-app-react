@@ -1,20 +1,20 @@
-$track-shadow-color: rgba(0, 0, 0, .2);
-$default-thumb-bg-color: rgba(50, 50, 50, .3);
-$default-track-bg-color: #eee;
+@track-shadow-color: rgba(0, 0, 0, .2);
+@default-thumb-bg-color: rgba(50, 50, 50, .3);
+@default-track-bg-color: #eee;
 
-@mixin scrollbar($thumb-bg-color: $default-thumb-bg-color, $track-bg-color: $default-track-bg-color) {
+.scrollbar(@thumb-bg-color: @default-thumb-bg-color, @track-bg-color: @default-track-bg-color) {
   ::-webkit-scrollbar {
     width: 7px;
     height: 7px;
 
     &-thumb {
       border-radius: 1em;
-      background-color: $thumb-bg-color;
+      background-color: @thumb-bg-color;
     }
 
     &-track {
-      background-color: $track-bg-color;
-      box-shadow: inset 0 0 6px $track-shadow-color;
+      background-color: @track-bg-color;
+      box-shadow: inset 0 0 6px @track-shadow-color;
     }
   }
 }

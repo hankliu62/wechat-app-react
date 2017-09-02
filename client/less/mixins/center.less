@@ -1,15 +1,14 @@
-@mixin absolute-center {
+.absolute-center {
   position: absolute;
   top: 50%;
   left: 50%;
-
   transform: translate(-50%, -50%);
 }
 
-@mixin absolute-center-with-width($width: 100%) {
+.absolute-center-with-width(@width: 100%) {
   position: absolute;
   // 水平居中
-  width: $width;
+  width: @width;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -20,7 +19,7 @@
   transform: translateY(-50%);
 }
 
-@mixin absolute-fill {
+.absolute-fill {
   position: absolute;
   top: 0;
   left: 0;
@@ -28,7 +27,7 @@
   height: 100%;
 }
 
-@mixin absolute-vertical-center {
+.absolute-vertical-center {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

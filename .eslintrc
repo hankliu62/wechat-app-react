@@ -36,6 +36,7 @@
     // https://github.com/benmosher/eslint-plugin-import: import rules
     "import/no-extraneous-dependencies": "off",
     "import/prefer-default-export": "off",
+    "import/no-unresolved": ["error", { "commonjs": false }],
 
     // https://github.com/yannickcr/eslint-plugin-react: react rules
     "react/no-did-mount-set-state": "off",
