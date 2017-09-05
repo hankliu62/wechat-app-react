@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const autoprefixer = require('autoprefixer');
 
 const config = require('../../config/config');
 const LoggerPlugin = require('../plugins/logger-plugin');
@@ -24,11 +23,11 @@ const baseConfig = {
   },
   resolve: {
     enforceExtension: false,
-    extensions: ['.js', '.jsx', '.less']
+    extensions: ['.js', '.jsx']
   },
   module: {
     rules: [
-      { test: /\.jsx?$/, enforce: 'pre', loader: 'eslint-loader' },
+      // { test: /\.jsx?$/, enforce: 'pre', loader: 'eslint-loader' },
       { test: /\.jsx?$/, use: ['react-hot-loader', 'babel-loader'], exclude: /node_modules/ },
       { test: /\.(png|jpe?g|gif|svg|webp|woff2)$/,
         use: [
@@ -40,17 +39,6 @@ const baseConfig = {
   },
   plugins: [
     new LoggerPlugin(),
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        postcss() {
-          return [autoprefixer({ browsers: ['last 10 versions'] })];
-        },
-        eslint: {
-          formatter: require('eslint-friendly-formatter'),
-          fix: true
-        }
-      }
-    }),
     new webpack.optimize.CommonsChunkPlugin({
       name: config.compiler_vendor_key,
       filename: '[name].[hash:8].js'

@@ -1,7 +1,8 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import './NoenReport';
+import './NoenReport.less';
 
 class NoenReport extends Component {
   static propTypes = {

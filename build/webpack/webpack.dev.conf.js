@@ -38,7 +38,9 @@ webpackConfig.module.rules = HappyPackPluginDecorator.ReplaceToHappyLoaders(webp
 
 // 自动写入将引用写入html
 webpackConfig.plugins = webpackConfig.plugins.concat([
+  new webpack.optimize.OccurrenceOrderPlugin(),
   new webpack.HotModuleReplacementPlugin(),
+  new webpack.NoEmitOnErrorsPlugin(),
   ...HappyPackPluginDecorator.GetHappyPackPlugins(),
   // webpack dllplugin
   new webpack.DllReferencePlugin({

@@ -4,12 +4,12 @@ const AV = require('leanengine');
 // const path = require('path');
 const webpack = require('webpack');
 const statics = require('koa-static');
-const convert = require('koa-convert');
-// const koaWebpackMiddleware = require('koa-webpack-middleware');
+// const convert = require('koa-convert');
+const webpackDevMiddleware = require('koa-webpack-dev-middleware');
+const webpackHotMiddleware = require('koa-webpack-hot-middleware');
+const historyApiFallbackMiddleware = require('koa-history-api-fallback');
 
 const app = require('./app');
-const webpackDevMiddleware = require('./middlewares/webpack-dev');
-const webpackHotMiddleware = require('./middlewares/webpack-hot');
 const webpackConfig = require('../build/webpack/webpack.dev.conf');
 // const config = require('../config/config');
 // const exec = require('child_process').exec;
@@ -54,25 +54,23 @@ const hotMiddleware = webpackHotMiddleware(compiler);
 // });
 
 // handle fallback for HTML5 history API
-app.use(require('connect-history-api-fallback')());
+app.use(historyApiFallbackMiddleware());
 
 // serve webpack bundle output
-app.use(convert(devMiddleware));
+app.use(devMiddleware);
 
 // enable hot-reload and state-preserving
 // compilation error display
-app.use(convert(hotMiddleware));
-
-
-// error  handlers
-const errorHandler = require('./error-handler');
-
-app.use(errorHandler(app));
+app.use(hotMiddleware);
 
 // serve pure static assets
 // const staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory);
 // app.use(statics(path.resolve(__dirname, config.dev.staticPath)));
-app.use(statics(`${__dirname}/dist/`, { extensions: ['html'] }));
+// app.use(statics(`${__dirname}/dist/client/`, { extensions: ['html'] }));
+
+// handle static files
+// const staticPath = path.resolve(__dirname, config.dev.staticPath);
+app.use(statics(`${__dirname}/dist/client/`, { maxage: 0 }));
 
 // 端口一定要从环境变量 `LEANCLOUD_APP_PORT` 中获取。
 // LeanEngine 运行时会分配端口并赋值到该变量。

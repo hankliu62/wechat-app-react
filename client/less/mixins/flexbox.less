@@ -1,22 +1,11 @@
 .flexbox() {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
 }
 
 .flex-shrink(@size: 1) {
   flex-shrink: @size;
-  -webkit-flex-shrink: @size;
 }
 
 .flex(@count: 1) {
-  -moz-box-flex: @count;
-  -webkit-box-flex: @count;
-  -ms-box-flex: @count;
-  -o-box-flex: @count;
-  box-flex: @count;
-  -ms-flex: @count;
   flex: @count;
 }

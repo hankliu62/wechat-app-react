@@ -26,13 +26,13 @@ const HappyPackPluginsMap = {
     cache: true,
     verbose: true
   }),
-  less: new HappyPackPlugin({
-    id: 'less',
-    loaders: ['css-loader', 'less-loader?sourceMap'],
-    threadPool: happyThreadPool,
-    cache: true,
-    verbose: true
-  }),
+  // less: new HappyPackPlugin({
+  //   id: 'less',
+  //   loaders: ['css-loader', 'less-loader?sourceMap'],
+  //   threadPool: happyThreadPool,
+  //   cache: true,
+  //   verbose: true
+  // }),
   style: new HappyPackPlugin({
     id: 'style',
     loaders: ['style-loader?sourceMap'],

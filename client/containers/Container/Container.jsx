@@ -1,8 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Language from '../../libs/Language';
 
-import './Container';
+import './Container.less';
 
 class Container extends Component {
   static propTypes = {

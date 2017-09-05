@@ -7,7 +7,7 @@ import { getLang } from 'redux-pagan';
 import * as loginActions from '../../actions/login';
 import ObjectUtils from '../../utils/ObjectUtils';
 
-import './Login';
+import './Login.less';
 
 class Login extends Component {
   static propTypes = {

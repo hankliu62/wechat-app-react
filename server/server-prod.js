@@ -7,7 +7,6 @@ const webpack = require('webpack');
 const statics = require('koa-static');
 
 const app = require('./app');
-const errorHandler = require('./error-handler');
 // const clientRoute = require('./middlewares/client-route');
 
 // use webpack to build and package client codes
@@ -32,9 +31,6 @@ const createServer = function () {
     ctx.state.currentTime = new Date();
     await ctx.render('./index.ejs');
   });
-
-  // error handlers
-  app.use(errorHandler(app));
 
   // 端口一定要从环境变量 `LEANCLOUD_APP_PORT` 中获取。
   // LeanEngine 运行时会分配端口并赋值到该变量。

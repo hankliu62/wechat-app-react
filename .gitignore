@@ -60,3 +60,5 @@ typings/
 # LeanCloud configuration
 .avoscloud
 .leancloud
+
+dist/client/statistics.html

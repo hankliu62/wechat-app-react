@@ -45,8 +45,8 @@ const config = {
       basePath: path.resolve(__dirname, '../dist/dll/dev'),
       fileName: path.resolve(__dirname, '../dist/dll/dev', 'lib.dll.js'),
       manifest: path.resolve(__dirname, '../dist/dll/dev', 'manifest.json'),
-      outputPath: '/static/dll/dev',  // 生成目录
-      publicPath: '/static/dll/dev'   // 注入地址
+      outputPath: '/static/dll/dev', // 生成目录
+      publicPath: '/static/dll/dev' // 注入地址
     },
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
@@ -57,8 +57,8 @@ const config = {
       basePath: path.resolve(__dirname, '../dist/dll/js'),
       fileName: path.resolve(__dirname, '../dist/dll/js', 'lib.dll.js'),
       manifest: path.resolve(__dirname, '../dist/dll/js', 'manifest.json'),
-      outputPath: '/static/dll/js',  // 生成目录
-      publicPath: '/static/dll/js'   // 注入地址
+      outputPath: '/static/dll/js', // 生成目录
+      publicPath: '/static/dll/js' // 注入地址
     },
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',

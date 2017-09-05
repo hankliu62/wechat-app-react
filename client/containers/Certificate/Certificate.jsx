@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connectAdvanced } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -9,7 +10,7 @@ import NoenReport from './components/NoenReport/NoenReport';
 
 import Avatar from './images/avatar.jpg';
 
-import './Certificate';
+import './Certificate.less';
 
 class Certificate extends Component {
   static propTypes = {
