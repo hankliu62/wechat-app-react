@@ -5,13 +5,41 @@
   "description": "A sample Node.js app using Koa",
   "main": "server.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production && node server/server-prod.js",
-    "dev": "npm run dll-dev && cross-env NODE_ENV=development && node server/server-dev.js",
-    "build": "npm run dll-build && cross-env NODE_ENV=production && node ./server/server-prod.js",
-    "dll-dev": "NODE_ENV=development webpack --config build/webpack/webpack.dll.conf.js --progress",
-    "dll-build": "NODE_ENV=production webpack --config build/webpack/webpack.dll.conf.js --progress",
+    "start": "better-npm-run build:prod",
+    "dev": "npm-run-all dev:dll dev:build",
+    "build": "npm-run-all prod:dll prod:build",
+    "dev:build": "better-npm-run build:dev",
+    "prod:build": "better-npm-run build:prod",
+    "dev:dll": "better-npm-run dll:dev",
+    "prod:dll": "better-npm-run dll:prod",
     "precommit": "lint-staged",
     "commitmsg": "validate-commit-msg"
+  },
+  "betterScripts": {
+    "dll:dev": {
+      "command": "webpack --config build/webpack/webpack.dll.conf.js --progress",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "dll:prod": {
+      "command": "webpack --config build/webpack/webpack.dll.conf.js --progress",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "build:dev": {
+      "command": "node server/server-dev.js",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "build:prod": {
+      "command": "node ./server/server-prod.js",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
   },
   "dependencies": {
     "cookie-parser": "^1.4.3",
@@ -39,6 +67,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "base-64": "^0.1.0",
+    "better-npm-run": "^0.1.0",
     "classnames": "^2.2.5",
     "colors": "^1.1.2",
     "compression-webpack-plugin": "^1.0.0",
@@ -68,6 +97,7 @@
     "less-loader": "^4.0.5",
     "lint-staged": "^4.0.3",
     "nodemon": "^1.11.0",
+    "npm-run-all": "^4.1.1",
     "postcss-load-config": "^1.2.0",
     "postcss-loader": "^2.0.6",
     "progress-bar-webpack-plugin": "^1.10.0",
