@@ -1,18 +1,15 @@
 // Provide custom regenerator runtime and core-js
 require('babel-polyfill');
 const AV = require('leanengine');
-const fs = require('fs');
 const path = require('path');
-const webpack = require('webpack');
 const statics = require('koa-static');
 const Router = require('koa-router');
 const render = require('koa-ejs');
 
 const app = require('./app');
-// const clientRoute = require('./middlewares/client-route');
+const config = require('../config/config');
 
-// use webpack to build and package client codes
-const config = require('../build/webpack/webpack.prod.conf');
+const pathsUtils = config.utils_paths;
 
 AV.init({
   appId: process.env.LEANCLOUD_APP_ID,
@@ -25,7 +22,7 @@ AV.Cloud.useMasterKey();
 
 const createServer = function () {
   // create server
-  const clientPath = path.resolve(config.output.path);
+  const clientPath = path.resolve(pathsUtils.dist('client'));
 
   app.use(statics(clientPath));
 
@@ -62,24 +59,4 @@ const createServer = function () {
   });
 };
 
-const webpackedHandler = function (error, stats) {
-  if (error) {
-    if (console.error) {
-      // show error to console
-      console.error(error);
-    }
-  }
-
-  if (console.log) {
-    // show build info to console
-    console.log(stats.toString({ chunks: false, color: true }));
-  }
-
-  // save build info to file
-  fs.writeFile(path.resolve(__dirname, '../logs/', 'webpack.build.log'), stats.toString({ color: true }));
-
-  // create server to listen request
-  createServer();
-};
-
-webpack(config, webpackedHandler);
+createServer();

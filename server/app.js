@@ -7,9 +7,6 @@ const Koa = require('koa');
 const Router = require('koa-router');
 const statics = require('koa-static');
 const bodyParser = require('koa-bodyparser');
-// const cookieParser = require('cookie-parser');
-// const timeout = require('connect-timeout');
-// const views = require('koa-views');
 
 const logger = require('./utils/logger');
 const errorHanlder = require('./middlewares/error-handler');
@@ -19,32 +16,18 @@ require('./cloud');
 
 const app = new Koa();
 
-// 设置模版引擎
-// app.use(views(path.join(__dirname, 'views')));
-
 // 设置静态资源目录
 app.use(statics(path.join(__dirname, 'public')));
 
 const router = new Router();
 app.use(router.routes());
 
-// 设置默认超时时间
-// app.use(timeout('15s'));
-
 // 加载云引擎中间件
 app.use(AV.koa());
 
 app.use(bodyParser());
-// app.use(cookieParser());
 
-// router.get('/', async (ctx) => {
-//   ctx.state.currentTime = new Date();
-//   await ctx.render('./index.ejs');
-// });
-
-// // 可以将一类的路由单独保存在一个文件中
-// app.use(require('./routes/todos').routes());
-
+// 错误处理中间件
 app.use(errorHanlder);
 
 app.on('error', (err, ctx) => {

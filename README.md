@@ -6,7 +6,7 @@
 
 2.运行npm install
 
-3.运行lean up
+3.运行`npm run dev` or `lean up`
 
 4.浏览器打开 http://localhost:3000
 
