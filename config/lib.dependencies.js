@@ -1,7 +1,6 @@
 // 资源依赖包，提前编译
 const lib = [
   'react',
-  'react-bootstrap',
   'react-dom',
   'react-redux',
   'react-router',

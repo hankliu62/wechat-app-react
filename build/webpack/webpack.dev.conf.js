@@ -50,7 +50,8 @@ webpackConfig.plugins = webpackConfig.plugins.concat([
   new HtmlWebpackPlugin({
     title: '云汐吐槽网',
     filename: 'index.html',
-    template: pathsUtils.client('template.html')
+    template: pathsUtils.client('template.html'),
+    inject: 'body'
   }),
   new AddAssetHtmlPlugin([
     {

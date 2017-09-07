@@ -3,13 +3,15 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 
 import App from '../containers/App/App';
 import Container from '../containers/Container/Container';
-import Homepage from '../containers/Homepage/Homepage';
-import Login from '../containers/Login/Login';
-import SignUp from '../containers/SignUp/SignUp';
-import Certificate from '../containers/Certificate/Certificate';
+import Bundle from '../components/Bundle';
 
-const AppWrappingRoute = ({ component: Component, ...rest }) => (
-  <Route {...rest} render={props => (<App><Component {...props} /></App>)} />
+const loadLoginAsync = () => import(/* webpackChunkName: 'Login' */ '../containers/Login/Login');
+const loadSignUpAsync = () => import(/* webpackChunkName: 'SignUp' */ '../containers/SignUp/SignUp');
+const loadHomepageAsync = () => import(/* webpackChunkName: 'Homepage' */ '../containers/Homepage/Homepage');
+const loadCertificateAsync = () => import(/* webpackChunkName: 'Certificate' */ '../containers/Certificate/Certificate');
+
+const BundleWrappingRoute = ({ load, ...rest }) => (
+  <Route {...rest} render={props => (<Bundle load={load}>{InnerComponent => <InnerComponent {...props} />}</Bundle>)} />
 );
 
 // 根路由
@@ -17,10 +19,12 @@ const AppRouter = () => (
   <Container>
     <Switch>
       <Redirect exact from="/" to="/homepage" />
-      <Route exact path="/login" component={Login} />
-      <Route exact path="/signup" component={SignUp} />
-      <AppWrappingRoute path="/homepage" component={Homepage} />
-      <AppWrappingRoute path="/cert" component={Certificate} />
+      <BundleWrappingRoute exact path="/login" load={loadLoginAsync} />
+      <BundleWrappingRoute exact path="/signup" load={loadSignUpAsync} />
+      <App>
+        <BundleWrappingRoute path="/homepage" load={loadHomepageAsync} />
+        <BundleWrappingRoute path="/cert" load={loadCertificateAsync} />
+      </App>
     </Switch>
   </Container>
 );
