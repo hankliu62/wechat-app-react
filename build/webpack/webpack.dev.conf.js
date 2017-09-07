@@ -48,7 +48,7 @@ webpackConfig.plugins = webpackConfig.plugins.concat([
     manifest: require(config.dev.dll.manifest)
   }),
   new HtmlWebpackPlugin({
-    title: '云汐吐槽网',
+    title: '云汐Wechat',
     filename: 'index.html',
     template: pathsUtils.client('template.html'),
     inject: 'body'
@@ -56,8 +56,6 @@ webpackConfig.plugins = webpackConfig.plugins.concat([
   new AddAssetHtmlPlugin([
     {
       filepath: path.resolve(__dirname, config.dev.dll.basePath, 'lib.dll.*.js'),
-      // outputPath: path.join('/'),
-      // publicPath: path.join('/'),
       includeSourcemap: true
     }
   ]),

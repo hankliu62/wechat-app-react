@@ -1,8 +1,11 @@
+const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 
 const config = require('../../config/config');
+const assetDeps = require('../../config/assets.dependencies');
 const LoggerPlugin = require('../plugins/logger-plugin');
 
 const pathsUtils = config.utils_paths;
@@ -12,6 +15,11 @@ const entry = {
   app: APP_ENTRY,
   [config.compiler_vendor_key]: config.compiler_vendors
 };
+
+const assetHtmlPlugins = assetDeps.map(dep => ({
+  filepath: path.resolve(pathsUtils.client('deps'), dep, '*.js'),
+  includeSourcemap: false
+}));
 
 const baseConfig = {
   entry,
@@ -50,7 +58,8 @@ const baseConfig = {
     new CopyWebpackPlugin([
       { from: pathsUtils.client('deps'), to: 'deps' },
       { from: pathsUtils.client('favicons'), to: 'favicons' }
-    ])
+    ]),
+    new AddAssetHtmlPlugin(assetHtmlPlugins),
   ]
 };
 
