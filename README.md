@@ -21,7 +21,7 @@
 #### 1.2 具体步骤
 
 在`git commit`之前会`eslint`和`stylelint`本次提交的`jsx`,`js`和`less`文件，
-如果`eslint`和`stylelint`没有通过，那么本次`commit`也会失败，需要修改`eslint`和`stylelint`的错误后才能继续提交。
+如果`eslint`和`stylelint`没有通过，那么本次`commit`也会失败，需要修改`eslint`和`stylelint`的错误后才能继续提交。
 
 #### 1.3 补充
 
@@ -227,7 +227,7 @@ Body部分的格式是固定的，必须写成This reverts commit &lt;hash>.，�
   }
   ```
 
-* 在package.json里面增加验证commit的npm script
+* 在package.json里面增加验证commit的npm script
   ``` package.json
   "scripts": {
       "commitmsg": "validate-commit-msg"

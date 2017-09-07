@@ -3,6 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const UglifyJsParallelPlugin = require('webpack-parallel-uglify-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const config = require('../../config/config');
 const lib = require('../../config/lib.dependencies');
 
@@ -20,6 +21,10 @@ const plugins = [
 
 if (!isDebug) {
   plugins.push(
+    new CleanWebpackPlugin(['*'], {
+      root: config.build.dll.basePath,
+      verbose: true
+    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
@@ -45,6 +50,13 @@ if (!isDebug) {
       output: { comments: false }
     })
   );
+} else {
+  plugins.push(
+    new CleanWebpackPlugin(['*'], {
+      root: config.dev.dll.basePath,
+      verbose: true
+    })
+  );
 }
 
 module.exports = {
@@ -54,7 +66,7 @@ module.exports = {
   },
   output: {
     path: outputPath,
-    filename: '[name].dll.js',
+    filename: '[name].dll.[hash:8].js',
     library: '[name]_[hash:8]',
     libraryTarget: 'umd',
     umdNamedDefine: true

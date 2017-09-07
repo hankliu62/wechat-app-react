@@ -5,10 +5,10 @@ import App from '../containers/App/App';
 import Container from '../containers/Container/Container';
 import Bundle from '../components/Bundle';
 
-const loadLoginAsync = () => import(/* webpackChunkName: 'Login' */ '../containers/Login/Login');
-const loadSignUpAsync = () => import(/* webpackChunkName: 'SignUp' */ '../containers/SignUp/SignUp');
-const loadHomepageAsync = () => import(/* webpackChunkName: 'Homepage' */ '../containers/Homepage/Homepage');
-const loadCertificateAsync = () => import(/* webpackChunkName: 'Certificate' */ '../containers/Certificate/Certificate');
+const loadLoginAsync = () => import(/* webpackChunkName: 'containers/Login/Login' */ '../containers/Login/Login');
+const loadSignUpAsync = () => import(/* webpackChunkName: 'containers/SignUp/SignUp' */ '../containers/SignUp/SignUp');
+const loadHomepageAsync = () => import(/* webpackChunkName: 'containers/Homepage/Homepage' */ '../containers/Homepage/Homepage');
+const loadCertificateAsync = () => import(/* webpackChunkName: 'containers/Certificate/Certificate' */ '../containers/Certificate/Certificate');
 
 const BundleWrappingRoute = ({ load, ...rest }) => (
   <Route {...rest} render={props => (<Bundle load={load}>{InnerComponent => <InnerComponent {...props} />}</Bundle>)} />

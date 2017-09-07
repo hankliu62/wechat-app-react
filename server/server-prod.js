@@ -47,6 +47,7 @@ const createServer = function () {
   const PORT = parseInt(process.env.LEANCLOUD_APP_PORT || process.env.PORT || 3000, 10);
 
   app.listen(PORT, () => {
+    console.log(`\r\nListening at http://localhost:${PORT}`);
     console.log('Node app is running on port:', PORT);
 
     // 注册全局未捕获异常处理器

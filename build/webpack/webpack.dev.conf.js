@@ -45,7 +45,7 @@ webpackConfig.plugins = webpackConfig.plugins.concat([
   // webpack dllplugin
   new webpack.DllReferencePlugin({
     context: __dirname,
-    manifest: require(config.dev.dll.manifest),
+    manifest: require(config.dev.dll.manifest)
   }),
   new HtmlWebpackPlugin({
     title: '云汐吐槽网',
@@ -55,7 +55,7 @@ webpackConfig.plugins = webpackConfig.plugins.concat([
   }),
   new AddAssetHtmlPlugin([
     {
-      filepath: path.resolve(__dirname, config.dev.dll.fileName),
+      filepath: path.resolve(__dirname, config.dev.dll.basePath, 'lib.dll.*.js'),
       // outputPath: path.join('/'),
       // publicPath: path.join('/'),
       includeSourcemap: true

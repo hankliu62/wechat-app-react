@@ -65,7 +65,7 @@ webpackConfig.plugins = webpackConfig.plugins.concat([
   }),
   new AddAssetHtmlPlugin([
     {
-      filepath: path.resolve(__dirname, config.build.dll.fileName),
+      filepath: path.resolve(__dirname, config.build.dll.basePath, 'lib.dll.*.js'),
       // outputPath: path.join('/'),
       // publicPath: path.join('/'),
       includeSourcemap: true
