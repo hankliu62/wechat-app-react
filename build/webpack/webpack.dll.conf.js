@@ -25,7 +25,7 @@ if (!isDebug) {
     }),
     // gzip uglify
     new CompressionWebpackPlugin({
-      asset: '[path].gz[query]',
+      asset: '[path].map[query]',
       algorithm: 'gzip',
       test: /\.(js|html|css)$/,
       threshold: 10240,

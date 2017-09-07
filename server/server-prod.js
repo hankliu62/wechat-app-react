@@ -5,6 +5,8 @@ const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 const statics = require('koa-static');
+const Router = require('koa-router');
+const render = require('koa-ejs');
 
 const app = require('./app');
 // const clientRoute = require('./middlewares/client-route');
@@ -27,9 +29,20 @@ const createServer = function () {
 
   app.use(statics(clientPath));
 
-  app.get('/', async (ctx) => {
+  const router = new Router();
+  app.use(router.routes());
+
+  render(app, {
+    root: clientPath,
+    layout: false,
+    viewExt: 'html',
+    cache: false,
+    debug: true
+  });
+  router.get('*', async (ctx) => {
     ctx.state.currentTime = new Date();
-    await ctx.render('./index.ejs');
+    await ctx.render('index');
+    ctx.type = 'text/html; charset=utf-8';
   });
 
   // 端口一定要从环境变量 `LEANCLOUD_APP_PORT` 中获取。
@@ -63,11 +76,10 @@ const webpackedHandler = function (error, stats) {
   }
 
   // save build info to file
-  fs.writeFile(path.resolve(config.output.path, '../logs/', 'webpack.build.log'), stats.toString({ color: true }));
+  fs.writeFile(path.resolve(__dirname, '../logs/', 'webpack.build.log'), stats.toString({ color: true }));
 
   // create server to listen request
   createServer();
 };
 
 webpack(config, webpackedHandler);
-

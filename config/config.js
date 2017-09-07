@@ -54,11 +54,11 @@ const config = {
   },
   build: {
     dll: {
-      basePath: path.resolve(__dirname, '../dist/dll/js'),
-      fileName: path.resolve(__dirname, '../dist/dll/js', 'lib.dll.js'),
-      manifest: path.resolve(__dirname, '../dist/dll/js', 'manifest.json'),
-      outputPath: '/static/dll/js', // 生成目录
-      publicPath: '/static/dll/js' // 注入地址
+      basePath: path.resolve(__dirname, '../dist/dll/prod'),
+      fileName: path.resolve(__dirname, '../dist/dll/prod', 'lib.dll.js'),
+      manifest: path.resolve(__dirname, '../dist/dll/prod', 'manifest.json'),
+      outputPath: '/static/dll/prod', // 生成目录
+      publicPath: '/static/dll/prod' // 注入地址
     },
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
@@ -70,7 +70,7 @@ const config = {
 // Validate Vendor Dependencies
 // ------------------------------------
 config.compiler_vendors = config.compiler_vendors.filter((dep) => {
-  if (pkg.dependencies[dep]) {
+  if (pkg.dependencies[dep] || pkg.devDependencies[dep]) {
     return true;
   }
 
