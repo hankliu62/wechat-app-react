@@ -82,7 +82,8 @@
   -ms-flex-direction: column;
   flex-direction: column;
   margin: 0 auto;
-  height: 620px;
+  max-height: 620px;
+  height: 100%;
   background-color: #d1cdce;
   z-index: 1;
   -webkit-box-shadow: 0 0 0 5px rbga(209, 206, 205, 0.2);
