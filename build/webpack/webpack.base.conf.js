@@ -42,7 +42,8 @@ const baseConfig = {
           'url-loader?limit=8192&name=img/[name].[hash:8].[ext]'
         ],
         exclude: /node_modules/
-      }
+      },
+      { test: /\.(eot|woff|svg|ttf|woff2|appcache)(\?|$)/, loader: 'file-loader?name=[name].[ext]', exclude: /node_modules/ }
     ]
   },
   plugins: [

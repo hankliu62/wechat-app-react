@@ -9,11 +9,8 @@ import history from './libs/History';
 import Routes from './routes/index';
 
 import './less/index.less';
-import './less/abc.css';
 
 const routerHistory = syncHistoryWithStore(history, store);
-
-// import './scss/abc.css';
 
 render(
   <Provider store={store}>
