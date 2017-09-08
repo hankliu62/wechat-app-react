@@ -23,7 +23,7 @@ const entry = webpackConfig.entry;
 for (const key in entry) {
   if (({}).hasOwnProperty.call(entry, key)) {
     const isVendorEntry = key === config.compiler_vendor_key;
-    const extras = isVendorEntry ? [polyfill, devClient] : [devClient];
+    const extras = isVendorEntry ? [devClient] : [polyfill, devClient];
     entry[key] = extras.concat(entry[key]);
   }
 }

@@ -1,13 +1,18 @@
 // Provide custom regenerator runtime and core-js
 require('babel-polyfill');
 const AV = require('leanengine');
+// const path = require('path');
 const webpack = require('webpack');
 const statics = require('koa-static');
-const koaWebpackMiddleware = require('koa-webpack-middleware');
+// const convert = require('koa-convert');
+const webpackDevMiddleware = require('koa-webpack-dev-middleware');
+const webpackHotMiddleware = require('webpack-hot-middleware');
 const historyApiFallbackMiddleware = require('koa-history-api-fallback');
 
 const app = require('./app');
 const webpackConfig = require('../build/webpack/webpack.dev.conf');
+// const config = require('../config/config');
+// const exec = require('child_process').exec;
 
 AV.init({
   appId: process.env.LEANCLOUD_APP_ID,
@@ -20,7 +25,17 @@ AV.Cloud.useMasterKey();
 
 const compiler = webpack(webpackConfig);
 
-const devMiddleware = koaWebpackMiddleware.devMiddleware(compiler, {
+// use lint-staged and husky to replace pre-commit
+// 移动pre-commit到.git/hooks目录下
+// exec('cp ./pre-commit ./.git/hooks/pre-commit', (err) => {
+//   if (err) {
+//     console.error('Caught exception:', err.stack);
+//   } else {
+//     console.log('moved pre-commit to path ./.git/hooks');
+//   }
+// });
+
+const devMiddleware = webpackDevMiddleware(compiler, {
   noInfo: false,
   publicPath: webpackConfig.output.publicPath,
   stats: {
@@ -29,7 +44,14 @@ const devMiddleware = koaWebpackMiddleware.devMiddleware(compiler, {
   }
 });
 
-const hotMiddleware = koaWebpackMiddleware.hotMiddleware(compiler);
+const hotMiddleware = webpackHotMiddleware(compiler);
+// force page reload when html-webpack-plugin template changes
+compiler.plugin('compilation', (compilation) => {
+  compilation.plugin('html-webpack-plugin-after-emit', (data, cb) => {
+    hotMiddleware.publish({ action: 'reload' });
+    cb();
+  });
+});
 
 // handle fallback for HTML5 history API
 app.use(historyApiFallbackMiddleware());
@@ -41,7 +63,13 @@ app.use(devMiddleware);
 // compilation error display
 app.use(hotMiddleware);
 
-// 静态文件, wenpack dev
+// serve pure static assets
+// const staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory);
+// app.use(statics(path.resolve(__dirname, config.dev.staticPath)));
+// app.use(statics(`${__dirname}/dist/client/`, { extensions: ['html'] }));
+
+// handle static files
+// const staticPath = path.resolve(__dirname, config.dev.staticPath);
 app.use(statics(`${__dirname}/dist/client/`, { maxage: 0 }));
 
 // 端口一定要从环境变量 `LEANCLOUD_APP_PORT` 中获取。
