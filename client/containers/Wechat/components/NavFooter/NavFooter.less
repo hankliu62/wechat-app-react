@@ -1,0 +1,52 @@
+@nav-icon-default-color: #797979;
+@nav-title-default-color: #929292;
+@nav-selected-color: #0bb908;
+@nav-bg-color: #f9f9f9;
+@nav-border-color: #333;
+
+.wx-nav-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  .wx-nav {
+    display: flex;
+    padding-top: .25rem;
+    border-top: 1px solid @nav-border-color;
+    background-color: @nav-bg-color;
+
+    .nav {
+      flex: 1;
+      cursor: pointer;
+
+      .iconfont {
+        width: .875rem;
+        height: .875rem;
+        margin: 0 auto;
+        font-size: .875rem;
+        color: @nav-icon-default-color;
+        margin-bottom: .0625rem;
+      }
+
+      .title {
+        font-size: .3125rem;
+        color: @nav-title-default-color;
+        text-align: center;
+        padding-bottom: .0625rem;
+      }
+
+      &.selected {
+        .title,
+        .iconfont {
+          color: @nav-selected-color;
+        }
+      }
+
+      &:hover,
+      &focus {
+        text-decoration: none;
+      }
+    }
+  }
+}
