@@ -4,13 +4,13 @@
 @nav-bg-color: #f9f9f9;
 @nav-border-color: #333;
 
-.wx-nav-footer {
+.wc-nav-footer {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
 
-  .wx-nav {
+  .wc-nav {
     display: flex;
     padding-top: .25rem;
     border-top: 1px solid @nav-border-color;
@@ -21,12 +21,17 @@
       cursor: pointer;
 
       .iconfont {
-        width: .875rem;
-        height: .875rem;
+        width: .75rem;
+        height: .75rem;
         margin: 0 auto;
-        font-size: .875rem;
+        font-size: .75rem;
         color: @nav-icon-default-color;
         margin-bottom: .0625rem;
+        position: relative;
+
+        .new-msg {
+          transform: translate(40%, -40%);
+        }
       }
 
       .title {

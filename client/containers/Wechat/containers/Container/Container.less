@@ -1,3 +1,26 @@
 .wechat-container {
   height: 100%;
+
+  .wx-welcome {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 99;
+    background-image: url('./images/launch.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all .25s linear;
+    display: block;
+    opacity: 1;
+
+    &.hidden {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      z-index: -1;
+    }
+  }
 }

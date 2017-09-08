@@ -1,11 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import './NavFooter.less';
+import NewMsg from '../NewMsg/NewMsg';
+
+import './WcFooter.less';
 
 const links = [
   {
-    url: '/wechat/homepage',
+    url: '/wechat/chat',
     icon: 'wechat',
     title: '微信'
   },
@@ -26,14 +28,17 @@ const links = [
   }
 ];
 
-const NavFooter = () => (
-  <footer className="wx-nav-footer">
-    <nav className="wx-nav">
+const NavFooter = props => (
+  <footer className="wc-nav-footer">
+    <nav className="wc-nav">
       {
         links.map((link, index) => (
           <NavLink key={index} className="nav" activeClassName="selected" to={link.url}>
             <dl>
-              <dt className={`iconfont icon-${link.icon}`} />
+              <dt className={`iconfont icon-${link.icon}`}>
+                { index === 0 && props.newMsgCount ? (<NewMsg count={props.newMsgCount} type="count" />) : '' }
+                { index === 2 && props.newExplore ? (<NewMsg type="dot" />) : '' }
+              </dt>
               <dd className="title">{link.title}</dd>
             </dl>
           </NavLink>

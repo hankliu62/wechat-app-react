@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Self.less';
 
-const Component = () => {
+const Self = () => {
   return (
     <div className="self-wrapper">
       Self
@@ -10,4 +10,4 @@ const Component = () => {
   );
 };
 
-export default Component;
+export default Self;

@@ -1,0 +1,21 @@
+@import url('../../../../less/variables');
+
+@wc-header-bg-color: linear-gradient(180deg, #303036, #3c3b40);
+@wc-header-title-color: @white;
+
+.wc-header {
+  display: flex;
+  background: @wc-header-bg-color;
+  color: @wc-header-title-color;
+
+  .wc-header-title {
+    width: 90%;
+    text-align: center;
+    padding: 3% 0;
+  }
+
+  .wc-header-back,
+  .wc-header-operation {
+    flex: 1;
+  }
+}

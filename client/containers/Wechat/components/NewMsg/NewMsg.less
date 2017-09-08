@@ -1,0 +1,28 @@
+@import url('../../../../less/variables');
+
+@new-msg-bg-color: #f43531;
+@new-msg-color: @white;
+
+.new-msg {
+  border-radius: 50%;
+  background-color: @new-msg-bg-color;
+  color: @new-msg-color;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  font-family: PingFangSC-Regular, 'PingFang SC', 'Hiragino Sans GB', Arial, 'Microsoft YaHei', Helvetica;
+
+  &.new-msg-dot {
+    width: .275rem;
+    height: .275rem;
+  }
+
+  &.new-msg-count {
+    font-size: .375rem;
+    width: .5rem;
+    height: .5rem;
+    line-height: .5rem;
+    text-align: center;
+  }
+}
