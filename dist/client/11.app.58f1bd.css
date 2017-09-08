@@ -20,6 +20,65 @@
 .html-body .cp {
   cursor: pointer;
 }
+.homepage-wrapper {
+  height: 100%;
+}
+.contact-wrapper {
+  height: 100%;
+}
+.explore-wrapper {
+  height: 100%;
+}
+.self-wrapper {
+  height: 100%;
+}
+.wx-nav-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.wx-nav-footer .wx-nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: .25rem;
+  border-top: 1px solid #333;
+  background-color: #f9f9f9;
+}
+.wx-nav-footer .wx-nav .nav {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+}
+.wx-nav-footer .wx-nav .nav .iconfont {
+  width: .875rem;
+  height: .875rem;
+  margin: 0 auto;
+  font-size: .875rem;
+  color: #797979;
+  margin-bottom: .0625rem;
+}
+.wx-nav-footer .wx-nav .nav .title {
+  font-size: .3125rem;
+  color: #929292;
+  text-align: center;
+  padding-bottom: .0625rem;
+}
+.wx-nav-footer .wx-nav .nav.selected .title,
+.wx-nav-footer .wx-nav .nav.selected .iconfont {
+  color: #0bb908;
+}
+.wx-nav-footer .wx-nav .nav:hover,
+.wx-nav-footer .wx-nav .navfocus {
+  text-decoration: none;
+}
+.wechat-container {
+  height: 100%;
+}
 .absolute-center {
   position: absolute;
   top: 50%;
@@ -502,19 +561,98 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+@font-face {
+  font-family: 'iconfont';
+  src: url(/wechat.eot);
+  src: url(/wechat.eot?#iefix) format('embedded-opentype'), url(/wechat.woff) format('woff'), url(/wechat.ttf) format('truetype'), url(data:image/svg+xml;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJ3ZWNoYXQuc3ZnIjs=#iconfont) format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: .2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-tips-jia::before {
+  content: "\E605";
+}
+.icon-return-arrow::before {
+  content: "\E60A";
+}
+.icon-tips-add-friend::before {
+  content: "\E606";
+}
+.icon-chat-set::before {
+  content: "\E60E";
+}
+.icon-mute::before {
+  content: "\E604";
+}
+.icon-tips-xiaoxi::before {
+  content: "\E607";
+}
+.icon-chat-person::before {
+  content: "\E60C";
+}
+.icon-chat-friends::before {
+  content: "\E60C";
+}
+.icon-more::before {
+  content: "\E60B";
+}
+.icon-tips-saoyisao::before {
+  content: "\E608";
+}
+.icon-wechat::before {
+  content: "\E600";
+}
+.icon-me::before {
+  content: "\E601";
+}
+.icon-dialogue-jia::before {
+  content: "\E615";
+}
+.icon-tips-fukuan::before {
+  content: "\E609";
+}
+.icon-contact::before {
+  content: "\E610";
+}
+.icon-find::before {
+  content: "\E603";
+}
+.icon-chat-group::before {
+  content: "\E60D";
+}
+.icon-chat-detail-add::before {
+  content: "\E616";
+}
+.icon-dialogue-voice::before {
+  content: "\E60F";
+}
+.icon-dialogue-jianpan::before {
+  content: "\E611";
+}
+.icon-dialogue-smile::before {
+  content: "\E612";
+}
+.icon-dialogue-bar-jianpan::before {
+  content: "\E602";
+}
+.icon-dialogue-bar-menu::before {
+  content: "\E613";
+}
+.icon-search::before {
+  content: "\E614";
+}
+.icon-iphone-address::before {
+  content: "\E617";
+}
 .content {
   font-size: 15px;
   -webkit-transform: translate(20px, 10px);
   -ms-transform: translate(20px, 10px);
   transform: translate(20px, 10px);
   color: #f00;
-}
-.content1 {
-  background-color: #000;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-border-radius: 2px;
-          border-radius: 2px;
 }
