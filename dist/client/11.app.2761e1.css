@@ -27,11 +27,13 @@
   display: flex;
   background: linear-gradient(180deg, #303036, #3c3b40);
   color: #fff;
+  padding: 3% 0;
+  line-height: 0.6rem;
 }
 .wc-header .wc-header-title {
-  width: 90%;
+  width: 80%;
   text-align: center;
-  padding: 3% 0;
+  font-size: .5rem;
 }
 .wc-header .wc-header-back,
 .wc-header .wc-header-operation {
@@ -39,6 +41,8 @@
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  text-align: center;
+  font-size: .625rem;
 }
 .chat-wrapper {
   height: 100%;
