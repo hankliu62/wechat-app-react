@@ -1,3 +1,49 @@
+@import '../../../../less/variables';
+
+@arrow-color: #c8c8cd;
+
 .weui-cell {
-  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: .28rem .42rem;
+  color: @black;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+
+  .weui-cell-hd {
+    margin-right: .28rem;
+  }
+
+  .weui-cell-bd {
+    flex: 1;
+    vertical-align: middle;
+  }
+
+  &.weui-cell-access {
+    .weui-cell-ft {
+      img {
+        vertical-align: middle;
+        margin-right: .28rem;
+      }
+
+      &:after {
+        content: " ";
+        display: inline-block;
+        height: .15rem;
+        width: .15rem;
+        border-width: .0625rem .0625rem 0 0;
+        border-color: @arrow-color;
+        border-style: solid;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  + .weui-cell {
+    border-top: 1px solid @common-border-color;
+  }
 }

@@ -40,7 +40,7 @@ function pushprod() {
     check $?
 
     stash_msg=$(git stash)
-    # git push
+    git push
     if [[ "$stash_msg" != "No local changes to save" ]]; then
       git stash pop
     fi
