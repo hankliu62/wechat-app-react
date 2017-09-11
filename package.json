@@ -13,6 +13,7 @@
     "prod:dll": "better-npm-run dll:prod",
     "dev:build": "better-npm-run build:dev",
     "prod:build": "better-npm-run build:prod",
+    "push:prod": "bash ./bin/build.sh pushprod",
     "precommit": "lint-staged",
     "commitmsg": "validate-commit-msg"
   },
