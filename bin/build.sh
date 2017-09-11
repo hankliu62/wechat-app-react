@@ -5,6 +5,13 @@ function help() {
   echo "Usage: $0 pushprod|help"
 }
 
+function check() {
+  if [ $1 != 0 ];then
+    echo "exec fail"
+    exit 1
+  fi
+}
+
 function pushprod() {
   git_folder=".git"
 
@@ -19,10 +26,21 @@ function pushprod() {
     commit_msg="${commit_msg} on prod env"
     npm run prod
     git add dist/client/
+
+    echo -n ""
+    echo -e "\033[37;31;5mDo you want input custom commit message?(y/n): \c\033[39;49;0m"
+    read flag
+    flag=$(echo $flag | tr [A-Z] [a-z])
+    if [ $flag == "y" ]; then
+      echo -e "\033[37;31;5mInput custom commit message: \c\033[39;49;0m"
+      echo -n ""
+      read commit_msg
+    fi
     git commit -m "$commit_msg"
+    check $?
 
     stash_msg=$(git stash)
-    git push
+    # git push
     if [[ "$stash_msg" != "No local changes to save" ]]; then
       git stash pop
     fi
