@@ -36,7 +36,7 @@ const NavFooter = props => (
           <NavLink key={index} className="nav" activeClassName="selected" to={link.url}>
             <dl>
               <dt className={`iconfont icon-${link.icon}`}>
-                { index === 0 && props.newMsgCount ? (<NewMsg count={props.newMsgCount} type="count" />) : '' }
+                { index === 0 && (props.newMsgCount || 12) ? (<NewMsg count={props.newMsgCount || 12} type="count" />) : '' }
                 { index === 2 && props.newExplore ? (<NewMsg type="dot" />) : '' }
               </dt>
               <dd className="title">{link.title}</dd>

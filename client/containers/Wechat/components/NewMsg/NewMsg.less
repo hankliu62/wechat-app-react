@@ -4,7 +4,6 @@
 @new-msg-color: @white;
 
 .new-msg {
-  border-radius: 50%;
   background-color: @new-msg-bg-color;
   color: @new-msg-color;
   position: absolute;
@@ -12,16 +11,19 @@
   right: 0;
   transform: translate(50%, -50%);
   font-family: PingFangSC-Regular, 'PingFang SC', 'Hiragino Sans GB', Arial, 'Microsoft YaHei', Helvetica;
+  font-style: normal;
 
   &.new-msg-dot {
+    border-radius: 50%;
     width: .275rem;
     height: .275rem;
   }
 
   &.new-msg-count {
+    border-radius: .25rem;
     font-size: .375rem;
-    width: .5rem;
     height: .5rem;
+    padding: 0 .14rem;
     line-height: .5rem;
     text-align: center;
   }
