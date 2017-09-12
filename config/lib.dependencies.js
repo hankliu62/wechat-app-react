@@ -11,7 +11,8 @@ const lib = [
   'redux-pagan',
   'redux-thunk',
   'history',
-  'classnames'
+  'classnames',
+  'lodash'
 ];
 
 module.exports = lib;
