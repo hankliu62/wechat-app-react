@@ -27,8 +27,13 @@
   display: flex;
   background: linear-gradient(180deg, #303036, #3c3b40);
   color: #fff;
-  padding: 3% 0;
+  padding: .3rem 0;
   line-height: 0.6rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 .wc-header .wc-header-title {
   width: 80%;
@@ -131,6 +136,8 @@
 }
 .contact-wrapper .weui-cells {
   border: 0;
+  -webkit-box-shadow: 1px 0 1px 1px #f1f0f6;
+  box-shadow: 1px 0 1px 1px #f1f0f6;
 }
 .contact-wrapper .weui-cells.header-weui-cell {
   border-top: 1px soild #d9d9d9;
@@ -141,6 +148,32 @@
 }
 .contact-wrapper .weui-cells .weui-cell .weui-cell-ft {
   display: none;
+}
+.contact-wrapper .contact-alpha {
+  font-size: .38rem;
+  line-height: .56rem;
+  padding: 0 .42rem;
+  color: #888;
+}
+.contact-wrapper .contact-frineds-statistics {
+  text-align: center;
+  font-size: .45rem;
+  background-color: #fff;
+  color: #999;
+  padding: .42rem;
+  border-top: 1px solid #d9d9d9;
+}
+.contact-wrapper .anchor-bar {
+  position: fixed;
+  top: 50%;
+  right: .14rem;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.contact-wrapper .anchor-bar .letter-anchor {
+  font-size: .32rem;
+  line-height: 1.2;
 }
 .new-msg {
   background-color: #f43531;
@@ -259,8 +292,12 @@
   text-decoration: none;
 }
 .wechat-container {
-  height: 100%;
+  min-height: 100%;
   background-color: #fbf9fe;
+  padding-bottom: 1.5rem;
+  padding-top: 1.2rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .wechat-container .wx-welcome {
   position: fixed;
