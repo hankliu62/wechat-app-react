@@ -24,12 +24,18 @@ const pinyinOptions = {
   style: pinyin.STYLE_NORMAL // 设置拼音风格
 };
 
+let hasUnknowContact = false;
 for (const item of contacts) {
   item.initial = '';
   const pinyins = pinyin(item.remark || item.nickname, pinyinOptions);
   if (pinyins && pinyins.length) {
     if (pinyins[0] && pinyins[0].length && pinyins[0][0]) {
-      item.initial = pinyins[0][0][0];
+      if (/\w/.test(pinyins[0][0][0])) {
+        item.initial = pinyins[0][0][0].toUpperCase();
+      } else {
+        item.initial = '#';
+        hasUnknowContact = true;
+      }
     }
     item.pinyin = ([]).concat.call([], ...pinyins).join('');
   }
@@ -37,11 +43,15 @@ for (const item of contacts) {
 
 const contactGroups = groupBy(contacts, item => item.initial);
 const letters = Object.keys(contactGroups) || [];
+const contactLetters = letters.filter(item => item !== '#').sort();
+if (hasUnknowContact) {
+  contactLetters.push('#');
+}
 
 const defaultState = {
   contacts,
   contactGroups,
-  contactLetters: letters.sort()
+  contactLetters
 };
 
 export default (state = { ...defaultState }, action) => {

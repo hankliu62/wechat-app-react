@@ -1,8 +1,13 @@
 @import '../../../../less/variables';
 
+@contact-frineds-statistics-color: #999;
+@contact-alpha-color: #888;
+@contact-weui-cells-shadow-color: @common-bg-color;
+
 .contact-wrapper {
   .weui-cells {
     border: 0;
+    box-shadow: 1px 0 1px 1px @contact-weui-cells-shadow-color;
 
     &.header-weui-cell {
       border-top: 1px soild @common-border-color;
@@ -19,6 +24,34 @@
       .weui-cell-ft {
         display: none;
       }
+    }
+  }
+
+  .contact-alpha {
+    font-size: .38rem;
+    line-height: .56rem;
+    padding: 0 .42rem;
+    color: @contact-alpha-color;
+  }
+
+  .contact-frineds-statistics {
+    text-align: center;
+    font-size: .45rem;
+    background-color: @white;
+    color: @contact-frineds-statistics-color;
+    padding: .42rem;
+    border-top: 1px solid @common-border-color;
+  }
+
+  .anchor-bar {
+    position: fixed;
+    top: 50%;
+    right: .14rem;
+    transform: translateY(-50%);
+
+    .letter-anchor {
+      font-size: .32rem;
+      line-height: 1.2;
     }
   }
 }

@@ -14,6 +14,7 @@ class Contact extends Component {
   static propTypes = {
     contacts: PropTypes.object.isRequired,
     letters: PropTypes.array.isRequired,
+    total: PropTypes.number.isRequired,
     setState: PropTypes.func.isRequired
   }
 
@@ -23,7 +24,7 @@ class Contact extends Component {
     }, 3000);
   }
 
-  renderContactFrinedsGroup(letter, index) {
+  renderContactFrinedsGroup = (letter, index) => {
     const { contacts } = this.props;
 
     const frineds = contacts[letter] ? contacts[letter].map(frined => ({
@@ -34,14 +35,25 @@ class Contact extends Component {
 
     return (
       <li className="contact-frineds-group" key={index}>
-        <p>{letter}</p>
+        <p className="contact-alpha">{letter}</p>
         <WeuiCells cells={frineds} />
       </li>
     );
   }
 
-  render() {
+  renderLettersAnchorBar = () => {
     const { letters } = this.props;
+    return (
+      <ul className="anchor-bar">
+        {
+          letters.map((item, index) => (<li className="letter-anchor" key={index}>{item}</li>))
+        }
+      </ul>
+    );
+  }
+
+  render() {
+    const { letters, total } = this.props;
 
     const headerCells = [
       {
@@ -75,6 +87,9 @@ class Contact extends Component {
             letters.map((letter, index) => this.renderContactFrinedsGroup(letter, index))
           }
         </ul>
+        <p className="contact-frineds-statistics">{`${total}位联系人`}</p>
+
+        {this.renderLettersAnchorBar()}
       </div>
     );
   }
@@ -87,7 +102,8 @@ const selectorFactory = (dispatch) => {
   return (nextState, nextOwnProps) => {
     const contacts = nextState.wechat.contact.contactGroups;
     const letters = nextState.wechat.contact.contactLetters;
-    const nextResult = { ...nextOwnProps, contacts, letters, ...contactDispatchActions };
+    const total = (nextState.wechat.contact.contacts || []).length;
+    const nextResult = { ...nextOwnProps, contacts, letters, total, ...contactDispatchActions };
     result = ObjectUtils.shallowEqual(result, nextResult) ? result : nextResult;
     return result;
   };
