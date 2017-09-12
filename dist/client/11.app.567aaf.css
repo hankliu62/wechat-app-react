@@ -47,13 +47,8 @@
 .chat-wrapper {
   height: 100%;
 }
-.contact-wrapper {
-  height: 100%;
-}
-.explore-wrapper {
-  height: 100%;
-}
 .weui-cell {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -73,6 +68,10 @@
 .weui-cell .weui-cell-hd {
   margin-right: .28rem;
 }
+.weui-cell .weui-cell-hd img {
+  width: .64rem;
+  margin-right: .28rem;
+}
 .weui-cell .weui-cell-bd {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -80,47 +79,68 @@
   flex: 1;
   vertical-align: middle;
 }
-.weui-cell.weui-cell-access .weui-cell-ft img {
+.weui-cell .weui-cell-bd p {
+  font-size: .4rem;
+}
+.weui-cell .weui-cell-ft {
+  white-space: nowrap;
+}
+.weui-cell .weui-cell-ft img {
+  height: .7rem;
+}
+.weui-cell .weui-cell-ft {
+  position: relative;
+}
+.weui-cell .weui-cell-ft img {
   vertical-align: middle;
   margin-right: .28rem;
 }
-.weui-cell.weui-cell-access .weui-cell-ft:after {
+.weui-cell .weui-cell-ft:after {
   content: " ";
   display: inline-block;
-  height: .15rem;
-  width: .15rem;
-  border-width: .0625rem .0625rem 0 0;
+  height: .25rem;
+  width: .25rem;
+  border-width: .05rem .05rem 0 0;
   border-color: #c8c8cd;
   border-style: solid;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: rotate(45deg) translate(0, 0);
+  -ms-transform: rotate(45deg) translate(0, 0);
+  transform: rotate(45deg) translate(0, 0);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -0.125rem;
 }
-.weui-cell + .weui-cell {
+.weui-cell + .weui-cell:before {
+  content: " ";
+  position: absolute;
   border-top: 1px solid #d9d9d9;
+  left: .42rem;
+  top: 0;
+  right: 0;
+  height: 1px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .weui-cells {
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
   background-color: #fff;
-  margin-top: 4%;
 }
-.self-wrapper {
-  height: 100%;
+.contact-wrapper .weui-cells {
+  border: 0;
 }
-.self-wrapper .weui-cells .weui-cell .self-nickname {
-  font-size: .45rem;
-  margin-bottom: .14rem;
+.contact-wrapper .weui-cells.header-weui-cell {
+  border-top: 1px soild #d9d9d9;
 }
-.self-wrapper .weui-cells .weui-cell .self-wxid {
-  font-size: .38rem;
+.contact-wrapper .weui-cells .weui-cell .weui-cell-hd img {
+  width: .8rem;
+  margin-right: 0;
 }
-.self-wrapper .weui-cells .weui-cell.header-weui-cell .weui-cell-hd img {
-  width: 1.666667rem;
-  height: 1.666667rem;
-}
-.self-wrapper .weui-cells .weui-cell.header-weui-cell .weui-cell-ft img {
-  height: .7rem;
+.contact-wrapper .weui-cells .weui-cell .weui-cell-ft {
+  display: none;
 }
 .new-msg {
   background-color: #f43531;
@@ -137,8 +157,8 @@
 .new-msg.new-msg-dot {
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  width: .275rem;
-  height: .275rem;
+  width: .225rem;
+  height: .225rem;
 }
 .new-msg.new-msg-count {
   -webkit-border-radius: .25rem;
@@ -148,6 +168,45 @@
   padding: 0 .14rem;
   line-height: .5rem;
   text-align: center;
+}
+.explore-wrapper .weui-cells {
+  margin-top: 4%;
+}
+.explore-wrapper .weui-cells .weui-cell.header-weui-cell .weui-cell-ft .new-moments {
+  position: relative;
+  display: inline-block;
+  margin-right: .28rem;
+}
+.explore-wrapper .weui-cells .weui-cell.header-weui-cell .weui-cell-ft .new-moments img {
+  margin-right: 0;
+}
+.self-wrapper {
+  height: 100%;
+}
+.self-wrapper .weui-cells {
+  margin-top: 4%;
+}
+.self-wrapper .weui-cells .weui-cell .self-nickname {
+  font-size: .45rem;
+  margin-bottom: .14rem;
+}
+.self-wrapper .weui-cells .weui-cell .self-wxid {
+  font-size: .38rem;
+}
+.self-wrapper .weui-cells .weui-cell.header-weui-cell .weui-cell-hd {
+  margin-right: 0;
+}
+.self-wrapper .weui-cells .weui-cell.header-weui-cell .weui-cell-hd img {
+  width: 1.666667rem;
+  height: 1.666667rem;
+  -webkit-border-radius: .1rem;
+  border-radius: .1rem;
+}
+.self-wrapper .weui-cells .weui-cell.header-weui-cell .weui-cell-ft {
+  padding-right: .1rem;
+}
+.self-wrapper .weui-cells .weui-cell.header-weui-cell .weui-cell-ft img {
+  margin-right: .28rem;
 }
 .wc-nav-footer {
   position: fixed;
