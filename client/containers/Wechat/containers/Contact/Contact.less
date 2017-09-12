@@ -1,3 +1,24 @@
+@import '../../../../less/variables';
+
 .contact-wrapper {
-  height: 100%;
+  .weui-cells {
+    border: 0;
+
+    &.header-weui-cell {
+      border-top: 1px soild @common-border-color;
+    }
+
+    .weui-cell {
+      .weui-cell-hd {
+        img {
+          width: .8rem;
+          margin-right: 0;
+        }
+      }
+
+      .weui-cell-ft {
+        display: none;
+      }
+    }
+  }
 }

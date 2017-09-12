@@ -14,7 +14,7 @@ const WeuiCell = props => (
       )
     }
     <div className="weui-cell-bd">{props.center}</div>
-    { props.right && (<div className="weui-cell-ft">{props.right}</div>) }
+    <div className="weui-cell-ft">{props.right && props.right}</div>
   </Link>
 );
 
