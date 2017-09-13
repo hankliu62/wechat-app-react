@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Routes from './routes/index';
-import Container from './containers/Container/Container';
+import FooterContainer from './containers/FooterContainer/FooterContainer';
 
 const WechatContainer = props => (
-  <Container {...props}>
+  <FooterContainer {...props}>
     <Routes {...props} />
-  </Container>
+  </FooterContainer>
 );
 
 export default WechatContainer;

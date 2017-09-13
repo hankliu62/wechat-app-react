@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connectAdvanced } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { Sticky, StickyContainer } from 'react-sticky';
+import classNames from 'classnames';
 
 import WcHeader from '../../components/WcHeader/WcHeader';
 import WeuiCells from '../../components/WeuiCells/WeuiCells';
 import * as contactActions from '../../actions/contact';
 import ObjectUtils from '../../../../utils/ObjectUtils';
+import ElementUtil from '../../../../utils/ElementUtil';
 
 import './Contact.less';
 
@@ -18,26 +21,51 @@ class Contact extends Component {
     setState: PropTypes.func.isRequired
   }
 
-  componentDidMount() {
-    setTimeout(() => {
-      this.props.setState({ content: 'Modified Redux Content Data' });
-    }, 3000);
+  constructor(props) {
+    super(props);
+
+    console.log(props);
+
+    this.state = {
+      fontSize: 40,
+      stickyLetter: ''
+    };
   }
 
-  renderContactFrinedsGroup = (letter, index) => {
+
+  componentDidMount() {
+    this.props.setState({ content: 'Modified Redux Content Data' });
+    const fontSize = (ElementUtil.getElementStyle(document.documentElement, 'font-size') || '16px').replace('px', '');
+    this.setState({ fontSize });
+  }
+
+  onClickFriend = friend => () => {
+    this.props.setState({ selectorFriend: friend });
+    this.props.history.push('/wechat/contact/details');
+  }
+
+  renderContactFriendsGroup = (letter, index) => {
     const { contacts } = this.props;
 
-    const frineds = contacts[letter] ? contacts[letter].map(frined => ({
-      image: frined.headerUrl,
-      link: '/wechat/contact/details',
-      center: (<p>{frined.remark || frined.nickname}</p>)
+    const friends = contacts[letter] ? contacts[letter].map(friend => ({
+      image: friend.headerUrl,
+      center: (<p>{friend.remark || friend.nickname}</p>),
+      onClick: this.onClickFriend(friend)
     })) : [];
 
     return (
-      <li className="contact-frineds-group" key={index}>
-        <p className="contact-alpha">{letter}</p>
-        <WeuiCells cells={frineds} />
-      </li>
+      <StickyContainer className="contact-friends-group" key={index}>
+        <Sticky topOffset={-((1.76 * this.state.fontSize) - 2)}>
+          {
+            ({ isSticky, style }) => {
+              return (
+                <p className={classNames('contact-alpha', { sticky: isSticky })} style={{ ...style, top: (1.2 * this.state.fontSize) - 2 }}>{letter}</p>
+              );
+            }
+          }
+        </Sticky>
+        <WeuiCells cells={friends} />
+      </StickyContainer>
     );
   }
 
@@ -46,14 +74,14 @@ class Contact extends Component {
     return (
       <ul className="anchor-bar">
         {
-          letters.map((item, index) => (<li className="letter-anchor" key={index}>{item}</li>))
+          letters.map((item, index) => (<li className={classNames('letter-anchor', { sticky: this.stickyLetter === item })} key={index}>{item}</li>))
         }
       </ul>
     );
   }
 
   render() {
-    const { letters, total } = this.props;
+    const { letters, total, children } = this.props;
 
     const headerCells = [
       {
@@ -79,17 +107,22 @@ class Contact extends Component {
     ];
     return (
       <div className="contact-wrapper">
-        <WcHeader title="通讯录">+</WcHeader>
+        <WcHeader title="通讯录">
+          <i className="iconfont icon-tips-add-friend" />
+        </WcHeader>
+
         <WeuiCells cells={headerCells} />
 
         <ul className="contact-frineds">
           {
-            letters.map((letter, index) => this.renderContactFrinedsGroup(letter, index))
+            letters.map((letter, index) => this.renderContactFriendsGroup(letter, index))
           }
         </ul>
         <p className="contact-frineds-statistics">{`${total}位联系人`}</p>
 
         {this.renderLettersAnchorBar()}
+
+        { children && children }
       </div>
     );
   }
@@ -100,10 +133,17 @@ const selectorFactory = (dispatch) => {
 
   const contactDispatchActions = bindActionCreators(contactActions, dispatch);
   return (nextState, nextOwnProps) => {
-    const contacts = nextState.wechat.contact.contactGroups;
-    const letters = nextState.wechat.contact.contactLetters;
-    const total = (nextState.wechat.contact.contacts || []).length;
-    const nextResult = { ...nextOwnProps, contacts, letters, total, ...contactDispatchActions };
+    const { selectorFriend, contactLetters: letters, contactGroups, contacts = [] } = nextState.wechat.contact;
+    const total = contacts.length;
+    const nextResult = {
+      ...nextOwnProps,
+      contacts:
+      contactGroups,
+      letters,
+      total,
+      selectorFriend,
+      ...contactDispatchActions
+    };
     result = ObjectUtils.shallowEqual(result, nextResult) ? result : nextResult;
     return result;
   };

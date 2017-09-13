@@ -11,6 +11,7 @@ const loadSignUpAsync = () => import(/* webpackChunkName: 'containers/SignUp' */
 const loadHomepageAsync = () => import(/* webpackChunkName: 'containers/Homepage' */ '../containers/Homepage/Homepage');
 const loadCertificateAsync = () => import(/* webpackChunkName: 'containers/Certificate' */ '../containers/Certificate/Certificate');
 const loadNotFountAsync = () => import(/* webpackChunkName: 'containers/Error/NotFount' */ '../containers/Error/NotFount');
+// const loadWechatAsync = () => import(/* webpackChunkName: 'containers/Wechat' */ '../containers/Wechat/Index');
 
 // 根路由
 const AppRouter = () => {

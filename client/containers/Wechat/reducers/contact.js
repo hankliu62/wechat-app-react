@@ -51,7 +51,8 @@ if (hasUnknowContact) {
 const defaultState = {
   contacts,
   contactGroups,
-  contactLetters
+  contactLetters,
+  selectorFriend: null
 };
 
 export default (state = { ...defaultState }, action) => {

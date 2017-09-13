@@ -1,10 +1,15 @@
 @import '../../../../less/variables';
+@import '../../less/variables';
 
-@contact-frineds-statistics-color: #999;
+@contact-friends-statistics-color: #999;
 @contact-alpha-color: #888;
+@contact-alpha-sticky-color: @grass-light;
+@contact-alpha-sticky-border-color: @common-border-color;
 @contact-weui-cells-shadow-color: @common-bg-color;
 
 .contact-wrapper {
+  position: relative;
+
   .weui-cells {
     border: 0;
     box-shadow: 1px 0 1px 1px @contact-weui-cells-shadow-color;
@@ -32,14 +37,22 @@
     line-height: .56rem;
     padding: 0 .42rem;
     color: @contact-alpha-color;
+    background-color: @common-bg-color;
+    z-index: 99;
+
+    &.sticky {
+      background-color: @white;
+      color: @contact-alpha-sticky-color;
+      border-bottom: 1px solid @contact-alpha-sticky-border-color;
+    }
   }
 
   .contact-frineds-statistics {
-    text-align: center;
     font-size: .45rem;
-    background-color: @white;
-    color: @contact-frineds-statistics-color;
+    background-color: @common-bg-color;
+    color: @contact-friends-statistics-color;
     padding: .42rem;
+    text-align: center;
     border-top: 1px solid @common-border-color;
   }
 

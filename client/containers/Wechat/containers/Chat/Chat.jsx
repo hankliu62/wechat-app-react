@@ -7,7 +7,9 @@ import './Chat.less';
 const Chat = () => {
   return (
     <div className="chat-wrapper">
-      <WcHeader title="微信">+</WcHeader>
+      <WcHeader title="微信">
+        <i className="iconfont icon-tips-jia" />
+      </WcHeader>
       Chat
     </div>
   );

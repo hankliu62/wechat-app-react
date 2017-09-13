@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 
-import WcFooter from '../../components/WcFooter/WcFooter';
-
 import './Container.less';
 
 class Container extends Component {
@@ -21,13 +19,12 @@ class Container extends Component {
   }
 
   render() {
-    const { otherProps, children } = this.props;
+    const { children } = this.props;
 
     return (
       <div className="wechat-container">
         {children && children}
         <section className={classNames('wx-welcome', { hidden: !this.state.welcome })} />
-        <WcFooter {...otherProps} />
       </div>
     );
   }

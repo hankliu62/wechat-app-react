@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import NewMsg from '../NewMsg/NewMsg';
 
-import './WcFooter.less';
+import './WeuiFooter.less';
 
 const links = [
   {
@@ -28,7 +28,7 @@ const links = [
   }
 ];
 
-const NavFooter = props => (
+const WeuiFooter = props => (
   <footer className="wc-nav-footer">
     <nav className="wc-nav">
       {
@@ -48,4 +48,4 @@ const NavFooter = props => (
   </footer>
 );
 
-export default NavFooter;
+export default WeuiFooter;

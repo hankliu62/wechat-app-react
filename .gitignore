@@ -62,3 +62,5 @@ typings/
 .leancloud
 
 dist/client/statistics.html
+
+**/.DS_Store
