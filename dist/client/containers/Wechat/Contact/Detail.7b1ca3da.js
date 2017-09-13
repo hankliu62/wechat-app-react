@@ -1,0 +1,1 @@
+webpackJsonp([7],{586:function(e,t,n){try{(function(){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var e=function(e){return e&&e.__esModule?e:{default:e}}(n(11));t.default=function(t){return console.log(t),e.default.createElement("div",{className:"contact-detail-wrapper"},"Contact Detail")}}).call(this)}finally{}}});
