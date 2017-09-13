@@ -40,7 +40,6 @@ export default class Bundle extends Component {
     });
 
     props.load().then((mod) => {
-      console.log(mod, props, '-----');
       if (this.state.mount) {
         this.setState({
           mod: mod.default ? mod.default : mod

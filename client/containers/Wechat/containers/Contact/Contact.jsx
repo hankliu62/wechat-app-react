@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connectAdvanced } from 'react-redux';
+import { push } from 'react-router-redux';
 import { bindActionCreators } from 'redux';
 import { Sticky, StickyContainer } from 'react-sticky';
 import classNames from 'classnames';
@@ -18,13 +19,12 @@ class Contact extends Component {
     contacts: PropTypes.object.isRequired,
     letters: PropTypes.array.isRequired,
     total: PropTypes.number.isRequired,
-    setState: PropTypes.func.isRequired
+    setState: PropTypes.func.isRequired,
+    pushState: PropTypes.func.isRequired
   }
 
   constructor(props) {
     super(props);
-
-    console.log(props);
 
     this.state = {
       fontSize: 40,
@@ -41,7 +41,11 @@ class Contact extends Component {
 
   onClickFriend = friend => () => {
     this.props.setState({ selectorFriend: friend });
-    this.props.history.push('/wechat/contact/details');
+    this.props.pushState('/wechat/contact/detail');
+  }
+
+  onClickAddFriend = () => {
+    this.props.pushState('/wechat/contact/add-friends');
   }
 
   renderContactFriendsGroup = (letter, index) => {
@@ -105,10 +109,11 @@ class Contact extends Component {
         center: (<p>公众号</p>)
       }
     ];
+
     return (
       <div className="contact-wrapper">
         <WcHeader title="通讯录">
-          <i className="iconfont icon-tips-add-friend" />
+          <i className="iconfont icon-tips-add-friend" onClick={this.onClickAddFriend} />
         </WcHeader>
 
         <WeuiCells cells={headerCells} />
@@ -135,6 +140,7 @@ const selectorFactory = (dispatch) => {
   return (nextState, nextOwnProps) => {
     const { selectorFriend, contactLetters: letters, contactGroups, contacts = [] } = nextState.wechat.contact;
     const total = contacts.length;
+    const pushState = bindActionCreators(push, dispatch);
     const nextResult = {
       ...nextOwnProps,
       contacts:
@@ -142,7 +148,8 @@ const selectorFactory = (dispatch) => {
       letters,
       total,
       selectorFriend,
-      ...contactDispatchActions
+      ...contactDispatchActions,
+      pushState
     };
     result = ObjectUtils.shallowEqual(result, nextResult) ? result : nextResult;
     return result;
