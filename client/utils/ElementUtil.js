@@ -101,6 +101,11 @@ class ElementUtil {
     return ElementUtil.isChildOf(child.parentNode, parent);
   }
 
+  static hasClassName(elemnet, name) {
+    const className = elemnet.className;
+    return className.indexOf(name) !== -1;
+  }
+
   static addClassName(elemnet, name) {
     const className = elemnet.className;
     if (className.indexOf(name) === -1) {

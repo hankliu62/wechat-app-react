@@ -36,7 +36,6 @@ class Contact extends Component {
     };
   }
 
-
   componentDidMount() {
     this.props.setState({ content: 'Modified Redux Content Data' });
     const fontSize = (ElementUtil.getElementStyle(document.documentElement, 'font-size') || '16px').replace('px', '');
@@ -50,6 +49,27 @@ class Contact extends Component {
 
   onClickAddFriend = () => {
     this.props.history.push('/wechat/contact/add-friends');
+  }
+
+  onClickAnchorLetter = letter => (e) => {
+    const anchor = document.getElementById(`alpha${letter}`);
+    if (anchor && Math.abs(anchor.offsetTop - (HEADER_HEIGHT * this.state.fontSize)) >= 5) {
+      window.scrollTo(0, anchor.offsetTop);
+    }
+    e.stopPropagation();
+  }
+
+  triggerStickyAnchorLetter = (letter) => {
+    const anchors = document.getElementsByClassName('letter-anchor');
+    for (const anchor of anchors) {
+      if (ElementUtil.hasClassName(anchor, 'sticky') && anchor.innerText !== letter) {
+        ElementUtil.removeClassName(anchor, 'sticky');
+      }
+
+      if (anchor.innerText === letter) {
+        ElementUtil.addClassName(anchor, 'sticky');
+      }
+    }
   }
 
   renderContactFriendsGroup = (letter, index) => {
@@ -66,8 +86,17 @@ class Contact extends Component {
         <Sticky topOffset={-(((HEADER_HEIGHT + 0.56) * this.state.fontSize) - 2)}>
           {
             ({ isSticky, style }) => {
+              if (isSticky && this.stickyLetter !== letter) {
+                this.triggerStickyAnchorLetter(letter);
+                this.stickyLetter = letter;
+              }
+
               return (
-                <p className={classNames('contact-alpha', { sticky: isSticky })} style={{ ...style, top: (HEADER_HEIGHT * this.state.fontSize) - 2 }}>{letter}</p>
+                <p
+                  id={`alpha${letter}`}
+                  className={classNames('contact-alpha', { sticky: isSticky, })}
+                  style={{ ...style, top: (HEADER_HEIGHT * this.state.fontSize) - 2 }}
+                >{letter}</p>
               );
             }
           }
@@ -82,7 +111,13 @@ class Contact extends Component {
     return (
       <ul className="anchor-bar">
         {
-          letters.map((item, index) => (<li className={classNames('letter-anchor', { sticky: this.stickyLetter === item })} key={index}>{item}</li>))
+          letters.map((item, index) => (
+            <li
+              className={classNames('letter-anchor', `letter-anchor-${item}`)}
+              key={index}
+              onClick={this.onClickAnchorLetter(item)}
+            >{item}</li>
+          ))
         }
       </ul>
     );

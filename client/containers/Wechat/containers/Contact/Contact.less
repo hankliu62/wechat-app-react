@@ -10,6 +10,11 @@
 .contact-wrapper {
   position: relative;
 
+  .contact-main-wrapper {
+    width: 100%;
+    transition: all .3s linear;
+  }
+
   &.sub-wrapper {
     .contact-main-wrapper {
       display: none;
@@ -66,7 +71,16 @@
 
     .letter-anchor {
       font-size: .32rem;
-      line-height: 1.2;
+      line-height: .384rem;
+      text-align: center;
+      width: .384rem;
+      height: .384rem;
+      border-radius: 50%;
+
+      &.sticky {
+        color: @white;
+        background-color: @contact-alpha-sticky-color;
+      }
     }
   }
 }
