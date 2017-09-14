@@ -1,7 +1,8 @@
 import pinyin from 'pinyin';
 import groupBy from 'lodash/groupBy';
 
-import { WECHAT_CONTACT_MAIN_SET } from '../constants/ActionTypes';
+import { WECHAT_CONTACT_MAIN_SET, WECHAT_CONTACT_GET_CONTACTER } from '../constants/ActionTypes';
+import * as CONSTANTS from '../constants/Constants';
 
 /**
  * wxid-微信id
@@ -26,6 +27,7 @@ const pinyinOptions = {
 
 let hasUnknowContact = false;
 for (const item of contacts) {
+  item.gender = item.sex === 1 ? CONSTANTS.MALE : CONSTANTS.FEMALE;
   item.initial = '';
   const pinyins = pinyin(item.remark || item.nickname, pinyinOptions);
   if (pinyins && pinyins.length) {
@@ -52,13 +54,19 @@ const defaultState = {
   contacts,
   contactGroups,
   contactLetters,
-  selectorFriend: null
+  selectedContacter: null
+};
+
+const getContacter = (state, wxid) => {
+  return (state.contacts || []).find(contacter => contacter.wxid === wxid);
 };
 
 export default (state = { ...defaultState }, action) => {
   switch (action.type) {
     case WECHAT_CONTACT_MAIN_SET:
       return { ...state, ...action.payload };
+    case WECHAT_CONTACT_GET_CONTACTER:
+      return { ...state, selectedContacter: getContacter(state, action.wxid) };
     default:
       return state;
   }

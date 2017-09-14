@@ -29,8 +29,8 @@ const links = [
 ];
 
 const WeuiFooter = props => (
-  <footer className="wc-nav-footer">
-    <nav className="wc-nav">
+  <footer className="weui-nav-footer">
+    <nav className="weui-nav">
       {
         links.map((link, index) => (
           <NavLink key={index} className="nav" activeClassName="selected" to={link.url}>

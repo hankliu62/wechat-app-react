@@ -4,13 +4,13 @@
 @nav-bg-color: #f9f9f9;
 @nav-border-color: #333;
 
-.wc-nav-footer {
+.weui-nav-footer {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
 
-  .wc-nav {
+  .weui-nav {
     display: flex;
     padding-top: .25rem;
     border-top: 1px solid @nav-border-color;
@@ -54,4 +54,8 @@
       }
     }
   }
+}
+
+.without-footer-wrapper + .weui-nav-footer {
+  display: none;
 }

@@ -4,8 +4,6 @@ export default class Bundle extends Component {
   constructor(props) {
     super(props);
 
-    console.log(props, 'props-----');
-
     this.state = {
       mod: null,
       mount: true

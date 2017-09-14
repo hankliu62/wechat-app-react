@@ -6,13 +6,12 @@ import BundleWrappingRoute from '../../../components/BundleWrappingRoute/BundleW
 import ContactRoute from './contact';
 
 const loadChatAsync = () => import(/* webpackChunkName: 'containers/Wechat/Chat' */ '../containers/Chat/Chat');
-const loadContactAsync = () => import(/* webpackChunkName: 'containers/Wechat/Contact' */ '../containers/Contact/Contact');
 const loadExploreAsync = () => import(/* webpackChunkName: 'containers/Wechat/Explore' */ '../containers/Explore/Explore');
 const loadSelfAsync = () => import(/* webpackChunkName: 'containers/Wechat/Self' */ '../containers/Self/Self');
 
 // <Route path="/wechat/contact" render={nextProps => (<Contact {...nextProps}><ContactRoute /></Contact>)} />
 const WechatRouter = (props) => {
-  console.log(props, 'WechatRouter');
+  const loadContactAsync = () => import(/* webpackChunkName: 'containers/Wechat/Contact' */ '../containers/Contact/Contact');
   return (
     <Switch>
       <Redirect exact from="/wechat" to="/wechat/chat" />

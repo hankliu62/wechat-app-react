@@ -1,12 +1,12 @@
-@wechat-container-bg-color: #fbf9fe;
+@import '../../less/variables.less';
 
 .wechat-container {
   position: relative;
   min-height: 100%;
-  background-color: @wechat-container-bg-color;
+  background-color: @common-bg-color;
   // footer height: 1.4375
   padding-bottom: 1.45rem;
-  padding-top: 1.2rem;
+  padding-top: @header-height;
 
   .wx-welcome {
     position: fixed;

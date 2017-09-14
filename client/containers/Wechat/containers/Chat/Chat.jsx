@@ -1,15 +1,15 @@
 import React from 'react';
 
-import WcHeader from '../../components/WcHeader/WcHeader';
+import WeuiHeader from '../../components/WeuiHeader/WeuiHeader';
 
 import './Chat.less';
 
 const Chat = () => {
   return (
     <div className="chat-wrapper">
-      <WcHeader title="微信">
-        <i className="iconfont icon-tips-jia" />
-      </WcHeader>
+      <WeuiHeader title="微信">
+        <i className="icon-header-operation iconfont icon-tips-jia" />
+      </WeuiHeader>
       Chat
     </div>
   );

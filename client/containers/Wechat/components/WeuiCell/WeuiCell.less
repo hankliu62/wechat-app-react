@@ -2,6 +2,9 @@
 @import '../../less/variables';
 
 @arrow-color: #c8c8cd;
+@weui-cell-label-color: #333;
+@weui-cell-content-color: @black;
+@weui-cell-bg-active-color: #ececec;
 
 .weui-cell {
   position: relative;
@@ -16,12 +19,23 @@
     text-decoration: none;
   }
 
+  &.clickable {
+    &:active {
+      background-color: @weui-cell-bg-active-color;
+    }
+  }
+
   .weui-cell-hd {
     margin-right: .28rem;
 
     img {
       width: .64rem;
       margin-right: .28rem;
+    }
+
+    .weui-cell-label {
+      font-size: .4rem;
+      color: @weui-cell-label-color;
     }
   }
 
@@ -31,6 +45,11 @@
 
     p {
       font-size: .4rem;
+    }
+
+    .weui-cell-content {
+      font-size: .4rem;
+      color: @weui-cell-content-color;
     }
   }
 
@@ -52,7 +71,7 @@
 
     &:after {
       content: " ";
-      display: inline-block;
+      display: none;
       height: .25rem;
       width: .25rem;
       border-width: .05rem .05rem 0 0;
@@ -77,6 +96,48 @@
       right: 0;
       height: 1px;
       box-sizing: border-box;
+    }
+  }
+
+  &.header-weui-cell {
+    .weui-cell-hd {
+      img {
+        width: 1.666667rem !important;
+        height: 1.666667rem !important;
+        border-radius: .1rem !important;
+        margin-right: 0;
+      }
+    }
+
+    .weui-cell-bd {
+      h4 {
+        font-size: .45rem;
+        margin-bottom: .14rem;
+      }
+
+      p {
+        font-size: .38rem;
+
+        + p {
+          margin-top: .07rem;
+        }
+      }
+    }
+
+    .weui-cell-ft {
+      padding-right: .1rem;
+
+      img {
+        margin-right: .28rem;
+      }
+    }
+  }
+
+  &.with-arrow {
+    .weui-cell-ft {
+      &:after {
+        display: inline-block;
+      }
     }
   }
 }

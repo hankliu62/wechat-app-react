@@ -1,0 +1,43 @@
+@import '../../../../less/variables';
+@import '../../less/variables';
+
+@weui-header-bg-color: linear-gradient(180deg, #303036, #3c3b40);
+@weui-header-title-color: @white;
+
+.weui-header {
+  display: flex;
+  background: @weui-header-bg-color;
+  color: @weui-header-title-color;
+  padding: .3rem 0;
+  line-height: .45rem * 1.2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: @header-z-index;
+
+  .weui-header-title {
+    width: 50%;
+    text-align: center;
+    font-size: .45rem;
+  }
+
+  .weui-header-back,
+  .weui-header-operation {
+    flex: 1;
+
+    .icon-header-operation {
+      font-size: .5rem;
+    }
+  }
+
+  .weui-header-back {
+    text-align: left;
+    margin-left: .26rem;
+  }
+
+  .weui-header-operation {
+    text-align: right;
+    margin-right: .26rem;
+  }
+}

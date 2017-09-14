@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import WcHeader from '../../components/WcHeader/WcHeader';
+import WeuiHeader from '../../components/WeuiHeader/WeuiHeader';
 import WeuiCells from '../../components/WeuiCells/WeuiCells';
 import NewMsg from '../../components/NewMsg/NewMsg';
 
@@ -16,8 +16,8 @@ const NewMomentsAvatar = props => (
 
 const Explore = (props) => {
   const headerCells = [{
-    className: 'weui-cell-access header-weui-cell',
-    image: require('./images/moments.png'),
+    className: 'with-arrow',
+    left: (<img src={require('./images/moments.png')} />),
     link: '/wechat/explore/moments',
     center: (<p>朋友圈</p>),
     right: (<NewMomentsAvatar avatar={props.avatar || require('./images/avatar.png')} />)
@@ -25,12 +25,14 @@ const Explore = (props) => {
 
   const findCells = [
     {
-      image: require('./images/scan.png'),
+      className: 'with-arrow',
+      left: (<img src={require('./images/scan.png')} />),
       link: '/wechat/explore/scan',
       center: (<p>扫一扫</p>)
     },
     {
-      image: require('./images/shake.png'),
+      className: 'with-arrow',
+      left: (<img src={require('./images/shake.png')} />),
       link: '/wechat/explore/shake',
       center: (<p>摇一摇</p>)
     }
@@ -38,7 +40,8 @@ const Explore = (props) => {
 
   const bottleCells = [
     {
-      image: require('./images/bottle.png'),
+      className: 'with-arrow',
+      left: (<img src={require('./images/bottle.png')} />),
       link: '/wechat/explore/bottle',
       center: (<p>漂流瓶</p>)
     }
@@ -46,12 +49,14 @@ const Explore = (props) => {
 
   const amusementCells = [
     {
-      image: require('./images/shopping.png'),
+      className: 'with-arrow',
+      left: (<img src={require('./images/shopping.png')} />),
       link: '/wechat/explore/shopping',
       center: (<p>购物</p>)
     },
     {
-      image: require('./images/game.png'),
+      className: 'with-arrow',
+      left: (<img src={require('./images/game.png')} />),
       link: '/wechat/explore/game',
       center: (<p>游戏</p>)
     }
@@ -59,7 +64,7 @@ const Explore = (props) => {
 
   return (
     <div className="explore-wrapper">
-      <WcHeader title="发现" />
+      <WeuiHeader title="发现" />
 
       <WeuiCells cells={headerCells} />
 
