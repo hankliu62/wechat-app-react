@@ -1,0 +1,1 @@
+webpackJsonp([8],{590:function(e,t,a){try{(function(){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var e=function(e){return e&&e.__esModule?e:{default:e}}(a(11));t.default=function(t){return console.log(t,"tags"),e.default.createElement("div",{className:"contact-tags-wrapper"},"Contact Tags")}}).call(this)}finally{}}});
