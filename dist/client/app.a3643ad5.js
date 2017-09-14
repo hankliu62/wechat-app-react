@@ -3381,7 +3381,7 @@ module.exports = (__webpack_require__(1))(84);
 /* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -3447,7 +3447,7 @@ var BundleWrappingRoute = function BundleWrappingRoute(_ref) {
 
 exports.default = BundleWrappingRoute;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "BundleWrappingRoute.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "BundleWrappingRoute.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 126 */
@@ -3487,7 +3487,7 @@ exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.d
 /* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -3500,7 +3500,7 @@ var LOGIN_MIAN_SET = exports.LOGIN_MIAN_SET = 'LOGIN_MIAN_SET';
 
 var abc = exports.abc = 1;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "ActionTypes.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "ActionTypes.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 130 */
@@ -3519,7 +3519,7 @@ module.exports = (__webpack_require__(1))(312);
 /* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(process) {/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* WEBPACK VAR INJECTION */(function(process) {/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -3569,7 +3569,7 @@ var store = (0, _redux.compose)(_redux.applyMiddleware.apply(undefined, middlewa
 
 exports.default = store;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "configureStore.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "configureStore.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(205)))
 
 /***/ }),
@@ -4511,7 +4511,7 @@ module.exports = Math.scale || function scale(x, inLow, inHigh, outLow, outHigh)
 /* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -4544,13 +4544,13 @@ var historyInstance = function () {
 
 exports.default = historyInstance;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "History.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "History.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -4734,7 +4734,7 @@ var client = function (w) {
 
 exports.default = client;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "DeviceUtils.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "DeviceUtils.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 170 */
@@ -5424,7 +5424,13 @@ module.exports = (__webpack_require__(1))(367);
 /* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+module.exports = { "default": __webpack_require__(420), __esModule: true };
+
+/***/ }),
+/* 202 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -5435,19 +5441,13 @@ Object.defineProperty(exports, "__esModule", {
 var WECHAT_CONTACT_MAIN_SET = exports.WECHAT_CONTACT_MAIN_SET = 'WECHAT_CONTACT_MAIN_SET';
 var WECHAT_CONTACT_GET_CONTACTER = exports.WECHAT_CONTACT_GET_CONTACTER = 'WECHAT_CONTACT_GET_CONTACTER';
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "ActionTypes.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
-/* 202 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(420), __esModule: true };
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "ActionTypes.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -5460,7 +5460,7 @@ var MALE = exports.MALE = 'male';
 // header height, unit: rem;
 var HEADER_HEIGHT = exports.HEADER_HEIGHT = 1.2;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Constants.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Constants.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 204 */
@@ -5484,7 +5484,7 @@ module.exports = (__webpack_require__(1))(362);
 /* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -5510,13 +5510,13 @@ var NewMsg = function NewMsg(props) {
 
 exports.default = NewMsg;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "NewMsg.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "NewMsg.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -5560,7 +5560,7 @@ var routerHistory = (0, _reactRouterRedux.syncHistoryWithStore)(_History2.defaul
   )
 ), document.getElementById('root'));
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 209 */
@@ -10162,7 +10162,7 @@ module.exports = (__webpack_require__(1))(299);
 /* 415 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -10190,13 +10190,13 @@ exports.default = {
   wechat: _index2.default
 };
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 416 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -10228,13 +10228,13 @@ exports.default = function () {
   }
 };
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "homepage.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "homepage.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 417 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -10266,13 +10266,13 @@ exports.default = function () {
   }
 };
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "login.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "login.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 418 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -10292,13 +10292,13 @@ exports.default = (0, _redux.combineReducers)({
   contact: _contact2.default
 });
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 419 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -10310,7 +10310,7 @@ var _toConsumableArray2 = __webpack_require__(206);
 
 var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
-var _getIterator2 = __webpack_require__(202);
+var _getIterator2 = __webpack_require__(201);
 
 var _getIterator3 = _interopRequireDefault(_getIterator2);
 
@@ -10330,7 +10330,7 @@ var _groupBy = __webpack_require__(430);
 
 var _groupBy2 = _interopRequireDefault(_groupBy);
 
-var _ActionTypes = __webpack_require__(201);
+var _ActionTypes = __webpack_require__(202);
 
 var _Constants = __webpack_require__(203);
 
@@ -10440,7 +10440,7 @@ exports.default = function () {
   }
 };
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "contact.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "contact.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 420 */
@@ -15240,7 +15240,7 @@ module.exports = [{"wxid":"wxid_hankliu","headerUrl":"https://sinacloud.net/vue-
 /* 522 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -15274,13 +15274,13 @@ exports.default = function () {
   );
 };
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 523 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -15361,13 +15361,13 @@ var AppRouter = function AppRouter() {
 
 exports.default = AppRouter;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "routes.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "routes.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 524 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -15456,7 +15456,7 @@ var App = (_temp = _class = function (_Component) {
   children: null }, _temp);
 exports.default = App;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "App.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "App.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 525 */
@@ -16038,7 +16038,7 @@ $export($export.S, 'Object', {create: __webpack_require__(196)});
 /* 561 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -16116,13 +16116,13 @@ var Container = (_temp = _class = function (_Component) {
 }, _temp);
 exports.default = Container;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Container.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Container.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 562 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -16224,13 +16224,13 @@ var Language = function () {
 
 exports.default = Language;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Language.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Language.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 563 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -16302,7 +16302,7 @@ var Session = function () {
 
 exports.default = Session;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Session.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Session.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 564 */
@@ -16495,7 +16495,7 @@ module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
 /* 567 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -16513,7 +16513,7 @@ var LANGUAGE_STORAGE_KEY = exports.LANGUAGE_STORAGE_KEY = 'language';
 
 exports.default = LANGUAGE;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Language.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Language.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 568 */
@@ -16570,7 +16570,7 @@ exports.default = function (obj, keys) {
 /* 572 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -16672,13 +16672,13 @@ var Bundle = function (_Component) {
 
 exports.default = Bundle;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Bundle.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Bundle.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 573 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -16710,13 +16710,13 @@ var WechatContainer = function WechatContainer(props) {
 
 exports.default = WechatContainer;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Index.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Index.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 574 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -16738,13 +16738,13 @@ exports.default = function (props) {
   return _react2.default.createElement(_routes2.default, props);
 };
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 575 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -16808,13 +16808,13 @@ var WechatRouter = function WechatRouter(props) {
 
 exports.default = WechatRouter;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "routes.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "routes.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 576 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -16865,13 +16865,13 @@ var WechatContactRouter = function WechatContactRouter(props) {
 
 exports.default = WechatContactRouter;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "contact.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "contact.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 577 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -16897,7 +16897,7 @@ var Container = function Container(props) {
 
 exports.default = Container;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Container.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Container.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 578 */
@@ -16915,7 +16915,7 @@ exports.default = Container;
 /* 580 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -16952,13 +16952,13 @@ var FooterContainer = function FooterContainer(props) {
 
 exports.default = FooterContainer;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "FooterContainer.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "FooterContainer.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 581 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -17040,7 +17040,7 @@ var Container = function (_Component) {
 
 exports.default = Container;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Container.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Container.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 582 */
@@ -17052,7 +17052,7 @@ exports.default = Container;
 /* 583 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
@@ -17126,7 +17126,7 @@ var WeuiFooter = function WeuiFooter(props) {
 
 exports.default = WeuiFooter;
 
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/admin/WorkSpace/github/personal/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "WeuiFooter.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "WeuiFooter.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
 /* 584 */

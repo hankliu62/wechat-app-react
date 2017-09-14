@@ -326,6 +326,8 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
 }
 .weui-search-bar .search-form {
   position: relative;
@@ -403,6 +405,12 @@
 .contact-wrapper {
   position: relative;
 }
+.contact-wrapper .contact-main-wrapper {
+  width: 100%;
+  -webkit-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear;
+}
 .contact-wrapper.sub-wrapper .contact-main-wrapper {
   display: none;
 }
@@ -449,7 +457,16 @@
 }
 .contact-wrapper .anchor-bar .letter-anchor {
   font-size: .32rem;
-  line-height: 1.2;
+  line-height: .384rem;
+  text-align: center;
+  width: .384rem;
+  height: .384rem;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.contact-wrapper .anchor-bar .letter-anchor.sticky {
+  color: #fff;
+  background-color: #27ae60;
 }
 .wechat-container {
   position: relative;
