@@ -1,3 +1,63 @@
-.abc {
-  width: 100%;
+@header-weui-cell-content-color: #888;
+@weui-cell-content-tags-color: #57bf02;
+@weui-cell-content-telephone-color: #534fad;
+
+.contact-detail-wrapper {
+  .weui-cells {
+    margin-top: .56rem;
+
+    .weui-cell {
+      &.header-weui-cell {
+        p {
+          color: @header-weui-cell-content-color;
+        }
+      }
+
+      .weui-cell-bd {
+        .weui-cell-content {
+          &.content-telephone {
+            color: @weui-cell-content-telephone-color;
+          }
+
+          &.content-desc {
+            .content-desc-pic {
+              width: .55rem;
+              height: .42rem;
+              vertical-align: top;
+
+              + .content-desc-title {
+                margin-left: .1rem;
+              }
+            }
+          }
+
+          &.content-tags {
+            color: @weui-cell-content-tags-color;
+          }
+
+          &.content-albums {
+            .content-album {
+              width: 1.4rem;
+              height: 1.4rem;
+
+              + .content-album {
+                margin-left: .28rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .btn-groups {
+    margin-top: .56rem;
+    padding: 0 .42rem;
+
+    .weui-btn {
+      + .weui-btn {
+        margin-top: .42rem;
+      }
+    }
+  }
 }

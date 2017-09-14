@@ -1,26 +1,30 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connectAdvanced } from 'react-redux';
-import { push } from 'react-router-redux';
 import { bindActionCreators } from 'redux';
+import { push } from 'react-router-redux';
 import { Sticky, StickyContainer } from 'react-sticky';
+// import ReactMixin from 'react-mixin';
 import classNames from 'classnames';
 
-import WcHeader from '../../components/WcHeader/WcHeader';
-import WeuiCells from '../../components/WeuiCells/WeuiCells';
-import * as contactActions from '../../actions/contact';
 import ObjectUtils from '../../../../utils/ObjectUtils';
 import ElementUtil from '../../../../utils/ElementUtil';
+import WeuiHeader from '../../components/WeuiHeader/WeuiHeader';
+import WeuiCells from '../../components/WeuiCells/WeuiCells';
+import WeuiSearchBar from '../../components/WeuiSearchBar/WeuiSearchBar';
+import * as contactActions from '../../actions/contact';
+import CheckRoute from '../../decorators/CheckRoute';
+import { HEADER_HEIGHT } from '../../constants/Constants';
 
 import './Contact.less';
 
+@CheckRoute
 class Contact extends Component {
   static propTypes = {
     contacts: PropTypes.object.isRequired,
     letters: PropTypes.array.isRequired,
     total: PropTypes.number.isRequired,
-    setState: PropTypes.func.isRequired,
-    pushState: PropTypes.func.isRequired
+    setState: PropTypes.func.isRequired
   }
 
   constructor(props) {
@@ -40,30 +44,30 @@ class Contact extends Component {
   }
 
   onClickFriend = friend => () => {
-    this.props.setState({ selectorFriend: friend });
-    this.props.pushState('/wechat/contact/detail');
+    this.props.setState({ selectedContacter: friend });
+    this.props.history.push(`/wechat/contact/detail/${friend.wxid}`);
   }
 
   onClickAddFriend = () => {
-    this.props.pushState('/wechat/contact/add-friends');
+    this.props.history.push('/wechat/contact/add-friends');
   }
 
   renderContactFriendsGroup = (letter, index) => {
     const { contacts } = this.props;
 
     const friends = contacts[letter] ? contacts[letter].map(friend => ({
-      image: friend.headerUrl,
+      left: (<img src={friend.headerUrl} />),
       center: (<p>{friend.remark || friend.nickname}</p>),
       onClick: this.onClickFriend(friend)
     })) : [];
 
     return (
       <StickyContainer className="contact-friends-group" key={index}>
-        <Sticky topOffset={-((1.76 * this.state.fontSize) - 2)}>
+        <Sticky topOffset={-(((HEADER_HEIGHT + 0.56) * this.state.fontSize) - 2)}>
           {
             ({ isSticky, style }) => {
               return (
-                <p className={classNames('contact-alpha', { sticky: isSticky })} style={{ ...style, top: (1.2 * this.state.fontSize) - 2 }}>{letter}</p>
+                <p className={classNames('contact-alpha', { sticky: isSticky })} style={{ ...style, top: (HEADER_HEIGHT * this.state.fontSize) - 2 }}>{letter}</p>
               );
             }
           }
@@ -89,43 +93,47 @@ class Contact extends Component {
 
     const headerCells = [
       {
-        image: require('./images/contact-friend-notify.png'),
+        left: (<img src={require('./images/contact-friend-notify.png')} />),
         link: '/wechat/contact/new-friends',
         center: (<p>新的朋友</p>)
       },
       {
-        image: require('./images/contact-addgroup.png'),
+        left: (<img src={require('./images/contact-addgroup.png')} />),
         link: '/wechat/contact/group-chats',
         center: (<p>群聊</p>)
       },
       {
-        image: require('./images/contact-tag.png'),
+        left: (<img src={require('./images/contact-tag.png')} />),
         link: '/wechat/contact/tags',
         center: (<p>标签</p>)
       },
       {
-        image: require('./images/contact-offical.png'),
+        left: (<img src={require('./images/contact-offical.png')} />),
         link: '/wechat/contact/official-accounts',
         center: (<p>公众号</p>)
       }
     ];
 
     return (
-      <div className="contact-wrapper">
-        <WcHeader title="通讯录">
-          <i className="iconfont icon-tips-add-friend" onClick={this.onClickAddFriend} />
-        </WcHeader>
+      <div className={classNames('contact-wrapper', { 'sub-wrapper without-footer-wrapper': this.checkIsSubRoute.call(this) })}>
+        <div className="contact-main-wrapper">
+          <WeuiHeader title="通讯录">
+            <i className="icon-header-operation iconfont icon-tips-add-friend" onClick={this.onClickAddFriend} />
+          </WeuiHeader>
 
-        <WeuiCells cells={headerCells} />
+          <WeuiSearchBar />
 
-        <ul className="contact-frineds">
-          {
-            letters.map((letter, index) => this.renderContactFriendsGroup(letter, index))
-          }
-        </ul>
-        <p className="contact-frineds-statistics">{`${total}位联系人`}</p>
+          <WeuiCells cells={headerCells} />
 
-        {this.renderLettersAnchorBar()}
+          <ul className="contact-frineds">
+            {
+              letters.map((letter, index) => this.renderContactFriendsGroup(letter, index))
+            }
+          </ul>
+          <p className="contact-frineds-statistics">{`${total}位联系人`}</p>
+
+          {this.renderLettersAnchorBar()}
+        </div>
 
         { children && children }
       </div>
@@ -138,7 +146,7 @@ const selectorFactory = (dispatch) => {
 
   const contactDispatchActions = bindActionCreators(contactActions, dispatch);
   return (nextState, nextOwnProps) => {
-    const { selectorFriend, contactLetters: letters, contactGroups, contacts = [] } = nextState.wechat.contact;
+    const { selectedContacter, contactLetters: letters, contactGroups, contacts = [] } = nextState.wechat.contact;
     const total = contacts.length;
     const pushState = bindActionCreators(push, dispatch);
     const nextResult = {
@@ -147,7 +155,7 @@ const selectorFactory = (dispatch) => {
       contactGroups,
       letters,
       total,
-      selectorFriend,
+      selectedContacter,
       ...contactDispatchActions,
       pushState
     };
