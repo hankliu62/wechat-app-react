@@ -4,7 +4,7 @@ import './Container.less';
 
 const Container = (props) => {
   return (
-    <div className="contact-sub-wrapper">
+    <div className="sub-wrapper-contact">
       {props.children && props.children}
     </div>
   );

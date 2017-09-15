@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import NewMsg from '../NewMsg/NewMsg';
+import WeuiBadge from '../WeuiBadge/WeuiBadge';
 
 import './WeuiFooter.less';
 
@@ -36,8 +36,8 @@ const WeuiFooter = props => (
           <NavLink key={index} className="nav" activeClassName="selected" to={link.url}>
             <dl>
               <dt className={`iconfont icon-${link.icon}`}>
-                { index === 0 && (props.newMsgCount || 12) ? (<NewMsg count={props.newMsgCount || 12} type="count" />) : '' }
-                { index === 2 && props.newExplore ? (<NewMsg type="dot" />) : '' }
+                { index === 0 && (props.badgeCount || 12) ? (<WeuiBadge count={props.WeuiBadgeCount || 12} type="count" />) : '' }
+                { index === 2 && props.newExplore ? (<WeuiBadge type="dot" />) : '' }
               </dt>
               <dd className="title">{link.title}</dd>
             </dl>

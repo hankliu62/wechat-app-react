@@ -6,6 +6,7 @@ import { push } from 'react-router-redux';
 import { Sticky, StickyContainer } from 'react-sticky';
 // import ReactMixin from 'react-mixin';
 import classNames from 'classnames';
+import { throttle } from 'lodash';
 
 import ObjectUtils from '../../../../utils/ObjectUtils';
 import ElementUtil from '../../../../utils/ElementUtil';
@@ -34,12 +35,24 @@ class Contact extends Component {
       fontSize: 40,
       stickyLetter: ''
     };
+
+    this.checkIsSubRoute = this.checkIsSubRoute.bind(this);
   }
 
   componentDidMount() {
     this.props.setState({ content: 'Modified Redux Content Data' });
     const fontSize = (ElementUtil.getElementStyle(document.documentElement, 'font-size') || '16px').replace('px', '');
     this.setState({ fontSize });
+
+    this.throttleRedrawStickyAnchorLetter = throttle(this.redrawStickyAnchorLetter, 16.7);
+    window.addEventListener('scroll', this.throttleRedrawStickyAnchorLetter, false);
+  }
+
+  componentWillUnmount() {
+    if (this.throttleRedrawStickyAnchorLetter) {
+      window.removeEventListener('scroll', this.throttleRedrawStickyAnchorLetter, false);
+      this.throttleRedrawStickyAnchorLetter = false;
+    }
   }
 
   onClickFriend = friend => () => {
@@ -59,15 +72,40 @@ class Contact extends Component {
     e.stopPropagation();
   }
 
+  redrawStickyAnchorLetter = () => {
+    if (this.checkIsSubRoute()) {
+      return;
+    }
+
+    const stickyAlphas = document.getElementsByClassName('sticky');
+    const length = stickyAlphas.length;
+    let stickyAlphaLetter;
+    if (stickyAlphas.length) {
+      const stickyAlpha = stickyAlphas[length - 1];
+      stickyAlphaLetter = stickyAlpha.getAttribute('data-alpha');
+    }
+
+    const anchors = document.getElementsByClassName('letter-anchor');
+    for (const anchor of anchors) {
+      if (ElementUtil.hasClassName(anchor, 'anchor-sticky') && anchor.innerText !== stickyAlphaLetter) {
+        ElementUtil.removeClassName(anchor, 'anchor-sticky');
+      }
+
+      if (anchor.innerText === stickyAlphaLetter) {
+        ElementUtil.addClassName(anchor, 'anchor-sticky');
+      }
+    }
+  }
+
   triggerStickyAnchorLetter = (letter) => {
     const anchors = document.getElementsByClassName('letter-anchor');
     for (const anchor of anchors) {
-      if (ElementUtil.hasClassName(anchor, 'sticky') && anchor.innerText !== letter) {
-        ElementUtil.removeClassName(anchor, 'sticky');
+      if (ElementUtil.hasClassName(anchor, 'anchor-sticky') && anchor.innerText !== letter) {
+        ElementUtil.removeClassName(anchor, 'anchor-sticky');
       }
 
       if (anchor.innerText === letter) {
-        ElementUtil.addClassName(anchor, 'sticky');
+        ElementUtil.addClassName(anchor, 'anchor-sticky');
       }
     }
   }
@@ -94,7 +132,8 @@ class Contact extends Component {
               return (
                 <p
                   id={`alpha${letter}`}
-                  className={classNames('contact-alpha', { sticky: isSticky, })}
+                  data-alpha={letter}
+                  className={classNames('contact-alpha', { sticky: isSticky })}
                   style={{ ...style, top: (HEADER_HEIGHT * this.state.fontSize) - 2 }}
                 >{letter}</p>
               );
@@ -150,7 +189,7 @@ class Contact extends Component {
     ];
 
     return (
-      <div className={classNames('contact-wrapper', { 'sub-wrapper without-footer-wrapper': this.checkIsSubRoute.call(this) })}>
+      <div className={classNames('contact-wrapper', { 'with-sub-wrapper without-footer-wrapper': this.checkIsSubRoute() })}>
         <div className="contact-main-wrapper">
           <WeuiHeader title="通讯录">
             <i className="icon-header-operation iconfont icon-tips-add-friend" onClick={this.onClickAddFriend} />

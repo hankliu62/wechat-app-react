@@ -3,14 +3,14 @@ import classNames from 'classnames';
 
 import WeuiHeader from '../../components/WeuiHeader/WeuiHeader';
 import WeuiCells from '../../components/WeuiCells/WeuiCells';
-import NewMsg from '../../components/NewMsg/NewMsg';
+import WeuiBadge from '../../components/WeuiBadge/WeuiBadge';
 
 import './Explore.less';
 
-const NewMomentsAvatar = props => (
+const WeuiBadgeMomentsAvatar = props => (
   <div className={classNames('new-moments', { hidden: !props.avatar })}>
     <img src={props.avatar} />
-    <NewMsg type="dot" />
+    <WeuiBadge type="dot" />
   </div>
 );
 
@@ -20,7 +20,7 @@ const Explore = (props) => {
     left: (<img src={require('./images/moments.png')} />),
     link: '/wechat/explore/moments',
     center: (<p>朋友圈</p>),
-    right: (<NewMomentsAvatar avatar={props.avatar || require('./images/avatar.png')} />)
+    right: (<WeuiBadgeMomentsAvatar avatar={props.avatar || require('./images/avatar.png')} />)
   }];
 
   const findCells = [
