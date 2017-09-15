@@ -377,8 +377,148 @@
 .weui-search-bar.focusing .btn-cancel {
   display: inline-block;
 }
-.weui-chat-room {
+.weui-chat-avatar {
   width: 100%;
+  height: 100%;
+  padding: .1rem;
+}
+.weui-chat-avatar .chat-avatar-group {
+  font-size: 0;
+  text-align: center;
+}
+.weui-chat-avatar .chat-avatar-group .chat-avatar {
+  display: inline-block;
+}
+.weui-chat-avatar .chat-avatar-group .chat-avatar + .chat-avatar {
+  margin-left: .05rem;
+}
+.weui-chat-avatar .chat-avatar-group + .chat-avatar-group {
+  margin-top: .05rem;
+}
+.weui-chat-avatar.weui-chat-avatar-1 {
+  padding: 0;
+}
+.weui-chat-avatar.weui-chat-avatar-1 .chat-avatar-group {
+  width: 100%;
+  height: 100%;
+}
+.weui-chat-avatar.weui-chat-avatar-1 .chat-avatar-group .chat-avatar {
+  height: 100%;
+  margin: 0 auto;
+}
+.weui-chat-avatar.weui-chat-avatar-3 .chat-avatar-group .chat-avatar,
+.weui-chat-avatar.weui-chat-avatar-4 .chat-avatar-group .chat-avatar {
+  height: .475rem;
+  width: .475rem;
+}
+.weui-chat-avatar.weui-chat-avatar-5 .chat-avatar-group .chat-avatar,
+.weui-chat-avatar.weui-chat-avatar-6 .chat-avatar-group .chat-avatar,
+.weui-chat-avatar.weui-chat-avatar-7 .chat-avatar-group .chat-avatar,
+.weui-chat-avatar.weui-chat-avatar-8 .chat-avatar-group .chat-avatar,
+.weui-chat-avatar.weui-chat-avatar-9 .chat-avatar-group .chat-avatar {
+  height: .3rem;
+  width: .3rem;
+}
+.weui-chat-avatar.weui-chat-avatar-5 .chat-avatar-group:first-child,
+.weui-chat-avatar.weui-chat-avatar-6 .chat-avatar-group:first-child {
+  margin-top: .175rem;
+}
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.weui-chat-room {
+  position: relative;
+  padding: .2rem;
+  color: #000;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+}
+.weui-chat-room:hover,
+.weui-chat-room:active {
+  text-decoration: none;
+}
+.weui-chat-room.clickable:active {
+  background-color: #ececec;
+}
+.weui-chat-room .weui-chat-room-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.weui-chat-room .weui-chat-room-info .chat-info-avatar {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #f1f0f6;
+  margin-right: .25rem;
+  -webkit-border-radius: .125rem;
+  border-radius: .125rem;
+  overflow: hidden;
+}
+.weui-chat-room .weui-chat-room-info .chat-info-content {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.weui-chat-room .weui-chat-room-info .chat-info-content .content-body,
+.weui-chat-room .weui-chat-room-info .chat-info-content .content-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.weui-chat-room .weui-chat-room-info .chat-info-content .content-header .header-title {
+  font-size: .4rem;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: #333;
+}
+.weui-chat-room .weui-chat-room-info .chat-info-content .content-header .header-time {
+  font-size: .3rem;
+  color: #bbb;
+}
+.weui-chat-room .weui-chat-room-info .chat-info-content .content-header + .content-body {
+  margin-top: .25rem;
+}
+.weui-chat-room .weui-chat-room-info .chat-info-content .content-body .body-message {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: .35rem;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: #999;
+}
+.weui-chat-room .weui-chat-room-info .chat-info-content .content-body .body-mute {
+  font-size: .4rem;
+  color: #ddd;
+}
+.weui-chat-room + .weui-chat-room:before {
+  content: " ";
+  position: absolute;
+  border-top: 1px solid #d9d9d9;
+  left: .42rem;
+  top: 0;
+  right: 0;
+  height: 1px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .weui-chat-rooms {
   border-top: 1px solid #d9d9d9;
@@ -387,6 +527,9 @@
 }
 .chat-wrapper {
   height: 100%;
+}
+.chat-wrapper .chat-main-wrapper {
+  padding-bottom: 1.45rem;
 }
 .weui-badge {
   background-color: #f43531;
