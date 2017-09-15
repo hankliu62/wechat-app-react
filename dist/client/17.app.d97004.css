@@ -20,7 +20,7 @@
 .html-body .cp {
   cursor: pointer;
 }
-.contact-sub-wrapper {
+.sub-wrapper-contact {
   background-color: #f1f0f6;
 }
 .weui-header {
@@ -53,6 +53,10 @@
 .weui-header .weui-header-back .icon-header-operation,
 .weui-header .weui-header-operation .icon-header-operation {
   font-size: .5rem;
+}
+.weui-header .weui-header-back .link-header-operation,
+.weui-header .weui-header-operation .link-header-operation {
+  font-size: .4rem;
 }
 .weui-header .weui-header-back {
   text-align: left;
@@ -269,52 +273,23 @@
 .contact-detail-wrapper .btn-groups .weui-btn + .weui-btn {
   margin-top: .42rem;
 }
-.chat-wrapper {
-  height: 100%;
+.fade-enter {
+  opacity: .01;
 }
-.new-msg {
-  background-color: #f43531;
-  color: #fff;
-  position: absolute;
-  top: 0;
-  right: 0;
-  -webkit-transform: translate(50%, -50%);
-  -ms-transform: translate(50%, -50%);
-  transform: translate(50%, -50%);
-  font-family: PingFangSC-Regular, 'PingFang SC', 'Hiragino Sans GB', Arial, 'Microsoft YaHei', Helvetica;
-  font-style: normal;
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  -webkit-transition: opacity 500ms ease-in;
+  -o-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;
 }
-.new-msg.new-msg-dot {
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  width: .225rem;
-  height: .225rem;
+.fade-exit {
+  opacity: 1;
 }
-.new-msg.new-msg-count {
-  -webkit-border-radius: .25rem;
-  border-radius: .25rem;
-  font-size: .375rem;
-  height: .5rem;
-  padding: 0 .14rem;
-  line-height: .5rem;
-  text-align: center;
-}
-.explore-wrapper .weui-cells {
-  margin-top: 4%;
-}
-.explore-wrapper .weui-cells .weui-cell .weui-cell-ft .new-moments {
-  position: relative;
-  display: inline-block;
-  margin-right: .28rem;
-}
-.explore-wrapper .weui-cells .weui-cell .weui-cell-ft .new-moments img {
-  margin-right: 0;
-}
-.self-wrapper {
-  height: 100%;
-}
-.self-wrapper .weui-cells {
-  margin-top: .56rem;
+.fade-exit.fade-exit-active {
+  opacity: .01;
+  -webkit-transition: opacity 300ms ease-in;
+  -o-transition: opacity 300ms ease-in;
+  transition: opacity 300ms ease-in;
 }
 .weui-search-bar {
   padding: .2rem .25rem;
@@ -402,16 +377,74 @@
 .weui-search-bar.focusing .btn-cancel {
   display: inline-block;
 }
+.weui-chat-room {
+  width: 100%;
+}
+.weui-chat-rooms {
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  background-color: #fff;
+}
+.chat-wrapper {
+  height: 100%;
+}
+.weui-badge {
+  background-color: #f43531;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+  -ms-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+  font-family: PingFangSC-Regular, 'PingFang SC', 'Hiragino Sans GB', Arial, 'Microsoft YaHei', Helvetica;
+  font-style: normal;
+}
+.weui-badge.weui-badge-dot {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  width: .225rem;
+  height: .225rem;
+}
+.weui-badge.weui-badge-count {
+  -webkit-border-radius: .25rem;
+  border-radius: .25rem;
+  font-size: .375rem;
+  height: .5rem;
+  padding: 0 .14rem;
+  line-height: .5rem;
+  text-align: center;
+}
+.explore-wrapper .weui-cells {
+  margin-top: 4%;
+}
+.explore-wrapper .weui-cells .weui-cell .weui-cell-ft .new-moments {
+  position: relative;
+  display: inline-block;
+  margin-right: .28rem;
+}
+.explore-wrapper .weui-cells .weui-cell .weui-cell-ft .new-moments img {
+  margin-right: 0;
+}
+.self-wrapper {
+  height: 100%;
+}
+.self-wrapper .weui-cells {
+  margin-top: .56rem;
+}
 .contact-wrapper {
   position: relative;
+  height: 100%;
+  width: 100%;
 }
 .contact-wrapper .contact-main-wrapper {
   width: 100%;
   -webkit-transition: all .3s linear;
   -o-transition: all .3s linear;
   transition: all .3s linear;
+  padding-bottom: 1.45rem;
 }
-.contact-wrapper.sub-wrapper .contact-main-wrapper {
+.contact-wrapper.with-sub-wrapper .contact-main-wrapper {
   display: none;
 }
 .contact-wrapper .weui-cells {
@@ -464,13 +497,13 @@
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-.contact-wrapper .anchor-bar .letter-anchor.sticky {
+.contact-wrapper .anchor-bar .letter-anchor.anchor-sticky {
   color: #fff;
   background-color: #27ae60;
 }
 .wechat-container {
   position: relative;
-  min-height: 100%;
+  height: 100%;
   background-color: #f1f0f6;
   padding-bottom: 1.45rem;
   padding-top: 1.2rem;
