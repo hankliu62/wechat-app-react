@@ -1,3 +1,99 @@
+@import '../../../../less/variables';
+@import '../../../../less/mixins/text-ellipsis';
+@import '../../less/variables';
+
+@arrow-color: #c8c8cd;
+@weui-chat-room-bg-active-color: #ececec;
+@weui-chat-room-header-title-color: #333;
+@weui-chat-room-header-time-color: #bbb;
+@weui-chat-room-body-message-color: #999;
+@weui-chat-room-body-mute-color: #ddd;
+
 .weui-chat-room {
+  position: relative;
+  padding: .2rem;
+  color: @black;
+  text-decoration: none;
   width: 100%;
+  display: block;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+
+  &.clickable {
+    &:active {
+      background-color: @weui-chat-room-bg-active-color;
+    }
+  }
+
+  .weui-chat-room-info {
+    display: flex;
+    align-items: center;
+
+    .chat-info-avatar {
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: @common-bg-color;
+      margin-right: .25rem;
+      border-radius: .125rem;
+      overflow: hidden;
+    }
+
+    .chat-info-content {
+      flex: 1;
+
+      .content-body,
+      .content-header {
+        display: flex;
+        align-items: center;
+      }
+
+      .content-header {
+        .header-title {
+          font-size: .4rem;
+          flex: 1;
+          color: @weui-chat-room-header-title-color;
+        }
+
+        .header-time {
+          font-size: .3rem;
+          color: @weui-chat-room-header-time-color;
+        }
+
+        + .content-body {
+          margin-top: .25rem;
+        }
+      }
+
+      .content-body {
+        .body-message {
+          .text-ellipsis();
+
+          font-size: .35rem;
+          flex: 1;
+          color: @weui-chat-room-body-message-color;
+        }
+
+        .body-mute {
+          font-size: .4rem;
+          color: @weui-chat-room-body-mute-color;
+        }
+      }
+    }
+  }
+
+  + .weui-chat-room {
+    &:before {
+      content: " ";
+      position: absolute;
+      border-top: 1px solid @common-border-color;
+      left: .42rem;
+      top: 0;
+      right: 0;
+      height: 1px;
+      box-sizing: border-box;
+    }
+  }
 }

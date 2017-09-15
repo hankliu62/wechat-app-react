@@ -1,5 +1,8 @@
 import React from 'react';
+import classNames from 'classnames';
 import { chunk } from 'lodash';
+
+import './WeuiChatAvatar.less';
 
 const WeuiChatAvatar = (props) => {
   const images = (props.images || []).slice(0, 9);
@@ -10,14 +13,16 @@ const WeuiChatAvatar = (props) => {
   imagesGroups.reverse();
 
   return (
-    <div className="weui-chat-avatar">
-      {imagesGroups.map((groupImages, index) => {
-        return (
-          <div className="chat-avatar-group" key={`avatar-group$-${index}`}>
-            { groupImages.map((image, innerIndex) => (<img src={image} key={`image${innerIndex}`} />))}
-          </div>
-        );
-      })}
+    <div className={classNames('weui-chat-avatar', `weui-chat-avatar-${length}`)}>
+      {
+        imagesGroups.map((groupImages, index) => {
+          return (
+            <div className="chat-avatar-group" key={`avatar-group$-${index}`}>
+              { groupImages.map((image, innerIndex) => (<img className={classNames('chat-avatar', `chat-avatar-${length}`)} src={image} key={`image${innerIndex}`} />))}
+            </div>
+          );
+        })
+      }
     </div>
   );
 };

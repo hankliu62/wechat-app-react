@@ -21,7 +21,7 @@ class WeuiChatRoom extends Component {
   }
 
   renderAvatar = () => {
-    const { type } = this.props;
+    const { type, headerUrl } = this.props;
     const images = [
       'https://sinacloud.net/vue-wechat/images/headers/baiqian.jpg',
       'https://sinacloud.net/vue-wechat/images/headers/header01.png',
@@ -39,7 +39,7 @@ class WeuiChatRoom extends Component {
       case CHAT_ROOM_TYPE_GROUP:
         return (<WeuiChatAvatar images={images} />);
       case CHAT_ROOM_TYPE_SINGLE:
-        return (<div>单聊</div>);
+        return (<WeuiChatAvatar images={[headerUrl]} />);
       case CHAT_ROOM_TYPE_OFFICIAL_ACCOUNTS:
         return (<div>公众号</div>);
     }
@@ -58,7 +58,7 @@ class WeuiChatRoom extends Component {
               <div className="header-time">{ this.parseTime(lastTime) }</div>
             </div>
             <div className="content-body">
-              <div className="body-message">{ type === CHAT_ROOM_TYPE_GROUP ? `${lastSpeaker} : ` : '' }{ lastMessage }</div>
+              <div className="body-message">{ type === CHAT_ROOM_TYPE_GROUP ? `${lastSpeaker}: ` : '' }{ lastMessage }</div>
               <div className={classNames('body-mute iconfont icon-mute', { hidden: !mute })} />
             </div>
           </div>

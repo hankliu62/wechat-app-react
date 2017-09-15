@@ -5,7 +5,7 @@ import WeuiHeader from '../../components/WeuiHeader/WeuiHeader';
 import WeuiSearchBar from '../../components/WeuiSearchBar/WeuiSearchBar';
 import WeuiChatRooms from '../../components/WeuiChatRooms/WeuiChatRooms';
 import CheckRoute from '../../decorators/CheckRoute';
-import { CHAT_ROOM_TYPE_GROUP } from '../../constants/Constants';
+import { CHAT_ROOM_TYPE_GROUP, CHAT_ROOM_TYPE_SINGLE } from '../../constants/Constants';
 
 import './Chat.less';
 
@@ -22,6 +22,14 @@ class Chat extends Component {
         lastSpeaker: '夜华',
         mute: true,
         type: CHAT_ROOM_TYPE_GROUP
+      },
+      {
+        link: '/wechat/chat/dialogue',
+        title: '白浅',
+        headerUrl: 'https://sinacloud.net/vue-wechat/images/headers/baiqian.jpg',
+        lastTime: 1505470665990,
+        lastMessage: '你说什么，我刚才在遛狗，没看到。',
+        type: CHAT_ROOM_TYPE_SINGLE
       }
     ];
 

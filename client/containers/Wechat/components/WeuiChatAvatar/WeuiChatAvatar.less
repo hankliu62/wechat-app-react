@@ -1,3 +1,68 @@
 .weui-chat-avatar {
   width: 100%;
+  height: 100%;
+  padding: .1rem;
+
+  .chat-avatar-group {
+    font-size: 0;
+    text-align: center;
+
+    .chat-avatar {
+      display: inline-block;
+
+      + .chat-avatar {
+        margin-left: .05rem;
+      }
+    }
+
+    + .chat-avatar-group {
+      margin-top: .05rem;
+    }
+  }
+
+  &.weui-chat-avatar-1 {
+    padding: 0;
+
+    .chat-avatar-group {
+      width: 100%;
+      height: 100%;
+
+      .chat-avatar {
+        height: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &.weui-chat-avatar-3,
+  &.weui-chat-avatar-4 {
+    .chat-avatar-group {
+      .chat-avatar {
+        height: .475rem;
+        width: .475rem;
+      }
+    }
+  }
+
+  &.weui-chat-avatar-5,
+  &.weui-chat-avatar-6,
+  &.weui-chat-avatar-7,
+  &.weui-chat-avatar-8,
+  &.weui-chat-avatar-9 {
+    .chat-avatar-group {
+      .chat-avatar {
+        height: .3rem;
+        width: .3rem;
+      }
+    }
+  }
+
+  &.weui-chat-avatar-5,
+  &.weui-chat-avatar-6 {
+    .chat-avatar-group {
+      &:first-child {
+        margin-top: .175rem;
+      }
+    }
+  }
 }
