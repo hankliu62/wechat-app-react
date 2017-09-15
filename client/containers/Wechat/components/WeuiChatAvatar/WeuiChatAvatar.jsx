@@ -2,12 +2,12 @@ import React from 'react';
 import { chunk } from 'lodash';
 
 const WeuiChatAvatar = (props) => {
-  const images = (props.images || []).slice(0, 8);
-  images.reserve();
+  const images = (props.images || []).slice(0, 9);
+  images.reverse();
   const length = images.length;
   const columnCount = length > 4 ? 3 : Math.ceil(length / 2);
   const imagesGroups = chunk(images, columnCount);
-  imagesGroups.reserve();
+  imagesGroups.reverse();
 
   return (
     <div className="weui-chat-avatar">
