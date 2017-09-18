@@ -17,7 +17,7 @@ class Profile extends Component {
     nickname: PropTypes.string.isRequired,
     qrcode: PropTypes.string.isRequired,
     gender: PropTypes.string.isRequired,
-    remark: PropTypes.string.isRequired,
+    remark: PropTypes.string,
     area: PropTypes.array
   }
 

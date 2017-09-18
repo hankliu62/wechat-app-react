@@ -1,3 +1,23 @@
+@import '../../../../../../less/variables';
+@import '../../../../less/variables';
+
+@telephone-contact-desc-color: #929292;
+
 .contact-new-friends-wrapper {
-  width: 100%;
+  .telephone-contact-panel {
+    background-color: @white;
+    text-align: center;
+    padding: .25rem .375rem;
+
+    .icon-iphone-address {
+      color: @theme-color;
+      font-size: .875rem;
+    }
+
+    .telephone-contact-desc {
+      font: .35rem;
+      color: @telephone-contact-desc-color;
+      margin-top: .15rem;
+    }
+  }
 }

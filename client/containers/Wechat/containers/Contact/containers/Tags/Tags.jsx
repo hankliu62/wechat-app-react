@@ -3,6 +3,8 @@ import React from 'react';
 import WeuiHeader from '../../../../components/WeuiHeader/WeuiHeader';
 import WeuiBack from '../../../../components/WeuiBack/WeuiBack';
 
+import './Tags.less';
+
 const Tags = (props) => {
   return (
     <div className="contact-tags-wrapper">

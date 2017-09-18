@@ -209,7 +209,7 @@ class Contact extends Component {
               letters.map((letter, index) => this.renderLetterStickyContainer(letter, index))
             }
           </ul>
-          <p className="contact-frineds-statistics">{`${total}位联系人`}</p>
+          <p className="contact-statistics">{`${total}位联系人`}</p>
 
           {this.renderLettersAnchorBar()}
         </div>

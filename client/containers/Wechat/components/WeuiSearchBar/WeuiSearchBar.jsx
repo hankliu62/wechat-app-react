@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import uuid from 'uuid';
 
 import InputChange from '../../decorators/InputChange';
 
@@ -27,10 +28,12 @@ class WeuiSearchBar extends Component {
   constructor(props) {
     super(props);
 
+    const searchKey = `${uuid()}-search-text`;
     this.state = {
       focusing: !!props.defaultValue,
       clearing: !!props.defaultValue,
-      searchText: props.defaultValue
+      [searchKey]: props.defaultValue,
+      searchKey
     };
 
     this.handleChangeInput = this.handleChangeInput.bind(this);
@@ -41,13 +44,13 @@ class WeuiSearchBar extends Component {
   }
 
   handleBlurInput = () => {
-    if (this.state.searchText === '') {
+    if (this.state[this.state.searchKey] === '') {
       this.setState({ focusing: false });
     }
   }
 
   handleCancelInput = () => {
-    this.setState({ focusing: false, text: '' });
+    this.setState({ focusing: false, [this.state.searchKey]: '' });
 
     if (this.props.onChange()) {
       this.props.onChange('');
@@ -65,24 +68,25 @@ class WeuiSearchBar extends Component {
         e.stopPropagation();
       }
 
-      this.props.onSubmit(this.state.text, e);
+      this.props.onSubmit(this.state[this.state.searchKey], e);
     }
   }
 
   render() {
     const { placeholder } = this.props;
+    const { searchKey } = this.state;
 
     return (
       <div className={classNames('weui-search-bar', { focusing: this.state.focusing })}>
         <form className="search-form" onSubmit={this.handleSubmitBar}>
           <div className="search-form-box">
             <input
-              id="searchText"
+              id={searchKey}
               type="text"
               className="search-input"
-              name="searchText"
+              name={searchKey}
               placeholder={placeholder}
-              value={this.state.searchText}
+              value={this.state[searchKey]}
               rel={el => this.searchTextInput = el}
               onChange={this.handleChangeInput}
               onFocus={this.handleFocusInput}
@@ -91,7 +95,7 @@ class WeuiSearchBar extends Component {
             />
             <i className="iconfont icon-search" />
           </div>
-          <label className="search-form-label" htmlFor="searchText">
+          <label className="search-form-label" htmlFor={searchKey}>
             <i className="iconfont icon-search" />
             <span className="label-content">{placeholder}</span>
           </label>

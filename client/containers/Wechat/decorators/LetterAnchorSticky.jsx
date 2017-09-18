@@ -120,7 +120,7 @@ function LetterAnchorSticky(letterIdPrefix) {
 
     WrappedComponent.prototype.renderStickyStatistics = function (unit) {
       const { total } = this.props;
-      return (<p className="contact-frineds-statistics">{`${total}${unit}`}</p>);
+      return (<p className="contact-statistics">{`${total}${unit}`}</p>);
     };
   };
 }

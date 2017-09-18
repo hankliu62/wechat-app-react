@@ -14,6 +14,8 @@ import * as contactActions from '../../../../actions/contact';
 import ElementUtil from '../../../../../../utils/ElementUtil';
 import ObjectUtils from '../../../../../../utils/ObjectUtils';
 
+import './OfficialAccounts.less';
+
 const contactDebug = debug('wechat:contact');
 
 @CheckRoute
