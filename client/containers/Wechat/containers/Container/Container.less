@@ -31,4 +31,17 @@
       z-index: -1;
     }
   }
+
+  // 子页面中父级的显示和隐藏
+  .sub-main-wrapper {
+    width: 100%;
+    transition: all .3s linear;
+    padding-bottom: @footer-height;
+  }
+
+  .with-sub-wrapper {
+    .sub-main-wrapper {
+      display: none;
+    }
+  }
 }

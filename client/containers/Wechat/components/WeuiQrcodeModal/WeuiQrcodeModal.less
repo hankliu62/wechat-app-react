@@ -1,0 +1,59 @@
+@import '../../../../less/variables';
+@import '../../less/variables';
+
+@qrcode-modal-footer-color: #999;
+@qrcode-modal-header-name-color: @black;
+@qrcode-modal-header-address-color: #888;
+
+.weui-qrcode-modal {
+  .qrcode-modal-header {
+    display: flex;
+    align-items: center;
+
+    .profile-avatar {
+      margin-right: .28rem;
+
+      .avatar {
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: .1rem;
+      }
+    }
+
+    .profile-content {
+      .content-base {
+        .weui-contact-name {
+          display: inline-block;
+          color: @qrcode-modal-header-name-color;
+          font-weight: bold;
+          font-size: .5rem;
+        }
+
+        .weui-gender {
+          vertical-align: top;
+          margin-top: 0;
+        }
+      }
+
+      .content-address {
+        margin-top: .1rem;
+        font-size: .25rem;
+        color: @qrcode-modal-header-address-color;
+      }
+    }
+  }
+
+  .qrcode-modal-body {
+    .profile-qrcode {
+      width: 7.5rem;
+      margin-top: .5rem;
+      margin-bottom: .5rem;
+    }
+  }
+
+  .qrcode-modal-footer {
+    text-align: center;
+    font-size: .25rem;
+    color: @qrcode-modal-footer-color;
+  }
+}

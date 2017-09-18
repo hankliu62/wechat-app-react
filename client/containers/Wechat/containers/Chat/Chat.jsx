@@ -1,37 +1,26 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connectAdvanced } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import classNames from 'classnames';
 
 import WeuiHeader from '../../components/WeuiHeader/WeuiHeader';
 import WeuiSearchBar from '../../components/WeuiSearchBar/WeuiSearchBar';
 import WeuiChatRooms from '../../components/WeuiChatRooms/WeuiChatRooms';
 import CheckRoute from '../../decorators/CheckRoute';
-import { CHAT_ROOM_TYPE_GROUP, CHAT_ROOM_TYPE_SINGLE } from '../../constants/Constants';
+import * as chatActions from '../../actions/chat';
+import ObjectUtils from '../../../../utils/ObjectUtils';
 
 import './Chat.less';
 
 @CheckRoute
 class Chat extends Component {
+  static propTypes = {
+    chatRooms: PropTypes.array.isRequired
+  }
+
   render() {
-    const { children } = this.props;
-    const chatRooms = [
-      {
-        link: '/wechat/chat/dialogue',
-        title: '收购淘宝讨论群',
-        lastTime: 1505470665990,
-        lastMessage: '我试一试',
-        lastSpeaker: '夜华',
-        mute: true,
-        type: CHAT_ROOM_TYPE_GROUP
-      },
-      {
-        link: '/wechat/chat/dialogue',
-        title: '白浅',
-        headerUrl: 'https://sinacloud.net/vue-wechat/images/headers/baiqian.jpg',
-        lastTime: 1505470665990,
-        lastMessage: '你说什么，我刚才在遛狗，没看到。',
-        type: CHAT_ROOM_TYPE_SINGLE
-      }
-    ];
+    const { children, chatRooms } = this.props;
 
     return (
       <div className={classNames('chat-wrapper', { 'with-sub-wrapper without-footer-wrapper': this.checkIsSubRoute() })}>
@@ -51,4 +40,20 @@ class Chat extends Component {
   }
 }
 
-export default Chat;
+const selectorFactory = (dispatch) => {
+  let result = {};
+
+  const chatDispatchActions = bindActionCreators(chatActions, dispatch);
+  return (nextState, nextOwnProps) => {
+    const { chatRooms = [] } = nextState.wechat.chat;
+    const nextResult = {
+      ...nextOwnProps,
+      chatRooms,
+      ...chatDispatchActions
+    };
+    result = ObjectUtils.shallowEqual(result, nextResult) ? result : nextResult;
+    return result;
+  };
+};
+
+export default connectAdvanced(selectorFactory)(Chat);

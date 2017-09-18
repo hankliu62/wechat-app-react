@@ -54,19 +54,12 @@
   }
 
   .weui-cell-ft {
+    position: relative;
     white-space: nowrap;
 
     img {
-      height: .7rem;
-    }
-  }
-
-  .weui-cell-ft {
-    position: relative;
-
-    img {
       vertical-align: middle;
-      margin-right: .28rem;
+      height: .7rem;
     }
 
     &:after {
@@ -135,6 +128,10 @@
 
   &.with-arrow {
     .weui-cell-ft {
+      > :nth-last-child(1) {
+        margin-right: .28rem;
+      }
+
       &:after {
         display: inline-block;
       }

@@ -6,13 +6,14 @@ import { push } from 'react-router-redux';
 import { Sticky, StickyContainer } from 'react-sticky';
 // import ReactMixin from 'react-mixin';
 import classNames from 'classnames';
-import { throttle } from 'lodash';
+import throttle from 'lodash/throttle';
 
 import ObjectUtils from '../../../../utils/ObjectUtils';
 import ElementUtil from '../../../../utils/ElementUtil';
 import WeuiHeader from '../../components/WeuiHeader/WeuiHeader';
 import WeuiCells from '../../components/WeuiCells/WeuiCells';
 import WeuiSearchBar from '../../components/WeuiSearchBar/WeuiSearchBar';
+import WeuiContactName from '../../components/WeuiContactName/WeuiContactName';
 import * as contactActions from '../../actions/contact';
 import CheckRoute from '../../decorators/CheckRoute';
 import { HEADER_HEIGHT } from '../../constants/Constants';
@@ -110,15 +111,19 @@ class Contact extends Component {
     }
   }
 
-  renderContactFriendsGroup = (letter, index) => {
+  getStickyContainerCells = (letter) => {
     const { contacts } = this.props;
 
     const friends = contacts[letter] ? contacts[letter].map(friend => ({
       left: (<img src={friend.headerUrl} />),
-      center: (<p>{friend.remark || friend.nickname}</p>),
+      center: (<WeuiContactName {...friend} />),
       onClick: this.onClickFriend(friend)
     })) : [];
 
+    return friends;
+  }
+
+  renderLetterStickyContainer = (letter, index) => {
     return (
       <StickyContainer className="contact-friends-group" key={index}>
         <Sticky topOffset={-(((HEADER_HEIGHT + 0.56) * this.state.fontSize) - 2)}>
@@ -140,7 +145,7 @@ class Contact extends Component {
             }
           }
         </Sticky>
-        <WeuiCells cells={friends} />
+        <WeuiCells cells={this.getStickyContainerCells(letter)} />
       </StickyContainer>
     );
   }
@@ -190,7 +195,7 @@ class Contact extends Component {
 
     return (
       <div className={classNames('contact-wrapper', { 'with-sub-wrapper without-footer-wrapper': this.checkIsSubRoute() })}>
-        <div className="contact-main-wrapper">
+        <div className="sub-main-wrapper contact-main-wrapper">
           <WeuiHeader title="通讯录">
             <i className="icon-header-operation iconfont icon-tips-add-friend" onClick={this.onClickAddFriend} />
           </WeuiHeader>
@@ -201,7 +206,7 @@ class Contact extends Component {
 
           <ul className="contact-frineds">
             {
-              letters.map((letter, index) => this.renderContactFriendsGroup(letter, index))
+              letters.map((letter, index) => this.renderLetterStickyContainer(letter, index))
             }
           </ul>
           <p className="contact-frineds-statistics">{`${total}位联系人`}</p>
@@ -225,8 +230,7 @@ const selectorFactory = (dispatch) => {
     const pushState = bindActionCreators(push, dispatch);
     const nextResult = {
       ...nextOwnProps,
-      contacts:
-      contactGroups,
+      contacts: contactGroups,
       letters,
       total,
       selectedContacter,

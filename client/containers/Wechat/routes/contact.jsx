@@ -3,7 +3,7 @@ import { Switch } from 'react-router-dom';
 
 
 import BundleWrappingRoute from '../../../components/BundleWrappingRoute/BundleWrappingRoute';
-import Container from '../containers/Contact/containers/Container/Container';
+import SubPageContainer from '../containers/SubPageContainer/SubPageContainer';
 
 // import Detail from '../containers/Contact/containers/Detail/Detail';
 // import Tags from '../containers/Contact/containers/Tags/Tags';
@@ -20,12 +20,12 @@ const WechatContactRouter = (props) => {
 
   return (
     <Switch>
-      <BundleWrappingRoute {...props} component={Container} path="/wechat/contact/detail/:wxid" load={loadContactDetailAsync} />
-      <BundleWrappingRoute {...props} component={Container} path="/wechat/contact/tags" load={loadContactTagsAsync} />
-      <BundleWrappingRoute {...props} component={Container} path="/wechat/contact/new-friends" load={loadContactNewFriendsAsync} />
-      <BundleWrappingRoute {...props} component={Container} path="/wechat/contact/add-friends" load={loadContactAddFriendsAsync} />
-      <BundleWrappingRoute {...props} component={Container} path="/wechat/contact/group-chats" load={loadContactGroupChatsAsync} />
-      <BundleWrappingRoute {...props} component={Container} path="/wechat/contact/official-accounts" load={loadContactOfficialAccountsAsync} />
+      <BundleWrappingRoute {...props} component={SubPageContainer} path="/wechat/contact/detail/:wxid" load={loadContactDetailAsync} />
+      <BundleWrappingRoute {...props} component={SubPageContainer} path="/wechat/contact/tags" load={loadContactTagsAsync} />
+      <BundleWrappingRoute {...props} component={SubPageContainer} path="/wechat/contact/new-friends" load={loadContactNewFriendsAsync} />
+      <BundleWrappingRoute {...props} component={SubPageContainer} path="/wechat/contact/add-friends" load={loadContactAddFriendsAsync} />
+      <BundleWrappingRoute {...props} component={SubPageContainer} path="/wechat/contact/group-chats" load={loadContactGroupChatsAsync} />
+      <BundleWrappingRoute {...props} component={SubPageContainer} path="/wechat/contact/official-accounts" load={loadContactOfficialAccountsAsync} />
     </Switch>
   );
 };

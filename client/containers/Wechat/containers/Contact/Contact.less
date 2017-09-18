@@ -3,7 +3,7 @@
 
 @contact-friends-statistics-color: #999;
 @contact-alpha-color: #888;
-@contact-alpha-sticky-color: @grass-light;
+@contact-alpha-sticky-color: @theme-color;
 @contact-alpha-sticky-border-color: @common-border-color;
 @contact-weui-cells-shadow-color: @common-bg-color;
 
@@ -11,18 +11,6 @@
   position: relative;
   height: 100%;
   width: 100%;
-
-  .contact-main-wrapper {
-    width: 100%;
-    transition: all .3s linear;
-    padding-bottom: @footer-height;
-  }
-
-  &.with-sub-wrapper {
-    .contact-main-wrapper {
-      display: none;
-    }
-  }
 
   .weui-cells {
     border: 0;

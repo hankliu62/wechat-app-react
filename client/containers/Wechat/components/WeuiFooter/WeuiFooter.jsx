@@ -36,7 +36,7 @@ const WeuiFooter = props => (
           <NavLink key={index} className="nav" activeClassName="selected" to={link.url}>
             <dl>
               <dt className={`iconfont icon-${link.icon}`}>
-                { index === 0 && (props.badgeCount || 12) ? (<WeuiBadge count={props.WeuiBadgeCount || 12} type="count" />) : '' }
+                { index === 0 && (props.badgeCount || 102) ? (<WeuiBadge ellipsis count={props.WeuiBadgeCount || 102} type="count" />) : '' }
                 { index === 2 && props.newExplore ? (<WeuiBadge type="dot" />) : '' }
               </dt>
               <dd className="title">{link.title}</dd>

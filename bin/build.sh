@@ -28,7 +28,7 @@ function pushprod() {
     git add dist/client/
 
     echo -n ""
-    echo -e "\033[37;31;5mDo you want input custom commit message?(y/n): \c\033[39;49;0m"
+    echo -e "\033[37;31;5mDo you want to input custom commit message [yn]?: \c\033[39;49;0m"
     read flag
     flag=$(echo $flag | tr [A-Z] [a-z])
     if [ $flag == "y" ]; then
