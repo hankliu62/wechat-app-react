@@ -76,7 +76,7 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: .28rem .42rem;
+  padding: .25rem;
   color: #000;
   text-decoration: none;
 }
@@ -237,6 +237,13 @@
   -webkit-box-shadow: 0 0 1px 0 #999 inset;
   box-shadow: 0 0 1px 0 #999 inset;
 }
+.weui-btn.weui-btn-sm {
+  width: 1.1rem;
+  height: 0.65rem;
+  line-height: 2;
+  font-size: .35rem;
+  text-align: center;
+}
 .contact-detail-wrapper .weui-cells {
   margin-top: .56rem;
 }
@@ -289,6 +296,9 @@
   -o-transition: opacity 300ms ease-in;
   transition: opacity 300ms ease-in;
 }
+.contact-tags-wrapper {
+  width: 100%;
+}
 .weui-search-bar {
   padding: .2rem .25rem;
   display: -webkit-box;
@@ -327,6 +337,8 @@
   height: 0.7rem;
   padding: .1rem 0;
   font-size: .35rem;
+  border: 0;
+  outline: none;
 }
 .weui-search-bar .search-form-box .icon-search {
   position: absolute;
@@ -374,6 +386,98 @@
 }
 .weui-search-bar.focusing .btn-cancel {
   display: inline-block;
+}
+.contact-new-friends-wrapper .telephone-contact-panel {
+  background-color: #fff;
+  text-align: center;
+  padding: .25rem .375rem;
+}
+.contact-new-friends-wrapper .telephone-contact-panel .icon-iphone-address {
+  color: #40bb3a;
+  font-size: .875rem;
+}
+.contact-new-friends-wrapper .telephone-contact-panel .telephone-contact-desc {
+  font-size: .35rem;
+  color: #929292;
+  margin-top: .15rem;
+}
+.contact-new-friends-wrapper .weui-cells .weui-cell .weui-cell-bd .new-friend-group-center .new-friend-group-message {
+  font-size: .35rem;
+  color: #888;
+  margin-top: .125rem;
+}
+.contact-new-friends-wrapper .weui-cells .weui-cell .weui-cell-ft .new-friend-status {
+  font-size: .35rem;
+}
+.contact-new-friends-wrapper .weui-cells .weui-cell .weui-cell-ft .new-friend-status.status-accept {
+  color: #aaa;
+}
+.contact-new-friends-wrapper .weui-cells .weui-cell .weui-cell-ft .new-friend-status.status-expire {
+  color: #aaa;
+}
+.contact-new-friends-wrapper .weui-cells .weui-cell .weui-cell-ft .new-friend-status.status-refuse {
+  color: #aaa;
+}
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.weui-chat-avatar {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #f1f0f6;
+  padding: .1rem;
+  -webkit-border-radius: .125rem;
+  border-radius: .125rem;
+  overflow: hidden;
+}
+.weui-chat-avatar .chat-avatar-group {
+  font-size: 0;
+  text-align: center;
+}
+.weui-chat-avatar .chat-avatar-group .chat-avatar {
+  display: inline-block;
+}
+.weui-chat-avatar .chat-avatar-group .chat-avatar + .chat-avatar {
+  margin-left: .05rem;
+}
+.weui-chat-avatar .chat-avatar-group + .chat-avatar-group {
+  margin-top: .05rem;
+}
+.weui-chat-avatar.weui-chat-avatar-1 {
+  padding: 0;
+}
+.weui-chat-avatar.weui-chat-avatar-1 .chat-avatar-group {
+  width: 100%;
+  height: 100%;
+}
+.weui-chat-avatar.weui-chat-avatar-1 .chat-avatar-group .chat-avatar {
+  height: 100% !important;
+  margin: 0 auto;
+}
+.weui-chat-avatar.weui-chat-avatar-3 .chat-avatar-group .chat-avatar,
+.weui-chat-avatar.weui-chat-avatar-4 .chat-avatar-group .chat-avatar {
+  height: .475rem !important;
+  width: .475rem !important;
+}
+.weui-chat-avatar.weui-chat-avatar-5 .chat-avatar-group .chat-avatar,
+.weui-chat-avatar.weui-chat-avatar-6 .chat-avatar-group .chat-avatar,
+.weui-chat-avatar.weui-chat-avatar-7 .chat-avatar-group .chat-avatar,
+.weui-chat-avatar.weui-chat-avatar-8 .chat-avatar-group .chat-avatar,
+.weui-chat-avatar.weui-chat-avatar-9 .chat-avatar-group .chat-avatar {
+  height: .3rem !important;
+  width: .3rem !important;
+}
+.weui-chat-avatar.weui-chat-avatar-5 .chat-avatar-group:first-child,
+.weui-chat-avatar.weui-chat-avatar-6 .chat-avatar-group:first-child {
+  margin-top: .175rem;
+}
+.contact-group-chats-wrapper {
+  width: 100%;
+}
+.contact-official-accounts-wrapper {
+  width: 100%;
 }
 .second-sub-page-wrapper {
   width: 100%;
@@ -469,55 +573,6 @@
 .react-modal-content-avatar .weui-avatar-modal .avatar {
   width: 100%;
 }
-.weui-chat-avatar {
-  width: 100%;
-  height: 100%;
-  padding: .1rem;
-  -webkit-border-radius: .125rem;
-  border-radius: .125rem;
-  overflow: hidden;
-}
-.weui-chat-avatar .chat-avatar-group {
-  font-size: 0;
-  text-align: center;
-}
-.weui-chat-avatar .chat-avatar-group .chat-avatar {
-  display: inline-block;
-}
-.weui-chat-avatar .chat-avatar-group .chat-avatar + .chat-avatar {
-  margin-left: .05rem;
-}
-.weui-chat-avatar .chat-avatar-group + .chat-avatar-group {
-  margin-top: .05rem;
-}
-.weui-chat-avatar.weui-chat-avatar-1 {
-  padding: 0;
-}
-.weui-chat-avatar.weui-chat-avatar-1 .chat-avatar-group {
-  width: 100%;
-  height: 100%;
-}
-.weui-chat-avatar.weui-chat-avatar-1 .chat-avatar-group .chat-avatar {
-  height: 100%;
-  margin: 0 auto;
-}
-.weui-chat-avatar.weui-chat-avatar-3 .chat-avatar-group .chat-avatar,
-.weui-chat-avatar.weui-chat-avatar-4 .chat-avatar-group .chat-avatar {
-  height: .475rem;
-  width: .475rem;
-}
-.weui-chat-avatar.weui-chat-avatar-5 .chat-avatar-group .chat-avatar,
-.weui-chat-avatar.weui-chat-avatar-6 .chat-avatar-group .chat-avatar,
-.weui-chat-avatar.weui-chat-avatar-7 .chat-avatar-group .chat-avatar,
-.weui-chat-avatar.weui-chat-avatar-8 .chat-avatar-group .chat-avatar,
-.weui-chat-avatar.weui-chat-avatar-9 .chat-avatar-group .chat-avatar {
-  height: .3rem;
-  width: .3rem;
-}
-.weui-chat-avatar.weui-chat-avatar-5 .chat-avatar-group:first-child,
-.weui-chat-avatar.weui-chat-avatar-6 .chat-avatar-group:first-child {
-  margin-top: .175rem;
-}
 .weui-badge {
   background-color: #f43531;
   color: #fff;
@@ -552,7 +607,7 @@
 }
 .weui-chat-room {
   position: relative;
-  padding: .2rem;
+  padding: .25rem;
   color: #000;
   text-decoration: none;
   width: 100%;
@@ -577,12 +632,7 @@
 }
 .weui-chat-room .weui-chat-room-info .chat-info-avatar {
   position: relative;
-  width: 1.2rem;
-  height: 1.2rem;
-  background-color: #f1f0f6;
   margin-right: .25rem;
-  -webkit-border-radius: .125rem;
-  border-radius: .125rem;
 }
 .weui-chat-room .weui-chat-room-info .chat-info-content {
   -webkit-box-flex: 1;
@@ -664,6 +714,67 @@
 .explore-wrapper .weui-cells .weui-cell .weui-cell-ft .new-moments img {
   margin-right: 0;
 }
+.add-friend-wrapper .personal-info-box {
+  text-align: center;
+  font-size: .3rem;
+  color: #000;
+  margin-top: .25rem;
+}
+.add-friend-wrapper .personal-info-box .personal-wxid-title,
+.add-friend-wrapper .personal-info-box .personal-wxid-content {
+  vertical-align: middle;
+}
+.add-friend-wrapper .personal-info-box .icon-personal-qrcode {
+  width: .5rem;
+  margin-left: .1rem;
+  vertical-align: middle;
+}
+.add-friend-wrapper .weui-search-bar {
+  margin-top: .2rem;
+  padding: 0;
+  border: 0;
+}
+.add-friend-wrapper .weui-search-bar .search-form-box {
+  margin: .2rem .25rem;
+  width: initial;
+}
+.add-friend-wrapper .weui-search-bar .search-form-label {
+  position: .3rem;
+}
+.add-friend-wrapper .weui-search-bar .search-form-label .icon-search {
+  position: absolute;
+  left: .3rem;
+  top: 50%;
+  margin-top: -0.35rem;
+  color: #40bb3a;
+}
+.add-friend-wrapper .weui-search-bar .search-form-label .label-content {
+  position: absolute;
+  left: 0.7rem;
+  top: 50%;
+  margin-top: -0.35rem;
+}
+.add-friend-wrapper .weui-search-bar .btn-cancel {
+  margin-right: .25rem;
+  margin-left: 0;
+}
+.add-friend-wrapper .weui-cells {
+  margin-top: .5rem;
+}
+.add-friend-wrapper .weui-cells .weui-cell .weui-cell-hd .add-friend-way-icon {
+  width: .9rem;
+  margin-right: 0;
+}
+.add-friend-wrapper .weui-cells .weui-cell .weui-cell-bd .add-friend-way-center .add-friend-way-title {
+  color: #000;
+}
+.add-friend-wrapper .weui-cells .weui-cell .weui-cell-bd .add-friend-way-center .add-friend-way-title + .add-friend-way-desc {
+  margin-top: .1rem;
+}
+.add-friend-wrapper .weui-cells .weui-cell .weui-cell-bd .add-friend-way-center .add-friend-way-desc {
+  color: #b7b7b7;
+  font-size: .35rem;
+}
 .contact-wrapper {
   position: relative;
   height: 100%;
@@ -682,9 +793,9 @@
   margin-right: 0;
 }
 .contact-wrapper .contact-alpha {
-  font-size: .38rem;
+  font-size: .35rem;
   line-height: .56rem;
-  padding: 0 .42rem;
+  padding: 0 .25rem;
   color: #888;
   background-color: #f1f0f6;
   z-index: 99;
@@ -694,7 +805,7 @@
   color: #40bb3a;
   border-bottom: 1px solid #d9d9d9;
 }
-.contact-wrapper .contact-frineds-statistics {
+.contact-wrapper .contact-statistics {
   font-size: .4rem;
   background-color: #f1f0f6;
   color: #999;
