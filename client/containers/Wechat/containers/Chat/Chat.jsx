@@ -16,11 +16,23 @@ import './Chat.less';
 @CheckRoute
 class Chat extends Component {
   static propTypes = {
-    chatRooms: PropTypes.array.isRequired
+    chats: PropTypes.array,
+    chatRooms: PropTypes.array,
+    fetchChats: PropTypes.func.isRequired
+  }
+
+  componentDidMount() {
+    if (!this.props.chats) {
+      this.props.fetchChats();
+    }
   }
 
   render() {
-    const { children, chatRooms } = this.props;
+    const { children, chatRooms, chats } = this.props;
+
+    if (!chats) {
+      return null;
+    }
 
     return (
       <div className={classNames('chat-wrapper', { 'with-sub-wrapper without-footer-wrapper': this.checkIsSubRoute() })}>
@@ -45,9 +57,12 @@ const selectorFactory = (dispatch) => {
 
   const chatDispatchActions = bindActionCreators(chatActions, dispatch);
   return (nextState, nextOwnProps) => {
-    const { chatRooms = [] } = nextState.wechat.chat;
+    const { chatMain = {} } = nextState.wechat;
+    const { chats, chatRooms } = chatMain;
+
     const nextResult = {
       ...nextOwnProps,
+      chats,
       chatRooms,
       ...chatDispatchActions
     };

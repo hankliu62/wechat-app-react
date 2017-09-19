@@ -8,6 +8,7 @@ import SelfRoute from './self';
 
 const loadChatAsync = () => import(/* webpackChunkName: 'containers/Wechat/Chat' */ '../containers/Chat/Chat');
 const loadExploreAsync = () => import(/* webpackChunkName: 'containers/Wechat/Explore' */ '../containers/Explore/Explore');
+const loadAddFriendAsync = () => import(/* webpackChunkName: 'containers/Wechat/AddFriend' */ '../containers/AddFriend/AddFriend');
 // <Route path="/wechat/contact" render={nextProps => (<Contact {...nextProps}><ContactRoute /></Contact>)} />
 const WechatRouter = (props) => {
   const loadContactAsync = () => import(/* webpackChunkName: 'containers/Wechat/Contact' */ '../containers/Contact/Contact');
@@ -28,6 +29,7 @@ const WechatRouter = (props) => {
           nextProps => <SelfRoute {...nextProps} />
         }
       </BundleWrappingRoute>
+      <BundleWrappingRoute {...props} path="/wechat/add-friend" load={loadAddFriendAsync} />
     </Switch>
   );
 };

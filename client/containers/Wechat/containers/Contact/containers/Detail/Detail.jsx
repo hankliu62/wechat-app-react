@@ -168,7 +168,9 @@ const selectorFactory = (dispatch) => {
 
   const contactDispatchActions = bindActionCreators(contactActions, dispatch);
   return (nextState, nextOwnProps) => {
-    const { selectedContacter } = nextState.wechat.contact;
+    const { contactMain } = nextState.wechat;
+    const { selectedContacter } = contactMain;
+
     const nextResult = {
       ...nextOwnProps,
       selectedContacter,

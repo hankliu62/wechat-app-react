@@ -65,7 +65,9 @@ const selectorFactory = (dispatch) => {
 
   const contactDispatchActions = bindActionCreators(contactActions, dispatch);
   return (nextState, nextOwnProps) => {
-    const { chats = [] } = nextState.wechat.chat;
+    const { chatMain } = nextState.wechat;
+    const { chats = [] } = chatMain;
+
     const groupChats = [];
     for (const chat of chats) {
       if (chat.base.type === Constants.CHAT_ROOM_TYPE_GROUP) {

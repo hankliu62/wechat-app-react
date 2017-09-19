@@ -42,7 +42,8 @@ const selectorFactory = () => {
   let result = {};
 
   return (nextState, nextOwnProps) => {
-    const { personal } = nextState.wechat;
+    const { selfMain = {} } = nextState.wechat;
+    const { personal = {} } = selfMain;
     const nextResult = { ...nextOwnProps, ...personal };
     result = ObjectUtils.shallowEqual(result, nextResult) ? result : nextResult;
     return result;

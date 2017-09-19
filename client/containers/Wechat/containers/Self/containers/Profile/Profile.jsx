@@ -57,7 +57,7 @@ class Profile extends Component {
       {
         className: 'with-arrow',
         left: (<p className="profile-cell-label">名字</p>),
-        link: '/wechat/self/collect',
+        link: '/wechat/self/profile/name',
         right: (<p className="profile-cell-content">{ nickname }</p>)
       },
       {
@@ -73,7 +73,7 @@ class Profile extends Component {
       {
         className: 'with-arrow',
         left: (<p className="profile-cell-label">更多</p>),
-        link: '/wechat/self/expression'
+        link: '/wechat/self/profile/more'
       }
     ];
 
@@ -81,7 +81,7 @@ class Profile extends Component {
       {
         className: 'with-arrow',
         left: (<p className="profile-cell-label">我的地址</p>),
-        link: '/wechat/self/wallet',
+        link: '/wechat/self/profile/address',
       }
     ];
 
@@ -106,7 +106,8 @@ const selectorFactory = () => {
 
   // const selfDispatchActions = bindActionCreators(selfActions, dispatch);
   return (nextState, nextOwnProps) => {
-    const { personal } = nextState.wechat;
+    const { selfMain = {} } = nextState.wechat;
+    const { personal = {} } = selfMain;
     const nextResult = { ...nextOwnProps, ...personal };
     result = ObjectUtils.shallowEqual(result, nextResult) ? result : nextResult;
     return result;

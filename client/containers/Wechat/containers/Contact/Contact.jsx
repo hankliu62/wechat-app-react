@@ -62,7 +62,7 @@ class Contact extends Component {
   }
 
   onClickAddFriend = () => {
-    this.props.history.push('/wechat/contact/add-friends');
+    this.props.history.push('/wechat/add-friend');
   }
 
   onClickAnchorLetter = letter => (e) => {
@@ -152,6 +152,10 @@ class Contact extends Component {
 
   renderLettersAnchorBar = () => {
     const { letters } = this.props;
+    if (!letters) {
+      return null;
+    }
+
     return (
       <ul className="anchor-bar">
         {
@@ -206,7 +210,7 @@ class Contact extends Component {
 
           <ul className="contact-frineds">
             {
-              letters.map((letter, index) => this.renderLetterStickyContainer(letter, index))
+              !!letters && letters.map((letter, index) => this.renderLetterStickyContainer(letter, index))
             }
           </ul>
           <p className="contact-statistics">{`${total}位联系人`}</p>
@@ -225,9 +229,11 @@ const selectorFactory = (dispatch) => {
 
   const contactDispatchActions = bindActionCreators(contactActions, dispatch);
   return (nextState, nextOwnProps) => {
-    const { selectedContacter, contactLetters: letters, contactGroups, contacts = [] } = nextState.wechat.contact;
+    const { contactMain = {} } = nextState.wechat;
+    const { selectedContacter, contactLetters: letters, contactGroups, contacts = [] } = contactMain;
     const total = contacts.length;
     const pushState = bindActionCreators(push, dispatch);
+
     const nextResult = {
       ...nextOwnProps,
       contacts: contactGroups,

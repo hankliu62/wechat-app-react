@@ -22,10 +22,10 @@ const contactDebug = debug('wechat:contact');
 @LetterAnchorSticky()
 class OfficialAccounts extends Component {
   static propTypes = {
-    officialAccounts: PropTypes.object.isRequired,
+    officialAccounts: PropTypes.object,
     letters: PropTypes.array.isRequired,
     total: PropTypes.number.isRequired,
-    setState: PropTypes.func.isRequired
+    fetchOfficialAccounts: PropTypes.func.isRequired
   }
 
   constructor(props) {
@@ -48,7 +48,10 @@ class OfficialAccounts extends Component {
   }
 
   componentDidMount() {
-    this.props.setState({ content: 'Modified Redux Content Data' });
+    if (!this.props.officialAccounts) {
+      this.props.fetchOfficialAccounts();
+    }
+
     const fontSize = (ElementUtil.getElementStyle(document.documentElement, 'font-size') || '16px').replace('px', '');
     this.setState({ fontSize });
 
@@ -81,6 +84,12 @@ class OfficialAccounts extends Component {
   }
 
   render() {
+    const { officialAccounts } = this.props;
+
+    if (!officialAccounts) {
+      return null;
+    }
+
     return (
       <div className="contact-official-accounts-wrapper" ref={el => this.officialAccountsWrapper = el}>
         <WeuiHeader title="公众号" back={(<WeuiBack history={this.props.history}><span className="weui-back-centent">通讯录</span></WeuiBack>)}>
@@ -102,8 +111,10 @@ const selectorFactory = (dispatch) => {
 
   const contactDispatchActions = bindActionCreators(contactActions, dispatch);
   return (nextState, nextOwnProps) => {
-    const { selectedContacter, officialAccountsLetters: letters, officialAccountsGroups, officialAccounts = [] } = nextState.wechat.contact;
-    const total = officialAccounts.length;
+    const { contactMain = {} } = nextState.wechat;
+    const { selectedContacter, officialAccountsLetters: letters, officialAccountsGroups, officialAccounts } = contactMain;
+    const total = officialAccounts ? officialAccounts.length : 0;
+
     const nextResult = {
       ...nextOwnProps,
       officialAccounts: officialAccountsGroups,

@@ -14,7 +14,6 @@ const WechatContactRouter = (props) => {
   const loadContactDetailAsync = () => import(/* webpackChunkName: 'containers/Wechat/Contact/Detail' */ '../containers/Contact/containers/Detail/Detail.jsx');
   const loadContactTagsAsync = () => import(/* webpackChunkName: 'containers/Wechat/Contact/Tags' */ '../containers/Contact/containers/Tags/Tags.jsx');
   const loadContactNewFriendsAsync = () => import(/* webpackChunkName: 'containers/Wechat/Contact/NewFriends' */ '../containers/Contact/containers/NewFriends/NewFriends.jsx');
-  const loadContactAddFriendsAsync = () => import(/* webpackChunkName: 'containers/Wechat/Contact/AddFriends' */ '../containers/Contact/containers/AddFriends/AddFriends.jsx');
   const loadContactGroupChatsAsync = () => import(/* webpackChunkName: 'containers/Wechat/Contact/GroupChats' */ '../containers/Contact/containers/GroupChats/GroupChats.jsx');
   const loadContactOfficialAccountsAsync = () => import(/* webpackChunkName: 'containers/Wechat/Contact/OfficialAccounts' */ '../containers/Contact/containers/OfficialAccounts/OfficialAccounts.jsx');
 
@@ -23,7 +22,6 @@ const WechatContactRouter = (props) => {
       <BundleWrappingRoute {...props} component={SubPageContainer} path="/wechat/contact/detail/:wxid" load={loadContactDetailAsync} />
       <BundleWrappingRoute {...props} component={SubPageContainer} path="/wechat/contact/tags" load={loadContactTagsAsync} />
       <BundleWrappingRoute {...props} component={SubPageContainer} path="/wechat/contact/new-friends" load={loadContactNewFriendsAsync} />
-      <BundleWrappingRoute {...props} component={SubPageContainer} path="/wechat/contact/add-friends" load={loadContactAddFriendsAsync} />
       <BundleWrappingRoute {...props} component={SubPageContainer} path="/wechat/contact/group-chats" load={loadContactGroupChatsAsync} />
       <BundleWrappingRoute {...props} component={SubPageContainer} path="/wechat/contact/official-accounts" load={loadContactOfficialAccountsAsync} />
     </Switch>

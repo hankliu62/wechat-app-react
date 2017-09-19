@@ -1,0 +1,91 @@
+@import '../../../../less/variables';
+@import '../../less/variables';
+
+@personal-info-box-color: @black;
+@add-friend-way-title-color: @black;
+@add-friend-way-desc-color: #b7b7b7;
+
+.add-friend-wrapper {
+  .personal-info-box {
+    text-align: center;
+    font-size: .3rem;
+    color: @personal-info-box-color;
+    margin-top: .25rem;
+
+    .personal-wxid-title,
+    .personal-wxid-content {
+      vertical-align: middle;
+    }
+
+    .icon-personal-qrcode {
+      width: .5rem;
+      margin-left: .1rem;
+      vertical-align: middle;
+    }
+  }
+
+  .weui-search-bar {
+    margin-top: .2rem;
+    padding: 0;
+    border: 0;
+
+    .search-form-box {
+      margin: .2rem .25rem;
+      width: initial;
+    }
+
+    .search-form-label {
+      position: .3rem;
+
+      .icon-search {
+        position: absolute;
+        left: .3rem;
+        top: 50%;
+        margin-top: -.35rem;
+        color: @theme-color;
+      }
+
+      .label-content {
+        position: absolute;
+        left: .3rem + .4rem;
+        top: 50%;
+        margin-top: -.35rem;
+      }
+    }
+
+    .btn-cancel {
+      margin-right: .25rem;
+      margin-left: 0;
+    }
+  }
+
+  .weui-cells {
+    margin-top: .5rem;
+
+    .weui-cell {
+      .weui-cell-hd {
+        .add-friend-way-icon {
+          width: .9rem;
+          margin-right: 0;
+        }
+      }
+
+      .weui-cell-bd {
+        .add-friend-way-center {
+          .add-friend-way-title {
+            color: @add-friend-way-title-color;
+
+            + .add-friend-way-desc {
+              margin-top: .1rem;
+            }
+          }
+
+          .add-friend-way-desc {
+            color: @add-friend-way-desc-color;
+            font-size: .35rem;
+          }
+        }
+      }
+    }
+  }
+}

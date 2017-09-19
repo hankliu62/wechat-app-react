@@ -2,6 +2,10 @@
 @import '../../../../less/variables';
 
 @telephone-contact-desc-color: #929292;
+@new-friend-group-message-color: #888;
+@new-friend-status-accept-color: #aaa;
+@new-friend-status-expire-color: #aaa;
+@new-friend-status-refuse-color: #aaa;
 
 .contact-new-friends-wrapper {
   .telephone-contact-panel {
@@ -15,9 +19,41 @@
     }
 
     .telephone-contact-desc {
-      font: .35rem;
+      font-size: .35rem;
       color: @telephone-contact-desc-color;
       margin-top: .15rem;
+    }
+  }
+
+  .weui-cells {
+    .weui-cell {
+      .weui-cell-bd {
+        .new-friend-group-center {
+          .new-friend-group-message {
+            font-size: .35rem;
+            color: @new-friend-group-message-color;
+            margin-top: .125rem;
+          }
+        }
+      }
+
+      .weui-cell-ft {
+        .new-friend-status {
+          font-size: .35rem;
+
+          &.status-accept {
+            color: @new-friend-status-accept-color;
+          }
+
+          &.status-expire {
+            color: @new-friend-status-expire-color;
+          }
+
+          &.status-refuse {
+            color: @new-friend-status-refuse-color;
+          }
+        }
+      }
     }
   }
 }

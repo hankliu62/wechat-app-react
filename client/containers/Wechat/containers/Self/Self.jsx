@@ -22,10 +22,11 @@ const HeaderCellContent = props => (
 @CheckRoute
 class Self extends Component {
   static propTypes = {
-    headerUrl: PropTypes.string.isRequired,
-    nickname: PropTypes.string.isRequired,
-    wxid: PropTypes.string.isRequired,
-    setState: PropTypes.func.isRequired
+    personal: PropTypes.object,
+    headerUrl: PropTypes.string,
+    nickname: PropTypes.string,
+    wxid: PropTypes.string,
+    fetchPersonal: PropTypes.func.isRequired
   }
 
   constructor(props) {
@@ -35,9 +36,9 @@ class Self extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      this.props.setState({ content: 'Modified Redux Content Data' });
-    }, 3000);
+    if (!this.props.personal) {
+      this.props.fetchPersonal();
+    }
   }
 
   render() {
@@ -120,8 +121,9 @@ const selectorFactory = (dispatch) => {
 
   const selfDispatchActions = bindActionCreators(selfActions, dispatch);
   return (nextState, nextOwnProps) => {
-    const { personal } = nextState.wechat;
-    const nextResult = { ...nextOwnProps, ...personal, ...selfDispatchActions };
+    const { selfMain = {} } = nextState.wechat;
+    const { personal } = selfMain;
+    const nextResult = { ...nextOwnProps, personal, ...(personal || {}), ...selfDispatchActions };
     result = ObjectUtils.shallowEqual(result, nextResult) ? result : nextResult;
     return result;
   };

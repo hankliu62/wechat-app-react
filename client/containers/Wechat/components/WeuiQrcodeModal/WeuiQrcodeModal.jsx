@@ -20,12 +20,16 @@ class WeuiQrcodeModal extends Component {
     areas: PropTypes.array,
     isOpen: PropTypes.bool.isRequired,
     shouldCloseOnOverlayClick: PropTypes.bool,
+    overlayStyle: PropTypes.object,
+    contentStyle: PropTypes.object,
     onRequestClose: PropTypes.func
   }
 
   static defaultProps = {
     isOpen: false,
     shouldCloseOnOverlayClick: true,
+    overlayStyle: {},
+    contentStyle: {},
     onRequestClose: () => {}
   }
 
@@ -36,7 +40,7 @@ class WeuiQrcodeModal extends Component {
   }
 
   render() {
-    const { areas } = this.props;
+    const { areas, overlayStyle, contentStyle } = this.props;
 
     return (
       <WeuiModal
@@ -44,7 +48,8 @@ class WeuiQrcodeModal extends Component {
         onRequestClose={this.props.onRequestClose}
         shouldCloseOnOverlayClick={this.props.shouldCloseOnOverlayClick}
         contentLabel="Weui Qrcode Modal"
-        overlayStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.62)' }}
+        contentStyle={contentStyle}
+        overlayStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.62)', ...overlayStyle }}
       >
         <div className="weui-qrcode-modal">
           <header className="qrcode-modal-header">
