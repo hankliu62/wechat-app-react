@@ -9,6 +9,7 @@ import WeuiCells from '../../../../components/WeuiCells/WeuiCells';
 import WeuiGender from '../../../../components/WeuiGender/WeuiGender';
 import WeuiBack from '../../../../components/WeuiBack/WeuiBack';
 import WeuiBtn from '../../../../components/WeuiBtn/WeuiBtn';
+import WeuiAvatarModal from '../../../../components/WeuiAvatarModal/WeuiAvatarModal';
 import ObjectUtils from '../../../../../../utils/ObjectUtils';
 import * as contactActions from '../../../../actions/contact';
 
@@ -31,6 +32,14 @@ class Detail extends Component {
     getContacter: PropTypes.func.isRequired
   }
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isOpenAvatarModal: false
+    };
+  }
+
   componentDidMount() {
     const { params } = this.props.match;
     if (isEmpty(this.props.selectedContacter)) {
@@ -38,12 +47,20 @@ class Detail extends Component {
     }
   }
 
+  handleClickOpenAvatarModal = () => {
+    this.setState({ isOpenAvatarModal: true });
+  }
+
+  handleClickCloseAvatarModal = () => {
+    this.setState({ isOpenAvatarModal: false });
+  }
+
   renderHeaderCells = () => {
     const { selectedContacter: contacter } = this.props;
 
     const headerCells = [{
       className: 'header-weui-cell',
-      left: (contacter.headerUrl ? <img src={contacter.headerUrl} /> : null),
+      left: (contacter.headerUrl ? <img onClick={this.handleClickOpenAvatarModal} src={contacter.headerUrl} /> : null),
       center: (<HeaderCellContent remark={contacter.remark} nickname={contacter.nickname} wxid={contacter.wxid} gender={contacter.gender} />)
     }];
 
@@ -158,6 +175,13 @@ class Detail extends Component {
 
           <WeuiBtn theme="default">视频聊天</WeuiBtn>
         </section>
+
+        <WeuiAvatarModal
+          isOpen={this.state.isOpenAvatarModal}
+          headerUrl={contacter.headerUrl}
+          onRequestClose={this.handleClickCloseAvatarModal}
+          overlayStyle={{ zIndex: 100 }}
+        />
       </div>
     );
   }

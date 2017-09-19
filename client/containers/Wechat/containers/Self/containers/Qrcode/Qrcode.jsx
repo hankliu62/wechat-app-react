@@ -8,7 +8,6 @@ import WeuiHeader from '../../../../components/WeuiHeader/WeuiHeader';
 import WeuiBack from '../../../../components/WeuiBack/WeuiBack';
 import WeuiQrcodeModal from '../../../../components/WeuiQrcodeModal/WeuiQrcodeModal';
 
-
 const wechatSelfDebug = debug('wechat:self');
 
 class Profile extends Component {
