@@ -1,3 +1,99 @@
+@import '../../../../../../less/variables';
+@import '../../../../less/variables';
+@import '../../../../less/components/sticky';
+
+@album-personal-signature-color: #777;
+
 .self-album-wrapper {
-  width: 100%;
+  .album-cover-wrapper {
+    position: relative;
+    height: 8rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -.05rem;
+    margin-bottom: .9rem;
+
+    .album-personal-wrapper {
+      position: absolute;
+      height: 1.75rem;
+      width: 100%;
+      bottom: -.5rem;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      padding: 0 .4rem;
+
+      .album-avatar {
+        height: 100%;
+        background-color: @white;
+        padding: .05rem;
+        border: 1px solid @common-border-color;
+
+        .image-header {
+          height: 100%;
+        }
+      }
+
+      .album-nickname {
+        flex: 1;
+        margin-right: .5rem;
+        font-size: .4rem;
+        text-align: right;
+        color: @white;
+        font-weight: bold;
+        text-shadow: 0 0 1px @black;
+        margin-top: -.2rem;
+      }
+    }
+  }
+
+  .album-personal-signature {
+    padding: 0 .4rem;
+    text-align: right;
+    font-size: .35rem;
+    color: @album-personal-signature-color;
+  }
+
+  .weui-sticky-container {
+    .weui-sticky-header {
+      padding: 0 .4rem;
+      visibility: hidden;
+
+      &.stickyed-header {
+        visibility: visible;
+      }
+    }
+  }
+
+  .moments-group-wrapper {
+    padding: 0 .4rem;
+    display: flex;
+    align-items: flex-start;
+
+    .moments-group-header {
+      width: 25%;
+
+      .moments-time-wrapper {
+        .moments-month {
+          font-size: .45rem;
+          font-weight: bold;
+        }
+
+        .moments-day {
+          font-size: .25rem;
+        }
+
+        &.moments-time-diff-0 {
+          .moments-month {
+            font-size: .75rem;
+          }
+        }
+      }
+    }
+
+    .moments-group-body {
+      flex: 1;
+    }
+  }
 }

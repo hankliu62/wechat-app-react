@@ -1,0 +1,25 @@
+@import '../../../../less/variables';
+@import '../variables';
+
+@weui-sticky-header-color: #888;
+@weui-sticky-header-bg-color: @common-bg-color;
+@weui-sticky-header-stickyed-color: @theme-color;
+@weui-sticky-header-stickyed-bg-color: @white;
+@weui-sticky-header-stickyed-border-color: @common-border-color;
+
+.weui-sticky-container {
+  .weui-sticky-header {
+    font-size: .35rem;
+    line-height: .56rem;
+    padding: 0 .25rem;
+    color: @weui-sticky-header-color;
+    background-color: @weui-sticky-header-bg-color;
+    z-index: 99;
+
+    &.stickyed-header {
+      background-color: @weui-sticky-header-stickyed-bg-color;
+      color: @weui-sticky-header-stickyed-color;
+      border-bottom: 1px solid @weui-sticky-header-stickyed-border-color;
+    }
+  }
+}

@@ -6,6 +6,7 @@ import personal from './self';
 import newFriends from './new-friends';
 import addFriend from './add-friend';
 import moments from './moments';
+import album from './album';
 
 export default combineReducers({
   chatMain: chat,
@@ -13,5 +14,6 @@ export default combineReducers({
   selfMain: personal,
   newFriendsMain: newFriends,
   addFriendMain: addFriend,
-  momentsMain: moments
+  momentsMain: moments,
+  albumMain: album
 });
