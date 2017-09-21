@@ -16,6 +16,8 @@ const WeuiChatAvatar = (props) => {
     <div className={classNames('weui-chat-avatar', `weui-chat-avatar-${length}`)}>
       {
         imagesGroups.map((groupImages, index) => {
+          groupImages.reverse();
+
           return (
             <div className="chat-avatar-group" key={`avatar-group$-${index}`}>
               { groupImages.map((image, innerIndex) => (<img className={classNames('chat-avatar', `chat-avatar-${length}`)} src={image} key={`image${innerIndex}`} />))}

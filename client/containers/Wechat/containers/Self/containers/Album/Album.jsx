@@ -9,6 +9,7 @@ import classNames from 'classnames';
 import ObjectUtils from '../../../../../../utils/ObjectUtils';
 import WeuiHeader from '../../../../components/WeuiHeader/WeuiHeader';
 import WeuiBack from '../../../../components/WeuiBack/WeuiBack';
+import WeuiMomentsAvatars from '../../../../components/WeuiMomentsAvatars/WeuiMomentsAvatars';
 import * as momentsActions from '../../../../actions/moments';
 import * as selfActions from '../../../../actions/self';
 import * as albumActions from '../../../../actions/album';
@@ -52,7 +53,8 @@ class Album extends Component {
     };
 
     this.relativeDateKey = {
-      [moment().format(DateYYYYMMDD)]: '今天'
+      [moment().format(DateYYYYMMDD)]: '今天',
+      [moment().subtract(1, 'days').format(DateYYYYMMDD)]: '昨天'
     };
 
     this.checkHasRouteParams = this.checkHasRouteParams.bind(this);
@@ -89,11 +91,15 @@ class Album extends Component {
     return this.props.match.params.wxid || this.props.wxid;
   }
 
+  getCurrentYear = () => {
+    return `${new Date().getFullYear()}`;
+  }
+
   renderTodayPhotoGroup = () => {
     const groupOptions = {
       header: (
         <div className="moments-time-wrapper moments-time-diff-0">
-          <p className="moments-month">今天</p>
+          <p className="moments-day">今天</p>
         </div>
       ),
       body: (
@@ -104,36 +110,117 @@ class Album extends Component {
     return (<MomentsGroupContent {...groupOptions} />);
   }
 
+  renderDayMomentsGroupsWrapperBody = (post) => {
+    const hasImages = !!(post.images && post.images.length !== 0);
+
+    return (
+      <div className={classNames('moments-content-wrapper', { 'without-images-moments': !hasImages })}>
+        {
+          hasImages && <WeuiMomentsAvatars images={post.images} />
+        }
+        <div className="content-wrapper-body">
+          {
+            !!post.content && <p className="content-body-text">{ post.content }</p>
+          }
+          {
+            (hasImages && post.images.length > 1) && <p className="content-images-count">{ `共${post.images.length}张` }</p>
+          }
+        </div>
+      </div>
+    );
+  }
+
+  renderDayMomentsGroupsWrapper = (day, post, key) => {
+    if (!post) {
+      return null;
+    }
+
+    const groupOptions = {
+      header: (
+        <div className={classNames('moments-time-wrapper', `moments-time-diff-${moment().diff(moment(day), 'days')}`)}>
+          <p className="moments-day">{ this.relativeDateKey[day] ? this.relativeDateKey[day] : post.day }</p>
+          <p className="moments-month">{ `${post.month}月` }</p>
+        </div>
+      ),
+      body: this.renderDayMomentsGroupsWrapperBody(post)
+    };
+
+    return (<MomentsGroupContent key={key} {...groupOptions} />);
+  }
+
+  renderYearMomentsStickyWrapper = (year, moments, index) => {
+    const currentYear = this.getCurrentYear();
+
+    let days;
+    if (moments) {
+      days = Object.keys(moments).sort();
+    }
+
+    if (year !== currentYear && !moments) {
+      return null;
+    }
+
+    const currentDay = moment().format(DateYYYYMMDD);
+    const currentDayIndex = days.indexOf(currentDay);
+    if (currentDayIndex !== -1) {
+      days.splice(currentDayIndex, index);
+    }
+
+    return (
+      <StickyContainer className="weui-sticky-container" key={index}>
+        <Sticky topOffset={this.getStickyTopOffset()}>
+          {
+            ({ isSticky, style }) => {
+              return (
+                <p
+                  className={classNames('weui-sticky-header', { 'stickyed-header': isSticky })}
+                  style={{ ...style, top: this.getStickyChildrenTop() }}
+                >{`${year}年`}</p>
+              );
+            }
+          }
+        </Sticky>
+        <div className="moments-groups-wrapper">
+          {
+            year === currentYear && !this.checkHasRouteParams() && this.renderTodayPhotoGroup()
+          }
+          {
+            currentDayIndex !== -1 && moments[currentDay].map((post, subIndex) => this.renderDayMomentsGroupsWrapper(currentDay, post, `${currentDay}-${subIndex}`))
+          }
+        </div>
+        {
+          !!days.length && days.map((day, subIndex) => {
+            return (
+              <div className="moments-groups-wrapper" key={`moments-groups-wrapper-${subIndex}`}>
+                {
+                  moments[day].map((post, subSubIndex) => this.renderDayMomentsGroupsWrapper(day, post, `${day}-${subSubIndex}`))
+                }
+              </div>
+            );
+          })
+        }
+      </StickyContainer>
+    );
+  }
+
   renderMomentsWrapper = () => {
     const { momentsGroups } = this.getCurrentMoments() || {};
     if (!momentsGroups) {
       return null;
     }
 
+    const currentYear = this.getCurrentYear();
+    const years = Object.keys(momentsGroups).sort((pre, next) => next - pre) || [];
+    if (!years.includes(currentYear)) {
+      years.unshift(currentYear);
+    }
+
     return (
       <section className="moments-wrapper">
-        <StickyContainer className="weui-sticky-container">
-          <Sticky topOffset={this.getStickyTopOffset()}>
-            {
-              ({ isSticky, style }) => {
-                return (
-                  <p
-                    className={classNames('weui-sticky-header', { 'stickyed-header': isSticky })}
-                    style={{ ...style, top: this.getStickyChildrenTop() }}
-                  >{`${new Date().getFullYear()}年`}</p>
-                );
-              }
-            }
-          </Sticky>
-          <div className="moments-groups-wrapper">
-            {
-              !this.checkHasRouteParams() && this.renderTodayPhotoGroup()
-            }
-            {
+        {
+          !!years.length && years.map((year, index) => this.renderYearMomentsStickyWrapper(year, momentsGroups[year], index))
+        }
 
-            }
-          </div>
-        </StickyContainer>
       </section>
     );
   }

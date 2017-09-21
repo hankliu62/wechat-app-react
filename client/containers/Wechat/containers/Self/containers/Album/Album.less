@@ -3,8 +3,13 @@
 @import '../../../../less/components/sticky';
 
 @album-personal-signature-color: #777;
+@content-body-text-color: #333;
+@without-images-moments-box-bg-color: #f1f0f6;
+@self-album-wrapper-bg-color: @white;
 
 .self-album-wrapper {
+  background-color: @self-album-wrapper-bg-color;
+
   .album-cover-wrapper {
     position: relative;
     height: 8rem;
@@ -66,6 +71,12 @@
     }
   }
 
+  .moments-groups-wrapper {
+    + .moments-groups-wrapper {
+      margin-top: .25rem;
+    }
+  }
+
   .moments-group-wrapper {
     padding: 0 .4rem;
     display: flex;
@@ -75,17 +86,23 @@
       width: 25%;
 
       .moments-time-wrapper {
-        .moments-month {
-          font-size: .45rem;
-          font-weight: bold;
+        .moments-day {
+          font-size: .5rem;
+          font-weight: 700;
+          display: inline-block;
+
+          + .moments-month {
+            margin-left: .05rem;
+          }
         }
 
-        .moments-day {
+        .moments-month {
           font-size: .25rem;
+          display: inline-block;
         }
 
         &.moments-time-diff-0 {
-          .moments-month {
+          .moments-day {
             font-size: .75rem;
           }
         }
@@ -94,6 +111,72 @@
 
     .moments-group-body {
       flex: 1;
+
+      .moments-content-wrapper {
+        display: table;
+
+        .weui-moments-avatar {
+          display: table-cell;
+          vertical-align: top;
+          width: 2rem;
+          height: 2rem;
+
+          .moments-avatar-group {
+            .moments-avatar {
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
+
+            &.moments-avatar-group-1 {
+              .moments-avatar {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+
+          + .content-wrapper-body {
+            padding-left: .1rem;
+          }
+
+          &.weui-moments-avatar-1 {
+            .moments-avatar-group {
+              width: 100%;
+              height: 100%;
+
+              .moments-avatar {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+
+        .content-wrapper-body {
+          display: table-cell;
+          vertical-align: top;
+
+          .content-body-text {
+            font-size: .35rem;
+            color: @content-body-text-color;
+          }
+        }
+
+        &.without-images-moments {
+          display: block;
+          padding: .2rem .1rem;
+          background-color: @without-images-moments-box-bg-color;
+        }
+      }
+    }
+
+    + .moments-group-wrapper {
+      margin-top: .15rem;
+
+      .moments-group-header {
+        visibility: hidden;
+      }
     }
   }
 }
