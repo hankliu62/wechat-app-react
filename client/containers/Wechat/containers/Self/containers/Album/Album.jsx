@@ -138,8 +138,8 @@ class Album extends Component {
     const groupOptions = {
       header: (
         <div className={classNames('moments-time-wrapper', `moments-time-diff-${moment().diff(moment(day), 'days')}`)}>
-          <p className="moments-day">{ this.relativeDateKey[day] ? this.relativeDateKey[day] : post.day }</p>
-          <p className="moments-month">{ `${post.month}月` }</p>
+          <p className={classNames('moments-day', { 'moments-day-relative': this.relativeDateKey[day] })}>{ this.relativeDateKey[day] ? this.relativeDateKey[day] : post.day }</p>
+          { !this.relativeDateKey[day] && <p className="moments-month">{ `${post.month}月` }</p> }
         </div>
       ),
       body: this.renderDayMomentsGroupsWrapperBody(post)
@@ -154,6 +154,7 @@ class Album extends Component {
     let days;
     if (moments) {
       days = Object.keys(moments).sort();
+      days.reverse();
     }
 
     if (year !== currentYear && !moments) {
@@ -165,6 +166,8 @@ class Album extends Component {
     if (currentDayIndex !== -1) {
       days.splice(currentDayIndex, index);
     }
+
+    const hasCurrentDayWrapper = (year === currentYear && !this.checkHasRouteParams()) || (currentDayIndex !== -1);
 
     return (
       <StickyContainer className="weui-sticky-container" key={index}>
@@ -180,14 +183,18 @@ class Album extends Component {
             }
           }
         </Sticky>
-        <div className="moments-groups-wrapper">
-          {
-            year === currentYear && !this.checkHasRouteParams() && this.renderTodayPhotoGroup()
-          }
-          {
-            currentDayIndex !== -1 && moments[currentDay].map((post, subIndex) => this.renderDayMomentsGroupsWrapper(currentDay, post, `${currentDay}-${subIndex}`))
-          }
-        </div>
+        {
+          hasCurrentDayWrapper &&
+            <div className="moments-groups-wrapper">
+              {
+                year === currentYear && !this.checkHasRouteParams() && this.renderTodayPhotoGroup()
+              }
+              {
+                currentDayIndex !== -1 && moments[currentDay].map((post, subIndex) => this.renderDayMomentsGroupsWrapper(currentDay, post, `${currentDay}-${subIndex}`))
+              }
+            </div>
+        }
+
         {
           !!days.length && days.map((day, subIndex) => {
             return (
@@ -245,6 +252,10 @@ class Album extends Component {
         </div>
         <p className="album-personal-signature">{ contact.signature }</p>
         { this.renderMomentsWrapper() }
+
+        <div className="self-album-footer">
+          <hr />
+        </div>
       </div>
     );
   }

@@ -2,73 +2,91 @@
 @import '../../../../less/mixins/text-ellipsis';
 @import '../../less/variables';
 
-.weui-chat-avatar {
-  width: 1.2rem;
-  height: 1.2rem;
-  background-color: @common-bg-color;
-  padding: .1rem;
-  border-radius: .125rem;
-  overflow: hidden;
+.weui-moments-avatar {
+  display: table-cell;
+  vertical-align: top;
+  width: 2rem;
+  height: 2rem;
+  font-size: 0;
 
-  .chat-avatar-group {
-    font-size: 0;
-    text-align: center;
-
-    .chat-avatar {
-      display: inline-block;
-
-      + .chat-avatar {
-        margin-left: .05rem;
-      }
+  .moments-avatar-group {
+    .moments-avatar {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
 
-    + .chat-avatar-group {
-      margin-top: .05rem;
+    &.moments-avatar-group-1 {
+      .moments-avatar {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
-  &.weui-chat-avatar-1 {
-    padding: 0;
+  + .content-wrapper-body {
+    padding-left: .1rem;
+  }
 
-    .chat-avatar-group {
+  &.weui-moments-avatar-1 {
+    .moments-avatar-group {
       width: 100%;
       height: 100%;
 
-      .chat-avatar {
-        height: 100% !important;
-        margin: 0 auto;
+      .moments-avatar {
+        width: 100%;
+        height: 100%;
       }
     }
   }
 
-  &.weui-chat-avatar-3,
-  &.weui-chat-avatar-4 {
-    .chat-avatar-group {
-      .chat-avatar {
-        height: .475rem !important;
-        width: .475rem !important;
-      }
-    }
-  }
+  // &.weui-moments-avatar-2 {
+  //   .moments-avatar-group {
+  //     width: 100%;
+  //     height: 100%;
 
-  &.weui-chat-avatar-5,
-  &.weui-chat-avatar-6,
-  &.weui-chat-avatar-7,
-  &.weui-chat-avatar-8,
-  &.weui-chat-avatar-9 {
-    .chat-avatar-group {
-      .chat-avatar {
-        height: .3rem !important;
-        width: .3rem !important;
-      }
-    }
-  }
+  //     .moments-avatar {
+  //       display: inline-block;
+  //       width: 50%;
+  //       height: 100%;
+  //       margin-right: .05rem;
+  //       box-sizing: border-box;
 
-  &.weui-chat-avatar-5,
-  &.weui-chat-avatar-6 {
-    .chat-avatar-group {
-      &:first-child {
-        margin-top: .175rem;
+  //       + .moments-avatar {
+  //         padding-right: 0;
+  //         margin-left: .05rem;
+  //       }
+  //     }
+  //   }
+  // }
+
+  &.weui-moments-avatar-2,
+  &.weui-moments-avatar-3,
+  &.weui-moments-avatar-4 {
+    .moments-avatar-group {
+      display: inline-block;
+      width: 50%;
+      height: 100%;
+      padding-right: .05rem;
+
+      .moments-avatar {
+        width: 100%;
+        height: 100%;
+      }
+
+      + .moments-avatar-group {
+        padding-right: 0;
+        padding-left: .05rem;
+      }
+
+      &.moments-avatar-group-2 {
+        .moments-avatar {
+          height: .95rem;
+
+          + .moments-avatar {
+            margin-top: .1rem;
+          }
+        }
       }
     }
   }

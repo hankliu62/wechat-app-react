@@ -6,6 +6,7 @@
 @content-body-text-color: #333;
 @without-images-moments-box-bg-color: #f1f0f6;
 @self-album-wrapper-bg-color: @white;
+@content-images-count-color: #383838;
 
 .self-album-wrapper {
   background-color: @self-album-wrapper-bg-color;
@@ -69,6 +70,10 @@
         visibility: visible;
       }
     }
+
+    + .weui-sticky-container {
+      margin-top: .25rem;
+    }
   }
 
   .moments-groups-wrapper {
@@ -86,10 +91,15 @@
       width: 25%;
 
       .moments-time-wrapper {
+        font-weight: 700;
+
         .moments-day {
           font-size: .5rem;
-          font-weight: 700;
           display: inline-block;
+
+          &.moments-day-relative {
+            font-size: .75rem;
+          }
 
           + .moments-month {
             margin-left: .05rem;
@@ -112,54 +122,32 @@
     .moments-group-body {
       flex: 1;
 
+      .image-moments-photo {
+        width: 2rem;
+      }
+
       .moments-content-wrapper {
         display: table;
 
-        .weui-moments-avatar {
-          display: table-cell;
-          vertical-align: top;
-          width: 2rem;
-          height: 2rem;
-
-          .moments-avatar-group {
-            .moments-avatar {
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: cover;
-            }
-
-            &.moments-avatar-group-1 {
-              .moments-avatar {
-                width: 100%;
-                height: 100%;
-              }
-            }
-          }
-
-          + .content-wrapper-body {
-            padding-left: .1rem;
-          }
-
-          &.weui-moments-avatar-1 {
-            .moments-avatar-group {
-              width: 100%;
-              height: 100%;
-
-              .moments-avatar {
-                width: 100%;
-                height: 100%;
-              }
-            }
-          }
-        }
-
         .content-wrapper-body {
-          display: table-cell;
-          vertical-align: top;
+          display: flex;
+          flex-direction: column;
+          height: 2rem;
+          justify-content: space-between;
+          overflow: hidden;
 
           .content-body-text {
+            flex: 1;
             font-size: .35rem;
             color: @content-body-text-color;
+            max-height: 1.75rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          .content-images-count {
+            font-size: .25rem;
+            color: @content-images-count-color;
           }
         }
 
@@ -167,6 +155,10 @@
           display: block;
           padding: .2rem .1rem;
           background-color: @without-images-moments-box-bg-color;
+
+          .content-wrapper-body {
+            height: auto;
+          }
         }
       }
     }
@@ -177,6 +169,30 @@
       .moments-group-header {
         visibility: hidden;
       }
+    }
+  }
+
+  .self-album-footer {
+    margin-bottom: .4rem;
+    padding: .8rem 1.2rem;
+    position: relative;
+
+    hr {
+      color: @common-border-color;
+    }
+
+    &:after {
+      content: '·';
+      color: @common-border-color;
+      font-size: .3rem;
+      position: absolute;
+      padding: 0 .2rem;
+      line-height: .3rem;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      background-color: @white;
+      margin-top: 1px;
     }
   }
 }

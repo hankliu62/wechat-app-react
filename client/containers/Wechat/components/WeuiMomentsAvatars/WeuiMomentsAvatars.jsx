@@ -8,7 +8,8 @@ const WeuiMomentsAvatars = (props) => {
   const images = (props.images || []).slice(0, 4);
   images.reverse();
   const length = images.length;
-  const imagesGroups = chunk(images, 2);
+  const chunkCount = length > 2 ? 2 : 1;
+  const imagesGroups = chunk(images, chunkCount);
   imagesGroups.reverse();
 
   return (
