@@ -1,0 +1,49 @@
+@import '../../../../less/variables';
+@import '../../../../less/mixins/text-ellipsis';
+@import '../../less/variables';
+
+@weui-mask-bg-color: rgba(0, 0, 0, .6);
+@weui-actionsheet-cell-color: @common-text-color;
+
+.weui-actionsheet {
+  .weui-mask {
+    position: fixed;
+    z-index: 1003;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: @weui-mask-bg-color;
+  }
+
+  .weui-actionsheet-menu {
+    position: fixed;
+    z-index: 1004;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: @white;
+
+    .weui-actionsheet-cell {
+      text-align: center;
+
+      .weui-actionsheet-cell-content {
+        .text-ellipsis();
+
+        color: @weui-actionsheet-cell-color;
+        font-size: .45rem;
+        max-width: 80%;
+        padding: .35rem 0;
+        margin: 0 auto;
+      }
+
+      + .weui-actionsheet-cell {
+        border-top: 1px solid @common-border-color;
+      }
+
+      &.cancel-cell {
+        border-top: .15rem solid @common-border-color;
+      }
+    }
+  }
+}

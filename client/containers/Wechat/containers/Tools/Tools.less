@@ -1,0 +1,44 @@
+@import '../../less/variables';
+
+@tools-title-color: #777;
+@tools-border-color: #ddd;
+@tools-menu-color: #27ae60;
+
+.tools-wrapper {
+  height: 100%;
+
+  .sub-main-wrapper {
+    &.tools-main-wrapper {
+      width: 80%;
+      margin: 0 auto;
+      padding-top: 1rem;
+
+      .title {
+        margin: 0;
+        color: @tools-title-color;
+        font-size: .5rem;
+      }
+
+      .tools {
+        margin-top: .5rem;
+        padding-top: .25rem;
+        border-top: 1px solid @tools-border-color;
+
+        .tool-item {
+          padding-top: .2rem;
+
+          .menu {
+            padding-left: .25rem;
+            color: @tools-menu-color;
+            font-size: .4rem;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  &.with-sub-wrapper {
+    margin-top: -@header-height;
+  }
+}

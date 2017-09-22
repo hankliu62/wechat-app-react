@@ -10,6 +10,7 @@ import ObjectUtils from '../../../../../../utils/ObjectUtils';
 import WeuiHeader from '../../../../components/WeuiHeader/WeuiHeader';
 import WeuiBack from '../../../../components/WeuiBack/WeuiBack';
 import WeuiMomentsAvatars from '../../../../components/WeuiMomentsAvatars/WeuiMomentsAvatars';
+import WeuiActionSheet from '../../../../components/WeuiActionSheet/WeuiActionSheet';
 import * as momentsActions from '../../../../actions/moments';
 import * as selfActions from '../../../../actions/self';
 import * as albumActions from '../../../../actions/album';
@@ -49,7 +50,7 @@ class Album extends Component {
     super(props);
 
     this.state = {
-      show: true
+      isShowActionSheet: false
     };
 
     this.relativeDateKey = {
@@ -75,6 +76,14 @@ class Album extends Component {
     if (!this.getCurrentMoments()) {
       this.props.fetchMoments(wxid);
     }
+  }
+
+  handleOpenActionSheet = () => {
+    this.setState({ isShowActionSheet: true });
+  }
+
+  handleCloseActionSheet = () => {
+    this.setState({ isShowActionSheet: false });
   }
 
   getCurrentMoments = () => {
@@ -103,7 +112,7 @@ class Album extends Component {
         </div>
       ),
       body: (
-        <img className="image-moments-photo" src={require('./images/photo.png')} />
+        <img className="image-moments-photo" src={require('./images/photo.png')} onClick={this.handleOpenActionSheet} />
       )
     };
 
@@ -256,6 +265,13 @@ class Album extends Component {
         <div className="self-album-footer">
           <hr />
         </div>
+
+        <WeuiActionSheet
+          isOpen={this.state.isShowActionSheet}
+          cells={[{ text: '拍摄', value: 'photo' }, { text: '从相册中选择', value: 'album' }]}
+          onCancel={this.handleCloseActionSheet}
+          onClose={this.handleCloseActionSheet}
+        />
       </div>
     );
   }
