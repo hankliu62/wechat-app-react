@@ -6,7 +6,20 @@ import * as CONSTANTS from '../constants/Constants';
 
 export const setState = payload => ({ type: ActionTypes.WECHAT_CONTACT_MAIN_SET, payload });
 
-export const getContacter = wxid => ({ type: ActionTypes.WECHAT_CONTACT_GET_CONTACTER, wxid });
+export const getContacter = (wxid) => {
+  let contacter;
+  if (wxid) {
+    const contacts = require('../constants/data-contact.json') || [];
+    contacter = contacts.find(item => item.wxid === wxid);
+  } else {
+    contacter = require('../constants/data-self.json');
+  }
+
+  if (contacter) {
+    contacter.gender = contacter.sex === 1 ? CONSTANTS.MALE : CONSTANTS.FEMALE;
+  }
+  return { type: ActionTypes.WECHAT_CONTACT_GET_CONTACTER, payload: { selectedContacter: contacter } };
+};
 
 const pickObjectValue = (item, keys) => {
   for (const key of keys) {

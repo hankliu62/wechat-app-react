@@ -20,6 +20,7 @@ const WechatContactRouter = (props) => {
   return (
     <Switch>
       <BundleWrappingRoute {...props} component={SubPageContainer} path="/wechat/contact/detail/:wxid" load={loadContactDetailAsync} />
+      <BundleWrappingRoute {...props} component={SubPageContainer} path="/wechat/contact/detail" load={loadContactDetailAsync} />
       <BundleWrappingRoute {...props} component={SubPageContainer} path="/wechat/contact/tags" load={loadContactTagsAsync} />
       <BundleWrappingRoute {...props} component={SubPageContainer} path="/wechat/contact/new-friends" load={loadContactNewFriendsAsync} />
       <BundleWrappingRoute {...props} component={SubPageContainer} path="/wechat/contact/group-chats" load={loadContactGroupChatsAsync} />

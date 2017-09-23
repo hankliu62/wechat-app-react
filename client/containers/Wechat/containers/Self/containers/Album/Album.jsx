@@ -50,7 +50,8 @@ class Album extends Component {
     super(props);
 
     this.state = {
-      isShowActionSheet: false
+      isShowPhotoActionSheet: false,
+      isShowCoverActionSheet: false
     };
 
     this.relativeDateKey = {
@@ -78,12 +79,29 @@ class Album extends Component {
     }
   }
 
-  handleOpenActionSheet = () => {
-    this.setState({ isShowActionSheet: true });
+  handleOpenPhotoActionSheet = () => {
+    this.setState({ isShowPhotoActionSheet: true });
   }
 
-  handleCloseActionSheet = () => {
-    this.setState({ isShowActionSheet: false });
+  handleClosePhotoActionSheet = () => {
+    this.setState({ isShowPhotoActionSheet: false });
+  }
+
+  handleOpenCoverActionSheet = () => {
+    this.setState({ isShowCoverActionSheet: true });
+  }
+
+  handleCloseCoverActionSheet = () => {
+    this.setState({ isShowCoverActionSheet: false });
+  }
+
+  handleClickAvatar = (e) => {
+    if (e) {
+      e.stopPropagation();
+    }
+
+    const wxid = this.props.match.params.wxid ? `/${this.props.match.params.wxid}` : '';
+    this.props.history.push(`/wechat/contact/detail${wxid}`);
   }
 
   getCurrentMoments = () => {
@@ -112,7 +130,11 @@ class Album extends Component {
         </div>
       ),
       body: (
-        <img className="image-moments-photo" src={require('./images/photo.png')} onClick={this.handleOpenActionSheet} />
+        <img
+          className="image-moments-photo"
+          src={require('./images/photo.png')}
+          onClick={this.handleOpenPhotoActionSheet}
+        />
       )
     };
 
@@ -253,9 +275,13 @@ class Album extends Component {
     return (
       <div className="self-album-wrapper">
         <WeuiHeader title="相册" back={(<WeuiBack history={this.props.history}><span className="weui-back-centent">我</span></WeuiBack>)} />
-        <div className="album-cover-wrapper" style={{ backgroundImage: `url(${contact.coverUrl})` }}>
+        <div
+          className="album-cover-wrapper"
+          style={{ backgroundImage: `url(${contact.coverUrl})` }}
+          onClick={this.handleOpenCoverActionSheet}
+        >
           <div className="album-personal-wrapper">
-            <div className="album-avatar"><img className="image-header" src={contact.headerUrl} /></div>
+            <div className="album-avatar" onClick={this.handleClickAvatar}><img className="image-header" src={contact.headerUrl} /></div>
             <div className="album-nickname">{contact.nickname}</div>
           </div>
         </div>
@@ -267,10 +293,17 @@ class Album extends Component {
         </div>
 
         <WeuiActionSheet
-          isOpen={this.state.isShowActionSheet}
+          isOpen={this.state.isShowPhotoActionSheet}
           cells={[{ text: '拍摄', value: 'photo' }, { text: '从相册中选择', value: 'album' }]}
-          onCancel={this.handleCloseActionSheet}
-          onClose={this.handleCloseActionSheet}
+          onCancel={this.handleClosePhotoActionSheet}
+          onClose={this.handleClosePhotoActionSheet}
+        />
+
+        <WeuiActionSheet
+          isOpen={this.state.isShowCoverActionSheet}
+          cells={[{ text: '更换相册中封面', value: 'album' }]}
+          onCancel={this.handleCloseCoverActionSheet}
+          onClose={this.handleCloseCoverActionSheet}
         />
       </div>
     );

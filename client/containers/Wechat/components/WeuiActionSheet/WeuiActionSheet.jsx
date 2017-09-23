@@ -28,7 +28,18 @@ class WeuiActionSheet extends Component {
   }
 
   componentDidMount() {
-    document.addEventListener('click', this.handleClickDocument, false);
+    if (this.props.isShow) {
+      document.addEventListener('click', this.handleClickDocument, false);
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.isOpen) {
+      ElementUtil.addClassName(document.documentElement, 'weui-action-aheet-opensing');
+      document.addEventListener('click', this.handleClickDocument, false);
+    } else {
+      document.removeEventListener('click', this.handleClickDocument, false);
+    }
   }
 
   componentWillUnmount() {
@@ -40,7 +51,11 @@ class WeuiActionSheet extends Component {
       return;
     }
 
+    if (!this.props.isOpen) {
+      return;
+    }
 
+    ElementUtil.removeClassName(document.documentElement, 'weui-action-aheet-opensing');
     this.props.onClose();
   }
 
@@ -58,6 +73,7 @@ class WeuiActionSheet extends Component {
 
   render() {
     const { cells, isOpen } = this.props;
+
     if (!isOpen) {
       return null;
     }

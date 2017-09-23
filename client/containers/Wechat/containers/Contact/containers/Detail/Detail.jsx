@@ -42,7 +42,7 @@ class Detail extends Component {
 
   componentDidMount() {
     const { params } = this.props.match;
-    if (isEmpty(this.props.selectedContacter)) {
+    if (isEmpty(this.props.selectedContacter) || params.wxid !== this.props.selectedContacter.wxid) {
       this.props.getContacter(params.wxid);
     }
   }
