@@ -121,6 +121,11 @@ class Detail extends Component {
         center: (<p className="weui-cell-content content-address">{ Array.isArray(contacter.area) ? contacter.area.join(' ') : contacter.area }</p>)
       },
       {
+        className: 'signature-cell',
+        left: (<p className="weui-cell-label">个性签名</p>),
+        center: (<p className="weui-cell-content content-signature">{ contacter.signature }</p>)
+      },
+      {
         className: 'with-arrow',
         left: (<p className="weui-cell-label">更多</p>),
       }
@@ -140,7 +145,7 @@ class Detail extends Component {
         }
       }
 
-      moreCells.splice(1, 0, {
+      moreCells.splice(-1, 0, {
         className: 'with-arrow',
         left: (<p className="weui-cell-label">个人相册</p>),
         center: (
@@ -151,7 +156,7 @@ class Detail extends Component {
       });
     }
 
-    return (<WeuiCells cells={moreCells} />);
+    return (<WeuiCells className="contact-detail-more-cells" cells={moreCells} />);
   }
 
   render() {

@@ -1,3 +1,5 @@
+@import '../../../../../../less/mixins/text-ellipsis';
+
 @header-weui-cell-content-color: #888;
 @weui-cell-content-tags-color: #57bf02;
 @weui-cell-content-telephone-color: #534fad;
@@ -43,6 +45,34 @@
               + .content-album {
                 margin-left: .28rem;
               }
+            }
+          }
+        }
+      }
+    }
+
+    &.contact-detail-more-cells {
+      .weui-cell {
+        .weui-cell-hd {
+          width: 2rem;
+        }
+
+        .weui-cell-bd {
+          flex: 1;
+        }
+
+        &.signature-cell {
+          .weui-cell-bd {
+            position: absolute;
+            right: 0;
+            padding-left: 2.5rem;
+            padding-right: .25rem;
+            left: 0;
+
+            .content-signature {
+              .text-ellipsis();
+
+              width: 100%;
             }
           }
         }

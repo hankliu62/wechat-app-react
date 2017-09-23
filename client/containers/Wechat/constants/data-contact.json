@@ -286,5 +286,27 @@
             "title": "",
             "picUrl": ""
         }
-    }
+    },
+    {
+      "wxid": "miss_cc220",
+      "headerUrl": "http://owgszbgsl.bkt.clouddn.com/avatar_lpy.jpeg",
+      "nickname": "佩佩",
+      "sex": 0,
+      "remark": "",
+      "signature": "「无岁月可回头」",
+      "telephone": 15364078956,
+      "album": [
+      ],
+      "area": [
+          "中国",
+          "湖南",
+          "长沙"
+      ],
+      "from": "通过群聊添加",
+      "tag": [],
+      "desc": {
+          "title": "",
+          "picUrl": ""
+      }
+  }
 ]
