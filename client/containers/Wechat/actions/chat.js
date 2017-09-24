@@ -2,6 +2,7 @@ import sortBy from 'lodash/sortBy';
 
 import { WECHAT_CHAT_MAIN_SET, WECHAT_CHAT_FETCH_CHATS } from '../constants/ActionTypes';
 import * as Constants from '../constants/Constants';
+import { getAllContacters, getAllGroups, getAllOfficialAccounts } from './contact';
 
 export const setState = payload => ({ type: WECHAT_CHAT_MAIN_SET, payload });
 
@@ -15,6 +16,43 @@ export const fetchChats = () => {
   // "chatConfigModel.blacklist" // 黑名单
 
   const chats = require('../constants/data-chats.json') || [];
+  const contacts = getAllContacters();
+  const groups = getAllGroups();
+  const officialAccounts = getAllOfficialAccounts();
+  for (const chat of chats) {
+    let baseResources = [];
+    let chatMemberResources = [];
+    switch (chat.base.type) {
+      case Constants.CHAT_ROOM_TYPE_FRIENDS: {
+        baseResources = contacts;
+        chatMemberResources = contacts;
+        break;
+      }
+      case Constants.CHAT_ROOM_TYPE_GROUP: {
+        baseResources = groups;
+        chatMemberResources = contacts;
+        break;
+      }
+      case Constants.CHAT_ROOM_TYPE_SERVICE: {
+        baseResources = officialAccounts;
+        chatMemberResources = officialAccounts;
+        break;
+      }
+    }
+
+    const base = baseResources.find(item => item.wxid === chat.base.wxid) || {};
+    chat.base = { ...base, ...chat.base };
+
+    if (chat.base.type === Constants.CHAT_ROOM_TYPE_FRIENDS) {
+      chat.base.name = chat.base.remark || chat.base.nickname;
+    }
+
+    const chatMembers = (chat.chatMemberModel || []).map((wxid) => {
+      const member = chatMemberResources.find(item => item.wxid === wxid) || {};
+      return { wxid, ...member };
+    });
+    chat.chatMemberModel = chatMembers;
+  }
   const chatRooms = sortBy((chats || []).map((chat) => {
     const chatRoom = {
       link: `wechat/chat/dialogue/${chat.mid}`,
@@ -40,7 +78,8 @@ export const fetchChats = () => {
         break;
     }
     return chatRoom;
-  }), '-lastTime');
+  }), 'lastTime');
+  chatRooms.reverse();
 
   return {
     type: WECHAT_CHAT_FETCH_CHATS,

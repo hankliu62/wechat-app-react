@@ -142,5 +142,21 @@
     "headerUrl": "http://owgszbgsl.bkt.clouddn.com/fex.jpeg",
     "owner": "腾讯技术有限公司",
     "initial": "F"
+  },
+  {
+    "wxid": "iloveleme",
+    "name": "饿了么",
+    "desc": "",
+    "headerUrl": "http://tb1.bdstatic.com/tb/cms/ngmis/file_1453447545023.jpg",
+    "owner": "上海拉扎斯信息科技有限公司",
+    "type": "service"
+  },
+  {
+    "wxid": "wxid_xituquan",
+    "name": "稀土圈",
+    "desc": "",
+    "headerUrl": "http://ad-gold-cdn.xitu.io/14999139497307c668d55b4dd5984b6accc6bf41206a8.jpg",
+    "owner": "上海拉扎斯信息科技有限公司",
+    "type": "service"
   }
 ]

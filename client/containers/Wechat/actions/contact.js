@@ -4,6 +4,21 @@ import groupBy from 'lodash/groupBy';
 import * as ActionTypes from '../constants/ActionTypes';
 import * as CONSTANTS from '../constants/Constants';
 
+export const getAllContacters = () => {
+  const contacts = require('../constants/data-contact.json') || [];
+  return contacts;
+};
+
+export const getAllGroups = () => {
+  const groups = require('../constants/data-groups.json') || [];
+  return groups;
+};
+
+export const getAllOfficialAccounts = () => {
+  const officialAccounts = require('../constants/data-official-accounts.json') || [];
+  return officialAccounts;
+};
+
 export const setState = payload => ({ type: ActionTypes.WECHAT_CONTACT_MAIN_SET, payload });
 
 export const getContacter = (wxid) => {

@@ -8,14 +8,14 @@
 @weui-chat-room-header-time-color: #bbb;
 @weui-chat-room-body-message-color: #999;
 @weui-chat-room-body-mute-color: #ddd;
+@weui-chat-room-operate-mark-bg-color: #c7c7cc;
+@weui-chat-room-operate-del-bg-color: #ff3b30;
 
 .weui-chat-room {
   position: relative;
-  padding: .25rem;
+  display: block;
   color: @black;
   text-decoration: none;
-  width: 100%;
-  display: block;
 
   &:hover,
   &:active {
@@ -31,6 +31,10 @@
   .weui-chat-room-info {
     display: flex;
     align-items: center;
+    position: relative;
+    padding: .25rem;
+    z-index: 2;
+    background-color: @white;
 
     .chat-info-avatar {
       position: relative;
@@ -38,7 +42,11 @@
     }
 
     .chat-info-content {
-      flex: 1;
+      position: absolute;
+      left: 0;
+      right: 0;
+      padding-left: 1.7rem;
+      padding-right: .25rem;
 
       .content-body,
       .content-header {
@@ -81,6 +89,8 @@
   }
 
   + .weui-chat-room {
+    padding-top: 1px;
+
     &:before {
       content: " ";
       position: absolute;
@@ -90,6 +100,39 @@
       right: 0;
       height: 1px;
       box-sizing: border-box;
+    }
+
+    .weui-chat-room-operate {
+      top: 1px;
+    }
+  }
+
+  .weui-chat-room-operate {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+
+    .operate-mark,
+    .operate-del {
+      text-align: center;
+      height: 100%;
+      line-height: 1.7rem;
+      font-size: .45rem;
+      color: @white;
+    }
+
+    .operate-mark {
+      width: 2.4rem;
+      background-color: @weui-chat-room-operate-mark-bg-color;
+    }
+
+    .operate-del {
+      width: 1.5rem;
+      background-color: @weui-chat-room-operate-del-bg-color;
     }
   }
 }
