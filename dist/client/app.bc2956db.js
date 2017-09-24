@@ -1,4 +1,4 @@
-webpackJsonp([26],[
+webpackJsonp([28],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -97,7 +97,7 @@ module.exports = function (it) {
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var store = __webpack_require__(70)('wks');
+var store = __webpack_require__(71)('wks');
 var uid = __webpack_require__(40);
 var Symbol = __webpack_require__(3).Symbol;
 var USE_SYMBOL = typeof Symbol == 'function';
@@ -125,7 +125,7 @@ module.exports = !__webpack_require__(4)(function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 var anObject = __webpack_require__(2);
-var IE8_DOM_DEFINE = __webpack_require__(142);
+var IE8_DOM_DEFINE = __webpack_require__(146);
 var toPrimitive = __webpack_require__(26);
 var dP = Object.defineProperty;
 
@@ -289,7 +289,7 @@ var createDesc = __webpack_require__(39);
 var toIObject = __webpack_require__(18);
 var toPrimitive = __webpack_require__(26);
 var has = __webpack_require__(14);
-var IE8_DOM_DEFINE = __webpack_require__(142);
+var IE8_DOM_DEFINE = __webpack_require__(146);
 var gOPD = Object.getOwnPropertyDescriptor;
 
 exports.f = __webpack_require__(7) ? gOPD : function getOwnPropertyDescriptor(O, P) {
@@ -563,7 +563,7 @@ var WECHAT_ALBUM_GET_FRIEND = exports.WECHAT_ALBUM_GET_FRIEND = 'WECHAT_ALBUM_GE
 /* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var freeGlobal = __webpack_require__(196);
+var freeGlobal = __webpack_require__(199);
 
 /** Detect free variable `self`. */
 var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
@@ -585,7 +585,7 @@ if (__webpack_require__(7)) {
   var global = __webpack_require__(3);
   var fails = __webpack_require__(4);
   var $export = __webpack_require__(0);
-  var $typed = __webpack_require__(80);
+  var $typed = __webpack_require__(81);
   var $buffer = __webpack_require__(121);
   var ctx = __webpack_require__(21);
   var anInstance = __webpack_require__(47);
@@ -594,7 +594,7 @@ if (__webpack_require__(7)) {
   var redefineAll = __webpack_require__(49);
   var toInteger = __webpack_require__(28);
   var toLength = __webpack_require__(9);
-  var toIndex = __webpack_require__(168);
+  var toIndex = __webpack_require__(172);
   var toAbsoluteIndex = __webpack_require__(43);
   var toPrimitive = __webpack_require__(26);
   var has = __webpack_require__(14);
@@ -609,14 +609,14 @@ if (__webpack_require__(7)) {
   var uid = __webpack_require__(40);
   var wks = __webpack_require__(6);
   var createArrayMethod = __webpack_require__(30);
-  var createArrayIncludes = __webpack_require__(71);
-  var speciesConstructor = __webpack_require__(78);
+  var createArrayIncludes = __webpack_require__(72);
+  var speciesConstructor = __webpack_require__(79);
   var ArrayIterators = __webpack_require__(117);
   var Iterators = __webpack_require__(55);
-  var $iterDetect = __webpack_require__(75);
+  var $iterDetect = __webpack_require__(76);
   var setSpecies = __webpack_require__(46);
   var arrayFill = __webpack_require__(116);
-  var arrayCopyWithin = __webpack_require__(158);
+  var arrayCopyWithin = __webpack_require__(162);
   var $DP = __webpack_require__(8);
   var $GOPD = __webpack_require__(19);
   var dP = $DP.f;
@@ -1065,10 +1065,10 @@ if (__webpack_require__(7)) {
 /* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Map = __webpack_require__(163);
+var Map = __webpack_require__(167);
 var $export = __webpack_require__(0);
-var shared = __webpack_require__(70)('metadata');
-var store = shared.store || (shared.store = new (__webpack_require__(166))());
+var shared = __webpack_require__(71)('metadata');
+var store = shared.store || (shared.store = new (__webpack_require__(170))());
 
 var getOrCreateMetadataMap = function (target, targetKey, create) {
   var targetMetadata = store.get(target);
@@ -1120,6 +1120,12 @@ module.exports = {
 
 /***/ }),
 /* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = (__webpack_require__(1))(295);
+
+/***/ }),
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var META = __webpack_require__(40)('meta');
@@ -1178,7 +1184,7 @@ var meta = module.exports = {
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 22.1.3.31 Array.prototype[@@unscopables]
@@ -1191,7 +1197,7 @@ module.exports = function (key) {
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1204,12 +1210,6 @@ exports.default = function (instance, Constructor) {
     throw new TypeError("Cannot call a class as a function");
   }
 };
-
-/***/ }),
-/* 38 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = (__webpack_require__(1))(295);
 
 /***/ }),
 /* 39 */
@@ -1248,7 +1248,7 @@ module.exports = false;
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
-var $keys = __webpack_require__(144);
+var $keys = __webpack_require__(148);
 var enumBugKeys = __webpack_require__(99);
 
 module.exports = Object.keys || function keys(O) {
@@ -1275,7 +1275,7 @@ module.exports = function (index, length) {
 
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 var anObject = __webpack_require__(2);
-var dPs = __webpack_require__(145);
+var dPs = __webpack_require__(149);
 var enumBugKeys = __webpack_require__(99);
 var IE_PROTO = __webpack_require__(98)('IE_PROTO');
 var Empty = function () { /* empty */ };
@@ -1321,7 +1321,7 @@ module.exports = Object.create || function create(O, Properties) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-var $keys = __webpack_require__(144);
+var $keys = __webpack_require__(148);
 var hiddenKeys = __webpack_require__(99).concat('length', 'prototype');
 
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
@@ -1365,7 +1365,7 @@ module.exports = function (it, Constructor, name, forbiddenField) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var ctx = __webpack_require__(21);
-var call = __webpack_require__(156);
+var call = __webpack_require__(160);
 var isArrayIter = __webpack_require__(112);
 var anObject = __webpack_require__(2);
 var toLength = __webpack_require__(9);
@@ -1412,8 +1412,8 @@ module.exports = (__webpack_require__(1))(11);
 /* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsNative = __webpack_require__(509),
-    getValue = __webpack_require__(514);
+var baseIsNative = __webpack_require__(512),
+    getValue = __webpack_require__(517);
 
 /**
  * Gets the native function at `key` of `object`.
@@ -1440,7 +1440,7 @@ module.exports = getNative;
 
 exports.__esModule = true;
 
-var _defineProperty = __webpack_require__(450);
+var _defineProperty = __webpack_require__(454);
 
 var _defineProperty2 = _interopRequireDefault(_defineProperty);
 
@@ -1583,9 +1583,81 @@ module.exports = function (it) {
 /* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(61),
-    getRawTag = __webpack_require__(510),
-    objectToString = __webpack_require__(511);
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends2 = __webpack_require__(12);
+
+var _extends3 = _interopRequireDefault(_extends2);
+
+var _objectWithoutProperties2 = __webpack_require__(494);
+
+var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
+
+var _react = __webpack_require__(10);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(35);
+
+var _Bundle = __webpack_require__(495);
+
+var _Bundle2 = _interopRequireDefault(_Bundle);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var innerWrapper = function innerWrapper(InnerWrappingComponent) {
+  return function (ChildrenComponent) {
+    return function (props) {
+      return function (InnerComponent) {
+        return InnerWrappingComponent ? _react2.default.createElement(
+          InnerWrappingComponent,
+          null,
+          _react2.default.createElement(
+            InnerComponent,
+            props,
+            ChildrenComponent && ChildrenComponent(props)
+          )
+        ) : _react2.default.createElement(
+          InnerComponent,
+          props,
+          ChildrenComponent && ChildrenComponent(props)
+        );
+      };
+    };
+  };
+};
+
+var BundleWrappingRoute = function BundleWrappingRoute(_ref) {
+  var load = _ref.load,
+      InnerWrappingComponent = _ref.component,
+      ChildrenComponent = _ref.children,
+      rest = (0, _objectWithoutProperties3.default)(_ref, ['load', 'component', 'children']);
+  return _react2.default.createElement(_reactRouterDom.Route, (0, _extends3.default)({}, rest, { render: function render(props) {
+      return _react2.default.createElement(
+        _Bundle2.default,
+        { load: load },
+        innerWrapper(InnerWrappingComponent)(ChildrenComponent)(props)
+      );
+    } }));
+};
+
+exports.default = BundleWrappingRoute;
+
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "BundleWrappingRoute.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Symbol = __webpack_require__(62),
+    getRawTag = __webpack_require__(513),
+    objectToString = __webpack_require__(514);
 
 /** `Object#toString` result references. */
 var nullTag = '[object Null]',
@@ -1614,7 +1686,7 @@ module.exports = baseGetTag;
 
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var root = __webpack_require__(32);
@@ -1626,7 +1698,7 @@ module.exports = Symbol;
 
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports) {
 
 /**
@@ -1661,13 +1733,13 @@ module.exports = isObjectLike;
 
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(445), __esModule: true };
+module.exports = { "default": __webpack_require__(449), __esModule: true };
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1690,7 +1762,7 @@ exports.default = function (self, call) {
 };
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1698,11 +1770,11 @@ exports.default = function (self, call) {
 
 exports.__esModule = true;
 
-var _setPrototypeOf = __webpack_require__(473);
+var _setPrototypeOf = __webpack_require__(476);
 
 var _setPrototypeOf2 = _interopRequireDefault(_setPrototypeOf);
 
-var _create = __webpack_require__(478);
+var _create = __webpack_require__(481);
 
 var _create2 = _interopRequireDefault(_create);
 
@@ -1729,12 +1801,12 @@ exports.default = function (subClass, superClass) {
 };
 
 /***/ }),
-/* 66 */,
-/* 67 */
+/* 67 */,
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isFunction = __webpack_require__(195),
-    isLength = __webpack_require__(130);
+var isFunction = __webpack_require__(198),
+    isLength = __webpack_require__(131);
 
 /**
  * Checks if `value` is array-like. A value is considered array-like if it's
@@ -1769,7 +1841,7 @@ module.exports = isArrayLike;
 
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports) {
 
 /**
@@ -1806,11 +1878,11 @@ module.exports = isObject;
 
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(60),
-    isObjectLike = __webpack_require__(62);
+var baseGetTag = __webpack_require__(61),
+    isObjectLike = __webpack_require__(63);
 
 /** `Object#toString` result references. */
 var symbolTag = '[object Symbol]';
@@ -1841,7 +1913,7 @@ module.exports = isSymbol;
 
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(3);
@@ -1853,7 +1925,7 @@ module.exports = function (key) {
 
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // false -> Array#indexOf
@@ -1882,14 +1954,14 @@ module.exports = function (IS_INCLUDES) {
 
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports) {
 
 exports.f = Object.getOwnPropertySymbols;
 
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.2.2 IsArray(argument)
@@ -1900,7 +1972,7 @@ module.exports = Array.isArray || function isArray(arg) {
 
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.2.8 IsRegExp(argument)
@@ -1914,7 +1986,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ITERATOR = __webpack_require__(6)('iterator');
@@ -1942,7 +2014,7 @@ module.exports = function (exec, skipClosing) {
 
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1962,7 +2034,7 @@ module.exports = function () {
 
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1997,7 +2069,7 @@ module.exports = function (KEY, length, exec) {
 
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.3.20 SpeciesConstructor(O, defaultConstructor)
@@ -2012,7 +2084,7 @@ module.exports = function (O, D) {
 
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2021,12 +2093,12 @@ var global = __webpack_require__(3);
 var $export = __webpack_require__(0);
 var redefine = __webpack_require__(16);
 var redefineAll = __webpack_require__(49);
-var meta = __webpack_require__(35);
+var meta = __webpack_require__(36);
 var forOf = __webpack_require__(48);
 var anInstance = __webpack_require__(47);
 var isObject = __webpack_require__(5);
 var fails = __webpack_require__(4);
-var $iterDetect = __webpack_require__(75);
+var $iterDetect = __webpack_require__(76);
 var setToStringTag = __webpack_require__(53);
 var inheritIfRequired = __webpack_require__(103);
 
@@ -2104,7 +2176,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(3);
@@ -2138,7 +2210,7 @@ module.exports = {
 
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2154,7 +2226,7 @@ module.exports = __webpack_require__(41) || !__webpack_require__(4)(function () 
 
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2173,7 +2245,7 @@ module.exports = function (COLLECTION) {
 
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2208,86 +2280,14 @@ module.exports = function (COLLECTION) {
 
 
 /***/ }),
-/* 84 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends2 = __webpack_require__(12);
-
-var _extends3 = _interopRequireDefault(_extends2);
-
-var _objectWithoutProperties2 = __webpack_require__(491);
-
-var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
-
-var _react = __webpack_require__(10);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(38);
-
-var _Bundle = __webpack_require__(492);
-
-var _Bundle2 = _interopRequireDefault(_Bundle);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var innerWrapper = function innerWrapper(InnerWrappingComponent) {
-  return function (ChildrenComponent) {
-    return function (props) {
-      return function (InnerComponent) {
-        return InnerWrappingComponent ? _react2.default.createElement(
-          InnerWrappingComponent,
-          null,
-          _react2.default.createElement(
-            InnerComponent,
-            props,
-            ChildrenComponent && ChildrenComponent(props)
-          )
-        ) : _react2.default.createElement(
-          InnerComponent,
-          props,
-          ChildrenComponent && ChildrenComponent(props)
-        );
-      };
-    };
-  };
-};
-
-var BundleWrappingRoute = function BundleWrappingRoute(_ref) {
-  var load = _ref.load,
-      InnerWrappingComponent = _ref.component,
-      ChildrenComponent = _ref.children,
-      rest = (0, _objectWithoutProperties3.default)(_ref, ['load', 'component', 'children']);
-  return _react2.default.createElement(_reactRouterDom.Route, (0, _extends3.default)({}, rest, { render: function render(props) {
-      return _react2.default.createElement(
-        _Bundle2.default,
-        { load: load },
-        innerWrapper(InnerWrappingComponent)(ChildrenComponent)(props)
-      );
-    } }));
-};
-
-exports.default = BundleWrappingRoute;
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "BundleWrappingRoute.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
 /* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var listCacheClear = __webpack_require__(532),
-    listCacheDelete = __webpack_require__(533),
-    listCacheGet = __webpack_require__(534),
-    listCacheHas = __webpack_require__(535),
-    listCacheSet = __webpack_require__(536);
+var listCacheClear = __webpack_require__(535),
+    listCacheDelete = __webpack_require__(536),
+    listCacheGet = __webpack_require__(537),
+    listCacheHas = __webpack_require__(538),
+    listCacheSet = __webpack_require__(539);
 
 /**
  * Creates an list cache object.
@@ -2321,7 +2321,7 @@ module.exports = ListCache;
 /* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var eq = __webpack_require__(131);
+var eq = __webpack_require__(132);
 
 /**
  * Gets the index at which the `key` is found in `array` of key-value pairs.
@@ -2360,7 +2360,7 @@ module.exports = nativeCreate;
 /* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isKeyable = __webpack_require__(550);
+var isKeyable = __webpack_require__(553);
 
 /**
  * Gets the data for `map`.
@@ -2384,7 +2384,7 @@ module.exports = getMapData;
 /* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isSymbol = __webpack_require__(69);
+var isSymbol = __webpack_require__(70);
 
 /** Used as references for various `Number` constants. */
 var INFINITY = 1 / 0;
@@ -2451,8 +2451,8 @@ module.exports = (__webpack_require__(1))(25);
 /* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsArguments = __webpack_require__(523),
-    isObjectLike = __webpack_require__(62);
+var baseIsArguments = __webpack_require__(526),
+    isObjectLike = __webpack_require__(63);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -2515,7 +2515,7 @@ module.exports = function (it) {
 var global = __webpack_require__(3);
 var core = __webpack_require__(25);
 var LIBRARY = __webpack_require__(41);
-var wksExt = __webpack_require__(143);
+var wksExt = __webpack_require__(147);
 var defineProperty = __webpack_require__(8).f;
 module.exports = function (name) {
   var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
@@ -2527,7 +2527,7 @@ module.exports = function (name) {
 /* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var shared = __webpack_require__(70)('keys');
+var shared = __webpack_require__(71)('keys');
 var uid = __webpack_require__(40);
 module.exports = function (key) {
   return shared[key] || (shared[key] = uid(key));
@@ -2777,7 +2777,7 @@ module.exports = function (Constructor, NAME, next) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // helper for String#{startsWith, endsWith, includes}
-var isRegExp = __webpack_require__(74);
+var isRegExp = __webpack_require__(75);
 var defined = __webpack_require__(27);
 
 module.exports = function (that, searchString, NAME) {
@@ -2852,7 +2852,7 @@ module.exports = __webpack_require__(25).getIteratorMethod = function (it) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // 9.4.2.3 ArraySpeciesCreate(originalArray, length)
-var speciesConstructor = __webpack_require__(317);
+var speciesConstructor = __webpack_require__(321);
 
 module.exports = function (original, length) {
   return new (speciesConstructor(original))(length);
@@ -2887,8 +2887,8 @@ module.exports = function fill(value /* , start = 0, end = @length */) {
 
 "use strict";
 
-var addToUnscopables = __webpack_require__(36);
-var step = __webpack_require__(159);
+var addToUnscopables = __webpack_require__(37);
+var step = __webpack_require__(163);
 var Iterators = __webpack_require__(55);
 var toIObject = __webpack_require__(18);
 
@@ -2927,7 +2927,7 @@ addToUnscopables('entries');
 /***/ (function(module, exports, __webpack_require__) {
 
 var ctx = __webpack_require__(21);
-var invoke = __webpack_require__(149);
+var invoke = __webpack_require__(153);
 var html = __webpack_require__(100);
 var cel = __webpack_require__(96);
 var global = __webpack_require__(3);
@@ -3120,14 +3120,14 @@ module.exports.f = function (C) {
 var global = __webpack_require__(3);
 var DESCRIPTORS = __webpack_require__(7);
 var LIBRARY = __webpack_require__(41);
-var $typed = __webpack_require__(80);
+var $typed = __webpack_require__(81);
 var hide = __webpack_require__(15);
 var redefineAll = __webpack_require__(49);
 var fails = __webpack_require__(4);
 var anInstance = __webpack_require__(47);
 var toInteger = __webpack_require__(28);
 var toLength = __webpack_require__(9);
-var toIndex = __webpack_require__(168);
+var toIndex = __webpack_require__(172);
 var gOPN = __webpack_require__(45).f;
 var dP = __webpack_require__(8).f;
 var arrayFill = __webpack_require__(116);
@@ -3403,11 +3403,11 @@ exports[DATA_VIEW] = $DataView;
 
 exports.__esModule = true;
 
-var _iterator = __webpack_require__(451);
+var _iterator = __webpack_require__(455);
 
 var _iterator2 = _interopRequireDefault(_iterator);
 
-var _symbol = __webpack_require__(452);
+var _symbol = __webpack_require__(226);
 
 var _symbol2 = _interopRequireDefault(_symbol);
 
@@ -3437,10 +3437,10 @@ module.exports = (__webpack_require__(1))(28);
 /* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global         = __webpack_require__(180)
+var global         = __webpack_require__(184)
   , core           = __webpack_require__(50)
-  , LIBRARY        = __webpack_require__(186)
-  , wksExt         = __webpack_require__(185)
+  , LIBRARY        = __webpack_require__(190)
+  , wksExt         = __webpack_require__(189)
   , defineProperty = __webpack_require__(124).f;
 module.exports = function(name){
   var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
@@ -3463,9 +3463,41 @@ module.exports = (__webpack_require__(1))(29);
 /* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayLikeKeys = __webpack_require__(521),
-    baseKeys = __webpack_require__(215),
-    isArrayLike = __webpack_require__(67);
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(10);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(500);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SubPageContainer = function SubPageContainer(props) {
+  return _react2.default.createElement(
+    'div',
+    { className: 'sub-page-wrapper' },
+    props.children && props.children
+  );
+};
+
+exports.default = SubPageContainer;
+
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "SubPageContainer.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ }),
+/* 129 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayLikeKeys = __webpack_require__(524),
+    baseKeys = __webpack_require__(219),
+    isArrayLike = __webpack_require__(68);
 
 /**
  * Creates an array of the own enumerable property names of `object`.
@@ -3503,7 +3535,7 @@ module.exports = keys;
 
 
 /***/ }),
-/* 129 */
+/* 130 */
 /***/ (function(module, exports) {
 
 /** Used as references for various `Number` constants. */
@@ -3531,7 +3563,7 @@ module.exports = isIndex;
 
 
 /***/ }),
-/* 130 */
+/* 131 */
 /***/ (function(module, exports) {
 
 /** Used as references for various `Number` constants. */
@@ -3572,7 +3604,7 @@ module.exports = isLength;
 
 
 /***/ }),
-/* 131 */
+/* 132 */
 /***/ (function(module, exports) {
 
 /**
@@ -3615,7 +3647,7 @@ module.exports = eq;
 
 
 /***/ }),
-/* 132 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(51),
@@ -3628,14 +3660,14 @@ module.exports = Map;
 
 
 /***/ }),
-/* 133 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var mapCacheClear = __webpack_require__(542),
-    mapCacheDelete = __webpack_require__(549),
-    mapCacheGet = __webpack_require__(551),
-    mapCacheHas = __webpack_require__(552),
-    mapCacheSet = __webpack_require__(553);
+var mapCacheClear = __webpack_require__(545),
+    mapCacheDelete = __webpack_require__(552),
+    mapCacheGet = __webpack_require__(554),
+    mapCacheHas = __webpack_require__(555),
+    mapCacheSet = __webpack_require__(556);
 
 /**
  * Creates a map cache object to store key-value pairs.
@@ -3666,11 +3698,11 @@ module.exports = MapCache;
 
 
 /***/ }),
-/* 134 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isArray = __webpack_require__(24),
-    isSymbol = __webpack_require__(69);
+    isSymbol = __webpack_require__(70);
 
 /** Used to match property names within property paths. */
 var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
@@ -3701,7 +3733,13 @@ module.exports = isKey;
 
 
 /***/ }),
-/* 135 */
+/* 136 */
+/***/ (function(module, exports) {
+
+module.exports = [{"wxid":"wxid_hankliu","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/header01.png","nickname":"hankliu","sex":1,"remark":"刘小聪","signature":"填坑小能手","telephone":18896586152,"album":[{"imgSrc":""}],"area":["中国","北京","海淀"],"from":"","tag":[],"desc":{}},{"wxid":"wxid_baiqian","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/baiqian.jpg","nickname":"浅浅","sex":0,"remark":"","signature":"青丘女帝，天族天妃","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian01.jpeg","date":182625262},{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg","date":182625262}],"area":["青丘","狐狸洞"],"from":"通过扫一扫","tag":["女帝"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_yehua","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/yehua.jpg","nickname":"夜华","sex":1,"remark":"夜华","signature":"浅浅，过来","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu02.jpeg","date":182625262},{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg","date":182625262}],"area":["九重天","洗梧宫"],"from":"通过扫一扫","tag":["太子"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_liubei","initial":"","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/liubei.jpg","nickname":"刘备","sex":1,"remark":"刘备","signature":"惟贤惟德，仁服于人","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu02.jpeg","date":182625262},{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian01.jpeg","date":182625262}],"area":["蜀国","荆州"],"from":"通过扫一扫","tag":["蜀","主公"],"desc":{"title":"健健康康","picUrl":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg"}},{"wxid":"wxid_guangyu","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/guangyu.jpg","nickname":"关羽","sex":1,"remark":"关羽","signature":"观尔乃插标卖首","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg","date":182625262},{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg","date":182625262}],"area":["蜀国","荆州"],"from":"通过扫一扫","tag":["蜀"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_zhugeliang","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/zhugeliang.jpg","nickname":"诸葛亮","sex":1,"remark":"诸葛亮","signature":"你可识得此阵？","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian01.jpeg","date":182625262},{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg","date":182625262}],"area":["蜀国","荆州"],"from":"通过扫一扫","tag":["卧龙"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_sunshangxiang","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/sunshangxiang.jpg","nickname":"孙尚香","sex":0,"remark":"孙尚香","signature":"夫君,身体要紧~","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg","date":182625262}],"area":["吴国","富春"],"from":"通过手机号码添加","tag":["孙夫人"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_sunquan","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/sunquan.jpg","nickname":"孙权","sex":1,"remark":"孙权","signature":"容我三思","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg","date":182625262}],"area":["吴国","吴郡"],"from":"通过手机号码添加","tag":["主公"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_huangyueying","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/huangyueying.jpg","nickname":"黄月英","sex":0,"remark":"黄月英","signature":"哼哼~","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu02.jpeg","date":182625262}],"area":["蜀","荆州"],"from":"通过手机号码添加","tag":["蜀"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_zhenji","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/zhenji.jpg","nickname":"甄姬","sex":0,"remark":"甄姬","signature":"仿佛兮若轻云之蔽月","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg","date":182625262}],"area":["魏","荆州","中山"],"from":"通过手机号码添加","tag":["蜀"],"desc":{"title":"","picUrl":""}},{"wxid":"miss_cc220","headerUrl":"http://owgszbgsl.bkt.clouddn.com/avatar_lpy.jpeg","nickname":"佩佩","sex":0,"remark":"","signature":"「无岁月可回头」","telephone":15364078956,"album":[],"area":["中国","湖南","长沙"],"from":"通过群聊添加","tag":[],"desc":{"title":"","picUrl":""}}]
+
+/***/ }),
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -3738,11 +3776,11 @@ var CONSTANT_ADD_STATUS_REFUSE = exports.CONSTANT_ADD_STATUS_REFUSE = 3;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Constants.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 136 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(32),
-    stubFalse = __webpack_require__(524);
+    stubFalse = __webpack_require__(527);
 
 /** Detect free variable `exports`. */
 var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
@@ -3783,12 +3821,12 @@ module.exports = isBuffer;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(95)(module)))
 
 /***/ }),
-/* 137 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsTypedArray = __webpack_require__(525),
-    baseUnary = __webpack_require__(199),
-    nodeUtil = __webpack_require__(526);
+var baseIsTypedArray = __webpack_require__(528),
+    baseUnary = __webpack_require__(202),
+    nodeUtil = __webpack_require__(529);
 
 /* Node.js helper references. */
 var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
@@ -3816,7 +3854,238 @@ module.exports = isTypedArray;
 
 
 /***/ }),
-/* 138 */
+/* 140 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(501), __esModule: true };
+
+/***/ }),
+/* 141 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.fetchOfficialAccounts = exports.fetchContacts = exports.getContacter = exports.setState = exports.getAllOfficialAccounts = exports.getAllGroups = exports.getAllContacters = undefined;
+
+var _toConsumableArray2 = __webpack_require__(222);
+
+var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
+
+var _keys = __webpack_require__(143);
+
+var _keys2 = _interopRequireDefault(_keys);
+
+var _getIterator2 = __webpack_require__(140);
+
+var _getIterator3 = _interopRequireDefault(_getIterator2);
+
+var _pinyin = __webpack_require__(506);
+
+var _pinyin2 = _interopRequireDefault(_pinyin);
+
+var _groupBy = __webpack_require__(224);
+
+var _groupBy2 = _interopRequireDefault(_groupBy);
+
+var _ActionTypes = __webpack_require__(31);
+
+var ActionTypes = _interopRequireWildcard(_ActionTypes);
+
+var _Constants = __webpack_require__(137);
+
+var CONSTANTS = _interopRequireWildcard(_Constants);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var getAllContacters = exports.getAllContacters = function getAllContacters() {
+  var contacts = __webpack_require__(136) || [];
+  return contacts;
+};
+
+var getAllGroups = exports.getAllGroups = function getAllGroups() {
+  var groups = __webpack_require__(591) || [];
+  return groups;
+};
+
+var getAllOfficialAccounts = exports.getAllOfficialAccounts = function getAllOfficialAccounts() {
+  var officialAccounts = __webpack_require__(213) || [];
+  return officialAccounts;
+};
+
+var setState = exports.setState = function setState(payload) {
+  return { type: ActionTypes.WECHAT_CONTACT_MAIN_SET, payload: payload };
+};
+
+var getContacter = exports.getContacter = function getContacter(wxid) {
+  var contacter = void 0;
+  if (wxid) {
+    var contacts = __webpack_require__(136) || [];
+    contacter = contacts.find(function (item) {
+      return item.wxid === wxid;
+    });
+  } else {
+    contacter = __webpack_require__(223);
+  }
+
+  if (contacter) {
+    contacter.gender = contacter.sex === 1 ? CONSTANTS.MALE : CONSTANTS.FEMALE;
+  }
+  return { type: ActionTypes.WECHAT_CONTACT_GET_CONTACTER, payload: { selectedContacter: contacter } };
+};
+
+var pickObjectValue = function pickObjectValue(item, keys) {
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = (0, _getIterator3.default)(keys), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var key = _step.value;
+
+      if (item[key]) {
+        return item[key];
+      }
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  return '';
+};
+
+var getPinyinGroupsAndLettersStates = function getPinyinGroupsAndLettersStates(keys) {
+  return function (items) {
+    var pinyinOptions = {
+      heteronym: false,
+      style: _pinyin2.default.STYLE_NORMAL // 设置拼音风格
+    };
+
+    var hasUnknowItem = false;
+    var _iteratorNormalCompletion2 = true;
+    var _didIteratorError2 = false;
+    var _iteratorError2 = undefined;
+
+    try {
+      for (var _iterator2 = (0, _getIterator3.default)(items), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+        var item = _step2.value;
+
+        item.gender = item.sex === 1 ? CONSTANTS.MALE : CONSTANTS.FEMALE;
+        item.initial = '';
+        var pinyins = (0, _pinyin2.default)(pickObjectValue(item, keys), pinyinOptions);
+        if (pinyins && pinyins.length) {
+          var _concat;
+
+          if (pinyins[0] && pinyins[0].length && pinyins[0][0]) {
+            if (/\w/.test(pinyins[0][0][0])) {
+              item.initial = pinyins[0][0][0].toUpperCase();
+            } else {
+              item.initial = '#';
+              hasUnknowItem = true;
+            }
+          }
+          item.pinyin = (_concat = [].concat).call.apply(_concat, [[]].concat((0, _toConsumableArray3.default)(pinyins))).join('');
+        }
+      }
+    } catch (err) {
+      _didIteratorError2 = true;
+      _iteratorError2 = err;
+    } finally {
+      try {
+        if (!_iteratorNormalCompletion2 && _iterator2.return) {
+          _iterator2.return();
+        }
+      } finally {
+        if (_didIteratorError2) {
+          throw _iteratorError2;
+        }
+      }
+    }
+
+    var groups = (0, _groupBy2.default)(items, function (item) {
+      return item.initial;
+    });
+    var allLetters = (0, _keys2.default)(groups) || [];
+    var letters = allLetters.filter(function (item) {
+      return item !== '#';
+    }).sort();
+    if (hasUnknowItem) {
+      letters.push('#');
+    }
+
+    return { groups: groups, letters: letters };
+  };
+};
+
+var fetchContacts = exports.fetchContacts = function fetchContacts() {
+  /**
+   * wxid-微信id
+   * initial-姓名首字母
+   * headerUrl-头像地址
+   * nickname-昵称
+   * sex-性别 男1女0
+   * remark-备注
+   * signature-个性签名
+   * telphone-电话号码
+   * album-相册
+   * area-地区
+   * from-来源
+   * desc-描述
+   */
+  var contacts = __webpack_require__(136) || [];
+
+  var _getPinyinGroupsAndLe = getPinyinGroupsAndLettersStates(['remark', 'nickname'])(contacts),
+      contactGroups = _getPinyinGroupsAndLe.groups,
+      contactLetters = _getPinyinGroupsAndLe.letters;
+
+  return {
+    type: ActionTypes.WECHAT_CONTACT_FETCH_CONTACTS,
+    payload: {
+      contacts: contacts,
+      contactGroups: contactGroups,
+      contactLetters: contactLetters
+    }
+  };
+};
+
+var fetchOfficialAccounts = exports.fetchOfficialAccounts = function fetchOfficialAccounts() {
+  var officialAccounts = __webpack_require__(213) || [];
+
+  var _getPinyinGroupsAndLe2 = getPinyinGroupsAndLettersStates(['name'])(officialAccounts),
+      officialAccountsGroups = _getPinyinGroupsAndLe2.groups,
+      officialAccountsLetters = _getPinyinGroupsAndLe2.letters;
+
+  return {
+    type: ActionTypes.WECHAT_CONTACT_FETCH_OFFICIAL_ACCOUNTS,
+    payload: {
+      officialAccounts: officialAccounts,
+      officialAccountsGroups: officialAccountsGroups || {},
+      officialAccountsLetters: officialAccountsLetters || []
+    }
+  };
+};
+
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "contact.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ }),
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -3835,25 +4104,25 @@ var abc = exports.abc = 1;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "ActionTypes.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 139 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(367);
 
 /***/ }),
-/* 140 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(308);
 
 /***/ }),
-/* 141 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(312);
 
 /***/ }),
-/* 142 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = !__webpack_require__(7) && !__webpack_require__(4)(function () {
@@ -3862,19 +4131,19 @@ module.exports = !__webpack_require__(7) && !__webpack_require__(4)(function () 
 
 
 /***/ }),
-/* 143 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports.f = __webpack_require__(6);
 
 
 /***/ }),
-/* 144 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var has = __webpack_require__(14);
 var toIObject = __webpack_require__(18);
-var arrayIndexOf = __webpack_require__(71)(false);
+var arrayIndexOf = __webpack_require__(72)(false);
 var IE_PROTO = __webpack_require__(98)('IE_PROTO');
 
 module.exports = function (object, names) {
@@ -3892,7 +4161,7 @@ module.exports = function (object, names) {
 
 
 /***/ }),
-/* 145 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var dP = __webpack_require__(8);
@@ -3911,7 +4180,7 @@ module.exports = __webpack_require__(7) ? Object.defineProperties : function def
 
 
 /***/ }),
-/* 146 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
@@ -3936,14 +4205,14 @@ module.exports.f = function getOwnPropertyNames(it) {
 
 
 /***/ }),
-/* 147 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // 19.1.2.1 Object.assign(target, source, ...)
 var getKeys = __webpack_require__(42);
-var gOPS = __webpack_require__(72);
+var gOPS = __webpack_require__(73);
 var pIE = __webpack_require__(58);
 var toObject = __webpack_require__(11);
 var IObject = __webpack_require__(57);
@@ -3977,14 +4246,14 @@ module.exports = !$assign || __webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 148 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var aFunction = __webpack_require__(13);
 var isObject = __webpack_require__(5);
-var invoke = __webpack_require__(149);
+var invoke = __webpack_require__(153);
 var arraySlice = [].slice;
 var factories = {};
 
@@ -4009,7 +4278,7 @@ module.exports = Function.bind || function bind(that /* , ...args */) {
 
 
 /***/ }),
-/* 149 */
+/* 153 */
 /***/ (function(module, exports) {
 
 // fast apply, http://jsperf.lnkit.com/fast-apply/5
@@ -4031,7 +4300,7 @@ module.exports = function (fn, args, that) {
 
 
 /***/ }),
-/* 150 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $parseInt = __webpack_require__(3).parseInt;
@@ -4046,7 +4315,7 @@ module.exports = $parseInt(ws + '08') !== 8 || $parseInt(ws + '0x16') !== 22 ? f
 
 
 /***/ }),
-/* 151 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $parseFloat = __webpack_require__(3).parseFloat;
@@ -4060,7 +4329,7 @@ module.exports = 1 / $parseFloat(__webpack_require__(102) + '-0') !== -Infinity 
 
 
 /***/ }),
-/* 152 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var cof = __webpack_require__(22);
@@ -4071,7 +4340,7 @@ module.exports = function (it, msg) {
 
 
 /***/ }),
-/* 153 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.3 Number.isInteger(number)
@@ -4083,7 +4352,7 @@ module.exports = function isInteger(it) {
 
 
 /***/ }),
-/* 154 */
+/* 158 */
 /***/ (function(module, exports) {
 
 // 20.2.2.20 Math.log1p(x)
@@ -4093,7 +4362,7 @@ module.exports = Math.log1p || function log1p(x) {
 
 
 /***/ }),
-/* 155 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.16 Math.fround(x)
@@ -4122,7 +4391,7 @@ module.exports = Math.fround || function fround(x) {
 
 
 /***/ }),
-/* 156 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // call something on iterator step with safe closing on error
@@ -4140,7 +4409,7 @@ module.exports = function (iterator, fn, value, entries) {
 
 
 /***/ }),
-/* 157 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var aFunction = __webpack_require__(13);
@@ -4174,7 +4443,7 @@ module.exports = function (that, callbackfn, aLen, memo, isRight) {
 
 
 /***/ }),
-/* 158 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4207,7 +4476,7 @@ module.exports = [].copyWithin || function copyWithin(target /* = 0 */, start /*
 
 
 /***/ }),
-/* 159 */
+/* 163 */
 /***/ (function(module, exports) {
 
 module.exports = function (done, value) {
@@ -4216,18 +4485,18 @@ module.exports = function (done, value) {
 
 
 /***/ }),
-/* 160 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 21.2.5.3 get RegExp.prototype.flags()
 if (__webpack_require__(7) && /./g.flags != 'g') __webpack_require__(8).f(RegExp.prototype, 'flags', {
   configurable: true,
-  get: __webpack_require__(76)
+  get: __webpack_require__(77)
 });
 
 
 /***/ }),
-/* 161 */
+/* 165 */
 /***/ (function(module, exports) {
 
 module.exports = function (exec) {
@@ -4240,7 +4509,7 @@ module.exports = function (exec) {
 
 
 /***/ }),
-/* 162 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var anObject = __webpack_require__(2);
@@ -4258,17 +4527,17 @@ module.exports = function (C, x) {
 
 
 /***/ }),
-/* 163 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var strong = __webpack_require__(164);
+var strong = __webpack_require__(168);
 var validate = __webpack_require__(56);
 var MAP = 'Map';
 
 // 23.1 Map Objects
-module.exports = __webpack_require__(79)(MAP, function (get) {
+module.exports = __webpack_require__(80)(MAP, function (get) {
   return function Map() { return get(this, arguments.length > 0 ? arguments[0] : undefined); };
 }, {
   // 23.1.3.6 Map.prototype.get(key)
@@ -4284,7 +4553,7 @@ module.exports = __webpack_require__(79)(MAP, function (get) {
 
 
 /***/ }),
-/* 164 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4296,10 +4565,10 @@ var ctx = __webpack_require__(21);
 var anInstance = __webpack_require__(47);
 var forOf = __webpack_require__(48);
 var $iterDefine = __webpack_require__(108);
-var step = __webpack_require__(159);
+var step = __webpack_require__(163);
 var setSpecies = __webpack_require__(46);
 var DESCRIPTORS = __webpack_require__(7);
-var fastKey = __webpack_require__(35).fastKey;
+var fastKey = __webpack_require__(36).fastKey;
 var validate = __webpack_require__(56);
 var SIZE = DESCRIPTORS ? '_s' : 'size';
 
@@ -4435,17 +4704,17 @@ module.exports = {
 
 
 /***/ }),
-/* 165 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var strong = __webpack_require__(164);
+var strong = __webpack_require__(168);
 var validate = __webpack_require__(56);
 var SET = 'Set';
 
 // 23.2 Set Objects
-module.exports = __webpack_require__(79)(SET, function (get) {
+module.exports = __webpack_require__(80)(SET, function (get) {
   return function Set() { return get(this, arguments.length > 0 ? arguments[0] : undefined); };
 }, {
   // 23.2.3.1 Set.prototype.add(value)
@@ -4456,16 +4725,16 @@ module.exports = __webpack_require__(79)(SET, function (get) {
 
 
 /***/ }),
-/* 166 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var each = __webpack_require__(30)(0);
 var redefine = __webpack_require__(16);
-var meta = __webpack_require__(35);
-var assign = __webpack_require__(147);
-var weak = __webpack_require__(167);
+var meta = __webpack_require__(36);
+var assign = __webpack_require__(151);
+var weak = __webpack_require__(171);
 var isObject = __webpack_require__(5);
 var fails = __webpack_require__(4);
 var validate = __webpack_require__(56);
@@ -4498,7 +4767,7 @@ var methods = {
 };
 
 // 23.3 WeakMap Objects
-var $WeakMap = module.exports = __webpack_require__(79)(WEAK_MAP, wrapper, methods, weak, true, true);
+var $WeakMap = module.exports = __webpack_require__(80)(WEAK_MAP, wrapper, methods, weak, true, true);
 
 // IE11 WeakMap frozen keys fix
 if (fails(function () { return new $WeakMap().set((Object.freeze || Object)(tmp), 7).get(tmp) != 7; })) {
@@ -4522,13 +4791,13 @@ if (fails(function () { return new $WeakMap().set((Object.freeze || Object)(tmp)
 
 
 /***/ }),
-/* 167 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var redefineAll = __webpack_require__(49);
-var getWeak = __webpack_require__(35).getWeak;
+var getWeak = __webpack_require__(36).getWeak;
 var anObject = __webpack_require__(2);
 var isObject = __webpack_require__(5);
 var anInstance = __webpack_require__(47);
@@ -4614,7 +4883,7 @@ module.exports = {
 
 
 /***/ }),
-/* 168 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://tc39.github.io/ecma262/#sec-toindex
@@ -4630,12 +4899,12 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 169 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // all object keys, includes non-enumerable and symbols
 var gOPN = __webpack_require__(45);
-var gOPS = __webpack_require__(72);
+var gOPS = __webpack_require__(73);
 var anObject = __webpack_require__(2);
 var Reflect = __webpack_require__(3).Reflect;
 module.exports = Reflect && Reflect.ownKeys || function ownKeys(it) {
@@ -4646,13 +4915,13 @@ module.exports = Reflect && Reflect.ownKeys || function ownKeys(it) {
 
 
 /***/ }),
-/* 170 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://tc39.github.io/proposal-flatMap/#sec-FlattenIntoArray
-var isArray = __webpack_require__(73);
+var isArray = __webpack_require__(74);
 var isObject = __webpack_require__(5);
 var toLength = __webpack_require__(9);
 var ctx = __webpack_require__(21);
@@ -4692,7 +4961,7 @@ module.exports = flattenIntoArray;
 
 
 /***/ }),
-/* 171 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/tc39/proposal-string-pad-start-end
@@ -4714,7 +4983,7 @@ module.exports = function (that, maxLength, fillString, left) {
 
 
 /***/ }),
-/* 172 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getKeys = __webpack_require__(42);
@@ -4736,12 +5005,12 @@ module.exports = function (isEntries) {
 
 
 /***/ }),
-/* 173 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/DavidBruant/Map-Set.prototype.toJSON
 var classof = __webpack_require__(59);
-var from = __webpack_require__(174);
+var from = __webpack_require__(178);
 module.exports = function (NAME) {
   return function toJSON() {
     if (classof(this) != NAME) throw TypeError(NAME + "#toJSON isn't generic");
@@ -4751,7 +5020,7 @@ module.exports = function (NAME) {
 
 
 /***/ }),
-/* 174 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var forOf = __webpack_require__(48);
@@ -4764,7 +5033,7 @@ module.exports = function (iter, ITERATOR) {
 
 
 /***/ }),
-/* 175 */
+/* 179 */
 /***/ (function(module, exports) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
@@ -4788,8 +5057,8 @@ module.exports = Math.scale || function scale(x, inLow, inHigh, outLow, outHigh)
 
 
 /***/ }),
-/* 176 */,
-/* 177 */
+/* 180 */,
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -4804,23 +5073,23 @@ var _extends2 = __webpack_require__(12);
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var _redux = __webpack_require__(66);
+var _redux = __webpack_require__(67);
 
-var _reduxThunk = __webpack_require__(427);
+var _reduxThunk = __webpack_require__(431);
 
 var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
-var _reduxLogger = __webpack_require__(428);
+var _reduxLogger = __webpack_require__(432);
 
-var _reactRouterRedux = __webpack_require__(140);
+var _reactRouterRedux = __webpack_require__(144);
 
-var _reduxPagan = __webpack_require__(141);
+var _reduxPagan = __webpack_require__(145);
 
-var _History = __webpack_require__(178);
+var _History = __webpack_require__(182);
 
 var _History2 = _interopRequireDefault(_History);
 
-var _reducers = __webpack_require__(431);
+var _reducers = __webpack_require__(435);
 
 var _reducers2 = _interopRequireDefault(_reducers);
 
@@ -4841,10 +5110,10 @@ var store = (0, _redux.compose)(_redux.applyMiddleware.apply(undefined, middlewa
 exports.default = store;
 
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "configureStore.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(212)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(216)))
 
 /***/ }),
-/* 178 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -4855,15 +5124,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createBrowserHistory = __webpack_require__(429);
+var _createBrowserHistory = __webpack_require__(433);
 
 var _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
 
-var _createHashHistory = __webpack_require__(430);
+var _createHashHistory = __webpack_require__(434);
 
 var _createHashHistory2 = _interopRequireDefault(_createHashHistory);
 
-var _DeviceUtils = __webpack_require__(179);
+var _DeviceUtils = __webpack_require__(183);
 
 var _DeviceUtils2 = _interopRequireDefault(_DeviceUtils);
 
@@ -4883,7 +5152,7 @@ exports.default = historyInstance;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "History.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 179 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -5073,84 +5342,84 @@ exports.default = client;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "DeviceUtils.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 180 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(15);
 
 /***/ }),
-/* 181 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(39);
 
 /***/ }),
-/* 182 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(156);
 
 /***/ }),
-/* 183 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(50);
 
 /***/ }),
-/* 184 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(51);
 
 /***/ }),
-/* 185 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(352);
 
 /***/ }),
-/* 186 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(150);
 
 /***/ }),
-/* 187 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(30);
 
 /***/ }),
-/* 188 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(348);
 
 /***/ }),
-/* 189 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(167);
 
 /***/ }),
-/* 190 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(323);
 
 /***/ }),
-/* 191 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(356);
 
 /***/ }),
-/* 192 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./en-US.i18n.json": 488,
-	"./zh-CN.i18n.json": 489
+	"./en-US.i18n.json": 491,
+	"./zh-CN.i18n.json": 492
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -5166,42 +5435,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 192;
+webpackContext.id = 196;
 
 /***/ }),
-/* 193 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(10);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(497);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var SubPageContainer = function SubPageContainer(props) {
-  return _react2.default.createElement(
-    'div',
-    { className: 'sub-page-wrapper' },
-    props.children && props.children
-  );
-};
-
-exports.default = SubPageContainer;
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "SubPageContainer.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
-/* 194 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(51);
@@ -5218,11 +5455,11 @@ module.exports = defineProperty;
 
 
 /***/ }),
-/* 195 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(60),
-    isObject = __webpack_require__(68);
+var baseGetTag = __webpack_require__(61),
+    isObject = __webpack_require__(69);
 
 /** `Object#toString` result references. */
 var asyncTag = '[object AsyncFunction]',
@@ -5261,7 +5498,7 @@ module.exports = isFunction;
 
 
 /***/ }),
-/* 196 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/** Detect free variable `global` from Node.js. */
@@ -5272,7 +5509,7 @@ module.exports = freeGlobal;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(93)))
 
 /***/ }),
-/* 197 */
+/* 200 */
 /***/ (function(module, exports) {
 
 /** Used for built-in method references. */
@@ -5304,11 +5541,11 @@ module.exports = toSource;
 
 
 /***/ }),
-/* 198 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseForOwn = __webpack_require__(518),
-    createBaseEach = __webpack_require__(529);
+var baseForOwn = __webpack_require__(521),
+    createBaseEach = __webpack_require__(532);
 
 /**
  * The base implementation of `_.forEach` without support for iteratee shorthands.
@@ -5324,7 +5561,7 @@ module.exports = baseEach;
 
 
 /***/ }),
-/* 199 */
+/* 202 */
 /***/ (function(module, exports) {
 
 /**
@@ -5344,14 +5581,14 @@ module.exports = baseUnary;
 
 
 /***/ }),
-/* 200 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseMatches = __webpack_require__(530),
-    baseMatchesProperty = __webpack_require__(575),
+var baseMatches = __webpack_require__(533),
+    baseMatchesProperty = __webpack_require__(578),
     identity = __webpack_require__(90),
     isArray = __webpack_require__(24),
-    property = __webpack_require__(585);
+    property = __webpack_require__(588);
 
 /**
  * The base implementation of `_.iteratee`.
@@ -5381,15 +5618,15 @@ module.exports = baseIteratee;
 
 
 /***/ }),
-/* 201 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ListCache = __webpack_require__(85),
-    stackClear = __webpack_require__(537),
-    stackDelete = __webpack_require__(538),
-    stackGet = __webpack_require__(539),
-    stackHas = __webpack_require__(540),
-    stackSet = __webpack_require__(541);
+    stackClear = __webpack_require__(540),
+    stackDelete = __webpack_require__(541),
+    stackGet = __webpack_require__(542),
+    stackHas = __webpack_require__(543),
+    stackSet = __webpack_require__(544);
 
 /**
  * Creates a stack cache object to store key-value pairs.
@@ -5414,11 +5651,11 @@ module.exports = Stack;
 
 
 /***/ }),
-/* 202 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsEqualDeep = __webpack_require__(554),
-    isObjectLike = __webpack_require__(62);
+var baseIsEqualDeep = __webpack_require__(557),
+    isObjectLike = __webpack_require__(63);
 
 /**
  * The base implementation of `_.isEqual` which supports partial comparisons
@@ -5448,12 +5685,12 @@ module.exports = baseIsEqual;
 
 
 /***/ }),
-/* 203 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var SetCache = __webpack_require__(555),
-    arraySome = __webpack_require__(558),
-    cacheHas = __webpack_require__(559);
+var SetCache = __webpack_require__(558),
+    arraySome = __webpack_require__(561),
+    cacheHas = __webpack_require__(562);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1,
@@ -5537,7 +5774,7 @@ module.exports = equalArrays;
 
 
 /***/ }),
-/* 204 */
+/* 207 */
 /***/ (function(module, exports) {
 
 /**
@@ -5563,10 +5800,10 @@ module.exports = arrayPush;
 
 
 /***/ }),
-/* 205 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(68);
+var isObject = __webpack_require__(69);
 
 /**
  * Checks if `value` is suitable for strict equality comparisons, i.e. `===`.
@@ -5584,7 +5821,7 @@ module.exports = isStrictComparable;
 
 
 /***/ }),
-/* 206 */
+/* 209 */
 /***/ (function(module, exports) {
 
 /**
@@ -5610,10 +5847,10 @@ module.exports = matchesStrictComparable;
 
 
 /***/ }),
-/* 207 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var castPath = __webpack_require__(208),
+var castPath = __webpack_require__(211),
     toKey = __webpack_require__(89);
 
 /**
@@ -5640,13 +5877,13 @@ module.exports = baseGet;
 
 
 /***/ }),
-/* 208 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isArray = __webpack_require__(24),
-    isKey = __webpack_require__(134),
-    stringToPath = __webpack_require__(577),
-    toString = __webpack_require__(580);
+    isKey = __webpack_require__(135),
+    stringToPath = __webpack_require__(580),
+    toString = __webpack_require__(583);
 
 /**
  * Casts `value` to a path array if it's not one.
@@ -5667,7 +5904,7 @@ module.exports = castPath;
 
 
 /***/ }),
-/* 209 */
+/* 212 */
 /***/ (function(module, exports) {
 
 /**
@@ -5694,25 +5931,31 @@ module.exports = arrayMap;
 
 
 /***/ }),
-/* 210 */
+/* 213 */
+/***/ (function(module, exports) {
+
+module.exports = [{"wxid":"Google_Developers","name":"谷歌开发者","headerUrl":"http://cdn.sinacloud.net/vue-wechat/images/OfficialAccount/google-dev.JPG","desc":"","owner":"谷歌信息技术有限公司","initial":"G"},{"wxid":"overwatch163","name":"守望先锋","desc":"","headerUrl":"http://cdn.sinacloud.net/vue-wechat/images/OfficialAccount/overwatch.JPG","owner":"上海网易公司","initial":"O"},{"wxid":"FrontDev","name":"前端大全","desc":"","headerUrl":"http://cdn.sinacloud.net/vue-wechat/images/OfficialAccount/frontend.JPG","owner":"","initial":"Q"},{"wxid":"xituarea","name":"稀土区","desc":"","headerUrl":"http://cdn.sinacloud.net/vue-wechat/images/OfficialAccount/xitu.JPG","owner":"个人","initial":"X"},{"wxid":"LOL-922","name":"英雄联盟","desc":"","headerUrl":"http://cdn.sinacloud.net/vue-wechat/images/OfficialAccount/lol.JPG","owner":"腾讯技术有限公司","initial":"Y"},{"wxid":"wangyeshejijingxuan","name":"网页设计精选","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/wangyeshejijingxuan.jpeg","owner":"个人","initial":"W"},{"wxid":"ui-daren","name":"UI设计达人","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/UIshejidaren.jpeg","owner":"个人","initial":"U"},{"wxid":"wanwuzhi","name":"玩物志","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/wanweizhi.jpeg","owner":"玩物志有限公司","initial":"W"},{"wxid":"importnew","name":"ImportNew","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/ImportNew.jpeg","owner":"个人","initial":"I"},{"wxid":"xiaodianyanjiusuo","name":"笑点研究所","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/xiaodianyanjiusuo.jpeg","owner":"个人","initial":"X"},{"wxid":"chaofanyingyuan","name":"超凡影院","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/chaofanyingyuan.jpeg","owner":"个人","initial":"C"},{"wxid":"jikefan","name":"极客范","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/jikefan.jpeg","owner":"个人","initial":"J"},{"wxid":"shejidenaxieshi","name":"设计的那些事","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/shejinaxieshi.jpeg","owner":"个人","initial":"S"},{"wxid":"csdn","name":"CSDN","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/csdn.jpeg","owner":"个人","initial":"C"},{"wxid":"doubinvwang","name":"逗比女王","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/doubinvwang.jpeg","owner":"个人","initial":"D"},{"wxid":"youxiuwangyesheji","name":"优秀网页设计","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/youxiuwangyesheji.jpeg","owner":"个人","initial":"Y"},{"wxid":"qiwuzhoukan","name":"奇舞周刊","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/qiwuzhoukan.jpeg","owner":"个人","initial":"Q"},{"wxid":"fex","name":"FEX","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/fex.jpeg","owner":"腾讯技术有限公司","initial":"F"},{"wxid":"iloveleme","name":"饿了么","desc":"","headerUrl":"http://tb1.bdstatic.com/tb/cms/ngmis/file_1453447545023.jpg","owner":"上海拉扎斯信息科技有限公司","type":"service"},{"wxid":"wxid_xituquan","name":"稀土圈","desc":"","headerUrl":"http://ad-gold-cdn.xitu.io/14999139497307c668d55b4dd5984b6accc6bf41206a8.jpg","owner":"上海拉扎斯信息科技有限公司","type":"service"}]
+
+/***/ }),
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(264);
 
 /***/ }),
-/* 211 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(340);
 
 /***/ }),
-/* 212 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(110);
 
 /***/ }),
-/* 213 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -5723,7 +5966,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _keys = __webpack_require__(139);
+var _keys = __webpack_require__(143);
 
 var _keys2 = _interopRequireDefault(_keys);
 
@@ -5731,7 +5974,7 @@ var _typeof2 = __webpack_require__(122);
 
 var _typeof3 = _interopRequireDefault(_typeof2);
 
-var _classCallCheck2 = __webpack_require__(37);
+var _classCallCheck2 = __webpack_require__(38);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
@@ -5776,17 +6019,17 @@ exports.default = ObjectUtils;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "ObjectUtils.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 214 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(184);
 
 /***/ }),
-/* 215 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isPrototype = __webpack_require__(216),
-    nativeKeys = __webpack_require__(527);
+var isPrototype = __webpack_require__(220),
+    nativeKeys = __webpack_require__(530);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -5818,7 +6061,7 @@ module.exports = baseKeys;
 
 
 /***/ }),
-/* 216 */
+/* 220 */
 /***/ (function(module, exports) {
 
 /** Used for built-in method references. */
@@ -5842,16 +6085,16 @@ module.exports = isPrototype;
 
 
 /***/ }),
-/* 217 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var DataView = __webpack_require__(570),
-    Map = __webpack_require__(132),
-    Promise = __webpack_require__(571),
-    Set = __webpack_require__(572),
-    WeakMap = __webpack_require__(573),
-    baseGetTag = __webpack_require__(60),
-    toSource = __webpack_require__(197);
+var DataView = __webpack_require__(573),
+    Map = __webpack_require__(133),
+    Promise = __webpack_require__(574),
+    Set = __webpack_require__(575),
+    WeakMap = __webpack_require__(576),
+    baseGetTag = __webpack_require__(61),
+    toSource = __webpack_require__(200);
 
 /** `Object#toString` result references. */
 var mapTag = '[object Map]',
@@ -5906,220 +6149,23 @@ module.exports = getTag;
 
 
 /***/ }),
-/* 218 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(498), __esModule: true };
-
-/***/ }),
-/* 219 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.fetchOfficialAccounts = exports.fetchContacts = exports.getContacter = exports.setState = undefined;
-
-var _toConsumableArray2 = __webpack_require__(220);
-
-var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
-
-var _keys = __webpack_require__(139);
-
-var _keys2 = _interopRequireDefault(_keys);
-
-var _getIterator2 = __webpack_require__(218);
-
-var _getIterator3 = _interopRequireDefault(_getIterator2);
-
-var _pinyin = __webpack_require__(503);
-
-var _pinyin2 = _interopRequireDefault(_pinyin);
-
-var _groupBy = __webpack_require__(221);
-
-var _groupBy2 = _interopRequireDefault(_groupBy);
-
-var _ActionTypes = __webpack_require__(31);
-
-var ActionTypes = _interopRequireWildcard(_ActionTypes);
-
-var _Constants = __webpack_require__(135);
-
-var CONSTANTS = _interopRequireWildcard(_Constants);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var setState = exports.setState = function setState(payload) {
-  return { type: ActionTypes.WECHAT_CONTACT_MAIN_SET, payload: payload };
-};
-
-var getContacter = exports.getContacter = function getContacter(wxid) {
-  return { type: ActionTypes.WECHAT_CONTACT_GET_CONTACTER, wxid: wxid };
-};
-
-var pickObjectValue = function pickObjectValue(item, keys) {
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
-
-  try {
-    for (var _iterator = (0, _getIterator3.default)(keys), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var key = _step.value;
-
-      if (item[key]) {
-        return item[key];
-      }
-    }
-  } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator.return) {
-        _iterator.return();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
-    }
-  }
-
-  return '';
-};
-
-var getPinyinGroupsAndLettersStates = function getPinyinGroupsAndLettersStates(keys) {
-  return function (items) {
-    var pinyinOptions = {
-      heteronym: false,
-      style: _pinyin2.default.STYLE_NORMAL // 设置拼音风格
-    };
-
-    var hasUnknowItem = false;
-    var _iteratorNormalCompletion2 = true;
-    var _didIteratorError2 = false;
-    var _iteratorError2 = undefined;
-
-    try {
-      for (var _iterator2 = (0, _getIterator3.default)(items), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-        var item = _step2.value;
-
-        item.gender = item.sex === 1 ? CONSTANTS.MALE : CONSTANTS.FEMALE;
-        item.initial = '';
-        var pinyins = (0, _pinyin2.default)(pickObjectValue(item, keys), pinyinOptions);
-        if (pinyins && pinyins.length) {
-          var _concat;
-
-          if (pinyins[0] && pinyins[0].length && pinyins[0][0]) {
-            if (/\w/.test(pinyins[0][0][0])) {
-              item.initial = pinyins[0][0][0].toUpperCase();
-            } else {
-              item.initial = '#';
-              hasUnknowItem = true;
-            }
-          }
-          item.pinyin = (_concat = [].concat).call.apply(_concat, [[]].concat((0, _toConsumableArray3.default)(pinyins))).join('');
-        }
-      }
-    } catch (err) {
-      _didIteratorError2 = true;
-      _iteratorError2 = err;
-    } finally {
-      try {
-        if (!_iteratorNormalCompletion2 && _iterator2.return) {
-          _iterator2.return();
-        }
-      } finally {
-        if (_didIteratorError2) {
-          throw _iteratorError2;
-        }
-      }
-    }
-
-    var groups = (0, _groupBy2.default)(items, function (item) {
-      return item.initial;
-    });
-    var allLetters = (0, _keys2.default)(groups) || [];
-    var letters = allLetters.filter(function (item) {
-      return item !== '#';
-    }).sort();
-    if (hasUnknowItem) {
-      letters.push('#');
-    }
-
-    return { groups: groups, letters: letters };
-  };
-};
-
-var fetchContacts = exports.fetchContacts = function fetchContacts() {
-  /**
-   * wxid-微信id
-   * initial-姓名首字母
-   * headerUrl-头像地址
-   * nickname-昵称
-   * sex-性别 男1女0
-   * remark-备注
-   * signature-个性签名
-   * telphone-电话号码
-   * album-相册
-   * area-地区
-   * from-来源
-   * desc-描述
-   */
-  var contacts = __webpack_require__(588) || [];
-
-  var _getPinyinGroupsAndLe = getPinyinGroupsAndLettersStates(['remark', 'nickname'])(contacts),
-      contactGroups = _getPinyinGroupsAndLe.groups,
-      contactLetters = _getPinyinGroupsAndLe.letters;
-
-  return {
-    type: ActionTypes.WECHAT_CONTACT_FETCH_CONTACTS,
-    payload: {
-      contacts: contacts,
-      contactGroups: contactGroups,
-      contactLetters: contactLetters
-    }
-  };
-};
-
-var fetchOfficialAccounts = exports.fetchOfficialAccounts = function fetchOfficialAccounts() {
-  var officialAccounts = __webpack_require__(589) || [];
-
-  var _getPinyinGroupsAndLe2 = getPinyinGroupsAndLettersStates(['name'])(officialAccounts),
-      officialAccountsGroups = _getPinyinGroupsAndLe2.groups,
-      officialAccountsLetters = _getPinyinGroupsAndLe2.letters;
-
-  return {
-    type: ActionTypes.WECHAT_CONTACT_FETCH_OFFICIAL_ACCOUNTS,
-    payload: {
-      officialAccounts: officialAccounts,
-      officialAccountsGroups: officialAccountsGroups || {},
-      officialAccountsLetters: officialAccountsLetters || []
-    }
-  };
-};
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "contact.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
-/* 220 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(362);
 
 /***/ }),
-/* 221 */
+/* 223 */
+/***/ (function(module, exports) {
+
+module.exports = {"wxid":"kriskal","headerUrl":"http://owgszbgsl.bkt.clouddn.com/header.jpeg","qrcode":"http://owgszbgsl.bkt.clouddn.com/qrcode-me.png","coverUrl":"http://owgszbgsl.bkt.clouddn.com/album_kriskal_bg.jpeg","nickname":"卡鲁秋","sex":1,"signature":"不吃闲饭，不看冷脸；不掩己拙，不揭人短；不求人喜，不招人烦。","telephone":18521516462,"album":[{"imgSrc":""}],"area":["中国","湖南","娄底"],"from":"","tag":[],"desc":{}}
+
+/***/ }),
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseAssignValue = __webpack_require__(508),
-    createAggregator = __webpack_require__(515);
+var baseAssignValue = __webpack_require__(511),
+    createAggregator = __webpack_require__(518);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -6162,7 +6208,7 @@ module.exports = groupBy;
 
 
 /***/ }),
-/* 222 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -6177,7 +6223,7 @@ var _react = __webpack_require__(10);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(593);
+__webpack_require__(596);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -6208,7 +6254,13 @@ exports.default = WeuiBadge;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "WeuiBadge.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 223 */
+/* 226 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(456), __esModule: true };
+
+/***/ }),
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -6220,15 +6272,25 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.fetchChats = exports.setState = undefined;
 
-var _sortBy = __webpack_require__(594);
+var _extends2 = __webpack_require__(12);
+
+var _extends3 = _interopRequireDefault(_extends2);
+
+var _getIterator2 = __webpack_require__(140);
+
+var _getIterator3 = _interopRequireDefault(_getIterator2);
+
+var _sortBy = __webpack_require__(597);
 
 var _sortBy2 = _interopRequireDefault(_sortBy);
 
 var _ActionTypes = __webpack_require__(31);
 
-var _Constants = __webpack_require__(135);
+var _Constants = __webpack_require__(137);
 
 var Constants = _interopRequireWildcard(_Constants);
+
+var _contact = __webpack_require__(141);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -6247,7 +6309,77 @@ var fetchChats = exports.fetchChats = function fetchChats() {
   // "chatConfigModel.starFriends" // 标星
   // "chatConfigModel.blacklist" // 黑名单
 
-  var chats = __webpack_require__(610) || [];
+  var chats = __webpack_require__(613) || [];
+  var contacts = (0, _contact.getAllContacters)();
+  var groups = (0, _contact.getAllGroups)();
+  var officialAccounts = (0, _contact.getAllOfficialAccounts)();
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    var _loop = function _loop() {
+      var chat = _step.value;
+
+      var baseResources = [];
+      var chatMemberResources = [];
+      switch (chat.base.type) {
+        case Constants.CHAT_ROOM_TYPE_FRIENDS:
+          {
+            baseResources = contacts;
+            chatMemberResources = contacts;
+            break;
+          }
+        case Constants.CHAT_ROOM_TYPE_GROUP:
+          {
+            baseResources = groups;
+            chatMemberResources = contacts;
+            break;
+          }
+        case Constants.CHAT_ROOM_TYPE_SERVICE:
+          {
+            baseResources = officialAccounts;
+            chatMemberResources = officialAccounts;
+            break;
+          }
+      }
+
+      var base = baseResources.find(function (item) {
+        return item.wxid === chat.base.wxid;
+      }) || {};
+      chat.base = (0, _extends3.default)({}, base, chat.base);
+
+      if (chat.base.type === Constants.CHAT_ROOM_TYPE_FRIENDS) {
+        chat.base.name = chat.base.remark || chat.base.nickname;
+      }
+
+      var chatMembers = (chat.chatMemberModel || []).map(function (wxid) {
+        var member = chatMemberResources.find(function (item) {
+          return item.wxid === wxid;
+        }) || {};
+        return (0, _extends3.default)({ wxid: wxid }, member);
+      });
+      chat.chatMemberModel = chatMembers;
+    };
+
+    for (var _iterator = (0, _getIterator3.default)(chats), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      _loop();
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
   var chatRooms = (0, _sortBy2.default)((chats || []).map(function (chat) {
     var chatRoom = {
       link: 'wechat/chat/dialogue/' + chat.mid,
@@ -6275,7 +6407,8 @@ var fetchChats = exports.fetchChats = function fetchChats() {
         break;
     }
     return chatRoom;
-  }), '-lastTime');
+  }), 'lastTime');
+  chatRooms.reverse();
 
   return {
     type: _ActionTypes.WECHAT_CHAT_FETCH_CHATS,
@@ -6289,40 +6422,40 @@ var fetchChats = exports.fetchChats = function fetchChats() {
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "chat.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 224 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 'use strict';
 
-__webpack_require__(225);
+__webpack_require__(229);
 
 var _react = __webpack_require__(10);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(214);
+var _reactDom = __webpack_require__(218);
 
 var _reactRedux = __webpack_require__(92);
 
-var _reactRouter = __webpack_require__(176);
+var _reactRouter = __webpack_require__(180);
 
-var _reactRouterRedux = __webpack_require__(140);
+var _reactRouterRedux = __webpack_require__(144);
 
-var _configureStore = __webpack_require__(177);
+var _configureStore = __webpack_require__(181);
 
 var _configureStore2 = _interopRequireDefault(_configureStore);
 
-var _History = __webpack_require__(178);
+var _History = __webpack_require__(182);
 
 var _History2 = _interopRequireDefault(_History);
 
-var _index = __webpack_require__(442);
+var _index = __webpack_require__(446);
 
 var _index2 = _interopRequireDefault(_index);
 
-__webpack_require__(616);
+__webpack_require__(619);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -6341,17 +6474,17 @@ var routerHistory = (0, _reactRouterRedux.syncHistoryWithStore)(_History2.defaul
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 225 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {
 
-__webpack_require__(226);
+__webpack_require__(230);
 
-__webpack_require__(423);
+__webpack_require__(427);
 
-__webpack_require__(424);
+__webpack_require__(428);
 
 if (global._babelPolyfill) {
   throw new Error("only one instance of babel-polyfill is allowed");
@@ -6376,14 +6509,10 @@ define(String.prototype, "padRight", "".padEnd);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(93)))
 
 /***/ }),
-/* 226 */
+/* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(227);
-__webpack_require__(229);
-__webpack_require__(230);
 __webpack_require__(231);
-__webpack_require__(232);
 __webpack_require__(233);
 __webpack_require__(234);
 __webpack_require__(235);
@@ -6395,10 +6524,10 @@ __webpack_require__(240);
 __webpack_require__(241);
 __webpack_require__(242);
 __webpack_require__(243);
+__webpack_require__(244);
 __webpack_require__(245);
 __webpack_require__(246);
 __webpack_require__(247);
-__webpack_require__(248);
 __webpack_require__(249);
 __webpack_require__(250);
 __webpack_require__(251);
@@ -6456,19 +6585,19 @@ __webpack_require__(302);
 __webpack_require__(303);
 __webpack_require__(304);
 __webpack_require__(305);
+__webpack_require__(306);
 __webpack_require__(307);
 __webpack_require__(308);
-__webpack_require__(310);
+__webpack_require__(309);
 __webpack_require__(311);
 __webpack_require__(312);
-__webpack_require__(313);
 __webpack_require__(314);
 __webpack_require__(315);
 __webpack_require__(316);
+__webpack_require__(317);
 __webpack_require__(318);
 __webpack_require__(319);
 __webpack_require__(320);
-__webpack_require__(321);
 __webpack_require__(322);
 __webpack_require__(323);
 __webpack_require__(324);
@@ -6478,22 +6607,22 @@ __webpack_require__(327);
 __webpack_require__(328);
 __webpack_require__(329);
 __webpack_require__(330);
-__webpack_require__(117);
 __webpack_require__(331);
 __webpack_require__(332);
-__webpack_require__(160);
 __webpack_require__(333);
 __webpack_require__(334);
+__webpack_require__(117);
 __webpack_require__(335);
 __webpack_require__(336);
+__webpack_require__(164);
 __webpack_require__(337);
-__webpack_require__(163);
-__webpack_require__(165);
-__webpack_require__(166);
 __webpack_require__(338);
 __webpack_require__(339);
 __webpack_require__(340);
 __webpack_require__(341);
+__webpack_require__(167);
+__webpack_require__(169);
+__webpack_require__(170);
 __webpack_require__(342);
 __webpack_require__(343);
 __webpack_require__(344);
@@ -6575,11 +6704,15 @@ __webpack_require__(419);
 __webpack_require__(420);
 __webpack_require__(421);
 __webpack_require__(422);
+__webpack_require__(423);
+__webpack_require__(424);
+__webpack_require__(425);
+__webpack_require__(426);
 module.exports = __webpack_require__(25);
 
 
 /***/ }),
-/* 227 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6590,22 +6723,22 @@ var has = __webpack_require__(14);
 var DESCRIPTORS = __webpack_require__(7);
 var $export = __webpack_require__(0);
 var redefine = __webpack_require__(16);
-var META = __webpack_require__(35).KEY;
+var META = __webpack_require__(36).KEY;
 var $fails = __webpack_require__(4);
-var shared = __webpack_require__(70);
+var shared = __webpack_require__(71);
 var setToStringTag = __webpack_require__(53);
 var uid = __webpack_require__(40);
 var wks = __webpack_require__(6);
-var wksExt = __webpack_require__(143);
+var wksExt = __webpack_require__(147);
 var wksDefine = __webpack_require__(97);
-var enumKeys = __webpack_require__(228);
-var isArray = __webpack_require__(73);
+var enumKeys = __webpack_require__(232);
+var isArray = __webpack_require__(74);
 var anObject = __webpack_require__(2);
 var toIObject = __webpack_require__(18);
 var toPrimitive = __webpack_require__(26);
 var createDesc = __webpack_require__(39);
 var _create = __webpack_require__(44);
-var gOPNExt = __webpack_require__(146);
+var gOPNExt = __webpack_require__(150);
 var $GOPD = __webpack_require__(19);
 var $DP = __webpack_require__(8);
 var $keys = __webpack_require__(42);
@@ -6733,7 +6866,7 @@ if (!USE_NATIVE) {
   $DP.f = $defineProperty;
   __webpack_require__(45).f = gOPNExt.f = $getOwnPropertyNames;
   __webpack_require__(58).f = $propertyIsEnumerable;
-  __webpack_require__(72).f = $getOwnPropertySymbols;
+  __webpack_require__(73).f = $getOwnPropertySymbols;
 
   if (DESCRIPTORS && !__webpack_require__(41)) {
     redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
@@ -6820,12 +6953,12 @@ setToStringTag(global.JSON, 'JSON', true);
 
 
 /***/ }),
-/* 228 */
+/* 232 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // all enumerable object keys, includes symbols
 var getKeys = __webpack_require__(42);
-var gOPS = __webpack_require__(72);
+var gOPS = __webpack_require__(73);
 var pIE = __webpack_require__(58);
 module.exports = function (it) {
   var result = getKeys(it);
@@ -6841,7 +6974,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 229 */
+/* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
@@ -6850,7 +6983,7 @@ $export($export.S, 'Object', { create: __webpack_require__(44) });
 
 
 /***/ }),
-/* 230 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
@@ -6859,16 +6992,16 @@ $export($export.S + $export.F * !__webpack_require__(7), 'Object', { definePrope
 
 
 /***/ }),
-/* 231 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
 // 19.1.2.3 / 15.2.3.7 Object.defineProperties(O, Properties)
-$export($export.S + $export.F * !__webpack_require__(7), 'Object', { defineProperties: __webpack_require__(145) });
+$export($export.S + $export.F * !__webpack_require__(7), 'Object', { defineProperties: __webpack_require__(149) });
 
 
 /***/ }),
-/* 232 */
+/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
@@ -6883,7 +7016,7 @@ __webpack_require__(29)('getOwnPropertyDescriptor', function () {
 
 
 /***/ }),
-/* 233 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.9 Object.getPrototypeOf(O)
@@ -6898,7 +7031,7 @@ __webpack_require__(29)('getPrototypeOf', function () {
 
 
 /***/ }),
-/* 234 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 Object.keys(O)
@@ -6913,22 +7046,22 @@ __webpack_require__(29)('keys', function () {
 
 
 /***/ }),
-/* 235 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.7 Object.getOwnPropertyNames(O)
 __webpack_require__(29)('getOwnPropertyNames', function () {
-  return __webpack_require__(146).f;
+  return __webpack_require__(150).f;
 });
 
 
 /***/ }),
-/* 236 */
+/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.5 Object.freeze(O)
 var isObject = __webpack_require__(5);
-var meta = __webpack_require__(35).onFreeze;
+var meta = __webpack_require__(36).onFreeze;
 
 __webpack_require__(29)('freeze', function ($freeze) {
   return function freeze(it) {
@@ -6938,12 +7071,12 @@ __webpack_require__(29)('freeze', function ($freeze) {
 
 
 /***/ }),
-/* 237 */
+/* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.17 Object.seal(O)
 var isObject = __webpack_require__(5);
-var meta = __webpack_require__(35).onFreeze;
+var meta = __webpack_require__(36).onFreeze;
 
 __webpack_require__(29)('seal', function ($seal) {
   return function seal(it) {
@@ -6953,12 +7086,12 @@ __webpack_require__(29)('seal', function ($seal) {
 
 
 /***/ }),
-/* 238 */
+/* 242 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.15 Object.preventExtensions(O)
 var isObject = __webpack_require__(5);
-var meta = __webpack_require__(35).onFreeze;
+var meta = __webpack_require__(36).onFreeze;
 
 __webpack_require__(29)('preventExtensions', function ($preventExtensions) {
   return function preventExtensions(it) {
@@ -6968,7 +7101,7 @@ __webpack_require__(29)('preventExtensions', function ($preventExtensions) {
 
 
 /***/ }),
-/* 239 */
+/* 243 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.12 Object.isFrozen(O)
@@ -6982,7 +7115,7 @@ __webpack_require__(29)('isFrozen', function ($isFrozen) {
 
 
 /***/ }),
-/* 240 */
+/* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.13 Object.isSealed(O)
@@ -6996,7 +7129,7 @@ __webpack_require__(29)('isSealed', function ($isSealed) {
 
 
 /***/ }),
-/* 241 */
+/* 245 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.11 Object.isExtensible(O)
@@ -7010,26 +7143,26 @@ __webpack_require__(29)('isExtensible', function ($isExtensible) {
 
 
 /***/ }),
-/* 242 */
+/* 246 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.1 Object.assign(target, source)
 var $export = __webpack_require__(0);
 
-$export($export.S + $export.F, 'Object', { assign: __webpack_require__(147) });
+$export($export.S + $export.F, 'Object', { assign: __webpack_require__(151) });
 
 
 /***/ }),
-/* 243 */
+/* 247 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.10 Object.is(value1, value2)
 var $export = __webpack_require__(0);
-$export($export.S, 'Object', { is: __webpack_require__(244) });
+$export($export.S, 'Object', { is: __webpack_require__(248) });
 
 
 /***/ }),
-/* 244 */
+/* 248 */
 /***/ (function(module, exports) {
 
 // 7.2.9 SameValue(x, y)
@@ -7040,7 +7173,7 @@ module.exports = Object.is || function is(x, y) {
 
 
 /***/ }),
-/* 245 */
+/* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.19 Object.setPrototypeOf(O, proto)
@@ -7049,7 +7182,7 @@ $export($export.S, 'Object', { setPrototypeOf: __webpack_require__(101).set });
 
 
 /***/ }),
-/* 246 */
+/* 250 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7066,17 +7199,17 @@ if (test + '' != '[object z]') {
 
 
 /***/ }),
-/* 247 */
+/* 251 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.2.3.2 / 15.3.4.5 Function.prototype.bind(thisArg, args...)
 var $export = __webpack_require__(0);
 
-$export($export.P, 'Function', { bind: __webpack_require__(148) });
+$export($export.P, 'Function', { bind: __webpack_require__(152) });
 
 
 /***/ }),
-/* 248 */
+/* 252 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var dP = __webpack_require__(8).f;
@@ -7098,7 +7231,7 @@ NAME in FProto || __webpack_require__(7) && dP(FProto, NAME, {
 
 
 /***/ }),
-/* 249 */
+/* 253 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7118,27 +7251,27 @@ if (!(HAS_INSTANCE in FunctionProto)) __webpack_require__(8).f(FunctionProto, HA
 
 
 /***/ }),
-/* 250 */
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
-var $parseInt = __webpack_require__(150);
+var $parseInt = __webpack_require__(154);
 // 18.2.5 parseInt(string, radix)
 $export($export.G + $export.F * (parseInt != $parseInt), { parseInt: $parseInt });
 
 
 /***/ }),
-/* 251 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
-var $parseFloat = __webpack_require__(151);
+var $parseFloat = __webpack_require__(155);
 // 18.2.4 parseFloat(string)
 $export($export.G + $export.F * (parseFloat != $parseFloat), { parseFloat: $parseFloat });
 
 
 /***/ }),
-/* 252 */
+/* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7214,14 +7347,14 @@ if (!$Number(' 0o1') || !$Number('0b1') || $Number('+0x1')) {
 
 
 /***/ }),
-/* 253 */
+/* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
 var toInteger = __webpack_require__(28);
-var aNumberValue = __webpack_require__(152);
+var aNumberValue = __webpack_require__(156);
 var repeat = __webpack_require__(104);
 var $toFixed = 1.0.toFixed;
 var floor = Math.floor;
@@ -7335,14 +7468,14 @@ $export($export.P + $export.F * (!!$toFixed && (
 
 
 /***/ }),
-/* 254 */
+/* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
 var $fails = __webpack_require__(4);
-var aNumberValue = __webpack_require__(152);
+var aNumberValue = __webpack_require__(156);
 var $toPrecision = 1.0.toPrecision;
 
 $export($export.P + $export.F * ($fails(function () {
@@ -7360,7 +7493,7 @@ $export($export.P + $export.F * ($fails(function () {
 
 
 /***/ }),
-/* 255 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.1 Number.EPSILON
@@ -7370,7 +7503,7 @@ $export($export.S, 'Number', { EPSILON: Math.pow(2, -52) });
 
 
 /***/ }),
-/* 256 */
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.2 Number.isFinite(number)
@@ -7385,17 +7518,17 @@ $export($export.S, 'Number', {
 
 
 /***/ }),
-/* 257 */
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.3 Number.isInteger(number)
 var $export = __webpack_require__(0);
 
-$export($export.S, 'Number', { isInteger: __webpack_require__(153) });
+$export($export.S, 'Number', { isInteger: __webpack_require__(157) });
 
 
 /***/ }),
-/* 258 */
+/* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.4 Number.isNaN(number)
@@ -7410,12 +7543,12 @@ $export($export.S, 'Number', {
 
 
 /***/ }),
-/* 259 */
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.5 Number.isSafeInteger(number)
 var $export = __webpack_require__(0);
-var isInteger = __webpack_require__(153);
+var isInteger = __webpack_require__(157);
 var abs = Math.abs;
 
 $export($export.S, 'Number', {
@@ -7426,7 +7559,7 @@ $export($export.S, 'Number', {
 
 
 /***/ }),
-/* 260 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.6 Number.MAX_SAFE_INTEGER
@@ -7436,7 +7569,7 @@ $export($export.S, 'Number', { MAX_SAFE_INTEGER: 0x1fffffffffffff });
 
 
 /***/ }),
-/* 261 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.10 Number.MIN_SAFE_INTEGER
@@ -7446,32 +7579,32 @@ $export($export.S, 'Number', { MIN_SAFE_INTEGER: -0x1fffffffffffff });
 
 
 /***/ }),
-/* 262 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
-var $parseFloat = __webpack_require__(151);
+var $parseFloat = __webpack_require__(155);
 // 20.1.2.12 Number.parseFloat(string)
 $export($export.S + $export.F * (Number.parseFloat != $parseFloat), 'Number', { parseFloat: $parseFloat });
 
 
 /***/ }),
-/* 263 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
-var $parseInt = __webpack_require__(150);
+var $parseInt = __webpack_require__(154);
 // 20.1.2.13 Number.parseInt(string, radix)
 $export($export.S + $export.F * (Number.parseInt != $parseInt), 'Number', { parseInt: $parseInt });
 
 
 /***/ }),
-/* 264 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.3 Math.acosh(x)
 var $export = __webpack_require__(0);
-var log1p = __webpack_require__(154);
+var log1p = __webpack_require__(158);
 var sqrt = Math.sqrt;
 var $acosh = Math.acosh;
 
@@ -7490,7 +7623,7 @@ $export($export.S + $export.F * !($acosh
 
 
 /***/ }),
-/* 265 */
+/* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.5 Math.asinh(x)
@@ -7506,7 +7639,7 @@ $export($export.S + $export.F * !($asinh && 1 / $asinh(0) > 0), 'Math', { asinh:
 
 
 /***/ }),
-/* 266 */
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.7 Math.atanh(x)
@@ -7522,7 +7655,7 @@ $export($export.S + $export.F * !($atanh && 1 / $atanh(-0) < 0), 'Math', {
 
 
 /***/ }),
-/* 267 */
+/* 271 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.9 Math.cbrt(x)
@@ -7537,7 +7670,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 268 */
+/* 272 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.11 Math.clz32(x)
@@ -7551,7 +7684,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 269 */
+/* 273 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.12 Math.cosh(x)
@@ -7566,7 +7699,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 270 */
+/* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.14 Math.expm1(x)
@@ -7577,17 +7710,17 @@ $export($export.S + $export.F * ($expm1 != Math.expm1), 'Math', { expm1: $expm1 
 
 
 /***/ }),
-/* 271 */
+/* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.16 Math.fround(x)
 var $export = __webpack_require__(0);
 
-$export($export.S, 'Math', { fround: __webpack_require__(155) });
+$export($export.S, 'Math', { fround: __webpack_require__(159) });
 
 
 /***/ }),
-/* 272 */
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.17 Math.hypot([value1[, value2[, … ]]])
@@ -7618,7 +7751,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 273 */
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.18 Math.imul(x, y)
@@ -7641,7 +7774,7 @@ $export($export.S + $export.F * __webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 274 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.21 Math.log10(x)
@@ -7655,17 +7788,17 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 275 */
+/* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.20 Math.log1p(x)
 var $export = __webpack_require__(0);
 
-$export($export.S, 'Math', { log1p: __webpack_require__(154) });
+$export($export.S, 'Math', { log1p: __webpack_require__(158) });
 
 
 /***/ }),
-/* 276 */
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.22 Math.log2(x)
@@ -7679,7 +7812,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 277 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.28 Math.sign(x)
@@ -7689,7 +7822,7 @@ $export($export.S, 'Math', { sign: __webpack_require__(105) });
 
 
 /***/ }),
-/* 278 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.30 Math.sinh(x)
@@ -7710,7 +7843,7 @@ $export($export.S + $export.F * __webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 279 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.33 Math.tanh(x)
@@ -7728,7 +7861,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 280 */
+/* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.34 Math.trunc(x)
@@ -7742,7 +7875,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 281 */
+/* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
@@ -7771,7 +7904,7 @@ $export($export.S + $export.F * (!!$fromCodePoint && $fromCodePoint.length != 1)
 
 
 /***/ }),
-/* 282 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
@@ -7795,7 +7928,7 @@ $export($export.S, 'String', {
 
 
 /***/ }),
-/* 283 */
+/* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7809,7 +7942,7 @@ __webpack_require__(54)('trim', function ($trim) {
 
 
 /***/ }),
-/* 284 */
+/* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7833,7 +7966,7 @@ __webpack_require__(108)(String, 'String', function (iterated) {
 
 
 /***/ }),
-/* 285 */
+/* 289 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7849,7 +7982,7 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 286 */
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7876,7 +8009,7 @@ $export($export.P + $export.F * __webpack_require__(111)(ENDS_WITH), 'String', {
 
 
 /***/ }),
-/* 287 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7895,7 +8028,7 @@ $export($export.P + $export.F * __webpack_require__(111)(INCLUDES), 'String', {
 
 
 /***/ }),
-/* 288 */
+/* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
@@ -7907,7 +8040,7 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 289 */
+/* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7932,7 +8065,7 @@ $export($export.P + $export.F * __webpack_require__(111)(STARTS_WITH), 'String',
 
 
 /***/ }),
-/* 290 */
+/* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7946,7 +8079,7 @@ __webpack_require__(17)('anchor', function (createHTML) {
 
 
 /***/ }),
-/* 291 */
+/* 295 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7960,7 +8093,7 @@ __webpack_require__(17)('big', function (createHTML) {
 
 
 /***/ }),
-/* 292 */
+/* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7974,7 +8107,7 @@ __webpack_require__(17)('blink', function (createHTML) {
 
 
 /***/ }),
-/* 293 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7988,7 +8121,7 @@ __webpack_require__(17)('bold', function (createHTML) {
 
 
 /***/ }),
-/* 294 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8002,7 +8135,7 @@ __webpack_require__(17)('fixed', function (createHTML) {
 
 
 /***/ }),
-/* 295 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8016,7 +8149,7 @@ __webpack_require__(17)('fontcolor', function (createHTML) {
 
 
 /***/ }),
-/* 296 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8030,7 +8163,7 @@ __webpack_require__(17)('fontsize', function (createHTML) {
 
 
 /***/ }),
-/* 297 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8044,7 +8177,7 @@ __webpack_require__(17)('italics', function (createHTML) {
 
 
 /***/ }),
-/* 298 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8058,7 +8191,7 @@ __webpack_require__(17)('link', function (createHTML) {
 
 
 /***/ }),
-/* 299 */
+/* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8072,7 +8205,7 @@ __webpack_require__(17)('small', function (createHTML) {
 
 
 /***/ }),
-/* 300 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8086,7 +8219,7 @@ __webpack_require__(17)('strike', function (createHTML) {
 
 
 /***/ }),
-/* 301 */
+/* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8100,7 +8233,7 @@ __webpack_require__(17)('sub', function (createHTML) {
 
 
 /***/ }),
-/* 302 */
+/* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8114,7 +8247,7 @@ __webpack_require__(17)('sup', function (createHTML) {
 
 
 /***/ }),
-/* 303 */
+/* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.3.3.1 / 15.9.4.4 Date.now()
@@ -8124,7 +8257,7 @@ $export($export.S, 'Date', { now: function () { return new Date().getTime(); } }
 
 
 /***/ }),
-/* 304 */
+/* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8147,12 +8280,12 @@ $export($export.P + $export.F * __webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 305 */
+/* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.3.4.36 / 15.9.5.43 Date.prototype.toISOString()
 var $export = __webpack_require__(0);
-var toISOString = __webpack_require__(306);
+var toISOString = __webpack_require__(310);
 
 // PhantomJS / old WebKit has a broken implementations
 $export($export.P + $export.F * (Date.prototype.toISOString !== toISOString), 'Date', {
@@ -8161,7 +8294,7 @@ $export($export.P + $export.F * (Date.prototype.toISOString !== toISOString), 'D
 
 
 /***/ }),
-/* 306 */
+/* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8194,7 +8327,7 @@ module.exports = (fails(function () {
 
 
 /***/ }),
-/* 307 */
+/* 311 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var DateProto = Date.prototype;
@@ -8212,17 +8345,17 @@ if (new Date(NaN) + '' != INVALID_DATE) {
 
 
 /***/ }),
-/* 308 */
+/* 312 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var TO_PRIMITIVE = __webpack_require__(6)('toPrimitive');
 var proto = Date.prototype;
 
-if (!(TO_PRIMITIVE in proto)) __webpack_require__(15)(proto, TO_PRIMITIVE, __webpack_require__(309));
+if (!(TO_PRIMITIVE in proto)) __webpack_require__(15)(proto, TO_PRIMITIVE, __webpack_require__(313));
 
 
 /***/ }),
-/* 309 */
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8238,17 +8371,17 @@ module.exports = function (hint) {
 
 
 /***/ }),
-/* 310 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 22.1.2.2 / 15.4.3.2 Array.isArray(arg)
 var $export = __webpack_require__(0);
 
-$export($export.S, 'Array', { isArray: __webpack_require__(73) });
+$export($export.S, 'Array', { isArray: __webpack_require__(74) });
 
 
 /***/ }),
-/* 311 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8256,13 +8389,13 @@ $export($export.S, 'Array', { isArray: __webpack_require__(73) });
 var ctx = __webpack_require__(21);
 var $export = __webpack_require__(0);
 var toObject = __webpack_require__(11);
-var call = __webpack_require__(156);
+var call = __webpack_require__(160);
 var isArrayIter = __webpack_require__(112);
 var toLength = __webpack_require__(9);
 var createProperty = __webpack_require__(113);
 var getIterFn = __webpack_require__(114);
 
-$export($export.S + $export.F * !__webpack_require__(75)(function (iter) { Array.from(iter); }), 'Array', {
+$export($export.S + $export.F * !__webpack_require__(76)(function (iter) { Array.from(iter); }), 'Array', {
   // 22.1.2.1 Array.from(arrayLike, mapfn = undefined, thisArg = undefined)
   from: function from(arrayLike /* , mapfn = undefined, thisArg = undefined */) {
     var O = toObject(arrayLike);
@@ -8292,7 +8425,7 @@ $export($export.S + $export.F * !__webpack_require__(75)(function (iter) { Array
 
 
 /***/ }),
-/* 312 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8318,7 +8451,7 @@ $export($export.S + $export.F * __webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 313 */
+/* 317 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8337,7 +8470,7 @@ $export($export.P + $export.F * (__webpack_require__(57) != Object || !__webpack
 
 
 /***/ }),
-/* 314 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8372,7 +8505,7 @@ $export($export.P + $export.F * __webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 315 */
+/* 319 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8402,7 +8535,7 @@ $export($export.P + $export.F * (fails(function () {
 
 
 /***/ }),
-/* 316 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8420,11 +8553,11 @@ $export($export.P + $export.F * !STRICT, 'Array', {
 
 
 /***/ }),
-/* 317 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(5);
-var isArray = __webpack_require__(73);
+var isArray = __webpack_require__(74);
 var SPECIES = __webpack_require__(6)('species');
 
 module.exports = function (original) {
@@ -8442,7 +8575,7 @@ module.exports = function (original) {
 
 
 /***/ }),
-/* 318 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8459,7 +8592,7 @@ $export($export.P + $export.F * !__webpack_require__(23)([].map, true), 'Array',
 
 
 /***/ }),
-/* 319 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8476,7 +8609,7 @@ $export($export.P + $export.F * !__webpack_require__(23)([].filter, true), 'Arra
 
 
 /***/ }),
-/* 320 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8493,7 +8626,7 @@ $export($export.P + $export.F * !__webpack_require__(23)([].some, true), 'Array'
 
 
 /***/ }),
-/* 321 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8510,13 +8643,13 @@ $export($export.P + $export.F * !__webpack_require__(23)([].every, true), 'Array
 
 
 /***/ }),
-/* 322 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
-var $reduce = __webpack_require__(157);
+var $reduce = __webpack_require__(161);
 
 $export($export.P + $export.F * !__webpack_require__(23)([].reduce, true), 'Array', {
   // 22.1.3.18 / 15.4.4.21 Array.prototype.reduce(callbackfn [, initialValue])
@@ -8527,13 +8660,13 @@ $export($export.P + $export.F * !__webpack_require__(23)([].reduce, true), 'Arra
 
 
 /***/ }),
-/* 323 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
-var $reduce = __webpack_require__(157);
+var $reduce = __webpack_require__(161);
 
 $export($export.P + $export.F * !__webpack_require__(23)([].reduceRight, true), 'Array', {
   // 22.1.3.19 / 15.4.4.22 Array.prototype.reduceRight(callbackfn [, initialValue])
@@ -8544,13 +8677,13 @@ $export($export.P + $export.F * !__webpack_require__(23)([].reduceRight, true), 
 
 
 /***/ }),
-/* 324 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
-var $indexOf = __webpack_require__(71)(false);
+var $indexOf = __webpack_require__(72)(false);
 var $native = [].indexOf;
 var NEGATIVE_ZERO = !!$native && 1 / [1].indexOf(1, -0) < 0;
 
@@ -8566,7 +8699,7 @@ $export($export.P + $export.F * (NEGATIVE_ZERO || !__webpack_require__(23)($nati
 
 
 /***/ }),
-/* 325 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8595,19 +8728,19 @@ $export($export.P + $export.F * (NEGATIVE_ZERO || !__webpack_require__(23)($nati
 
 
 /***/ }),
-/* 326 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 22.1.3.3 Array.prototype.copyWithin(target, start, end = this.length)
 var $export = __webpack_require__(0);
 
-$export($export.P, 'Array', { copyWithin: __webpack_require__(158) });
+$export($export.P, 'Array', { copyWithin: __webpack_require__(162) });
 
-__webpack_require__(36)('copyWithin');
+__webpack_require__(37)('copyWithin');
 
 
 /***/ }),
-/* 327 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 22.1.3.6 Array.prototype.fill(value, start = 0, end = this.length)
@@ -8615,11 +8748,11 @@ var $export = __webpack_require__(0);
 
 $export($export.P, 'Array', { fill: __webpack_require__(116) });
 
-__webpack_require__(36)('fill');
+__webpack_require__(37)('fill');
 
 
 /***/ }),
-/* 328 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8636,11 +8769,11 @@ $export($export.P + $export.F * forced, 'Array', {
     return $find(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
   }
 });
-__webpack_require__(36)(KEY);
+__webpack_require__(37)(KEY);
 
 
 /***/ }),
-/* 329 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8657,26 +8790,26 @@ $export($export.P + $export.F * forced, 'Array', {
     return $find(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
   }
 });
-__webpack_require__(36)(KEY);
+__webpack_require__(37)(KEY);
 
 
 /***/ }),
-/* 330 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(46)('Array');
 
 
 /***/ }),
-/* 331 */
+/* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(3);
 var inheritIfRequired = __webpack_require__(103);
 var dP = __webpack_require__(8).f;
 var gOPN = __webpack_require__(45).f;
-var isRegExp = __webpack_require__(74);
-var $flags = __webpack_require__(76);
+var isRegExp = __webpack_require__(75);
+var $flags = __webpack_require__(77);
 var $RegExp = global.RegExp;
 var Base = $RegExp;
 var proto = $RegExp.prototype;
@@ -8717,14 +8850,14 @@ __webpack_require__(46)('RegExp');
 
 
 /***/ }),
-/* 332 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-__webpack_require__(160);
+__webpack_require__(164);
 var anObject = __webpack_require__(2);
-var $flags = __webpack_require__(76);
+var $flags = __webpack_require__(77);
 var DESCRIPTORS = __webpack_require__(7);
 var TO_STRING = 'toString';
 var $toString = /./[TO_STRING];
@@ -8749,11 +8882,11 @@ if (__webpack_require__(4)(function () { return $toString.call({ source: 'a', fl
 
 
 /***/ }),
-/* 333 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // @@match logic
-__webpack_require__(77)('match', 1, function (defined, MATCH, $match) {
+__webpack_require__(78)('match', 1, function (defined, MATCH, $match) {
   // 21.1.3.11 String.prototype.match(regexp)
   return [function match(regexp) {
     'use strict';
@@ -8765,11 +8898,11 @@ __webpack_require__(77)('match', 1, function (defined, MATCH, $match) {
 
 
 /***/ }),
-/* 334 */
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // @@replace logic
-__webpack_require__(77)('replace', 2, function (defined, REPLACE, $replace) {
+__webpack_require__(78)('replace', 2, function (defined, REPLACE, $replace) {
   // 21.1.3.14 String.prototype.replace(searchValue, replaceValue)
   return [function replace(searchValue, replaceValue) {
     'use strict';
@@ -8783,11 +8916,11 @@ __webpack_require__(77)('replace', 2, function (defined, REPLACE, $replace) {
 
 
 /***/ }),
-/* 335 */
+/* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // @@search logic
-__webpack_require__(77)('search', 1, function (defined, SEARCH, $search) {
+__webpack_require__(78)('search', 1, function (defined, SEARCH, $search) {
   // 21.1.3.15 String.prototype.search(regexp)
   return [function search(regexp) {
     'use strict';
@@ -8799,13 +8932,13 @@ __webpack_require__(77)('search', 1, function (defined, SEARCH, $search) {
 
 
 /***/ }),
-/* 336 */
+/* 340 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // @@split logic
-__webpack_require__(77)('split', 2, function (defined, SPLIT, $split) {
+__webpack_require__(78)('split', 2, function (defined, SPLIT, $split) {
   'use strict';
-  var isRegExp = __webpack_require__(74);
+  var isRegExp = __webpack_require__(75);
   var _split = $split;
   var $push = [].push;
   var $SPLIT = 'split';
@@ -8876,7 +9009,7 @@ __webpack_require__(77)('split', 2, function (defined, SPLIT, $split) {
 
 
 /***/ }),
-/* 337 */
+/* 341 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8890,12 +9023,12 @@ var isObject = __webpack_require__(5);
 var aFunction = __webpack_require__(13);
 var anInstance = __webpack_require__(47);
 var forOf = __webpack_require__(48);
-var speciesConstructor = __webpack_require__(78);
+var speciesConstructor = __webpack_require__(79);
 var task = __webpack_require__(118).set;
 var microtask = __webpack_require__(119)();
 var newPromiseCapabilityModule = __webpack_require__(120);
-var perform = __webpack_require__(161);
-var promiseResolve = __webpack_require__(162);
+var perform = __webpack_require__(165);
+var promiseResolve = __webpack_require__(166);
 var PROMISE = 'Promise';
 var TypeError = global.TypeError;
 var process = global.process;
@@ -9116,7 +9249,7 @@ $export($export.S + $export.F * (LIBRARY || !USE_NATIVE), PROMISE, {
     return promiseResolve(LIBRARY && this === Wrapper ? $Promise : this, x);
   }
 });
-$export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(75)(function (iter) {
+$export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(76)(function (iter) {
   $Promise.all(iter)['catch'](empty);
 })), PROMISE, {
   // 25.4.4.1 Promise.all(iterable)
@@ -9163,17 +9296,17 @@ $export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(75)(function
 
 
 /***/ }),
-/* 338 */
+/* 342 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var weak = __webpack_require__(167);
+var weak = __webpack_require__(171);
 var validate = __webpack_require__(56);
 var WEAK_SET = 'WeakSet';
 
 // 23.4 WeakSet Objects
-__webpack_require__(79)(WEAK_SET, function (get) {
+__webpack_require__(80)(WEAK_SET, function (get) {
   return function WeakSet() { return get(this, arguments.length > 0 ? arguments[0] : undefined); };
 }, {
   // 23.4.3.1 WeakSet.prototype.add(value)
@@ -9184,20 +9317,20 @@ __webpack_require__(79)(WEAK_SET, function (get) {
 
 
 /***/ }),
-/* 339 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var $export = __webpack_require__(0);
-var $typed = __webpack_require__(80);
+var $typed = __webpack_require__(81);
 var buffer = __webpack_require__(121);
 var anObject = __webpack_require__(2);
 var toAbsoluteIndex = __webpack_require__(43);
 var toLength = __webpack_require__(9);
 var isObject = __webpack_require__(5);
 var ArrayBuffer = __webpack_require__(3).ArrayBuffer;
-var speciesConstructor = __webpack_require__(78);
+var speciesConstructor = __webpack_require__(79);
 var $ArrayBuffer = buffer.ArrayBuffer;
 var $DataView = buffer.DataView;
 var $isView = $typed.ABV && ArrayBuffer.isView;
@@ -9237,17 +9370,17 @@ __webpack_require__(46)(ARRAY_BUFFER);
 
 
 /***/ }),
-/* 340 */
+/* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
-$export($export.G + $export.W + $export.F * !__webpack_require__(80).ABV, {
+$export($export.G + $export.W + $export.F * !__webpack_require__(81).ABV, {
   DataView: __webpack_require__(121).DataView
 });
 
 
 /***/ }),
-/* 341 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(33)('Int8', 1, function (init) {
@@ -9258,7 +9391,7 @@ __webpack_require__(33)('Int8', 1, function (init) {
 
 
 /***/ }),
-/* 342 */
+/* 346 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(33)('Uint8', 1, function (init) {
@@ -9269,7 +9402,7 @@ __webpack_require__(33)('Uint8', 1, function (init) {
 
 
 /***/ }),
-/* 343 */
+/* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(33)('Uint8', 1, function (init) {
@@ -9280,7 +9413,7 @@ __webpack_require__(33)('Uint8', 1, function (init) {
 
 
 /***/ }),
-/* 344 */
+/* 348 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(33)('Int16', 2, function (init) {
@@ -9291,7 +9424,7 @@ __webpack_require__(33)('Int16', 2, function (init) {
 
 
 /***/ }),
-/* 345 */
+/* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(33)('Uint16', 2, function (init) {
@@ -9302,7 +9435,7 @@ __webpack_require__(33)('Uint16', 2, function (init) {
 
 
 /***/ }),
-/* 346 */
+/* 350 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(33)('Int32', 4, function (init) {
@@ -9313,7 +9446,7 @@ __webpack_require__(33)('Int32', 4, function (init) {
 
 
 /***/ }),
-/* 347 */
+/* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(33)('Uint32', 4, function (init) {
@@ -9324,7 +9457,7 @@ __webpack_require__(33)('Uint32', 4, function (init) {
 
 
 /***/ }),
-/* 348 */
+/* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(33)('Float32', 4, function (init) {
@@ -9335,7 +9468,7 @@ __webpack_require__(33)('Float32', 4, function (init) {
 
 
 /***/ }),
-/* 349 */
+/* 353 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(33)('Float64', 8, function (init) {
@@ -9346,7 +9479,7 @@ __webpack_require__(33)('Float64', 8, function (init) {
 
 
 /***/ }),
-/* 350 */
+/* 354 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.1 Reflect.apply(target, thisArgument, argumentsList)
@@ -9368,7 +9501,7 @@ $export($export.S + $export.F * !__webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 351 */
+/* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.2 Reflect.construct(target, argumentsList [, newTarget])
@@ -9378,7 +9511,7 @@ var aFunction = __webpack_require__(13);
 var anObject = __webpack_require__(2);
 var isObject = __webpack_require__(5);
 var fails = __webpack_require__(4);
-var bind = __webpack_require__(148);
+var bind = __webpack_require__(152);
 var rConstruct = (__webpack_require__(3).Reflect || {}).construct;
 
 // MS Edge supports only 2 arguments and argumentsList argument is optional
@@ -9421,7 +9554,7 @@ $export($export.S + $export.F * (NEW_TARGET_BUG || ARGS_BUG), 'Reflect', {
 
 
 /***/ }),
-/* 352 */
+/* 356 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.3 Reflect.defineProperty(target, propertyKey, attributes)
@@ -9450,7 +9583,7 @@ $export($export.S + $export.F * __webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 353 */
+/* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.4 Reflect.deleteProperty(target, propertyKey)
@@ -9467,7 +9600,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 354 */
+/* 358 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9500,7 +9633,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 355 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.6 Reflect.get(target, propertyKey [, receiver])
@@ -9527,7 +9660,7 @@ $export($export.S, 'Reflect', { get: get });
 
 
 /***/ }),
-/* 356 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.7 Reflect.getOwnPropertyDescriptor(target, propertyKey)
@@ -9543,7 +9676,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 357 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.8 Reflect.getPrototypeOf(target)
@@ -9559,7 +9692,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 358 */
+/* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.9 Reflect.has(target, propertyKey)
@@ -9573,7 +9706,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 359 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.10 Reflect.isExtensible(target)
@@ -9590,17 +9723,17 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 360 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.11 Reflect.ownKeys(target)
 var $export = __webpack_require__(0);
 
-$export($export.S, 'Reflect', { ownKeys: __webpack_require__(169) });
+$export($export.S, 'Reflect', { ownKeys: __webpack_require__(173) });
 
 
 /***/ }),
-/* 361 */
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.12 Reflect.preventExtensions(target)
@@ -9622,7 +9755,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 362 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.13 Reflect.set(target, propertyKey, V [, receiver])
@@ -9659,7 +9792,7 @@ $export($export.S, 'Reflect', { set: set });
 
 
 /***/ }),
-/* 363 */
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.14 Reflect.setPrototypeOf(target, proto)
@@ -9680,14 +9813,14 @@ if (setProto) $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 364 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://github.com/tc39/Array.prototype.includes
 var $export = __webpack_require__(0);
-var $includes = __webpack_require__(71)(true);
+var $includes = __webpack_require__(72)(true);
 
 $export($export.P, 'Array', {
   includes: function includes(el /* , fromIndex = 0 */) {
@@ -9695,18 +9828,18 @@ $export($export.P, 'Array', {
   }
 });
 
-__webpack_require__(36)('includes');
+__webpack_require__(37)('includes');
 
 
 /***/ }),
-/* 365 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flatMap
 var $export = __webpack_require__(0);
-var flattenIntoArray = __webpack_require__(170);
+var flattenIntoArray = __webpack_require__(174);
 var toObject = __webpack_require__(11);
 var toLength = __webpack_require__(9);
 var aFunction = __webpack_require__(13);
@@ -9724,18 +9857,18 @@ $export($export.P, 'Array', {
   }
 });
 
-__webpack_require__(36)('flatMap');
+__webpack_require__(37)('flatMap');
 
 
 /***/ }),
-/* 366 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flatten
 var $export = __webpack_require__(0);
-var flattenIntoArray = __webpack_require__(170);
+var flattenIntoArray = __webpack_require__(174);
 var toObject = __webpack_require__(11);
 var toLength = __webpack_require__(9);
 var toInteger = __webpack_require__(28);
@@ -9752,11 +9885,11 @@ $export($export.P, 'Array', {
   }
 });
 
-__webpack_require__(36)('flatten');
+__webpack_require__(37)('flatten');
 
 
 /***/ }),
-/* 367 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9773,14 +9906,14 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 368 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://github.com/tc39/proposal-string-pad-start-end
 var $export = __webpack_require__(0);
-var $pad = __webpack_require__(171);
+var $pad = __webpack_require__(175);
 
 $export($export.P, 'String', {
   padStart: function padStart(maxLength /* , fillString = ' ' */) {
@@ -9790,14 +9923,14 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 369 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://github.com/tc39/proposal-string-pad-start-end
 var $export = __webpack_require__(0);
-var $pad = __webpack_require__(171);
+var $pad = __webpack_require__(175);
 
 $export($export.P, 'String', {
   padEnd: function padEnd(maxLength /* , fillString = ' ' */) {
@@ -9807,7 +9940,7 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 370 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9821,7 +9954,7 @@ __webpack_require__(54)('trimLeft', function ($trim) {
 
 
 /***/ }),
-/* 371 */
+/* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9835,7 +9968,7 @@ __webpack_require__(54)('trimRight', function ($trim) {
 
 
 /***/ }),
-/* 372 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9844,8 +9977,8 @@ __webpack_require__(54)('trimRight', function ($trim) {
 var $export = __webpack_require__(0);
 var defined = __webpack_require__(27);
 var toLength = __webpack_require__(9);
-var isRegExp = __webpack_require__(74);
-var getFlags = __webpack_require__(76);
+var isRegExp = __webpack_require__(75);
+var getFlags = __webpack_require__(77);
 var RegExpProto = RegExp.prototype;
 
 var $RegExpStringIterator = function (regexp, string) {
@@ -9872,26 +10005,26 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 373 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(97)('asyncIterator');
 
 
 /***/ }),
-/* 374 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(97)('observable');
 
 
 /***/ }),
-/* 375 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/tc39/proposal-object-getownpropertydescriptors
 var $export = __webpack_require__(0);
-var ownKeys = __webpack_require__(169);
+var ownKeys = __webpack_require__(173);
 var toIObject = __webpack_require__(18);
 var gOPD = __webpack_require__(19);
 var createProperty = __webpack_require__(113);
@@ -9914,12 +10047,12 @@ $export($export.S, 'Object', {
 
 
 /***/ }),
-/* 376 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/tc39/proposal-object-values-entries
 var $export = __webpack_require__(0);
-var $values = __webpack_require__(172)(false);
+var $values = __webpack_require__(176)(false);
 
 $export($export.S, 'Object', {
   values: function values(it) {
@@ -9929,12 +10062,12 @@ $export($export.S, 'Object', {
 
 
 /***/ }),
-/* 377 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/tc39/proposal-object-values-entries
 var $export = __webpack_require__(0);
-var $entries = __webpack_require__(172)(true);
+var $entries = __webpack_require__(176)(true);
 
 $export($export.S, 'Object', {
   entries: function entries(it) {
@@ -9944,7 +10077,7 @@ $export($export.S, 'Object', {
 
 
 /***/ }),
-/* 378 */
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9955,7 +10088,7 @@ var aFunction = __webpack_require__(13);
 var $defineProperty = __webpack_require__(8);
 
 // B.2.2.2 Object.prototype.__defineGetter__(P, getter)
-__webpack_require__(7) && $export($export.P + __webpack_require__(81), 'Object', {
+__webpack_require__(7) && $export($export.P + __webpack_require__(82), 'Object', {
   __defineGetter__: function __defineGetter__(P, getter) {
     $defineProperty.f(toObject(this), P, { get: aFunction(getter), enumerable: true, configurable: true });
   }
@@ -9963,7 +10096,7 @@ __webpack_require__(7) && $export($export.P + __webpack_require__(81), 'Object',
 
 
 /***/ }),
-/* 379 */
+/* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9974,7 +10107,7 @@ var aFunction = __webpack_require__(13);
 var $defineProperty = __webpack_require__(8);
 
 // B.2.2.3 Object.prototype.__defineSetter__(P, setter)
-__webpack_require__(7) && $export($export.P + __webpack_require__(81), 'Object', {
+__webpack_require__(7) && $export($export.P + __webpack_require__(82), 'Object', {
   __defineSetter__: function __defineSetter__(P, setter) {
     $defineProperty.f(toObject(this), P, { set: aFunction(setter), enumerable: true, configurable: true });
   }
@@ -9982,7 +10115,7 @@ __webpack_require__(7) && $export($export.P + __webpack_require__(81), 'Object',
 
 
 /***/ }),
-/* 380 */
+/* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9994,7 +10127,7 @@ var getPrototypeOf = __webpack_require__(20);
 var getOwnPropertyDescriptor = __webpack_require__(19).f;
 
 // B.2.2.4 Object.prototype.__lookupGetter__(P)
-__webpack_require__(7) && $export($export.P + __webpack_require__(81), 'Object', {
+__webpack_require__(7) && $export($export.P + __webpack_require__(82), 'Object', {
   __lookupGetter__: function __lookupGetter__(P) {
     var O = toObject(this);
     var K = toPrimitive(P, true);
@@ -10007,7 +10140,7 @@ __webpack_require__(7) && $export($export.P + __webpack_require__(81), 'Object',
 
 
 /***/ }),
-/* 381 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10019,7 +10152,7 @@ var getPrototypeOf = __webpack_require__(20);
 var getOwnPropertyDescriptor = __webpack_require__(19).f;
 
 // B.2.2.5 Object.prototype.__lookupSetter__(P)
-__webpack_require__(7) && $export($export.P + __webpack_require__(81), 'Object', {
+__webpack_require__(7) && $export($export.P + __webpack_require__(82), 'Object', {
   __lookupSetter__: function __lookupSetter__(P) {
     var O = toObject(this);
     var K = toPrimitive(P, true);
@@ -10032,62 +10165,30 @@ __webpack_require__(7) && $export($export.P + __webpack_require__(81), 'Object',
 
 
 /***/ }),
-/* 382 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://github.com/DavidBruant/Map-Set.prototype.toJSON
-var $export = __webpack_require__(0);
-
-$export($export.P + $export.R, 'Map', { toJSON: __webpack_require__(173)('Map') });
-
-
-/***/ }),
-/* 383 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://github.com/DavidBruant/Map-Set.prototype.toJSON
-var $export = __webpack_require__(0);
-
-$export($export.P + $export.R, 'Set', { toJSON: __webpack_require__(173)('Set') });
-
-
-/***/ }),
-/* 384 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://tc39.github.io/proposal-setmap-offrom/#sec-map.of
-__webpack_require__(82)('Map');
-
-
-/***/ }),
-/* 385 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://tc39.github.io/proposal-setmap-offrom/#sec-set.of
-__webpack_require__(82)('Set');
-
-
-/***/ }),
 /* 386 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// https://tc39.github.io/proposal-setmap-offrom/#sec-weakmap.of
-__webpack_require__(82)('WeakMap');
+// https://github.com/DavidBruant/Map-Set.prototype.toJSON
+var $export = __webpack_require__(0);
+
+$export($export.P + $export.R, 'Map', { toJSON: __webpack_require__(177)('Map') });
 
 
 /***/ }),
 /* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// https://tc39.github.io/proposal-setmap-offrom/#sec-weakset.of
-__webpack_require__(82)('WeakSet');
+// https://github.com/DavidBruant/Map-Set.prototype.toJSON
+var $export = __webpack_require__(0);
+
+$export($export.P + $export.R, 'Set', { toJSON: __webpack_require__(177)('Set') });
 
 
 /***/ }),
 /* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// https://tc39.github.io/proposal-setmap-offrom/#sec-map.from
+// https://tc39.github.io/proposal-setmap-offrom/#sec-map.of
 __webpack_require__(83)('Map');
 
 
@@ -10095,7 +10196,7 @@ __webpack_require__(83)('Map');
 /* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// https://tc39.github.io/proposal-setmap-offrom/#sec-set.from
+// https://tc39.github.io/proposal-setmap-offrom/#sec-set.of
 __webpack_require__(83)('Set');
 
 
@@ -10103,7 +10204,7 @@ __webpack_require__(83)('Set');
 /* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// https://tc39.github.io/proposal-setmap-offrom/#sec-weakmap.from
+// https://tc39.github.io/proposal-setmap-offrom/#sec-weakmap.of
 __webpack_require__(83)('WeakMap');
 
 
@@ -10111,12 +10212,44 @@ __webpack_require__(83)('WeakMap');
 /* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// https://tc39.github.io/proposal-setmap-offrom/#sec-weakset.from
+// https://tc39.github.io/proposal-setmap-offrom/#sec-weakset.of
 __webpack_require__(83)('WeakSet');
 
 
 /***/ }),
 /* 392 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://tc39.github.io/proposal-setmap-offrom/#sec-map.from
+__webpack_require__(84)('Map');
+
+
+/***/ }),
+/* 393 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://tc39.github.io/proposal-setmap-offrom/#sec-set.from
+__webpack_require__(84)('Set');
+
+
+/***/ }),
+/* 394 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://tc39.github.io/proposal-setmap-offrom/#sec-weakmap.from
+__webpack_require__(84)('WeakMap');
+
+
+/***/ }),
+/* 395 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://tc39.github.io/proposal-setmap-offrom/#sec-weakset.from
+__webpack_require__(84)('WeakSet');
+
+
+/***/ }),
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/tc39/proposal-global
@@ -10126,7 +10259,7 @@ $export($export.G, { global: __webpack_require__(3) });
 
 
 /***/ }),
-/* 393 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/tc39/proposal-global
@@ -10136,7 +10269,7 @@ $export($export.S, 'System', { global: __webpack_require__(3) });
 
 
 /***/ }),
-/* 394 */
+/* 398 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/ljharb/proposal-is-error
@@ -10151,7 +10284,7 @@ $export($export.S, 'Error', {
 
 
 /***/ }),
-/* 395 */
+/* 399 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
@@ -10165,7 +10298,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 396 */
+/* 400 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
@@ -10175,7 +10308,7 @@ $export($export.S, 'Math', { DEG_PER_RAD: Math.PI / 180 });
 
 
 /***/ }),
-/* 397 */
+/* 401 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
@@ -10190,13 +10323,13 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 398 */
+/* 402 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
 var $export = __webpack_require__(0);
-var scale = __webpack_require__(175);
-var fround = __webpack_require__(155);
+var scale = __webpack_require__(179);
+var fround = __webpack_require__(159);
 
 $export($export.S, 'Math', {
   fscale: function fscale(x, inLow, inHigh, outLow, outHigh) {
@@ -10206,7 +10339,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 399 */
+/* 403 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://gist.github.com/BrendanEich/4294d5c212a6d2254703
@@ -10223,7 +10356,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 400 */
+/* 404 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://gist.github.com/BrendanEich/4294d5c212a6d2254703
@@ -10240,7 +10373,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 401 */
+/* 405 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://gist.github.com/BrendanEich/4294d5c212a6d2254703
@@ -10262,7 +10395,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 402 */
+/* 406 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
@@ -10272,7 +10405,7 @@ $export($export.S, 'Math', { RAD_PER_DEG: 180 / Math.PI });
 
 
 /***/ }),
-/* 403 */
+/* 407 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
@@ -10287,17 +10420,17 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 404 */
+/* 408 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
 var $export = __webpack_require__(0);
 
-$export($export.S, 'Math', { scale: __webpack_require__(175) });
+$export($export.S, 'Math', { scale: __webpack_require__(179) });
 
 
 /***/ }),
-/* 405 */
+/* 409 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://gist.github.com/BrendanEich/4294d5c212a6d2254703
@@ -10319,7 +10452,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 406 */
+/* 410 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // http://jfbastien.github.io/papers/Math.signbit.html
@@ -10332,7 +10465,7 @@ $export($export.S, 'Math', { signbit: function signbit(x) {
 
 
 /***/ }),
-/* 407 */
+/* 411 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10341,8 +10474,8 @@ $export($export.S, 'Math', { signbit: function signbit(x) {
 var $export = __webpack_require__(0);
 var core = __webpack_require__(25);
 var global = __webpack_require__(3);
-var speciesConstructor = __webpack_require__(78);
-var promiseResolve = __webpack_require__(162);
+var speciesConstructor = __webpack_require__(79);
+var promiseResolve = __webpack_require__(166);
 
 $export($export.P + $export.R, 'Promise', { 'finally': function (onFinally) {
   var C = speciesConstructor(this, core.Promise || global.Promise);
@@ -10359,7 +10492,7 @@ $export($export.P + $export.R, 'Promise', { 'finally': function (onFinally) {
 
 
 /***/ }),
-/* 408 */
+/* 412 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10367,7 +10500,7 @@ $export($export.P + $export.R, 'Promise', { 'finally': function (onFinally) {
 // https://github.com/tc39/proposal-promise-try
 var $export = __webpack_require__(0);
 var newPromiseCapability = __webpack_require__(120);
-var perform = __webpack_require__(161);
+var perform = __webpack_require__(165);
 
 $export($export.S, 'Promise', { 'try': function (callbackfn) {
   var promiseCapability = newPromiseCapability.f(this);
@@ -10378,7 +10511,7 @@ $export($export.S, 'Promise', { 'try': function (callbackfn) {
 
 
 /***/ }),
-/* 409 */
+/* 413 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var metadata = __webpack_require__(34);
@@ -10392,7 +10525,7 @@ metadata.exp({ defineMetadata: function defineMetadata(metadataKey, metadataValu
 
 
 /***/ }),
-/* 410 */
+/* 414 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var metadata = __webpack_require__(34);
@@ -10413,7 +10546,7 @@ metadata.exp({ deleteMetadata: function deleteMetadata(metadataKey, target /* , 
 
 
 /***/ }),
-/* 411 */
+/* 415 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var metadata = __webpack_require__(34);
@@ -10436,11 +10569,11 @@ metadata.exp({ getMetadata: function getMetadata(metadataKey, target /* , target
 
 
 /***/ }),
-/* 412 */
+/* 416 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Set = __webpack_require__(165);
-var from = __webpack_require__(174);
+var Set = __webpack_require__(169);
+var from = __webpack_require__(178);
 var metadata = __webpack_require__(34);
 var anObject = __webpack_require__(2);
 var getPrototypeOf = __webpack_require__(20);
@@ -10461,7 +10594,7 @@ metadata.exp({ getMetadataKeys: function getMetadataKeys(target /* , targetKey *
 
 
 /***/ }),
-/* 413 */
+/* 417 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var metadata = __webpack_require__(34);
@@ -10476,7 +10609,7 @@ metadata.exp({ getOwnMetadata: function getOwnMetadata(metadataKey, target /* , 
 
 
 /***/ }),
-/* 414 */
+/* 418 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var metadata = __webpack_require__(34);
@@ -10490,7 +10623,7 @@ metadata.exp({ getOwnMetadataKeys: function getOwnMetadataKeys(target /* , targe
 
 
 /***/ }),
-/* 415 */
+/* 419 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var metadata = __webpack_require__(34);
@@ -10512,7 +10645,7 @@ metadata.exp({ hasMetadata: function hasMetadata(metadataKey, target /* , target
 
 
 /***/ }),
-/* 416 */
+/* 420 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var metadata = __webpack_require__(34);
@@ -10527,7 +10660,7 @@ metadata.exp({ hasOwnMetadata: function hasOwnMetadata(metadataKey, target /* , 
 
 
 /***/ }),
-/* 417 */
+/* 421 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $metadata = __webpack_require__(34);
@@ -10548,7 +10681,7 @@ $metadata.exp({ metadata: function metadata(metadataKey, metadataValue) {
 
 
 /***/ }),
-/* 418 */
+/* 422 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-09/sept-25.md#510-globalasap-for-enqueuing-a-microtask
@@ -10566,7 +10699,7 @@ $export($export.G, {
 
 
 /***/ }),
-/* 419 */
+/* 423 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10772,7 +10905,7 @@ __webpack_require__(46)('Observable');
 
 
 /***/ }),
-/* 420 */
+/* 424 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // ie9- setTimeout & setInterval additional parameters fix
@@ -10798,7 +10931,7 @@ $export($export.G + $export.B + $export.F * MSIE, {
 
 
 /***/ }),
-/* 421 */
+/* 425 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
@@ -10810,7 +10943,7 @@ $export($export.G + $export.B, {
 
 
 /***/ }),
-/* 422 */
+/* 426 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $iterators = __webpack_require__(117);
@@ -10874,32 +11007,32 @@ for (var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++
 
 
 /***/ }),
-/* 423 */
+/* 427 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(315);
 
 /***/ }),
-/* 424 */
+/* 428 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(425);
+__webpack_require__(429);
 module.exports = __webpack_require__(25).RegExp.escape;
 
 
 /***/ }),
-/* 425 */
+/* 429 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/benjamingr/RexExp.escape
 var $export = __webpack_require__(0);
-var $re = __webpack_require__(426)(/[\\^$*+?.()|[\]{}]/g, '\\$&');
+var $re = __webpack_require__(430)(/[\\^$*+?.()|[\]{}]/g, '\\$&');
 
 $export($export.S, 'RegExp', { escape: function escape(it) { return $re(it); } });
 
 
 /***/ }),
-/* 426 */
+/* 430 */
 /***/ (function(module, exports) {
 
 module.exports = function (regExp, replace) {
@@ -10913,31 +11046,31 @@ module.exports = function (regExp, replace) {
 
 
 /***/ }),
-/* 427 */
+/* 431 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(380);
 
 /***/ }),
-/* 428 */
+/* 432 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(311);
 
 /***/ }),
-/* 429 */
+/* 433 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(297);
 
 /***/ }),
-/* 430 */
+/* 434 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(299);
 
 /***/ }),
-/* 431 */
+/* 435 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -10948,15 +11081,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _homepage = __webpack_require__(432);
+var _homepage = __webpack_require__(436);
 
 var _homepage2 = _interopRequireDefault(_homepage);
 
-var _login = __webpack_require__(433);
+var _login = __webpack_require__(437);
 
 var _login2 = _interopRequireDefault(_login);
 
-var _index = __webpack_require__(434);
+var _index = __webpack_require__(438);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -10971,7 +11104,7 @@ exports.default = {
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 432 */
+/* 436 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -10986,7 +11119,7 @@ var _extends2 = __webpack_require__(12);
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var _ActionTypes = __webpack_require__(138);
+var _ActionTypes = __webpack_require__(142);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11009,7 +11142,7 @@ exports.default = function () {
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "homepage.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 433 */
+/* 437 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -11024,7 +11157,7 @@ var _extends2 = __webpack_require__(12);
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var _ActionTypes = __webpack_require__(138);
+var _ActionTypes = __webpack_require__(142);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11047,7 +11180,7 @@ exports.default = function () {
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "login.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 434 */
+/* 438 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -11058,33 +11191,33 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(66);
+var _redux = __webpack_require__(67);
 
-var _chat = __webpack_require__(435);
+var _chat = __webpack_require__(439);
 
 var _chat2 = _interopRequireDefault(_chat);
 
-var _contact = __webpack_require__(436);
+var _contact = __webpack_require__(440);
 
 var _contact2 = _interopRequireDefault(_contact);
 
-var _self = __webpack_require__(437);
+var _self = __webpack_require__(441);
 
 var _self2 = _interopRequireDefault(_self);
 
-var _newFriends = __webpack_require__(438);
+var _newFriends = __webpack_require__(442);
 
 var _newFriends2 = _interopRequireDefault(_newFriends);
 
-var _addFriend = __webpack_require__(439);
+var _addFriend = __webpack_require__(443);
 
 var _addFriend2 = _interopRequireDefault(_addFriend);
 
-var _moments = __webpack_require__(440);
+var _moments = __webpack_require__(444);
 
 var _moments2 = _interopRequireDefault(_moments);
 
-var _album = __webpack_require__(441);
+var _album = __webpack_require__(445);
 
 var _album2 = _interopRequireDefault(_album);
 
@@ -11103,7 +11236,7 @@ exports.default = (0, _redux.combineReducers)({
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 435 */
+/* 439 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -11140,7 +11273,7 @@ exports.default = function () {
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "chat.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 436 */
+/* 440 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -11167,12 +11300,6 @@ var defaultState = {
   selectedContacter: null
 };
 
-var getContacter = function getContacter(state, wxid) {
-  return (state.contacts || []).find(function (contacter) {
-    return contacter.wxid === wxid;
-  });
-};
-
 exports.default = function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : (0, _extends3.default)({}, defaultState);
   var action = arguments[1];
@@ -11181,9 +11308,8 @@ exports.default = function () {
     case ActionTypes.WECHAT_CONTACT_FETCH_CONTACTS:
     case ActionTypes.WECHAT_CONTACT_FETCH_OFFICIAL_ACCOUNTS:
     case ActionTypes.WECHAT_CONTACT_MAIN_SET:
-      return (0, _extends3.default)({}, state, action.payload);
     case ActionTypes.WECHAT_CONTACT_GET_CONTACTER:
-      return (0, _extends3.default)({}, state, { selectedContacter: getContacter(state, action.wxid) });
+      return (0, _extends3.default)({}, state, action.payload);
     default:
       return state;
   }
@@ -11192,7 +11318,7 @@ exports.default = function () {
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "contact.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 437 */
+/* 441 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -11231,7 +11357,7 @@ exports.default = function () {
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "self.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 438 */
+/* 442 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -11265,7 +11391,7 @@ exports.default = function () {
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "new-friends.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 439 */
+/* 443 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -11307,7 +11433,7 @@ exports.default = function () {
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "add-friend.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 440 */
+/* 444 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -11318,7 +11444,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _defineProperty2 = __webpack_require__(211);
+var _defineProperty2 = __webpack_require__(215);
 
 var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
@@ -11347,7 +11473,7 @@ exports.default = function () {
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "moments.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 441 */
+/* 445 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -11387,7 +11513,7 @@ exports.default = function () {
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "album.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 442 */
+/* 446 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -11402,13 +11528,13 @@ var _react = __webpack_require__(10);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(38);
+var _reactRouterDom = __webpack_require__(35);
 
-var _routes = __webpack_require__(443);
+var _routes = __webpack_require__(447);
 
 var _routes2 = _interopRequireDefault(_routes);
 
-var _DeviceUtils = __webpack_require__(179);
+var _DeviceUtils = __webpack_require__(183);
 
 var _DeviceUtils2 = _interopRequireDefault(_DeviceUtils);
 
@@ -11427,7 +11553,7 @@ exports.default = function () {
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 443 */
+/* 447 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -11442,40 +11568,40 @@ var _react = __webpack_require__(10);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(38);
+var _reactRouterDom = __webpack_require__(35);
 
-var _App = __webpack_require__(444);
+var _App = __webpack_require__(448);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _Container = __webpack_require__(481);
+var _Container = __webpack_require__(484);
 
 var _Container2 = _interopRequireDefault(_Container);
 
-var _BundleWrappingRoute = __webpack_require__(84);
+var _BundleWrappingRoute = __webpack_require__(60);
 
 var _BundleWrappingRoute2 = _interopRequireDefault(_BundleWrappingRoute);
 
-var _Index = __webpack_require__(493);
+var _Index = __webpack_require__(496);
 
 var _Index2 = _interopRequireDefault(_Index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var loadLoginAsync = function loadLoginAsync() {
-  return __webpack_require__.e/* import() */(20).then(__webpack_require__.bind(null, 639));
+  return __webpack_require__.e/* import() */(22).then(__webpack_require__.bind(null, 644));
 };
 var loadSignUpAsync = function loadSignUpAsync() {
-  return __webpack_require__.e/* import() */(22).then(__webpack_require__.bind(null, 640));
+  return __webpack_require__.e/* import() */(24).then(__webpack_require__.bind(null, 645));
 };
 var loadHomepageAsync = function loadHomepageAsync() {
-  return __webpack_require__.e/* import() */(21).then(__webpack_require__.bind(null, 641));
+  return __webpack_require__.e/* import() */(23).then(__webpack_require__.bind(null, 646));
 };
 var loadCertificateAsync = function loadCertificateAsync() {
-  return __webpack_require__.e/* import() */(13).then(__webpack_require__.bind(null, 642));
+  return __webpack_require__.e/* import() */(13).then(__webpack_require__.bind(null, 647));
 };
 var loadNotFountAsync = function loadNotFountAsync() {
-  return __webpack_require__.e/* import() */(23).then(__webpack_require__.bind(null, 643));
+  return __webpack_require__.e/* import() */(25).then(__webpack_require__.bind(null, 648));
 };
 // const loadWechatAsync = () => import(/* webpackChunkName: 'containers/Wechat' */ '../containers/Wechat/Index');
 
@@ -11514,7 +11640,7 @@ exports.default = AppRouter;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "routes.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 444 */
+/* 448 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -11525,11 +11651,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _getPrototypeOf = __webpack_require__(63);
+var _getPrototypeOf = __webpack_require__(64);
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
-var _classCallCheck2 = __webpack_require__(37);
+var _classCallCheck2 = __webpack_require__(38);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
@@ -11537,11 +11663,11 @@ var _createClass2 = __webpack_require__(52);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _possibleConstructorReturn2 = __webpack_require__(64);
+var _possibleConstructorReturn2 = __webpack_require__(65);
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-var _inherits2 = __webpack_require__(65);
+var _inherits2 = __webpack_require__(66);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -11609,102 +11735,96 @@ exports.default = App;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "App.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 445 */
+/* 449 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(446);
+__webpack_require__(450);
 module.exports = __webpack_require__(50).Object.getPrototypeOf;
 
 /***/ }),
-/* 446 */
+/* 450 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.9 Object.getPrototypeOf(O)
-var toObject        = __webpack_require__(447)
-  , $getPrototypeOf = __webpack_require__(448);
+var toObject        = __webpack_require__(451)
+  , $getPrototypeOf = __webpack_require__(452);
 
-__webpack_require__(449)('getPrototypeOf', function(){
+__webpack_require__(453)('getPrototypeOf', function(){
   return function getPrototypeOf(it){
     return $getPrototypeOf(toObject(it));
   };
 });
 
 /***/ }),
-/* 447 */
+/* 451 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(54);
 
 /***/ }),
-/* 448 */
+/* 452 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(327);
 
 /***/ }),
-/* 449 */
+/* 453 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(89);
 
 /***/ }),
-/* 450 */
+/* 454 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(166);
 
 /***/ }),
-/* 451 */
+/* 455 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(350);
 
 /***/ }),
-/* 452 */
+/* 456 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(453), __esModule: true };
-
-/***/ }),
-/* 453 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(454);
-__webpack_require__(470);
-__webpack_require__(471);
-__webpack_require__(472);
+__webpack_require__(457);
+__webpack_require__(473);
+__webpack_require__(474);
+__webpack_require__(475);
 module.exports = __webpack_require__(50).Symbol;
 
 /***/ }),
-/* 454 */
+/* 457 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // ECMAScript 6 symbols shim
-var global         = __webpack_require__(180)
-  , has            = __webpack_require__(181)
-  , DESCRIPTORS    = __webpack_require__(455)
+var global         = __webpack_require__(184)
+  , has            = __webpack_require__(185)
+  , DESCRIPTORS    = __webpack_require__(458)
   , $export        = __webpack_require__(123)
-  , redefine       = __webpack_require__(456)
-  , META           = __webpack_require__(457).KEY
-  , $fails         = __webpack_require__(184)
-  , shared         = __webpack_require__(458)
-  , setToStringTag = __webpack_require__(459)
-  , uid            = __webpack_require__(182)
-  , wks            = __webpack_require__(460)
-  , wksExt         = __webpack_require__(185)
+  , redefine       = __webpack_require__(459)
+  , META           = __webpack_require__(460).KEY
+  , $fails         = __webpack_require__(188)
+  , shared         = __webpack_require__(461)
+  , setToStringTag = __webpack_require__(462)
+  , uid            = __webpack_require__(186)
+  , wks            = __webpack_require__(463)
+  , wksExt         = __webpack_require__(189)
   , wksDefine      = __webpack_require__(125)
-  , keyOf          = __webpack_require__(461)
-  , enumKeys       = __webpack_require__(462)
-  , isArray        = __webpack_require__(463)
+  , keyOf          = __webpack_require__(464)
+  , enumKeys       = __webpack_require__(465)
+  , isArray        = __webpack_require__(466)
   , anObject       = __webpack_require__(127)
-  , toIObject      = __webpack_require__(187)
-  , toPrimitive    = __webpack_require__(465)
-  , createDesc     = __webpack_require__(466)
-  , _create        = __webpack_require__(190)
-  , gOPNExt        = __webpack_require__(467)
-  , $GOPD          = __webpack_require__(191)
+  , toIObject      = __webpack_require__(191)
+  , toPrimitive    = __webpack_require__(468)
+  , createDesc     = __webpack_require__(469)
+  , _create        = __webpack_require__(194)
+  , gOPNExt        = __webpack_require__(470)
+  , $GOPD          = __webpack_require__(195)
   , $DP            = __webpack_require__(124)
   , $keys          = __webpack_require__(126)
   , gOPD           = $GOPD.f
@@ -11829,11 +11949,11 @@ if(!USE_NATIVE){
 
   $GOPD.f = $getOwnPropertyDescriptor;
   $DP.f   = $defineProperty;
-  __webpack_require__(468).f = gOPNExt.f = $getOwnPropertyNames;
-  __webpack_require__(189).f  = $propertyIsEnumerable;
-  __webpack_require__(188).f = $getOwnPropertySymbols;
+  __webpack_require__(471).f = gOPNExt.f = $getOwnPropertyNames;
+  __webpack_require__(193).f  = $propertyIsEnumerable;
+  __webpack_require__(192).f = $getOwnPropertySymbols;
 
-  if(DESCRIPTORS && !__webpack_require__(186)){
+  if(DESCRIPTORS && !__webpack_require__(190)){
     redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
   }
 
@@ -11908,7 +12028,7 @@ $JSON && $export($export.S + $export.F * (!USE_NATIVE || $fails(function(){
 });
 
 // 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
-$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(469)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
+$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(472)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
 // 19.4.3.5 Symbol.prototype[@@toStringTag]
 setToStringTag($Symbol, 'Symbol');
 // 20.2.1.9 Math[@@toStringTag]
@@ -11917,30 +12037,30 @@ setToStringTag(Math, 'Math', true);
 setToStringTag(global.JSON, 'JSON', true);
 
 /***/ }),
-/* 455 */
+/* 458 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(19);
 
 /***/ }),
-/* 456 */
+/* 459 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(321);
 
 /***/ }),
-/* 457 */
+/* 460 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var META     = __webpack_require__(182)('meta')
-  , isObject = __webpack_require__(183)
-  , has      = __webpack_require__(181)
+var META     = __webpack_require__(186)('meta')
+  , isObject = __webpack_require__(187)
+  , has      = __webpack_require__(185)
   , setDesc  = __webpack_require__(124).f
   , id       = 0;
 var isExtensible = Object.isExtensible || function(){
   return true;
 };
-var FREEZE = !__webpack_require__(184)(function(){
+var FREEZE = !__webpack_require__(188)(function(){
   return isExtensible(Object.preventExtensions({}));
 });
 var setMeta = function(it){
@@ -11987,29 +12107,29 @@ var meta = module.exports = {
 };
 
 /***/ }),
-/* 458 */
+/* 461 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(155);
 
 /***/ }),
-/* 459 */
+/* 462 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(88);
 
 /***/ }),
-/* 460 */
+/* 463 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(12);
 
 /***/ }),
-/* 461 */
+/* 464 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getKeys   = __webpack_require__(126)
-  , toIObject = __webpack_require__(187);
+  , toIObject = __webpack_require__(191);
 module.exports = function(object, el){
   var O      = toIObject(object)
     , keys   = getKeys(O)
@@ -12020,13 +12140,13 @@ module.exports = function(object, el){
 };
 
 /***/ }),
-/* 462 */
+/* 465 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // all enumerable object keys, includes symbols
 var getKeys = __webpack_require__(126)
-  , gOPS    = __webpack_require__(188)
-  , pIE     = __webpack_require__(189);
+  , gOPS    = __webpack_require__(192)
+  , pIE     = __webpack_require__(193);
 module.exports = function(it){
   var result     = getKeys(it)
     , getSymbols = gOPS.f;
@@ -12040,97 +12160,97 @@ module.exports = function(it){
 };
 
 /***/ }),
-/* 463 */
+/* 466 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.2.2 IsArray(argument)
-var cof = __webpack_require__(464);
+var cof = __webpack_require__(467);
 module.exports = Array.isArray || function isArray(arg){
   return cof(arg) == 'Array';
 };
 
 /***/ }),
-/* 464 */
+/* 467 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(53);
 
 /***/ }),
-/* 465 */
+/* 468 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(152);
 
 /***/ }),
-/* 466 */
+/* 469 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(52);
 
 /***/ }),
-/* 467 */
+/* 470 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(360);
 
 /***/ }),
-/* 468 */
+/* 471 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(361);
 
 /***/ }),
-/* 469 */
+/* 472 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(27);
 
 /***/ }),
-/* 470 */
+/* 473 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(319);
 
 /***/ }),
-/* 471 */
+/* 474 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125)('asyncIterator');
 
 /***/ }),
-/* 472 */
+/* 475 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125)('observable');
 
 /***/ }),
-/* 473 */
+/* 476 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(474), __esModule: true };
+module.exports = { "default": __webpack_require__(477), __esModule: true };
 
 /***/ }),
-/* 474 */
+/* 477 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(475);
+__webpack_require__(478);
 module.exports = __webpack_require__(50).Object.setPrototypeOf;
 
 /***/ }),
-/* 475 */
+/* 478 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.19 Object.setPrototypeOf(O, proto)
 var $export = __webpack_require__(123);
-$export($export.S, 'Object', {setPrototypeOf: __webpack_require__(476).set});
+$export($export.S, 'Object', {setPrototypeOf: __webpack_require__(479).set});
 
 /***/ }),
-/* 476 */
+/* 479 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Works with __proto__ only. Old v8 can't work with null proto objects.
 /* eslint-disable no-proto */
-var isObject = __webpack_require__(183)
+var isObject = __webpack_require__(187)
   , anObject = __webpack_require__(127);
 var check = function(O, proto){
   anObject(O);
@@ -12140,7 +12260,7 @@ module.exports = {
   set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
     function(test, buggy, set){
       try {
-        set = __webpack_require__(477)(Function.call, __webpack_require__(191).f(Object.prototype, '__proto__').set, 2);
+        set = __webpack_require__(480)(Function.call, __webpack_require__(195).f(Object.prototype, '__proto__').set, 2);
         set(test, []);
         buggy = !(test instanceof Array);
       } catch(e){ buggy = true; }
@@ -12155,37 +12275,37 @@ module.exports = {
 };
 
 /***/ }),
-/* 477 */
+/* 480 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(38);
 
 /***/ }),
-/* 478 */
+/* 481 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(479), __esModule: true };
+module.exports = { "default": __webpack_require__(482), __esModule: true };
 
 /***/ }),
-/* 479 */
+/* 482 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(480);
+__webpack_require__(483);
 var $Object = __webpack_require__(50).Object;
 module.exports = function create(P, D){
   return $Object.create(P, D);
 };
 
 /***/ }),
-/* 480 */
+/* 483 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(123)
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-$export($export.S, 'Object', {create: __webpack_require__(190)});
+$export($export.S, 'Object', {create: __webpack_require__(194)});
 
 /***/ }),
-/* 481 */
+/* 484 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -12196,11 +12316,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _getPrototypeOf = __webpack_require__(63);
+var _getPrototypeOf = __webpack_require__(64);
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
-var _classCallCheck2 = __webpack_require__(37);
+var _classCallCheck2 = __webpack_require__(38);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
@@ -12208,11 +12328,11 @@ var _createClass2 = __webpack_require__(52);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _possibleConstructorReturn2 = __webpack_require__(64);
+var _possibleConstructorReturn2 = __webpack_require__(65);
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-var _inherits2 = __webpack_require__(65);
+var _inherits2 = __webpack_require__(66);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -12226,11 +12346,11 @@ var _propTypes = __webpack_require__(91);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _Language = __webpack_require__(482);
+var _Language = __webpack_require__(485);
 
 var _Language2 = _interopRequireDefault(_Language);
 
-__webpack_require__(490);
+__webpack_require__(493);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12269,7 +12389,7 @@ exports.default = Container;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Container.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 482 */
+/* 485 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -12280,7 +12400,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _classCallCheck2 = __webpack_require__(37);
+var _classCallCheck2 = __webpack_require__(38);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
@@ -12288,17 +12408,17 @@ var _createClass2 = __webpack_require__(52);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _reduxPagan = __webpack_require__(141);
+var _reduxPagan = __webpack_require__(145);
 
-var _configureStore = __webpack_require__(177);
+var _configureStore = __webpack_require__(181);
 
 var _configureStore2 = _interopRequireDefault(_configureStore);
 
-var _Session = __webpack_require__(483);
+var _Session = __webpack_require__(486);
 
 var _Session2 = _interopRequireDefault(_Session);
 
-var _Language = __webpack_require__(487);
+var _Language = __webpack_require__(490);
 
 var _Language2 = _interopRequireDefault(_Language);
 
@@ -12350,9 +12470,9 @@ var Language = function () {
       var type = _Language2.default.ZH_TYPES.includes(locale) ? _Language2.default.ZH_CN : _Language2.default.EN_US;
       try {
         // here we use promise-loader to load lang data by demand
-        return { type: type, data: __webpack_require__(192)("./" + type + '.i18n.json') };
+        return { type: type, data: __webpack_require__(196)("./" + type + '.i18n.json') };
       } catch (err) {
-        return { type: type, data: __webpack_require__(192)("./" + type + '.i18n.json') };
+        return { type: type, data: __webpack_require__(196)("./" + type + '.i18n.json') };
       }
     }
   }, {
@@ -12377,7 +12497,7 @@ exports.default = Language;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Language.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 483 */
+/* 486 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -12388,11 +12508,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _stringify = __webpack_require__(484);
+var _stringify = __webpack_require__(487);
 
 var _stringify2 = _interopRequireDefault(_stringify);
 
-var _classCallCheck2 = __webpack_require__(37);
+var _classCallCheck2 = __webpack_require__(38);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
@@ -12400,7 +12520,7 @@ var _createClass2 = __webpack_require__(52);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _base = __webpack_require__(486);
+var _base = __webpack_require__(489);
 
 var _base2 = _interopRequireDefault(_base);
 
@@ -12455,13 +12575,13 @@ exports.default = Session;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Session.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 484 */
+/* 487 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(485), __esModule: true };
+module.exports = { "default": __webpack_require__(488), __esModule: true };
 
 /***/ }),
-/* 485 */
+/* 488 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var core  = __webpack_require__(50)
@@ -12471,7 +12591,7 @@ module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
 };
 
 /***/ }),
-/* 486 */
+/* 489 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! http://mths.be/base64 v0.1.0 by @mathias | MIT license */
@@ -12642,7 +12762,7 @@ module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(95)(module), __webpack_require__(93)))
 
 /***/ }),
-/* 487 */
+/* 490 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -12666,37 +12786,37 @@ exports.default = LANGUAGE;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Language.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 488 */
+/* 491 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = function () {
   return new Promise(function (resolve) {
-    __webpack_require__.e/* require.ensure */(25).then((function (require) {
-      resolve(__webpack_require__(618));
+    __webpack_require__.e/* require.ensure */(27).then((function (require) {
+      resolve(__webpack_require__(621));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
   });
 }
 
 /***/ }),
-/* 489 */
+/* 492 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = function () {
   return new Promise(function (resolve) {
-    __webpack_require__.e/* require.ensure */(24).then((function (require) {
-      resolve(__webpack_require__(619));
+    __webpack_require__.e/* require.ensure */(26).then((function (require) {
+      resolve(__webpack_require__(622));
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
   });
 }
 
 /***/ }),
-/* 490 */
+/* 493 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 491 */
+/* 494 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12717,7 +12837,7 @@ exports.default = function (obj, keys) {
 };
 
 /***/ }),
-/* 492 */
+/* 495 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -12729,11 +12849,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
-var _getPrototypeOf = __webpack_require__(63);
+var _getPrototypeOf = __webpack_require__(64);
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
-var _classCallCheck2 = __webpack_require__(37);
+var _classCallCheck2 = __webpack_require__(38);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
@@ -12741,11 +12861,11 @@ var _createClass2 = __webpack_require__(52);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _possibleConstructorReturn2 = __webpack_require__(64);
+var _possibleConstructorReturn2 = __webpack_require__(65);
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-var _inherits2 = __webpack_require__(65);
+var _inherits2 = __webpack_require__(66);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -12825,7 +12945,7 @@ exports.default = Bundle;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Bundle.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 493 */
+/* 496 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -12840,11 +12960,11 @@ var _react = __webpack_require__(10);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _index = __webpack_require__(494);
+var _index = __webpack_require__(497);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _FooterContainer = __webpack_require__(611);
+var _FooterContainer = __webpack_require__(614);
 
 var _FooterContainer2 = _interopRequireDefault(_FooterContainer);
 
@@ -12863,7 +12983,7 @@ exports.default = WechatContainer;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Index.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 494 */
+/* 497 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -12878,7 +12998,7 @@ var _react = __webpack_require__(10);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _routes = __webpack_require__(495);
+var _routes = __webpack_require__(498);
 
 var _routes2 = _interopRequireDefault(_routes);
 
@@ -12891,7 +13011,7 @@ exports.default = function (props) {
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "index.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 495 */
+/* 498 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -12910,39 +13030,47 @@ var _react = __webpack_require__(10);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(38);
+var _reactRouterDom = __webpack_require__(35);
 
-var _BundleWrappingRoute = __webpack_require__(84);
+var _BundleWrappingRoute = __webpack_require__(60);
 
 var _BundleWrappingRoute2 = _interopRequireDefault(_BundleWrappingRoute);
 
-var _contact = __webpack_require__(496);
+var _contact = __webpack_require__(499);
 
 var _contact2 = _interopRequireDefault(_contact);
 
-var _self = __webpack_require__(590);
+var _self = __webpack_require__(592);
 
 var _self2 = _interopRequireDefault(_self);
 
+var _tools = __webpack_require__(595);
+
+var _tools2 = _interopRequireDefault(_tools);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import Contact from '../containers/Contact/Contact';
 var loadChatAsync = function loadChatAsync() {
-  return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 634));
+  return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 638));
 };
+// import Contact from '../containers/Contact/Contact';
+
 var loadExploreAsync = function loadExploreAsync() {
-  return __webpack_require__.e/* import() */(12).then(__webpack_require__.bind(null, 635));
+  return __webpack_require__.e/* import() */(12).then(__webpack_require__.bind(null, 639));
 };
 var loadAddFriendAsync = function loadAddFriendAsync() {
-  return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 636));
+  return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 640));
 };
 // <Route path="/wechat/contact" render={nextProps => (<Contact {...nextProps}><ContactRoute /></Contact>)} />
 var WechatRouter = function WechatRouter(props) {
   var loadContactAsync = function loadContactAsync() {
-    return __webpack_require__.e/* import() */(5).then(__webpack_require__.bind(null, 637));
+    return __webpack_require__.e/* import() */(5).then(__webpack_require__.bind(null, 641));
   };
   var loadSelfAsync = function loadSelfAsync() {
-    return __webpack_require__.e/* import() */(10).then(__webpack_require__.bind(null, 638));
+    return __webpack_require__.e/* import() */(10).then(__webpack_require__.bind(null, 642));
+  };
+  var loadToolsAsync = function loadToolsAsync() {
+    return __webpack_require__.e/* import() */(21).then(__webpack_require__.bind(null, 643));
   };
 
   return _react2.default.createElement(
@@ -12965,7 +13093,14 @@ var WechatRouter = function WechatRouter(props) {
         return _react2.default.createElement(_self2.default, nextProps);
       }
     ),
-    _react2.default.createElement(_BundleWrappingRoute2.default, (0, _extends3.default)({}, props, { path: '/wechat/add-friend', load: loadAddFriendAsync }))
+    _react2.default.createElement(_BundleWrappingRoute2.default, (0, _extends3.default)({}, props, { path: '/wechat/add-friend', load: loadAddFriendAsync })),
+    _react2.default.createElement(
+      _BundleWrappingRoute2.default,
+      (0, _extends3.default)({}, props, { path: '/wechat/tools', load: loadToolsAsync }),
+      function (nextProps) {
+        return _react2.default.createElement(_tools2.default, nextProps);
+      }
+    )
   );
 };
 
@@ -12974,7 +13109,7 @@ exports.default = WechatRouter;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "routes.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 496 */
+/* 499 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -12993,13 +13128,13 @@ var _react = __webpack_require__(10);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(38);
+var _reactRouterDom = __webpack_require__(35);
 
-var _BundleWrappingRoute = __webpack_require__(84);
+var _BundleWrappingRoute = __webpack_require__(60);
 
 var _BundleWrappingRoute2 = _interopRequireDefault(_BundleWrappingRoute);
 
-var _SubPageContainer = __webpack_require__(193);
+var _SubPageContainer = __webpack_require__(128);
 
 var _SubPageContainer2 = _interopRequireDefault(_SubPageContainer);
 
@@ -13012,25 +13147,26 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var WechatContactRouter = function WechatContactRouter(props) {
   var loadContactDetailAsync = function loadContactDetailAsync() {
-    return __webpack_require__.e/* import() */(6).then(__webpack_require__.bind(null, 620));
+    return __webpack_require__.e/* import() */(6).then(__webpack_require__.bind(null, 623));
   };
   var loadContactTagsAsync = function loadContactTagsAsync() {
-    return __webpack_require__.e/* import() */(19).then(__webpack_require__.bind(null, 621));
+    return __webpack_require__.e/* import() */(20).then(__webpack_require__.bind(null, 624));
   };
   var loadContactNewFriendsAsync = function loadContactNewFriendsAsync() {
-    return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 622));
+    return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 625));
   };
   var loadContactGroupChatsAsync = function loadContactGroupChatsAsync() {
-    return __webpack_require__.e/* import() */(8).then(__webpack_require__.bind(null, 623));
+    return __webpack_require__.e/* import() */(8).then(__webpack_require__.bind(null, 626));
   };
   var loadContactOfficialAccountsAsync = function loadContactOfficialAccountsAsync() {
-    return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, 624));
+    return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, 627));
   };
 
   return _react2.default.createElement(
     _reactRouterDom.Switch,
     null,
     _react2.default.createElement(_BundleWrappingRoute2.default, (0, _extends3.default)({}, props, { component: _SubPageContainer2.default, path: '/wechat/contact/detail/:wxid', load: loadContactDetailAsync })),
+    _react2.default.createElement(_BundleWrappingRoute2.default, (0, _extends3.default)({}, props, { component: _SubPageContainer2.default, path: '/wechat/contact/detail', load: loadContactDetailAsync })),
     _react2.default.createElement(_BundleWrappingRoute2.default, (0, _extends3.default)({}, props, { component: _SubPageContainer2.default, path: '/wechat/contact/tags', load: loadContactTagsAsync })),
     _react2.default.createElement(_BundleWrappingRoute2.default, (0, _extends3.default)({}, props, { component: _SubPageContainer2.default, path: '/wechat/contact/new-friends', load: loadContactNewFriendsAsync })),
     _react2.default.createElement(_BundleWrappingRoute2.default, (0, _extends3.default)({}, props, { component: _SubPageContainer2.default, path: '/wechat/contact/group-chats', load: loadContactGroupChatsAsync })),
@@ -13043,37 +13179,37 @@ exports.default = WechatContactRouter;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "contact.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 497 */
+/* 500 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 498 */
+/* 501 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(499);
-__webpack_require__(500);
-module.exports = __webpack_require__(501);
+__webpack_require__(502);
+__webpack_require__(503);
+module.exports = __webpack_require__(504);
 
 /***/ }),
-/* 499 */
+/* 502 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(158);
 
 /***/ }),
-/* 500 */
+/* 503 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(79);
 
 /***/ }),
-/* 501 */
+/* 504 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var anObject = __webpack_require__(127)
-  , get      = __webpack_require__(502);
+  , get      = __webpack_require__(505);
 module.exports = __webpack_require__(50).getIterator = function(it){
   var iterFn = get(it);
   if(typeof iterFn != 'function')throw TypeError(it + ' is not iterable!');
@@ -13081,13 +13217,13 @@ module.exports = __webpack_require__(50).getIterator = function(it){
 };
 
 /***/ }),
-/* 502 */
+/* 505 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(162);
 
 /***/ }),
-/* 503 */
+/* 506 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13115,8 +13251,8 @@ function buildPinyinCache(dict_combo){
   return uncomboed;
 }
 
-const PINYIN_DICT = buildPinyinCache(__webpack_require__(504));
-const Pinyin = __webpack_require__(505);
+const PINYIN_DICT = buildPinyinCache(__webpack_require__(507));
+const Pinyin = __webpack_require__(508);
 const pinyin = new Pinyin(PINYIN_DICT);
 
 module.exports = pinyin.convert.bind(pinyin);
@@ -13130,7 +13266,7 @@ module.exports.STYLE_FIRST_LETTER = Pinyin.STYLE_FIRST_LETTER;
 
 
 /***/ }),
-/* 504 */
+/* 507 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -14680,13 +14816,13 @@ module.exports = {
 
 
 /***/ }),
-/* 505 */
+/* 508 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-const assign = __webpack_require__(506);
+const assign = __webpack_require__(509);
 // XXX: Symbol when web support.
 const PINYIN_STYLE = {
   NORMAL: 0,       // 普通风格，不带音标。
@@ -14707,7 +14843,7 @@ const INITIALS = "b,p,m,f,d,t,n,l,g,k,h,j,q,x,r,zh,ch,sh,z,c,s".split(",");
 // 韵母表。
 //const FINALS = "ang,eng,ing,ong,an,en,in,un,er,ai,ei,ui,ao,ou,iu,ie,ve,a,o,e,i,u,v".split(",");
 // 带音标字符。
-const PHONETIC_SYMBOL = __webpack_require__(507);
+const PHONETIC_SYMBOL = __webpack_require__(510);
 const RE_PHONETIC_SYMBOL = new RegExp("([" + Object.keys(PHONETIC_SYMBOL).join("") + "])", "g");
 const RE_TONE2 = /([aeoiuvnm])([0-4])$/;
 
@@ -14897,13 +15033,13 @@ module.exports = Pinyin;
 
 
 /***/ }),
-/* 506 */
+/* 509 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(3);
 
 /***/ }),
-/* 507 */
+/* 510 */
 /***/ (function(module, exports) {
 
 // 带音标字符。
@@ -14939,10 +15075,10 @@ module.exports = {
 
 
 /***/ }),
-/* 508 */
+/* 511 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var defineProperty = __webpack_require__(194);
+var defineProperty = __webpack_require__(197);
 
 /**
  * The base implementation of `assignValue` and `assignMergeValue` without
@@ -14970,13 +15106,13 @@ module.exports = baseAssignValue;
 
 
 /***/ }),
-/* 509 */
+/* 512 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isFunction = __webpack_require__(195),
-    isMasked = __webpack_require__(512),
-    isObject = __webpack_require__(68),
-    toSource = __webpack_require__(197);
+var isFunction = __webpack_require__(198),
+    isMasked = __webpack_require__(515),
+    isObject = __webpack_require__(69),
+    toSource = __webpack_require__(200);
 
 /**
  * Used to match `RegExp`
@@ -15023,10 +15159,10 @@ module.exports = baseIsNative;
 
 
 /***/ }),
-/* 510 */
+/* 513 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(61);
+var Symbol = __webpack_require__(62);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -15075,7 +15211,7 @@ module.exports = getRawTag;
 
 
 /***/ }),
-/* 511 */
+/* 514 */
 /***/ (function(module, exports) {
 
 /** Used for built-in method references. */
@@ -15103,10 +15239,10 @@ module.exports = objectToString;
 
 
 /***/ }),
-/* 512 */
+/* 515 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var coreJsData = __webpack_require__(513);
+var coreJsData = __webpack_require__(516);
 
 /** Used to detect methods masquerading as native. */
 var maskSrcKey = (function() {
@@ -15129,7 +15265,7 @@ module.exports = isMasked;
 
 
 /***/ }),
-/* 513 */
+/* 516 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var root = __webpack_require__(32);
@@ -15141,7 +15277,7 @@ module.exports = coreJsData;
 
 
 /***/ }),
-/* 514 */
+/* 517 */
 /***/ (function(module, exports) {
 
 /**
@@ -15160,12 +15296,12 @@ module.exports = getValue;
 
 
 /***/ }),
-/* 515 */
+/* 518 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayAggregator = __webpack_require__(516),
-    baseAggregator = __webpack_require__(517),
-    baseIteratee = __webpack_require__(200),
+var arrayAggregator = __webpack_require__(519),
+    baseAggregator = __webpack_require__(520),
+    baseIteratee = __webpack_require__(203),
     isArray = __webpack_require__(24);
 
 /**
@@ -15189,7 +15325,7 @@ module.exports = createAggregator;
 
 
 /***/ }),
-/* 516 */
+/* 519 */
 /***/ (function(module, exports) {
 
 /**
@@ -15217,10 +15353,10 @@ module.exports = arrayAggregator;
 
 
 /***/ }),
-/* 517 */
+/* 520 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseEach = __webpack_require__(198);
+var baseEach = __webpack_require__(201);
 
 /**
  * Aggregates elements of `collection` on `accumulator` with keys transformed
@@ -15244,11 +15380,11 @@ module.exports = baseAggregator;
 
 
 /***/ }),
-/* 518 */
+/* 521 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFor = __webpack_require__(519),
-    keys = __webpack_require__(128);
+var baseFor = __webpack_require__(522),
+    keys = __webpack_require__(129);
 
 /**
  * The base implementation of `_.forOwn` without support for iteratee shorthands.
@@ -15266,10 +15402,10 @@ module.exports = baseForOwn;
 
 
 /***/ }),
-/* 519 */
+/* 522 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createBaseFor = __webpack_require__(520);
+var createBaseFor = __webpack_require__(523);
 
 /**
  * The base implementation of `baseForOwn` which iterates over `object`
@@ -15288,7 +15424,7 @@ module.exports = baseFor;
 
 
 /***/ }),
-/* 520 */
+/* 523 */
 /***/ (function(module, exports) {
 
 /**
@@ -15319,15 +15455,15 @@ module.exports = createBaseFor;
 
 
 /***/ }),
-/* 521 */
+/* 524 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseTimes = __webpack_require__(522),
+var baseTimes = __webpack_require__(525),
     isArguments = __webpack_require__(94),
     isArray = __webpack_require__(24),
-    isBuffer = __webpack_require__(136),
-    isIndex = __webpack_require__(129),
-    isTypedArray = __webpack_require__(137);
+    isBuffer = __webpack_require__(138),
+    isIndex = __webpack_require__(130),
+    isTypedArray = __webpack_require__(139);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -15374,7 +15510,7 @@ module.exports = arrayLikeKeys;
 
 
 /***/ }),
-/* 522 */
+/* 525 */
 /***/ (function(module, exports) {
 
 /**
@@ -15400,11 +15536,11 @@ module.exports = baseTimes;
 
 
 /***/ }),
-/* 523 */
+/* 526 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(60),
-    isObjectLike = __webpack_require__(62);
+var baseGetTag = __webpack_require__(61),
+    isObjectLike = __webpack_require__(63);
 
 /** `Object#toString` result references. */
 var argsTag = '[object Arguments]';
@@ -15424,7 +15560,7 @@ module.exports = baseIsArguments;
 
 
 /***/ }),
-/* 524 */
+/* 527 */
 /***/ (function(module, exports) {
 
 /**
@@ -15448,12 +15584,12 @@ module.exports = stubFalse;
 
 
 /***/ }),
-/* 525 */
+/* 528 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(60),
-    isLength = __webpack_require__(130),
-    isObjectLike = __webpack_require__(62);
+var baseGetTag = __webpack_require__(61),
+    isLength = __webpack_require__(131),
+    isObjectLike = __webpack_require__(63);
 
 /** `Object#toString` result references. */
 var argsTag = '[object Arguments]',
@@ -15514,10 +15650,10 @@ module.exports = baseIsTypedArray;
 
 
 /***/ }),
-/* 526 */
+/* 529 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var freeGlobal = __webpack_require__(196);
+/* WEBPACK VAR INJECTION */(function(module) {var freeGlobal = __webpack_require__(199);
 
 /** Detect free variable `exports`. */
 var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
@@ -15543,10 +15679,10 @@ module.exports = nodeUtil;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(95)(module)))
 
 /***/ }),
-/* 527 */
+/* 530 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var overArg = __webpack_require__(528);
+var overArg = __webpack_require__(531);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeKeys = overArg(Object.keys, Object);
@@ -15555,7 +15691,7 @@ module.exports = nativeKeys;
 
 
 /***/ }),
-/* 528 */
+/* 531 */
 /***/ (function(module, exports) {
 
 /**
@@ -15576,10 +15712,10 @@ module.exports = overArg;
 
 
 /***/ }),
-/* 529 */
+/* 532 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isArrayLike = __webpack_require__(67);
+var isArrayLike = __webpack_require__(68);
 
 /**
  * Creates a `baseEach` or `baseEachRight` function.
@@ -15614,12 +15750,12 @@ module.exports = createBaseEach;
 
 
 /***/ }),
-/* 530 */
+/* 533 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsMatch = __webpack_require__(531),
-    getMatchData = __webpack_require__(574),
-    matchesStrictComparable = __webpack_require__(206);
+var baseIsMatch = __webpack_require__(534),
+    getMatchData = __webpack_require__(577),
+    matchesStrictComparable = __webpack_require__(209);
 
 /**
  * The base implementation of `_.matches` which doesn't clone `source`.
@@ -15642,11 +15778,11 @@ module.exports = baseMatches;
 
 
 /***/ }),
-/* 531 */
+/* 534 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Stack = __webpack_require__(201),
-    baseIsEqual = __webpack_require__(202);
+var Stack = __webpack_require__(204),
+    baseIsEqual = __webpack_require__(205);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1,
@@ -15710,7 +15846,7 @@ module.exports = baseIsMatch;
 
 
 /***/ }),
-/* 532 */
+/* 535 */
 /***/ (function(module, exports) {
 
 /**
@@ -15729,7 +15865,7 @@ module.exports = listCacheClear;
 
 
 /***/ }),
-/* 533 */
+/* 536 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(86);
@@ -15770,7 +15906,7 @@ module.exports = listCacheDelete;
 
 
 /***/ }),
-/* 534 */
+/* 537 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(86);
@@ -15795,7 +15931,7 @@ module.exports = listCacheGet;
 
 
 /***/ }),
-/* 535 */
+/* 538 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(86);
@@ -15817,7 +15953,7 @@ module.exports = listCacheHas;
 
 
 /***/ }),
-/* 536 */
+/* 539 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(86);
@@ -15849,7 +15985,7 @@ module.exports = listCacheSet;
 
 
 /***/ }),
-/* 537 */
+/* 540 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ListCache = __webpack_require__(85);
@@ -15870,7 +16006,7 @@ module.exports = stackClear;
 
 
 /***/ }),
-/* 538 */
+/* 541 */
 /***/ (function(module, exports) {
 
 /**
@@ -15894,7 +16030,7 @@ module.exports = stackDelete;
 
 
 /***/ }),
-/* 539 */
+/* 542 */
 /***/ (function(module, exports) {
 
 /**
@@ -15914,7 +16050,7 @@ module.exports = stackGet;
 
 
 /***/ }),
-/* 540 */
+/* 543 */
 /***/ (function(module, exports) {
 
 /**
@@ -15934,12 +16070,12 @@ module.exports = stackHas;
 
 
 /***/ }),
-/* 541 */
+/* 544 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ListCache = __webpack_require__(85),
-    Map = __webpack_require__(132),
-    MapCache = __webpack_require__(133);
+    Map = __webpack_require__(133),
+    MapCache = __webpack_require__(134);
 
 /** Used as the size to enable large array optimizations. */
 var LARGE_ARRAY_SIZE = 200;
@@ -15974,12 +16110,12 @@ module.exports = stackSet;
 
 
 /***/ }),
-/* 542 */
+/* 545 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Hash = __webpack_require__(543),
+var Hash = __webpack_require__(546),
     ListCache = __webpack_require__(85),
-    Map = __webpack_require__(132);
+    Map = __webpack_require__(133);
 
 /**
  * Removes all key-value entries from the map.
@@ -16001,14 +16137,14 @@ module.exports = mapCacheClear;
 
 
 /***/ }),
-/* 543 */
+/* 546 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var hashClear = __webpack_require__(544),
-    hashDelete = __webpack_require__(545),
-    hashGet = __webpack_require__(546),
-    hashHas = __webpack_require__(547),
-    hashSet = __webpack_require__(548);
+var hashClear = __webpack_require__(547),
+    hashDelete = __webpack_require__(548),
+    hashGet = __webpack_require__(549),
+    hashHas = __webpack_require__(550),
+    hashSet = __webpack_require__(551);
 
 /**
  * Creates a hash object.
@@ -16039,7 +16175,7 @@ module.exports = Hash;
 
 
 /***/ }),
-/* 544 */
+/* 547 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var nativeCreate = __webpack_require__(87);
@@ -16060,7 +16196,7 @@ module.exports = hashClear;
 
 
 /***/ }),
-/* 545 */
+/* 548 */
 /***/ (function(module, exports) {
 
 /**
@@ -16083,7 +16219,7 @@ module.exports = hashDelete;
 
 
 /***/ }),
-/* 546 */
+/* 549 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var nativeCreate = __webpack_require__(87);
@@ -16119,7 +16255,7 @@ module.exports = hashGet;
 
 
 /***/ }),
-/* 547 */
+/* 550 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var nativeCreate = __webpack_require__(87);
@@ -16148,7 +16284,7 @@ module.exports = hashHas;
 
 
 /***/ }),
-/* 548 */
+/* 551 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var nativeCreate = __webpack_require__(87);
@@ -16177,7 +16313,7 @@ module.exports = hashSet;
 
 
 /***/ }),
-/* 549 */
+/* 552 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getMapData = __webpack_require__(88);
@@ -16201,7 +16337,7 @@ module.exports = mapCacheDelete;
 
 
 /***/ }),
-/* 550 */
+/* 553 */
 /***/ (function(module, exports) {
 
 /**
@@ -16222,7 +16358,7 @@ module.exports = isKeyable;
 
 
 /***/ }),
-/* 551 */
+/* 554 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getMapData = __webpack_require__(88);
@@ -16244,7 +16380,7 @@ module.exports = mapCacheGet;
 
 
 /***/ }),
-/* 552 */
+/* 555 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getMapData = __webpack_require__(88);
@@ -16266,7 +16402,7 @@ module.exports = mapCacheHas;
 
 
 /***/ }),
-/* 553 */
+/* 556 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getMapData = __webpack_require__(88);
@@ -16294,17 +16430,17 @@ module.exports = mapCacheSet;
 
 
 /***/ }),
-/* 554 */
+/* 557 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Stack = __webpack_require__(201),
-    equalArrays = __webpack_require__(203),
-    equalByTag = __webpack_require__(560),
-    equalObjects = __webpack_require__(564),
-    getTag = __webpack_require__(217),
+var Stack = __webpack_require__(204),
+    equalArrays = __webpack_require__(206),
+    equalByTag = __webpack_require__(563),
+    equalObjects = __webpack_require__(567),
+    getTag = __webpack_require__(221),
     isArray = __webpack_require__(24),
-    isBuffer = __webpack_require__(136),
-    isTypedArray = __webpack_require__(137);
+    isBuffer = __webpack_require__(138),
+    isTypedArray = __webpack_require__(139);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1;
@@ -16383,12 +16519,12 @@ module.exports = baseIsEqualDeep;
 
 
 /***/ }),
-/* 555 */
+/* 558 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var MapCache = __webpack_require__(133),
-    setCacheAdd = __webpack_require__(556),
-    setCacheHas = __webpack_require__(557);
+var MapCache = __webpack_require__(134),
+    setCacheAdd = __webpack_require__(559),
+    setCacheHas = __webpack_require__(560);
 
 /**
  *
@@ -16416,7 +16552,7 @@ module.exports = SetCache;
 
 
 /***/ }),
-/* 556 */
+/* 559 */
 /***/ (function(module, exports) {
 
 /** Used to stand-in for `undefined` hash values. */
@@ -16441,7 +16577,7 @@ module.exports = setCacheAdd;
 
 
 /***/ }),
-/* 557 */
+/* 560 */
 /***/ (function(module, exports) {
 
 /**
@@ -16461,7 +16597,7 @@ module.exports = setCacheHas;
 
 
 /***/ }),
-/* 558 */
+/* 561 */
 /***/ (function(module, exports) {
 
 /**
@@ -16490,7 +16626,7 @@ module.exports = arraySome;
 
 
 /***/ }),
-/* 559 */
+/* 562 */
 /***/ (function(module, exports) {
 
 /**
@@ -16509,15 +16645,15 @@ module.exports = cacheHas;
 
 
 /***/ }),
-/* 560 */
+/* 563 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(61),
-    Uint8Array = __webpack_require__(561),
-    eq = __webpack_require__(131),
-    equalArrays = __webpack_require__(203),
-    mapToArray = __webpack_require__(562),
-    setToArray = __webpack_require__(563);
+var Symbol = __webpack_require__(62),
+    Uint8Array = __webpack_require__(564),
+    eq = __webpack_require__(132),
+    equalArrays = __webpack_require__(206),
+    mapToArray = __webpack_require__(565),
+    setToArray = __webpack_require__(566);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1,
@@ -16627,7 +16763,7 @@ module.exports = equalByTag;
 
 
 /***/ }),
-/* 561 */
+/* 564 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var root = __webpack_require__(32);
@@ -16639,7 +16775,7 @@ module.exports = Uint8Array;
 
 
 /***/ }),
-/* 562 */
+/* 565 */
 /***/ (function(module, exports) {
 
 /**
@@ -16663,7 +16799,7 @@ module.exports = mapToArray;
 
 
 /***/ }),
-/* 563 */
+/* 566 */
 /***/ (function(module, exports) {
 
 /**
@@ -16687,10 +16823,10 @@ module.exports = setToArray;
 
 
 /***/ }),
-/* 564 */
+/* 567 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getAllKeys = __webpack_require__(565);
+var getAllKeys = __webpack_require__(568);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1;
@@ -16782,12 +16918,12 @@ module.exports = equalObjects;
 
 
 /***/ }),
-/* 565 */
+/* 568 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetAllKeys = __webpack_require__(566),
-    getSymbols = __webpack_require__(567),
-    keys = __webpack_require__(128);
+var baseGetAllKeys = __webpack_require__(569),
+    getSymbols = __webpack_require__(570),
+    keys = __webpack_require__(129);
 
 /**
  * Creates an array of own enumerable property names and symbols of `object`.
@@ -16804,10 +16940,10 @@ module.exports = getAllKeys;
 
 
 /***/ }),
-/* 566 */
+/* 569 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayPush = __webpack_require__(204),
+var arrayPush = __webpack_require__(207),
     isArray = __webpack_require__(24);
 
 /**
@@ -16830,11 +16966,11 @@ module.exports = baseGetAllKeys;
 
 
 /***/ }),
-/* 567 */
+/* 570 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayFilter = __webpack_require__(568),
-    stubArray = __webpack_require__(569);
+var arrayFilter = __webpack_require__(571),
+    stubArray = __webpack_require__(572);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -16866,7 +17002,7 @@ module.exports = getSymbols;
 
 
 /***/ }),
-/* 568 */
+/* 571 */
 /***/ (function(module, exports) {
 
 /**
@@ -16897,7 +17033,7 @@ module.exports = arrayFilter;
 
 
 /***/ }),
-/* 569 */
+/* 572 */
 /***/ (function(module, exports) {
 
 /**
@@ -16926,7 +17062,7 @@ module.exports = stubArray;
 
 
 /***/ }),
-/* 570 */
+/* 573 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(51),
@@ -16939,7 +17075,7 @@ module.exports = DataView;
 
 
 /***/ }),
-/* 571 */
+/* 574 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(51),
@@ -16952,7 +17088,7 @@ module.exports = Promise;
 
 
 /***/ }),
-/* 572 */
+/* 575 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(51),
@@ -16965,7 +17101,7 @@ module.exports = Set;
 
 
 /***/ }),
-/* 573 */
+/* 576 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(51),
@@ -16978,11 +17114,11 @@ module.exports = WeakMap;
 
 
 /***/ }),
-/* 574 */
+/* 577 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isStrictComparable = __webpack_require__(205),
-    keys = __webpack_require__(128);
+var isStrictComparable = __webpack_require__(208),
+    keys = __webpack_require__(129);
 
 /**
  * Gets the property names, values, and compare flags of `object`.
@@ -17008,15 +17144,15 @@ module.exports = getMatchData;
 
 
 /***/ }),
-/* 575 */
+/* 578 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsEqual = __webpack_require__(202),
-    get = __webpack_require__(576),
-    hasIn = __webpack_require__(582),
-    isKey = __webpack_require__(134),
-    isStrictComparable = __webpack_require__(205),
-    matchesStrictComparable = __webpack_require__(206),
+var baseIsEqual = __webpack_require__(205),
+    get = __webpack_require__(579),
+    hasIn = __webpack_require__(585),
+    isKey = __webpack_require__(135),
+    isStrictComparable = __webpack_require__(208),
+    matchesStrictComparable = __webpack_require__(209),
     toKey = __webpack_require__(89);
 
 /** Used to compose bitmasks for value comparisons. */
@@ -17047,10 +17183,10 @@ module.exports = baseMatchesProperty;
 
 
 /***/ }),
-/* 576 */
+/* 579 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGet = __webpack_require__(207);
+var baseGet = __webpack_require__(210);
 
 /**
  * Gets the value at `path` of `object`. If the resolved value is
@@ -17086,10 +17222,10 @@ module.exports = get;
 
 
 /***/ }),
-/* 577 */
+/* 580 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var memoizeCapped = __webpack_require__(578);
+var memoizeCapped = __webpack_require__(581);
 
 /** Used to match property names within property paths. */
 var reLeadingDot = /^\./,
@@ -17120,10 +17256,10 @@ module.exports = stringToPath;
 
 
 /***/ }),
-/* 578 */
+/* 581 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var memoize = __webpack_require__(579);
+var memoize = __webpack_require__(582);
 
 /** Used as the maximum memoize cache size. */
 var MAX_MEMOIZE_SIZE = 500;
@@ -17152,10 +17288,10 @@ module.exports = memoizeCapped;
 
 
 /***/ }),
-/* 579 */
+/* 582 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var MapCache = __webpack_require__(133);
+var MapCache = __webpack_require__(134);
 
 /** Error message constants. */
 var FUNC_ERROR_TEXT = 'Expected a function';
@@ -17231,10 +17367,10 @@ module.exports = memoize;
 
 
 /***/ }),
-/* 580 */
+/* 583 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseToString = __webpack_require__(581);
+var baseToString = __webpack_require__(584);
 
 /**
  * Converts `value` to a string. An empty string is returned for `null`
@@ -17265,13 +17401,13 @@ module.exports = toString;
 
 
 /***/ }),
-/* 581 */
+/* 584 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(61),
-    arrayMap = __webpack_require__(209),
+var Symbol = __webpack_require__(62),
+    arrayMap = __webpack_require__(212),
     isArray = __webpack_require__(24),
-    isSymbol = __webpack_require__(69);
+    isSymbol = __webpack_require__(70);
 
 /** Used as references for various `Number` constants. */
 var INFINITY = 1 / 0;
@@ -17308,11 +17444,11 @@ module.exports = baseToString;
 
 
 /***/ }),
-/* 582 */
+/* 585 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseHasIn = __webpack_require__(583),
-    hasPath = __webpack_require__(584);
+var baseHasIn = __webpack_require__(586),
+    hasPath = __webpack_require__(587);
 
 /**
  * Checks if `path` is a direct or inherited property of `object`.
@@ -17348,7 +17484,7 @@ module.exports = hasIn;
 
 
 /***/ }),
-/* 583 */
+/* 586 */
 /***/ (function(module, exports) {
 
 /**
@@ -17367,14 +17503,14 @@ module.exports = baseHasIn;
 
 
 /***/ }),
-/* 584 */
+/* 587 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var castPath = __webpack_require__(208),
+var castPath = __webpack_require__(211),
     isArguments = __webpack_require__(94),
     isArray = __webpack_require__(24),
-    isIndex = __webpack_require__(129),
-    isLength = __webpack_require__(130),
+    isIndex = __webpack_require__(130),
+    isLength = __webpack_require__(131),
     toKey = __webpack_require__(89);
 
 /**
@@ -17412,12 +17548,12 @@ module.exports = hasPath;
 
 
 /***/ }),
-/* 585 */
+/* 588 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseProperty = __webpack_require__(586),
-    basePropertyDeep = __webpack_require__(587),
-    isKey = __webpack_require__(134),
+var baseProperty = __webpack_require__(589),
+    basePropertyDeep = __webpack_require__(590),
+    isKey = __webpack_require__(135),
     toKey = __webpack_require__(89);
 
 /**
@@ -17450,7 +17586,7 @@ module.exports = property;
 
 
 /***/ }),
-/* 586 */
+/* 589 */
 /***/ (function(module, exports) {
 
 /**
@@ -17470,10 +17606,10 @@ module.exports = baseProperty;
 
 
 /***/ }),
-/* 587 */
+/* 590 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGet = __webpack_require__(207);
+var baseGet = __webpack_require__(210);
 
 /**
  * A specialized version of `baseProperty` which supports deep paths.
@@ -17492,19 +17628,13 @@ module.exports = basePropertyDeep;
 
 
 /***/ }),
-/* 588 */
+/* 591 */
 /***/ (function(module, exports) {
 
-module.exports = [{"wxid":"wxid_hankliu","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/header01.png","nickname":"hankliu","sex":1,"remark":"刘小聪","signature":"填坑小能手","telephone":18896586152,"album":[{"imgSrc":""}],"area":["中国","北京","海淀"],"from":"","tag":[],"desc":{}},{"wxid":"wxid_baiqian","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/baiqian.jpg","nickname":"白浅","sex":0,"remark":"","signature":"青丘女帝，天族天妃","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian01.jpeg","date":182625262},{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg","date":182625262}],"area":["青丘","狐狸洞"],"from":"通过扫一扫","tag":["女帝"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_yehua","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/yehua.jpg","nickname":"夜华","sex":1,"remark":"夜华","signature":"浅浅，过来","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu02.jpeg","date":182625262},{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg","date":182625262}],"area":["九重天","洗梧宫"],"from":"通过扫一扫","tag":["太子"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_liubei","initial":"","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/liubei.jpg","nickname":"刘备","sex":1,"remark":"刘备","signature":"惟贤惟德，仁服于人","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu02.jpeg","date":182625262},{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian01.jpeg","date":182625262}],"area":["蜀国","荆州"],"from":"通过扫一扫","tag":["蜀","主公"],"desc":{"title":"健健康康","picUrl":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg"}},{"wxid":"wxid_guangyu","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/guangyu.jpg","nickname":"关羽","sex":1,"remark":"关羽","signature":"观尔乃插标卖首","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg","date":182625262},{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg","date":182625262}],"area":["蜀国","荆州"],"from":"通过扫一扫","tag":["蜀"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_zhugeliang","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/zhugeliang.jpg","nickname":"诸葛亮","sex":1,"remark":"诸葛亮","signature":"你可识得此阵？","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian01.jpeg","date":182625262},{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg","date":182625262}],"area":["蜀国","荆州"],"from":"通过扫一扫","tag":["卧龙"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_sunshangxiang","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/sunshangxiang.jpg","nickname":"孙尚香","sex":0,"remark":"孙尚香","signature":"夫君,身体要紧~","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg","date":182625262}],"area":["吴国","富春"],"from":"通过手机号码添加","tag":["孙夫人"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_sunquan","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/sunquan.jpg","nickname":"孙权","sex":1,"remark":"孙权","signature":"容我三思","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg","date":182625262}],"area":["吴国","吴郡"],"from":"通过手机号码添加","tag":["主公"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_huangyueying","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/huangyueying.jpg","nickname":"黄月英","sex":0,"remark":"黄月英","signature":"哼哼~","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu02.jpeg","date":182625262}],"area":["蜀","荆州"],"from":"通过手机号码添加","tag":["蜀"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_zhenji","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/zhenji.jpg","nickname":"甄姬","sex":0,"remark":"甄姬","signature":"仿佛兮若轻云之蔽月","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg","date":182625262}],"area":["魏","荆州","中山"],"from":"通过手机号码添加","tag":["蜀"],"desc":{"title":"","picUrl":""}}]
+module.exports = [{"wxid":"wxid_taobaoshougou","name":"收购淘宝讨论群","nickname":"收购淘宝讨论群","remark":"收购淘宝讨论群","qq":"00002","email":null,"qrCode":"","signature":"个性签名"},{"wxid":"wxid_bagua","name":"八卦讨论群","nickname":"八卦讨论群","remark":"八卦讨论群","qq":"00003","email":null,"qrCode":"","signature":"个性签名"}]
 
 /***/ }),
-/* 589 */
-/***/ (function(module, exports) {
-
-module.exports = [{"wxid":"Google_Developers","name":"谷歌开发者","headerUrl":"http://cdn.sinacloud.net/vue-wechat/images/OfficialAccount/google-dev.JPG","desc":"","owner":"谷歌信息技术有限公司","initial":"G"},{"wxid":"overwatch163","name":"守望先锋","desc":"","headerUrl":"http://cdn.sinacloud.net/vue-wechat/images/OfficialAccount/overwatch.JPG","owner":"上海网易公司","initial":"O"},{"wxid":"FrontDev","name":"前端大全","desc":"","headerUrl":"http://cdn.sinacloud.net/vue-wechat/images/OfficialAccount/frontend.JPG","owner":"","initial":"Q"},{"wxid":"xituarea","name":"稀土区","desc":"","headerUrl":"http://cdn.sinacloud.net/vue-wechat/images/OfficialAccount/xitu.JPG","owner":"个人","initial":"X"},{"wxid":"LOL-922","name":"英雄联盟","desc":"","headerUrl":"http://cdn.sinacloud.net/vue-wechat/images/OfficialAccount/lol.JPG","owner":"腾讯技术有限公司","initial":"Y"},{"wxid":"wangyeshejijingxuan","name":"网页设计精选","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/wangyeshejijingxuan.jpeg","owner":"个人","initial":"W"},{"wxid":"ui-daren","name":"UI设计达人","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/UIshejidaren.jpeg","owner":"个人","initial":"U"},{"wxid":"wanwuzhi","name":"玩物志","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/wanweizhi.jpeg","owner":"玩物志有限公司","initial":"W"},{"wxid":"importnew","name":"ImportNew","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/ImportNew.jpeg","owner":"个人","initial":"I"},{"wxid":"xiaodianyanjiusuo","name":"笑点研究所","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/xiaodianyanjiusuo.jpeg","owner":"个人","initial":"X"},{"wxid":"chaofanyingyuan","name":"超凡影院","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/chaofanyingyuan.jpeg","owner":"个人","initial":"C"},{"wxid":"jikefan","name":"极客范","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/jikefan.jpeg","owner":"个人","initial":"J"},{"wxid":"shejidenaxieshi","name":"设计的那些事","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/shejinaxieshi.jpeg","owner":"个人","initial":"S"},{"wxid":"csdn","name":"CSDN","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/csdn.jpeg","owner":"个人","initial":"C"},{"wxid":"doubinvwang","name":"逗比女王","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/doubinvwang.jpeg","owner":"个人","initial":"D"},{"wxid":"youxiuwangyesheji","name":"优秀网页设计","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/youxiuwangyesheji.jpeg","owner":"个人","initial":"Y"},{"wxid":"qiwuzhoukan","name":"奇舞周刊","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/qiwuzhoukan.jpeg","owner":"个人","initial":"Q"},{"wxid":"fex","name":"FEX","desc":"","headerUrl":"http://owgszbgsl.bkt.clouddn.com/fex.jpeg","owner":"腾讯技术有限公司","initial":"F"}]
-
-/***/ }),
-/* 590 */
+/* 592 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -17523,17 +17653,17 @@ var _react = __webpack_require__(10);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(38);
+var _reactRouterDom = __webpack_require__(35);
 
-var _BundleWrappingRoute = __webpack_require__(84);
+var _BundleWrappingRoute = __webpack_require__(60);
 
 var _BundleWrappingRoute2 = _interopRequireDefault(_BundleWrappingRoute);
 
-var _SubPageContainer = __webpack_require__(193);
+var _SubPageContainer = __webpack_require__(128);
 
 var _SubPageContainer2 = _interopRequireDefault(_SubPageContainer);
 
-var _SecondSubPageContainer = __webpack_require__(591);
+var _SecondSubPageContainer = __webpack_require__(593);
 
 var _SecondSubPageContainer2 = _interopRequireDefault(_SecondSubPageContainer);
 
@@ -17541,25 +17671,25 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var WechatSelfRouter = function WechatSelfRouter(props) {
   var loadSelfProfileAsync = function loadSelfProfileAsync() {
-    return __webpack_require__.e/* import() */(11).then(__webpack_require__.bind(null, 625));
+    return __webpack_require__.e/* import() */(11).then(__webpack_require__.bind(null, 628));
   };
   var loadSelfWalletAsync = function loadSelfWalletAsync() {
-    return __webpack_require__.e/* import() */(14).then(__webpack_require__.bind(null, 626));
+    return __webpack_require__.e/* import() */(15).then(__webpack_require__.bind(null, 629));
   };
   var loadSelfCollectAsync = function loadSelfCollectAsync() {
-    return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 627));
+    return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, 630));
   };
   var loadSelfAlbumAsync = function loadSelfAlbumAsync() {
-    return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 628));
+    return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 631));
   };
   var loadSelfCardsAsync = function loadSelfCardsAsync() {
-    return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, 629));
+    return __webpack_require__.e/* import() */(19).then(__webpack_require__.bind(null, 632));
   };
   var loadSelfExpressionAsync = function loadSelfExpressionAsync() {
-    return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 630));
+    return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 633));
   };
   var loadSelfSettingAsync = function loadSelfSettingAsync() {
-    return __webpack_require__.e/* import() */(15).then(__webpack_require__.bind(null, 631));
+    return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 634));
   };
 
   return _react2.default.createElement(
@@ -17570,10 +17700,10 @@ var WechatSelfRouter = function WechatSelfRouter(props) {
       (0, _extends3.default)({}, props, { component: _SubPageContainer2.default, path: '/wechat/self/profile', load: loadSelfProfileAsync }),
       function (nextProps) {
         var loadSelfProfileQrcodeAsync = function loadSelfProfileQrcodeAsync() {
-          return __webpack_require__.e/* import() */(7).then(__webpack_require__.bind(null, 632));
+          return __webpack_require__.e/* import() */(7).then(__webpack_require__.bind(null, 635));
         };
         var loadSelfProfileAvatarAsync = function loadSelfProfileAvatarAsync() {
-          return __webpack_require__.e/* import() */(9).then(__webpack_require__.bind(null, 633));
+          return __webpack_require__.e/* import() */(9).then(__webpack_require__.bind(null, 636));
         };
 
         return _react2.default.createElement(
@@ -17598,7 +17728,7 @@ exports.default = WechatSelfRouter;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "self.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 591 */
+/* 593 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -17613,7 +17743,7 @@ var _react = __webpack_require__(10);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(592);
+__webpack_require__(594);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17630,25 +17760,73 @@ exports.default = SecondSubPageContainer;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "SecondSubPageContainer.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 592 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 593 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
 /* 594 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 595 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFlatten = __webpack_require__(595),
-    baseOrderBy = __webpack_require__(597),
-    baseRest = __webpack_require__(602),
-    isIterateeCall = __webpack_require__(609);
+/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends2 = __webpack_require__(12);
+
+var _extends3 = _interopRequireDefault(_extends2);
+
+var _react = __webpack_require__(10);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(35);
+
+var _BundleWrappingRoute = __webpack_require__(60);
+
+var _BundleWrappingRoute2 = _interopRequireDefault(_BundleWrappingRoute);
+
+var _SubPageContainer = __webpack_require__(128);
+
+var _SubPageContainer2 = _interopRequireDefault(_SubPageContainer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var WechatToolsRouter = function WechatToolsRouter(props) {
+  var loadToolsIconFontsAsync = function loadToolsIconFontsAsync() {
+    return __webpack_require__.e/* import() */(14).then(__webpack_require__.bind(null, 637));
+  };
+
+  return _react2.default.createElement(
+    _reactRouterDom.Switch,
+    null,
+    _react2.default.createElement(_BundleWrappingRoute2.default, (0, _extends3.default)({}, props, { component: _SubPageContainer2.default, path: '/wechat/tools/iconfonts', load: loadToolsIconFontsAsync }))
+  );
+};
+
+exports.default = WechatToolsRouter;
+
+/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "tools.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ }),
+/* 596 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 597 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var baseFlatten = __webpack_require__(598),
+    baseOrderBy = __webpack_require__(600),
+    baseRest = __webpack_require__(605),
+    isIterateeCall = __webpack_require__(612);
 
 /**
  * Creates an array of elements, sorted in ascending order by the results of
@@ -17696,11 +17874,11 @@ module.exports = sortBy;
 
 
 /***/ }),
-/* 595 */
+/* 598 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayPush = __webpack_require__(204),
-    isFlattenable = __webpack_require__(596);
+var arrayPush = __webpack_require__(207),
+    isFlattenable = __webpack_require__(599);
 
 /**
  * The base implementation of `_.flatten` with support for restricting flattening.
@@ -17740,10 +17918,10 @@ module.exports = baseFlatten;
 
 
 /***/ }),
-/* 596 */
+/* 599 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(61),
+var Symbol = __webpack_require__(62),
     isArguments = __webpack_require__(94),
     isArray = __webpack_require__(24);
 
@@ -17766,15 +17944,15 @@ module.exports = isFlattenable;
 
 
 /***/ }),
-/* 597 */
+/* 600 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayMap = __webpack_require__(209),
-    baseIteratee = __webpack_require__(200),
-    baseMap = __webpack_require__(598),
-    baseSortBy = __webpack_require__(599),
-    baseUnary = __webpack_require__(199),
-    compareMultiple = __webpack_require__(600),
+var arrayMap = __webpack_require__(212),
+    baseIteratee = __webpack_require__(203),
+    baseMap = __webpack_require__(601),
+    baseSortBy = __webpack_require__(602),
+    baseUnary = __webpack_require__(202),
+    compareMultiple = __webpack_require__(603),
     identity = __webpack_require__(90);
 
 /**
@@ -17806,11 +17984,11 @@ module.exports = baseOrderBy;
 
 
 /***/ }),
-/* 598 */
+/* 601 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseEach = __webpack_require__(198),
-    isArrayLike = __webpack_require__(67);
+var baseEach = __webpack_require__(201),
+    isArrayLike = __webpack_require__(68);
 
 /**
  * The base implementation of `_.map` without support for iteratee shorthands.
@@ -17834,7 +18012,7 @@ module.exports = baseMap;
 
 
 /***/ }),
-/* 599 */
+/* 602 */
 /***/ (function(module, exports) {
 
 /**
@@ -17861,10 +18039,10 @@ module.exports = baseSortBy;
 
 
 /***/ }),
-/* 600 */
+/* 603 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var compareAscending = __webpack_require__(601);
+var compareAscending = __webpack_require__(604);
 
 /**
  * Used by `_.orderBy` to compare multiple properties of a value to another
@@ -17911,10 +18089,10 @@ module.exports = compareMultiple;
 
 
 /***/ }),
-/* 601 */
+/* 604 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isSymbol = __webpack_require__(69);
+var isSymbol = __webpack_require__(70);
 
 /**
  * Compares values to sort them in ascending order.
@@ -17958,12 +18136,12 @@ module.exports = compareAscending;
 
 
 /***/ }),
-/* 602 */
+/* 605 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var identity = __webpack_require__(90),
-    overRest = __webpack_require__(603),
-    setToString = __webpack_require__(605);
+    overRest = __webpack_require__(606),
+    setToString = __webpack_require__(608);
 
 /**
  * The base implementation of `_.rest` which doesn't validate or coerce arguments.
@@ -17981,10 +18159,10 @@ module.exports = baseRest;
 
 
 /***/ }),
-/* 603 */
+/* 606 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var apply = __webpack_require__(604);
+var apply = __webpack_require__(607);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeMax = Math.max;
@@ -18023,7 +18201,7 @@ module.exports = overRest;
 
 
 /***/ }),
-/* 604 */
+/* 607 */
 /***/ (function(module, exports) {
 
 /**
@@ -18050,11 +18228,11 @@ module.exports = apply;
 
 
 /***/ }),
-/* 605 */
+/* 608 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseSetToString = __webpack_require__(606),
-    shortOut = __webpack_require__(608);
+var baseSetToString = __webpack_require__(609),
+    shortOut = __webpack_require__(611);
 
 /**
  * Sets the `toString` method of `func` to return `string`.
@@ -18070,11 +18248,11 @@ module.exports = setToString;
 
 
 /***/ }),
-/* 606 */
+/* 609 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var constant = __webpack_require__(607),
-    defineProperty = __webpack_require__(194),
+var constant = __webpack_require__(610),
+    defineProperty = __webpack_require__(197),
     identity = __webpack_require__(90);
 
 /**
@@ -18098,7 +18276,7 @@ module.exports = baseSetToString;
 
 
 /***/ }),
-/* 607 */
+/* 610 */
 /***/ (function(module, exports) {
 
 /**
@@ -18130,7 +18308,7 @@ module.exports = constant;
 
 
 /***/ }),
-/* 608 */
+/* 611 */
 /***/ (function(module, exports) {
 
 /** Used to detect hot functions by number of calls within a span of milliseconds. */
@@ -18173,13 +18351,13 @@ module.exports = shortOut;
 
 
 /***/ }),
-/* 609 */
+/* 612 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var eq = __webpack_require__(131),
-    isArrayLike = __webpack_require__(67),
-    isIndex = __webpack_require__(129),
-    isObject = __webpack_require__(68);
+var eq = __webpack_require__(132),
+    isArrayLike = __webpack_require__(68),
+    isIndex = __webpack_require__(130),
+    isObject = __webpack_require__(69);
 
 /**
  * Checks if the given arguments are from an iteratee call.
@@ -18209,13 +18387,13 @@ module.exports = isIterateeCall;
 
 
 /***/ }),
-/* 610 */
+/* 613 */
 /***/ (function(module, exports) {
 
-module.exports = [{"mid":"59bf53e976233dc4c4a5ed98","base":{"id":1,"name":"白浅","nickname":"白浅","remark":"","wxid":"wxid_baiqian","qq":"00001","email":"00001@qq.com","type":"friends","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/baiqian.jpg","qrCode":"","signature":"青丘女帝，天族天妃","telphone":18812345678,"area":["青丘","狐狸洞"],"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian01.jpeg","date":182625262},{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg","date":182625262}]},"chatBaseModel":{"newsUnreadCount":1,"endTimeStr":1505710210291,"endChatAuth":"白浅","endChatTxt":"你说什么，我刚才在遛迷谷，没看到。"},"chatDialogueBarModel":{"menu":[]},"chatDialogueModel":[],"chatMemberModel":[{"wxid":"wxid_baiqian","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/baiqian.jpg","nickname":"白浅","sex":0,"remark":"","signature":"青丘女帝，天族天妃","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian01.jpeg","date":182625262},{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg","date":182625262}],"area":["青丘","狐狸洞"],"from":"通过扫一扫","tag":["女帝"],"desc":{"title":"","picUrl":""}}],"chatConfigModel":{"isStick":false,"newsMute":false,"starFriends":false,"lookMePhotos":true,"lookHisPhotos":true,"blacklist":false}},{"mid":"59bf53e976233dc4c4a5ed99","base":{"id":2,"name":"微信群01","nickname":"nick_微信群01","remark":"remark_微信群01","wxid":"wxid_group01","qq":"00002","email":null,"type":"group","qrCode":"","signature":"个性签名"},"chatBaseModel":{"newsUnreadCount":1,"endTimeStr":1505470665990,"endChatAuth":"夜华","endChatTxt":"大家下班的时候记得锁好门"},"chatDialogueBarModel":{"menu":[]},"chatDialogueModel":[],"chatMemberModel":[{"wxid":"wxid_hankliu","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/header01.png","nickname":"hankliu","sex":1,"remark":"刘小聪","signature":"填坑小能手","telephone":18896586152,"album":[{"imgSrc":""}],"area":["中国","北京","海淀"],"from":"","tag":[],"desc":{}},{"wxid":"wxid_baiqian","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/baiqian.jpg","nickname":"白浅","sex":0,"remark":"","signature":"青丘女帝，天族天妃","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian01.jpeg","date":182625262},{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg","date":182625262}],"area":["青丘","狐狸洞"],"from":"通过扫一扫","tag":["女帝"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_yehua","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/yehua.jpg","nickname":"夜华","sex":1,"remark":"夜华","signature":"浅浅，过来","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu02.jpeg","date":182625262},{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg","date":182625262}],"area":["九重天","洗梧宫"],"from":"通过扫一扫","tag":["太子"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_liubei","initial":"","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/liubei.jpg","nickname":"刘备","sex":1,"remark":"刘备","signature":"惟贤惟德，仁服于人","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu02.jpeg","date":182625262},{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian01.jpeg","date":182625262}],"area":["蜀国","荆州"],"from":"通过扫一扫","tag":["蜀","主公"],"desc":{"title":"健健康康","picUrl":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg"}},{"wxid":"wxid_guangyu","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/guangyu.jpg","nickname":"关羽","sex":1,"remark":"关羽","signature":"观尔乃插标卖首","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg","date":182625262},{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg","date":182625262}],"area":["蜀国","荆州"],"from":"通过扫一扫","tag":["蜀"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_zhugeliang","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/zhugeliang.jpg","nickname":"诸葛亮","sex":1,"remark":"诸葛亮","signature":"你可识得此阵？","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian01.jpeg","date":182625262},{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg","date":182625262}],"area":["蜀国","荆州"],"from":"通过扫一扫","tag":["卧龙"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_sunshangxiang","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/sunshangxiang.jpg","nickname":"孙尚香","sex":0,"remark":"孙尚香","signature":"夫君,身体要紧~","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg","date":182625262}],"area":["吴国","富春"],"from":"通过手机号码添加","tag":["孙夫人"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_sunquan","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/sunquan.jpg","nickname":"孙权","sex":1,"remark":"孙权","signature":"容我三思","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg","date":182625262}],"area":["吴国","吴郡"],"from":"通过手机号码添加","tag":["主公"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_huangyueying","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/huangyueying.jpg","nickname":"黄月英","sex":0,"remark":"黄月英","signature":"哼哼~","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu02.jpeg","date":182625262}],"area":["蜀","荆州"],"from":"通过手机号码添加","tag":["蜀"],"desc":{"title":"","picUrl":""}},{"wxid":"wxid_zhenji","headerUrl":"https://sinacloud.net/vue-wechat/images/headers/zhenji.jpg","nickname":"甄姬","sex":0,"remark":"甄姬","signature":"仿佛兮若轻云之蔽月","telephone":18896586152,"album":[{"imgSrc":"https://sinacloud.net/vue-wechat/images/album/guanyu/guanyu01.jpeg","date":182625262}],"area":["魏","荆州","中山"],"from":"通过手机号码添加","tag":["蜀"],"desc":{"title":"","picUrl":""}}],"chatConfigModel":{"chatBackground":null,"groupNotice":"","isStick":false,"newsMute":true,"contactsSave":false,"showGroupNickname":true}},{"mid":"59bf53e976233dc4c4a5ed9a","base":{"id":1,"name":"稀土圈","nickname":"稀土圈","remark":"稀土圈","wxid":"iloveleme","qq":"00000","email":"000000@qq.com","type":"service","headerUrl":"http://ad-gold-cdn.xitu.io/14999139497307c668d55b4dd5984b6accc6bf41206a8.jpg","qrCode":"","signature":"个性签名","telphone":18812345678,"area":["中国","北京","海淀"],"selfPhotos":[{"imgSrc":""}]},"chatBaseModel":{"newsUnreadCount":11,"endTimeStr":1504168586443,"endChatAuth":"","endChatTxt":"挖掘最优质的互联网技术"},"chatDialogueBarModel":{"menu":[{"title":"翻译计划","url":"http://p.memoe.cn/","subMenu":[]},{"title":"绝密试卷","url":"http://p.memoe.cn/","subMenu":[]},{"title":"稀土掘金","url":"http://gold.xitu.io","subMenu":[]}]},"chatDialogueModel":[{"id":1,"name":"稀土圈","nickname":"稀土圈","remark":"稀土圈","wxid":"wxid_jingdong","qq":"000021","email":"000021@qq.com","type":"service","iconSrc":"http://ad-gold-cdn.xitu.io/14999139497307c668d55b4dd5984b6accc6bf41206a8.jpg","qrCode":"","signature":"个性签名","telphone":18812345678,"area":["中国","北京","海淀"],"selfPhotos":[{"imgSrc":""}]}],"chatMemberModel":[],"chatConfigModel":{"isStick":false,"newsMute":false,"starFriends":false,"lookMePhotos":true,"lookHisPhotos":true,"blacklist":false}},{"mid":"59bf53e976233dc4c4a5ed9b","base":{"id":1,"name":"饿了么","nickname":"饿了么","remark":"饿了么","wxid":"iloveleme","qq":"00000","email":"000000@qq.com","type":"service","headerUrl":"http://tb1.bdstatic.com/tb/cms/ngmis/file_1453447545023.jpg","qrCode":"","signature":"个性签名","telphone":18812345678,"area":["中国","北京","海淀"],"selfPhotos":[{"imgSrc":""}]},"chatBaseModel":{"newsUnreadCount":0,"endTimeStr":1503736586443,"endChatAuth":"","endChatTxt":"饿了么网上订餐平台"},"chatDialogueBarModel":{"menu":[{"title":"我要订餐","url":"http://m.ele.me/","subMenu":[]},{"title":"关注必读","url":"","subMenu":[]},{"title":"联系我们","url":"http://m.ele.me/","subMenu":[]}]},"chatDialogueModel":[{"id":1,"name":"饿了么","nickname":"饿了么","remark":"饿了么","wxid":"iloveleme","qq":"00000","email":"00000@qq.com","type":"service","iconSrc":"","qrCode":"","signature":"个性签名","telphone":18812345678,"area":["中国","北京","海淀"],"selfPhotos":[{"imgSrc":""}]}],"chatMemberModel":[],"chatConfigModel":{"isStick":false,"newsMute":false,"starFriends":false,"lookMePhotos":true,"lookHisPhotos":true,"blacklist":false}}]
+module.exports = [{"mid":"59bf53e976233dc4c4a5ed98","base":{"wxid":"wxid_baiqian","type":"friends"},"chatBaseModel":{"newsUnreadCount":1,"endTimeStr":1505710210291,"endChatAuth":"白浅","endChatTxt":"你说什么，我刚才在遛迷谷，没看到。"},"chatDialogueBarModel":{"menu":[]},"chatDialogueModel":[],"chatMemberModel":["wxid_baiqian"],"chatConfigModel":{"isStick":false,"newsMute":false,"starFriends":false,"lookMePhotos":true,"lookHisPhotos":true,"blacklist":false}},{"mid":"59bf53e976233dc4c4a5ed99","base":{"wxid":"wxid_taobaoshougou","type":"group"},"chatBaseModel":{"newsUnreadCount":1,"endTimeStr":1505470665990,"endChatAuth":"夜华","endChatTxt":"大家下班的时候记得锁好门"},"chatDialogueBarModel":{"menu":[]},"chatDialogueModel":[],"chatMemberModel":["wxid_hankliu","wxid_baiqian","wxid_yehua","wxid_liubei","wxid_guangyu","wxid_zhugeliang","wxid_sunshangxiang","wxid_sunquan","wxid_huangyueying","wxid_zhenji"],"chatConfigModel":{"chatBackground":null,"groupNotice":"","isStick":false,"newsMute":true,"contactsSave":false,"showGroupNickname":true}},{"mid":"59bf53e976233dc4c4a5ed9a","base":{"wxid":"wxid_xituquan","type":"service"},"chatBaseModel":{"newsUnreadCount":11,"endTimeStr":1504168586443,"endChatAuth":"","endChatTxt":"挖掘最优质的互联网技术"},"chatDialogueBarModel":{"menu":[{"title":"翻译计划","url":"http://p.memoe.cn/","subMenu":[]},{"title":"绝密试卷","url":"http://p.memoe.cn/","subMenu":[]},{"title":"稀土掘金","url":"http://gold.xitu.io","subMenu":[]}]},"chatDialogueModel":["wxid_xituquan"],"chatMemberModel":[],"chatConfigModel":{"isStick":false,"newsMute":false,"starFriends":false,"lookMePhotos":true,"lookHisPhotos":true,"blacklist":false}},{"mid":"59bf53e976233dc4c4a5ed9b","base":{"wxid":"iloveleme","type":"service"},"chatBaseModel":{"newsUnreadCount":0,"endTimeStr":1503236586443,"endChatAuth":"","endChatTxt":"饿了么网上订餐平台"},"chatDialogueBarModel":{"menu":[{"title":"我要订餐","url":"http://m.ele.me/","subMenu":[]},{"title":"关注必读","url":"","subMenu":[]},{"title":"联系我们","url":"http://m.ele.me/","subMenu":[]}]},"chatDialogueModel":["iloveleme"],"chatMemberModel":[],"chatConfigModel":{"isStick":false,"newsMute":false,"starFriends":false,"lookMePhotos":true,"lookHisPhotos":true,"blacklist":false}},{"mid":"59bf53e976233dc4c4a5ed9f","base":{"wxid":"wxid_bagua","type":"group"},"chatBaseModel":{"newsUnreadCount":1,"endTimeStr":1503706586443,"endChatAuth":"佩佩","endChatTxt":"2018杨幂、范冰冰、赵丽颖要大混战了, 明年新剧上映你支持谁?"},"chatDialogueBarModel":{"menu":[]},"chatDialogueModel":[],"chatMemberModel":["miss_cc220","wxid_baiqian","wxid_yehua"],"chatConfigModel":{"chatBackground":null,"groupNotice":"","isStick":false,"newsMute":true,"contactsSave":false,"showGroupNickname":true}},{"mid":"59bf53e976233dc4c4a5ed0d","base":{"wxid":"miss_cc220","type":"friends"},"chatBaseModel":{"newsUnreadCount":0,"endTimeStr":1400710210291,"endChatAuth":"佩佩","endChatTxt":"Facebook将修改React、Jest、Flow 与 Immutable.js授权许可。"},"chatDialogueBarModel":{"menu":[]},"chatDialogueModel":[],"chatMemberModel":["miss_cc220"],"chatConfigModel":{"isStick":false,"newsMute":false,"starFriends":false,"lookMePhotos":true,"lookHisPhotos":true,"blacklist":false}}]
 
 /***/ }),
-/* 611 */
+/* 614 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -18230,11 +18408,11 @@ var _react = __webpack_require__(10);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Container = __webpack_require__(612);
+var _Container = __webpack_require__(615);
 
 var _Container2 = _interopRequireDefault(_Container);
 
-var _WeuiFooter = __webpack_require__(614);
+var _WeuiFooter = __webpack_require__(617);
 
 var _WeuiFooter2 = _interopRequireDefault(_WeuiFooter);
 
@@ -18258,7 +18436,7 @@ exports.default = FooterContainer;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "FooterContainer.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 612 */
+/* 615 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -18273,11 +18451,11 @@ var _extends2 = __webpack_require__(12);
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var _getPrototypeOf = __webpack_require__(63);
+var _getPrototypeOf = __webpack_require__(64);
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
-var _classCallCheck2 = __webpack_require__(37);
+var _classCallCheck2 = __webpack_require__(38);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
@@ -18285,11 +18463,11 @@ var _createClass2 = __webpack_require__(52);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _possibleConstructorReturn2 = __webpack_require__(64);
+var _possibleConstructorReturn2 = __webpack_require__(65);
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-var _inherits2 = __webpack_require__(65);
+var _inherits2 = __webpack_require__(66);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -18305,25 +18483,25 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _reactRedux = __webpack_require__(92);
 
-var _redux = __webpack_require__(66);
+var _redux = __webpack_require__(67);
 
-var _classnames = __webpack_require__(210);
+var _classnames = __webpack_require__(214);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _ObjectUtils = __webpack_require__(213);
+var _ObjectUtils = __webpack_require__(217);
 
 var _ObjectUtils2 = _interopRequireDefault(_ObjectUtils);
 
-var _contact = __webpack_require__(219);
+var _contact = __webpack_require__(141);
 
 var contactActions = _interopRequireWildcard(_contact);
 
-var _chat = __webpack_require__(223);
+var _chat = __webpack_require__(227);
 
 var chatActions = _interopRequireWildcard(_chat);
 
-__webpack_require__(613);
+__webpack_require__(616);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -18414,13 +18592,13 @@ exports.default = (0, _reactRedux.connectAdvanced)(selectorFactory)(Container);
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Container.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 613 */
+/* 616 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 614 */
+/* 617 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -18435,13 +18613,13 @@ var _react = __webpack_require__(10);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(38);
+var _reactRouterDom = __webpack_require__(35);
 
-var _WeuiBadge = __webpack_require__(222);
+var _WeuiBadge = __webpack_require__(225);
 
 var _WeuiBadge2 = _interopRequireDefault(_WeuiBadge);
 
-__webpack_require__(615);
+__webpack_require__(618);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18500,16 +18678,16 @@ exports.default = WeuiFooter;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/liuxiaocong/Workspace/github/wechat-app-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "WeuiFooter.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 615 */
+/* 618 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 616 */
+/* 619 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ })
-],[224]);
+],[228]);
