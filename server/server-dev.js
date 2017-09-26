@@ -23,10 +23,7 @@ AV.Cloud.useMasterKey();
 
 // Start the spinner. Returns the instance. Set the current text if text is provided
 // spinner.start();
-const compiler = webpack(webpackConfig, () => {
-  // Stop and clear the spinner. Returns the instance.
-  // spinner.stop();
-});
+const compiler = webpack(webpackConfig);
 
 const devMiddleware = koaWebpackMiddleware.devMiddleware(compiler, {
   noInfo: false,

@@ -22,7 +22,7 @@ class Container extends Component {
     super(props);
 
     this.state = {
-      welcome: false
+      welcome: location.search.indexOf('dev') === -1
     };
   }
 

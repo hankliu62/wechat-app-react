@@ -1,0 +1,40 @@
+@import '../../../../less/variables';
+
+@scan-content-bg-color: rgba(0, 0, 0, .3);
+@scan-content-footer-bg-color: rgba(0, 0, 0, .6);
+
+.explore-scan-wrapper {
+  height: 100%;
+  box-sizing: content-box;
+  padding-bottom: @footer-height;
+  position: relative;
+
+  .scan-video {
+    height: 100%;
+    margin-left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+
+  .scan-content {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: @scan-content-bg-color;
+
+    .scan-content-body {
+      flex: 1;
+    }
+
+    .scan-content-footer {
+      height: 2.5rem;
+      background-color: @scan-content-footer-bg-color;
+    }
+  }
+}

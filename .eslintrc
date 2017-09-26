@@ -67,7 +67,8 @@
     "jsx-a11y/no-static-element-interactions": "off",
     "jsx-a11y/no-noninteractive-element-interactions": "off",
     "jsx-a11y/alt-text": "off",
-    "jsx-a11y/anchor-has-content": "off" // a 标签必须有子元素
+    "jsx-a11y/anchor-has-content": "off", // a 标签必须有子元素
+    "jsx-a11y/media-has-caption": "off" //audio, video元素必须包含track options
   },
   "env": {
     "es6": true,

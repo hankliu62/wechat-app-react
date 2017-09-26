@@ -5,15 +5,16 @@ import BundleWrappingRoute from '../../../components/BundleWrappingRoute/BundleW
 // import Contact from '../containers/Contact/Contact';
 import ContactRoutes from './contact';
 import SelfRoutes from './self';
+import ExploreRoutes from './explore';
 import ToolsRoutes from './tools';
 
 const loadChatAsync = () => import(/* webpackChunkName: 'containers/Wechat/Chat' */ '../containers/Chat/Chat');
-const loadExploreAsync = () => import(/* webpackChunkName: 'containers/Wechat/Explore' */ '../containers/Explore/Explore');
 const loadAddFriendAsync = () => import(/* webpackChunkName: 'containers/Wechat/AddFriend' */ '../containers/AddFriend/AddFriend');
 // <Route path="/wechat/contact" render={nextProps => (<Contact {...nextProps}><ContactRoute /></Contact>)} />
 const WechatRouter = (props) => {
   const loadContactAsync = () => import(/* webpackChunkName: 'containers/Wechat/Contact' */ '../containers/Contact/Contact');
   const loadSelfAsync = () => import(/* webpackChunkName: 'containers/Wechat/Self' */ '../containers/Self/Self');
+  const loadExploreAsync = () => import(/* webpackChunkName: 'containers/Wechat/Explore' */ '../containers/Explore/Explore');
   const loadToolsAsync = () => import(/* webpackChunkName: 'containers/Wechat/Tools' */ '../containers/Tools/Tools');
 
   return (
@@ -25,7 +26,11 @@ const WechatRouter = (props) => {
           nextProps => <ContactRoutes {...nextProps} />
         }
       </BundleWrappingRoute>
-      <BundleWrappingRoute {...props} path="/wechat/explore" load={loadExploreAsync} />
+      <BundleWrappingRoute {...props} path="/wechat/explore" load={loadExploreAsync}>
+        {
+          nextProps => <ExploreRoutes {...nextProps} />
+        }
+      </BundleWrappingRoute>
       <BundleWrappingRoute {...props} path="/wechat/self" load={loadSelfAsync}>
         {
           nextProps => <SelfRoutes {...nextProps} />
