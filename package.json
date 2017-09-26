@@ -21,6 +21,7 @@
     "start": {
       "command": "node ./server/server-prod.js",
       "env": {
+        "NODE_ENV": "production",
         "LEANCLOUD_APP_ID": "NApWmr4uyoMKzfKik2pzDWhn-gzGzoHsz",
         "LEANCLOUD_APP_KEY": "5FWkqzh3Rl9cQLtfuFF6rEqX",
         "LEANCLOUD_APP_MASTER_KEY": "nv13ozE9nSvC7s6Yefi9AOsL"
@@ -41,7 +42,6 @@
     "build:dev": {
       "command": "node server/server-dev.js",
       "env": {
-        "PORT": 3062,
         "NODE_ENV": "development",
         "LEANCLOUD_APP_ID": "NApWmr4uyoMKzfKik2pzDWhn-gzGzoHsz",
         "LEANCLOUD_APP_KEY": "5FWkqzh3Rl9cQLtfuFF6rEqX",
