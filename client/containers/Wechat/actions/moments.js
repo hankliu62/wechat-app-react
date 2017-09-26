@@ -3,22 +3,29 @@ import moment from 'moment';
 import { WECHAT_ALBUM_FETCH_MOMENTS, WECHAT_SELF_FETCH_PERSONAL } from '../constants/ActionTypes';
 import { DateYYYYMMDD, DateM, DateD } from '../constants/Times';
 import { getPersonal } from './self';
+import { RestUtilInstance } from '../../../utils/RestUtil';
 
-const totalMoments = require('../constants/data-moments.json') || [];
+export const getMoments = async () => {
+  const response = await RestUtilInstance.Get('/wechat/moments');
+  const moments = response.data.items;
+
+  return moments;
+};
 
 export const fetchMoments = (wxid) => {
-  return function (dispatch, getState) {
+  return async (dispatch, getState) => {
     if (!wxid) {
       const { wechat } = getState();
       const { selfMain = {} } = wechat;
       let { personal = {} } = selfMain;
       if (!personal.wxid) {
-        personal = getPersonal();
+        personal = await getPersonal();
         dispatch({ type: WECHAT_SELF_FETCH_PERSONAL, payload: { personal } });
       }
       wxid = personal.wxid;
     }
 
+    const totalMoments = await getMoments();
     const fetchContactMoments = totalMoments.find(item => item.wxid === wxid) || [];
     const moments = fetchContactMoments.moments;
     const momentsGroups = groupBy(moments, item => new Date(item.date).getFullYear()) || {};

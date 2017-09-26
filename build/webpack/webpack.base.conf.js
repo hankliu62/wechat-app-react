@@ -10,6 +10,7 @@ const LoggerPlugin = require('../plugins/logger-plugin');
 
 const pathsUtils = config.utils_paths;
 const APP_ENTRY = pathsUtils.client('index.jsx');
+const systemConfigPath = path.resolve(pathsUtils.client('config'));
 
 const entry = {
   app: APP_ENTRY,
@@ -31,7 +32,10 @@ const baseConfig = {
   },
   resolve: {
     enforceExtension: false,
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    alias: {
+      systemConfig: process.env.NODE_ENV === 'production' ? path.resolve(systemConfigPath, 'systemConfig.prod.js') : path.resolve(systemConfigPath, 'systemConfig.dev.js')
+    }
   },
   module: {
     rules: [

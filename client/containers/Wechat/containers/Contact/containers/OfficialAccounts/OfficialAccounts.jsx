@@ -23,7 +23,7 @@ const contactDebug = debug('wechat:contact');
 class OfficialAccounts extends Component {
   static propTypes = {
     officialAccounts: PropTypes.object,
-    letters: PropTypes.array.isRequired,
+    letters: PropTypes.array,
     total: PropTypes.number.isRequired,
     fetchOfficialAccounts: PropTypes.func.isRequired
   }

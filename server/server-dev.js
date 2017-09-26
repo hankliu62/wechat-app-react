@@ -5,9 +5,12 @@ const webpack = require('webpack');
 const statics = require('koa-static');
 const koaWebpackMiddleware = require('koa-webpack-middleware');
 const historyApiFallbackMiddleware = require('koa-history-api-fallback');
+// const ora = require('ora');
 
 const app = require('./app');
 const webpackConfig = require('../build/webpack/webpack.dev.conf');
+
+// const spinner = ora(`building for ${process.env.NODE_ENV}...`);
 
 AV.init({
   appId: process.env.LEANCLOUD_APP_ID,
@@ -18,7 +21,12 @@ AV.init({
 // 如果不希望使用 masterKey 权限，可以将下面一行删除
 AV.Cloud.useMasterKey();
 
-const compiler = webpack(webpackConfig);
+// Start the spinner. Returns the instance. Set the current text if text is provided
+// spinner.start();
+const compiler = webpack(webpackConfig, () => {
+  // Stop and clear the spinner. Returns the instance.
+  // spinner.stop();
+});
 
 const devMiddleware = koaWebpackMiddleware.devMiddleware(compiler, {
   noInfo: false,

@@ -69,7 +69,7 @@ class Album extends Component {
       if (!this.props.friend) {
         this.props.fetchFriend(this.props.match.params.wxid);
       }
-    } else if (!this.wxid) {
+    } else if (!this.props.wxid) {
       this.props.fetchPersonal();
     }
 

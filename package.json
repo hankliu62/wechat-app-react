@@ -41,6 +41,7 @@
     "build:dev": {
       "command": "node server/server-dev.js",
       "env": {
+        "PORT": 3062,
         "NODE_ENV": "development",
         "LEANCLOUD_APP_ID": "NApWmr4uyoMKzfKik2pzDWhn-gzGzoHsz",
         "LEANCLOUD_APP_KEY": "5FWkqzh3Rl9cQLtfuFF6rEqX",
@@ -116,7 +117,6 @@
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "nodemon": "^1.11.0",
-    "pinyin": "^2.8.3",
     "postcss-load-config": "^1.2.0",
     "postcss-loader": "^2.0.6",
     "progress-bar-webpack-plugin": "^1.10.0",
@@ -146,7 +146,8 @@
     "webpack": "^3.5.5",
     "webpack-md5-hash": "0.0.5",
     "webpack-parallel-uglify-plugin": "^1.0.0",
-    "webpack-visualizer-plugin": "^0.1.11"
+    "webpack-visualizer-plugin": "^0.1.11",
+    "whatwg-fetch": "^2.0.3"
   },
   "lint-staged": {
     "**/*.{js,jsx}": [
