@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
+import { Link } from 'react-router-dom';
 
 import WeuiHeader from '../../../../components/WeuiHeader/WeuiHeader';
 import WeuiBack from '../../../../components/WeuiBack/WeuiBack';
@@ -14,30 +15,62 @@ class Scan extends Component {
     this.state = {
       scene: CONSTANTS.SCAN_SCENE_QRCODE
     };
+
+    this.sceneOptions = {
+      [CONSTANTS.SCAN_SCENE_QRCODE]: {
+        headerTitle: '二维码/条码',
+        headerOperation: '相册',
+        bodyTitle: '将二维码/条码放入框内, 即可自动扫描'
+      },
+      [CONSTANTS.SCAN_SCENE_COVER]: {
+        headerTitle: '封面/电影海报',
+        bodyTitle: '讲书、CD、电影海报放入框内, 即可自动扫描'
+      },
+      [CONSTANTS.SCAN_SCENE_STREET]: {
+        headerTitle: '街景',
+        bodyTitle: '扫一下周边环境, 即可自动扫描'
+      },
+      [CONSTANTS.SCAN_SCENE_TRANSLATION]: {
+        headerTitle: '翻译',
+        bodyTitle: '将英文单词放入框内'
+      }
+    };
   }
 
   componentDidMount() {
     const vendorUrl = window.URL || window.webkitURL;
 
     // 媒体对象
-    navigator.getMedia = navigator.getUserMedia || navigator.webkitGetUserMedia ||
-      navigator.mozGetUserMedia || navigator.msGetUserMedia;
-    navigator.getMedia({
+    const getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+    getUserMedia({
       video: true, // 使用摄像头对象
       audio: false // 不适用音频
     }, (strem) => {
       this.video.src = vendorUrl.createObjectURL(strem);
       this.video.play();
     }, (error) => {
-    // error.code
+      // error.code
       console.log(error);
     });
   }
 
   renderBodyScanWrapper = () => {
+    const { scene } = this.state;
+    const sceneOption = this.sceneOptions[scene];
+
     return (
-      <div className="scanning-box">
-        1
+      <div className="scanning-wrapper">
+        <div className={classNames('scanning-box', `scanning-box-${scene}`)}>
+          <span className="scanning-line" />
+          <span className="left-top" />
+          <span className="right-top" />
+          <span className="left-bottom" />
+          <span className="right-bottom" />
+        </div>
+        <div className="scanning-desc">
+          <p className="scanning-desc-info">{sceneOption.bodyTitle}</p>
+          { scene === CONSTANTS.SCAN_SCENE_QRCODE && <Link className="personal-qrcode" to="/wechat/self/profile/qrcode">我的二维码</Link> }
+        </div>
       </div>
     );
   }
@@ -46,23 +79,18 @@ class Scan extends Component {
     const scenes = [
       {
         type: CONSTANTS.SCAN_SCENE_QRCODE,
-        icon: this.state.scene === CONSTANTS.SCAN_SCENE_QRCODE ? require('./images/scan-qrcode-actived.png') : require('./images/scan-qrcode-default.png'),
         title: '扫码'
       },
       {
         type: CONSTANTS.SCAN_SCENE_COVER,
-        icon: this.state.scene === CONSTANTS.SCAN_SCENE_COVER ? require('./images/scan-cover-actived.png') : require('./images/scan-cover-default.png'),
         title: '封面'
       },
       {
         type: CONSTANTS.SCAN_SCENE_STREET,
-        icon: this.state.scene === CONSTANTS.SCAN_SCENE_STREET ? require('./images/scan-street-actived.png') : require('./images/scan-street-default.png'),
         title: '街景'
       },
       {
         type: CONSTANTS.SCAN_SCENE_TRANSLATION,
-        icon: this.state.scene === CONSTANTS.SCAN_SCENE_TRANSLATION ?
-          require('./images/scan-translation-actived.png') : require('./images/scan-translation-default.png'),
         title: '翻译'
       }
     ];
@@ -71,9 +99,9 @@ class Scan extends Component {
       <ul className="content-footer-scenes">
         {
           scenes.map(scene => (
-            <li className="content-footer-scene" key={scene.type} onClick={() => this.setState({ scene })}>
-              <div className={classNames('scene-image', [`scene-image${scene.type}`], { actived: scene.type === this.state.scene })} />
-              <div className="scene-title">{ scene.title }</div>
+            <li className="content-footer-scene" key={scene.type} onClick={() => this.setState({ scene: scene.type })}>
+              <div className={classNames('scene-image', [`scene-image-${scene.type}`], { actived: scene.type === this.state.scene })} />
+              <div className={classNames('scene-title', { actived: scene.type === this.state.scene })}>{ scene.title }</div>
             </li>
           ))
         }
@@ -82,17 +110,22 @@ class Scan extends Component {
   }
 
   render() {
+    const { scene } = this.state;
+    const sceneOption = this.sceneOptions[scene];
+
     return (
       <div className="explore-scan-wrapper">
         <WeuiHeader
-          title="二维码/条码"
+          title={sceneOption.headerTitle}
           back={(<WeuiBack history={this.props.history}><span className="weui-back-centent">发现</span></WeuiBack>)}
         >
-          <p className="link-header-operation">相册</p>
+          { sceneOption.headerOperation && <p className="link-header-operation">{ sceneOption.headerOperation }</p> }
         </WeuiHeader>
         <video className="scan-video" ref={el => this.video = el} />
         <div className="scan-content">
-          <div className="scan-content-body">1</div>
+          <div className="scan-content-body">
+            { this.renderBodyScanWrapper() }
+          </div>
           <div className="scan-content-footer">
             { this.renderFooterScenesWrapper() }
           </div>

@@ -1,15 +1,27 @@
+@import '../../../../../../less/variables';
 @import '../../../../less/variables';
 
+@scan-common-color: #b2b2b2;
 @scan-content-bg-color: rgba(0, 0, 0, .3);
 @scan-content-footer-bg-color: rgba(0, 0, 0, .6);
+@scanning-box-border-color: #b3b3b3;
+@scanning-line-gradient-color-1: #72e52d;
+@scanning-line-gradient-color-2: #54cf21;
+@scanning-line-gradient-color-3: #0a4a04;
+@scanning-line-gradient-color-4: @scan-content-bg-color;
+@scanning-line-shadow-color: rgba(96, 255, 0, .5);
+@scanning-box-angle-color: #09bb07;
 
-@scenes: qrcode cover street translation;
+@scenes: qrcode, cover, street, translation;
+@scenes-length: length(@scenes);
 
 .explore-scan-wrapper {
+  margin-top: -.1rem;
   height: 100%;
   box-sizing: content-box;
-  padding-bottom: @footer-height;
+  padding-bottom: @footer-height + .1rem;
   position: relative;
+  overflow: hidden;
 
   .scan-video {
     height: 100%;
@@ -32,11 +44,241 @@
 
     .scan-content-body {
       flex: 1;
+      display: flex;
+      align-items: center;
+
+      .scanning-wrapper {
+        width: 100%;
+        text-align: center;
+        color: @scan-common-color;
+
+        .scanning-box {
+          margin: 0 auto;
+          border: 1px solid @scanning-box-border-color;
+          position: relative;
+
+          &.scanning-box-qrcode {
+            width: 70%;
+            padding-top: 70%;
+          }
+
+          &.scanning-box-cover {
+            width: 90%;
+            padding-top: 100%;
+          }
+
+          &.scanning-box-street {
+            width: 90%;
+            padding-top: 100%;
+          }
+
+          &.scanning-box-translation {
+            width: 62%;
+            height: 1.25rem;
+
+            .scanning-line {
+              display: none;
+            }
+          }
+
+          .scanning-line {
+            position: absolute;
+            left: 2%;
+            top: 2%;
+            width: 96%;
+            height: .05rem;
+            background: radial-gradient(@scanning-line-gradient-color-1 5%, @scanning-line-gradient-color-2 50%, @scanning-line-gradient-color-3 80%, @scanning-line-gradient-color-4 100%);
+            box-shadow: 0 0 .05rem @scanning-line-shadow-color;
+
+            @keyframes linemove {
+              0% {
+                top: 2%;
+              }
+
+              100% {
+                top: 95%;
+                opacity: 1;
+              }
+            }
+
+            animation-name: linemove;
+            animation-duration: 1500ms;
+            animation-delay: 300ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+          }
+
+          .left-top {
+            position: absolute;
+            left: -1px;
+            top: -1px;
+
+            &:before {
+              content: "";
+              display: block;
+              width: .35rem;
+              height: .05rem;
+              background-color: @scanning-box-angle-color;
+            }
+
+            &:after {
+              content: "";
+              display: block;
+              width: .05rem;
+              height: .35rem;
+              background-color: @scanning-box-angle-color;
+              margin-left: 0;
+              margin-top: -.05rem;
+            }
+          }
+
+          .right-top {
+            position: absolute;
+            right: -1px;
+            top: -1px;
+
+            &:before {
+              content: "";
+              display: block;
+              width: .35rem;
+              height: .05rem;
+              background-color: @scanning-box-angle-color;
+            }
+
+            &:after {
+              float: right;
+              content: "";
+              display: block;
+              width: .05rem;
+              height: .35rem;
+              background-color: @scanning-box-angle-color;
+              margin-left: 0;
+              margin-top: -.05rem;
+            }
+          }
+
+          .left-bottom {
+            position: absolute;
+            left: -1px;
+            bottom: -1px;
+
+            &:before {
+              content: "";
+              display: block;
+              width: .05rem;
+              height: .35rem;
+              background-color: @scanning-box-angle-color;
+              margin-left: 0;
+              margin-top: -.05rem;
+            }
+
+            &:after {
+              content: "";
+              display: block;
+              width: .35rem;
+              height: .05rem;
+              background-color: @scanning-box-angle-color;
+            }
+          }
+
+          .right-bottom {
+            position: absolute;
+            right: -1px;
+            bottom: -1px;
+
+            &:before {
+              content: "";
+              display: block;
+              width: .05rem;
+              height: .35rem;
+              background-color: @scanning-box-angle-color;
+              margin-left: .3rem;
+            }
+
+            &:after {
+              float: left;
+              content: "";
+              display: block;
+              width: .35rem;
+              height: .05rem;
+              background-color: @scanning-box-angle-color;
+            }
+          }
+        }
+
+        .scanning-desc {
+          .scanning-desc-info {
+            margin-top: .375rem;
+            color: @scan-common-color;
+            font-size: .4rem;
+          }
+
+          .personal-qrcode {
+            margin-top: 1rem;
+            color: @theme-color;
+            font-size: .4rem;
+            display: block;
+
+            &:hover,
+            &:active {
+              color: @theme-color;
+              text-decoration: none;
+            }
+          }
+        }
+      }
     }
 
     .scan-content-footer {
-      height: 2.5rem;
+      padding: .25rem;
       background-color: @scan-content-footer-bg-color;
+
+      .content-footer-scenes {
+        display: flex;
+
+        .content-footer-scene {
+          flex: 1;
+          text-align: center;
+
+          .scene-image {
+            width: 1rem;
+            height: 1rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0 auto;
+
+            .loop(@index) when(@index <= @scenes-length) {
+              @scene: extract(@scenes, @index);
+
+              &.scene-image-@{scene} {
+                background-image: url('./images/scan-@{scene}-default.png');
+
+                &.actived {
+                  background-image: url('./images/scan-@{scene}-actived.png');
+                }
+              }
+
+              .loop(@index + 1);
+            }
+
+            .loop(1);
+
+            + .scene-title {
+              margin-top: .25rem;
+            }
+          }
+
+          .scene-title {
+            color: @scan-common-color;
+            font-size: .4rem;
+
+            &.actived {
+              color: @theme-color;
+            }
+          }
+        }
+      }
     }
   }
 }

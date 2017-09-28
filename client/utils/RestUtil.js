@@ -56,6 +56,7 @@ class RestUtil {
     return fetch(url, { method }).then((response) => {
       return Promise.resolve(response.json());
     }).catch((ex) => {
+      alert(`fetch failed, url: ${url}; method: ${method}`);
       console.log('parsing failed', ex);
     });
   }

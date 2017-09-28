@@ -73,7 +73,6 @@ class Explore extends Component {
 
     const { children, location } = this.props;
     const subPathname = location.pathname.split('/').pop();
-    console.log(subPathname, location);
 
     return (
       <div
