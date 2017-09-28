@@ -43,7 +43,7 @@ class Scan extends Component {
     // 媒体对象
     const getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
     getUserMedia({
-      video: true, // 使用摄像头对象
+      video: false, // 使用摄像头对象
       audio: false // 不适用音频
     }, (strem) => {
       this.video.src = vendorUrl.createObjectURL(strem);
