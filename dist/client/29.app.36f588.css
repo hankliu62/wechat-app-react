@@ -142,7 +142,7 @@
   content: " ";
   position: absolute;
   border-top: 1px solid #d9d9d9;
-  left: .42rem;
+  left: .25rem;
   top: 0;
   right: 0;
   height: 1px;
@@ -520,6 +520,9 @@
 }
 .with-second-sub-wrapper .second-sub-main-wrapper {
   display: none;
+}
+.self-profile-wrapper .weui-cell {
+  min-height: 1.02rem;
 }
 .self-profile-wrapper .weui-cell .weui-cell-ft .profile-header-avatar {
   width: 1.25rem;
@@ -1338,7 +1341,7 @@
   content: " ";
   position: absolute;
   border-top: 1px solid #d9d9d9;
-  left: .42rem;
+  left: .25rem;
   top: 0;
   right: 0;
   height: 1px;
