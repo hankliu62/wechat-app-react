@@ -1240,14 +1240,15 @@
 }
 .explore-bottle-wrapper .bottle-content .content-footer-scenes .content-footer-brand {
   position: absolute;
-  width: 100%;
+  bottom: -0.05rem;
+  left: 0;
+  right: 0;
   height: 1.5rem;
   background-image: url(/img/bottle-board.3eb1ad19.png);
   background-repeat: no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
+  -webkit-background-size: 100% 100%;
+  background-size: 100%;
   z-index: 0;
-  bottom: -0.05rem;
 }
 .explore-bottle-wrapper .bottle-content .content-footer-scenes .content-footer-scene {
   -webkit-box-flex: 1;
