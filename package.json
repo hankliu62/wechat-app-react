@@ -42,6 +42,7 @@
     "build:dev": {
       "command": "node server/server-dev.js",
       "env": {
+        "PORT": 3062,
         "NODE_ENV": "development",
         "LEANCLOUD_APP_ID": "NApWmr4uyoMKzfKik2pzDWhn-gzGzoHsz",
         "LEANCLOUD_APP_KEY": "5FWkqzh3Rl9cQLtfuFF6rEqX",

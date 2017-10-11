@@ -1,0 +1,93 @@
+@import '../../../../../../less/variables';
+@import '../../../../less/variables';
+
+@scan-common-color: #b2b2b2;
+@shake-bg-color: #2d3031;
+
+@scenes: people, music, tv;
+@scenes-length: length(@scenes);
+
+.explore-shake-wrapper {
+  height: 100%;
+  box-sizing: content-box;
+  margin-top: -@footer-height;
+  padding-bottom: @footer-height + @footer-height;
+  background-color: @shake-bg-color;
+
+  .shake-content {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .shake-content-body {
+      position: relative;
+      flex: 1;
+
+      .icon-shake-hand {
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -1.5rem;
+        margin-top: -1.5rem;
+        background-image: url('./images/mobile-hand.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    .content-footer-scenes {
+      display: flex;
+      position: relative;
+
+      .content-footer-scene {
+        flex: 1;
+        text-align: center;
+        z-index: 1;
+        padding-bottom: .2rem;
+
+        .scene-image {
+          width: .8rem;
+          height: .8rem;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          margin: 0 auto;
+
+          .loop(@index) when(@index <= @scenes-length) {
+            @scene: extract(@scenes, @index);
+
+            &.scene-image-@{scene} {
+              background-image: url('./images/shake-@{scene}-default.png');
+
+              &.actived {
+                background-image: url('./images/shake-@{scene}-actived.png');
+              }
+            }
+
+            .loop(@index + 1);
+          }
+
+          .loop(1);
+        }
+
+        .scene-title {
+          color: @scan-common-color;
+          font-size: .4rem;
+          margin-top: .2rem;
+
+          &.actived {
+            color: @theme-color;
+          }
+        }
+      }
+    }
+  }
+}
