@@ -30,10 +30,19 @@ const config = {
   },
   compiler_vendors: [
     'react',
+    'react-dom',
     'react-redux',
     'react-router',
+    'react-router-dom',
+    'react-router-redux',
     'redux',
-    'axios'
+    'redux-logger',
+    'redux-pagan',
+    'redux-thunk',
+    'history',
+    'classnames',
+    'lodash',
+    'moment'
   ],
   compiler_vendor_key: 'vendor',
 

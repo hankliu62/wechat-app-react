@@ -12,7 +12,8 @@ const lib = [
   'redux-thunk',
   'history',
   'classnames',
-  'lodash'
+  'lodash',
+  'moment'
 ];
 
 module.exports = lib;

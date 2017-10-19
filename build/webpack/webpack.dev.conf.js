@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const VisualizerPlugin = require('webpack-visualizer-plugin');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 // const HappyPackPlugin = require('happypack');
 const webpackConfig = require('./webpack.base.conf');
 const config = require('../../config/config');
@@ -38,6 +39,7 @@ webpackConfig.module.rules = HappyPackPluginDecorator.ReplaceToHappyLoaders(webp
 
 // 自动写入将引用写入html
 webpackConfig.plugins = webpackConfig.plugins.concat([
+  new BundleAnalyzerPlugin(),
   new webpack.optimize.OccurrenceOrderPlugin(),
   new webpack.HotModuleReplacementPlugin(),
   new webpack.NoEmitOnErrorsPlugin(),
