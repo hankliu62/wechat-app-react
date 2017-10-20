@@ -16,27 +16,34 @@ import './Chat.less';
 @CheckRoute
 class Chat extends Component {
   static propTypes = {
-    chats: PropTypes.array,
+    chats: PropTypes.object,
     chatRooms: PropTypes.array,
     fetchChats: PropTypes.func.isRequired
   }
 
   componentDidMount() {
-    if (!this.props.chats) {
+    if (!this.props.chats || !this.props.chats.items) {
       this.props.fetchChats();
     }
   }
 
   render() {
-    const { children, chatRooms, chats } = this.props;
+    const { children, chatRooms, location } = this.props;
 
-    if (!chats) {
+    if (!chatRooms) {
       return null;
     }
 
+    const subPathname = location.pathname.split('/')[3] || '';
+
     return (
-      <div className={classNames('chat-wrapper', { 'with-sub-wrapper without-footer-wrapper': this.checkIsSubRoute() })}>
-        <div className="chat-main-wrapper">
+      <div
+        className={classNames('chat-wrapper', {
+          'with-sub-wrapper without-footer-wrapper': this.checkIsSubRoute(),
+          [`${subPathname}-parent-explore-wrapper`]: this.checkIsSubRoute()
+        })}
+      >
+        <div className="sub-main-wrapper chat-main-wrapper">
           <WeuiHeader title="微信">
             <i className="icon-header-operation iconfont icon-tips-jia" />
           </WeuiHeader>

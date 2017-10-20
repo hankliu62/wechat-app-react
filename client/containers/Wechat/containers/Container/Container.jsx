@@ -13,7 +13,7 @@ import './Container.less';
 class Container extends Component {
   static propTypes = {
     contacts: PropTypes.array,
-    chats: PropTypes.array,
+    chats: PropTypes.object,
     fetchContacts: PropTypes.func.isRequired,
     fetchChats: PropTypes.func.isRequired
   }
@@ -31,7 +31,7 @@ class Container extends Component {
       this.props.fetchContacts();
     }
 
-    if (!this.props.chats) {
+    if (!this.props.chats || !this.props.chats.items) {
       this.props.fetchChats();
     }
 

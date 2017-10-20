@@ -3,15 +3,16 @@ import { Switch, Redirect } from 'react-router-dom';
 
 import BundleWrappingRoute from '../../../components/BundleWrappingRoute/BundleWrappingRoute';
 // import Contact from '../containers/Contact/Contact';
+import ChatRoutes from './chat';
 import ContactRoutes from './contact';
 import SelfRoutes from './self';
 import ExploreRoutes from './explore';
 import ToolsRoutes from './tools';
 
-const loadChatAsync = () => import(/* webpackChunkName: 'containers/Wechat/Chat' */ '../containers/Chat/Chat');
 const loadAddFriendAsync = () => import(/* webpackChunkName: 'containers/Wechat/AddFriend' */ '../containers/AddFriend/AddFriend');
 // <Route path="/wechat/contact" render={nextProps => (<Contact {...nextProps}><ContactRoute /></Contact>)} />
 const WechatRouter = (props) => {
+  const loadChatAsync = () => import(/* webpackChunkName: 'containers/Wechat/Chat' */ '../containers/Chat/Chat');
   const loadContactAsync = () => import(/* webpackChunkName: 'containers/Wechat/Contact' */ '../containers/Contact/Contact');
   const loadSelfAsync = () => import(/* webpackChunkName: 'containers/Wechat/Self' */ '../containers/Self/Self');
   const loadExploreAsync = () => import(/* webpackChunkName: 'containers/Wechat/Explore' */ '../containers/Explore/Explore');
@@ -20,7 +21,11 @@ const WechatRouter = (props) => {
   return (
     <Switch>
       <Redirect exact from="/wechat" to="/wechat/chat" />
-      <BundleWrappingRoute {...props} path="/wechat/chat" load={loadChatAsync} />
+      <BundleWrappingRoute {...props} path="/wechat/chat" load={loadChatAsync} >
+        {
+          nextProps => <ChatRoutes {...nextProps} />
+        }
+      </BundleWrappingRoute>
       <BundleWrappingRoute {...props} path="/wechat/contact" load={loadContactAsync}>
         {
           nextProps => <ContactRoutes {...nextProps} />

@@ -1,0 +1,71 @@
+@import '../../../../../../less/variables';
+@import '../../../../less/variables';
+@import '../../../../less/components/form-control';
+
+@dialogue-content-footer-iconfont-color: #7d7e83;
+@dialogue-content-footer-say-color: #565656;
+@dialogue-content-footer-say-border-color: #7d7e83;
+
+.chat-dialogue-wrapper {
+  // margin-top: -.1rem;
+  height: 100%;
+  box-sizing: content-box;
+  // padding-bottom: @footer-height + .1rem;
+  padding-bottom: @footer-height;
+  position: relative;
+  overflow: hidden;
+
+  .dialogue-content {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+
+    .dialogue-content-body {
+      flex: 1;
+    }
+
+    .dialogue-content-footer {
+      position: relative;
+      padding: .2rem 0;
+      display: flex;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-color: #b7b7b7;
+        height: 1px;
+      }
+
+      .iconfont {
+        text-align: center;
+        width: 1rem;
+        font-size: .8rem;
+        color: @dialogue-content-footer-iconfont-color;
+      }
+
+      .chat-way {
+        flex: 1;
+        height: 100%;
+        user-select: none;
+
+        .chat-say {
+          font-size: .45rem;
+          text-align: center;
+          border-radius: .15rem;
+          padding: 0 .25rem;
+          height: .8rem;
+          line-height: .8rem;
+          color: @dialogue-content-footer-say-color;
+          border: 1px solid @dialogue-content-footer-say-border-color;
+        }
+      }
+    }
+  }
+}

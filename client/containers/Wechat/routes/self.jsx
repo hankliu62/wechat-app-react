@@ -1,7 +1,6 @@
 import React from 'react';
 import { Switch } from 'react-router-dom';
 
-
 import BundleWrappingRoute from '../../../components/BundleWrappingRoute/BundleWrappingRoute';
 import SubPageContainer from '../containers/SubPageContainer/SubPageContainer';
 import SecondSubPageContainer from '../containers/SecondSubPageContainer/SecondSubPageContainer';

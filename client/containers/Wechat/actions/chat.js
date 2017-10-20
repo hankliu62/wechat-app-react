@@ -1,8 +1,8 @@
-import { WECHAT_CHAT_MAIN_SET, WECHAT_CHAT_FETCH_CHATS } from '../constants/ActionTypes';
+import * as ActionTypes from '../constants/ActionTypes';
 import * as Constants from '../constants/Constants';
 import { RestUtilInstance } from '../../../utils/RestUtil';
 
-export const setState = payload => ({ type: WECHAT_CHAT_MAIN_SET, payload });
+export const setState = payload => ({ type: ActionTypes.WECHAT_CHAT_MAIN_SET, payload });
 
 export const fetchChats = () => {
   // 'mid' // 消息的id 唯一标识，重要
@@ -16,9 +16,12 @@ export const fetchChats = () => {
   return async (dispatch) => {
     const response = await RestUtilInstance.Get('/wechat/chats');
     const chats = response.data.items;
+    const chatsData = { items: chats };
     const chatRooms = (chats || []).map((chat) => {
+      chatsData[chat.mid] = chat;
+
       const chatRoom = {
-        link: `wechat/chat/dialogue/${chat.mid}`,
+        link: `/wechat/chat/dialogue/${chat.mid}`,
         title: chat.base.name,
         lastTime: chat.chatBaseModel.endTimeStr,
         lastMessage: chat.chatBaseModel.endChatTxt,
@@ -44,8 +47,25 @@ export const fetchChats = () => {
     });
 
     dispatch({
-      type: WECHAT_CHAT_FETCH_CHATS,
-      payload: { chats, chatRooms }
+      type: ActionTypes.WECHAT_CHAT_FETCH_CHATS,
+      payload: { chats: chatsData, chatRooms }
     });
+  };
+};
+
+export const fetchChat = (chatId) => {
+  return async (dispatch, getState) => {
+    const { wechat } = getState();
+    const chatMain = wechat.chatMain || {};
+    const chats = chatMain.chats || {};
+
+    if (chats[chatId]) {
+      dispatch({
+        type: ActionTypes.WECHAT_CHAT_FETCH_CHAT,
+        payload: { currentChat: chats[chatId] }
+      });
+    } else {
+      // TODO: fetch chat by id
+    }
   };
 };

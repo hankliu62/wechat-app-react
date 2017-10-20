@@ -1,0 +1,116 @@
+@weui-form-control-color: #373d40;
+@weui-form-control-bg-color: rgba(245, 248, 249, .8);
+@weui-form-control-border-color: #c2cdd3;
+
+@weui-form-control-border-error-color: #ff3d29;
+
+@weui-form-control-focus-bg-color: rgba(243, 252, 255, .8);
+@weui-form-control-focus-border-color: #9dc5d9;
+
+@weui-form-control-disabled-color: #b3b3b3;
+@weui-form-control-disabled-bg-color: #f0f0f0;
+@weui-form-control-disabled-border-color: #d3d3d3;
+
+@weui-input-group-addon-color: #555;
+@weui-input-group-addon-bg-color: #eee;
+@weui-input-group-addon-border-color: @weui-form-control-border-color;
+
+@weui-form-control-feedback-color: #555;
+
+@weui-form-control-placeholder-color: #b1bfcd;
+
+@weui-form-control-height: .8rem;
+
+.weui-form-control {
+  padding: 0 .25rem;
+  width: 100%;
+  height: @weui-form-control-height;
+  color: @weui-form-control-color;
+  border: 1px solid @weui-form-control-border-color;
+  background-color: @weui-form-control-bg-color;
+  border-radius: .1rem;
+  font-size: .35rem;
+  box-sizing: border-box;
+  box-shadow: none;
+  vertical-align: middle;
+
+  &:focus {
+    border-color: @weui-form-control-focus-border-color;
+    background-color: @weui-form-control-focus-bg-color;
+    box-shadow: none;
+    outline: 0;
+  }
+
+  &.error {
+    border-color: @weui-form-control-border-error-color;
+  }
+
+  &:disabled,
+  &.disabled {
+    pointer-events: none;
+    color: @weui-form-control-disabled-color;
+    background-color: @weui-form-control-disabled-bg-color;
+    border: 1px solid @weui-form-control-disabled-border-color;
+  }
+
+  &::-webkit-input-placeholder {
+    color: @weui-form-control-placeholder-color;
+    user-select: none;
+  }
+
+  &::-moz-placeholder {
+    color: @weui-form-control-placeholder-color;
+    user-select: none;
+  }
+
+  &:-moz-placeholder {
+    color: @weui-form-control-placeholder-color;
+    user-select: none;
+  }
+
+  &:-ms-input-placeholder {
+    color: @weui-form-control-placeholder-color;
+    user-select: none;
+  }
+
+  + .weui-form-control-feedback {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.weui-input-group-addon {
+  display: table-cell;
+  white-space: nowrap;
+  vertical-align: middle;
+  padding: 0 .3rem;
+  height: @weui-form-control-height - 2px;
+  color: @weui-input-group-addon-color;
+  text-align: center;
+  background-color: @weui-input-group-addon-bg-color;
+  border: 1px solid @weui-input-group-addon-border-color;
+  border-radius: .1rem;
+
+  &:first-child {
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &:last-child {
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.weui-form-control-feedback {
+  display: inline-block;
+  color: @weui-form-control-feedback-color;
+  height: @weui-form-control-height;
+  font-size: .35rem;
+  font-weight: normal;
+  line-height: @weui-form-control-height;
+  padding: 0 .125rem;
+}
+
