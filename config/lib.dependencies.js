@@ -13,7 +13,8 @@ const lib = [
   'history',
   'classnames',
   'lodash',
-  'moment'
+  'moment',
+  'babel-polyfill'
 ];
 
 module.exports = lib;

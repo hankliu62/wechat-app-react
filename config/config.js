@@ -42,7 +42,8 @@ const config = {
     'history',
     'classnames',
     'lodash',
-    'moment'
+    'moment',
+    'babel-polyfill'
   ],
   compiler_vendor_key: 'vendor',
 
