@@ -69,3 +69,15 @@ export const fetchChat = (chatId) => {
     }
   };
 };
+
+export const fetchMessages = (chatId) => {
+  return async (dispatch) => {
+    const response = await RestUtilInstance.Get(`/wechat/messages/${chatId}`);
+    const messages = response.data.messages;
+
+    dispatch({
+      type: ActionTypes.WECHAT_CHAT_FETCH_MESSAGES,
+      payload: { messages, chatId }
+    });
+  };
+};

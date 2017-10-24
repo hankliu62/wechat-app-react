@@ -1,6 +1,8 @@
 import * as ActionTypes from '../constants/ActionTypes';
 
-const defaultState = {};
+const defaultState = {
+  messages: {}
+};
 
 export default (state = { ...defaultState }, action) => {
   switch (action.type) {
@@ -8,6 +10,8 @@ export default (state = { ...defaultState }, action) => {
     case ActionTypes.WECHAT_CHAT_FETCH_CHATS:
     case ActionTypes.WECHAT_CHAT_MAIN_SET:
       return { ...state, ...action.payload };
+    case ActionTypes.WECHAT_CHAT_FETCH_MESSAGES:
+      return { ...state, messages: { ...state.messages, [action.payload.chatId]: action.payload.messages } };
     default:
       return state;
   }
