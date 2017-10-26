@@ -19,12 +19,13 @@ webpackConfig.devtool = 'eval';
 
 // add hot-reload related code to entry chunks
 const polyfill = 'eventsource-polyfill'; // 兼容ie
+const hotLoaderPatch = 'react-hot-loader/patch';
 const devClient = './build/dev/dev-client';
 const entry = webpackConfig.entry;
 for (const key in entry) {
   if (({}).hasOwnProperty.call(entry, key)) {
     const isVendorEntry = key === config.compiler_vendor_key;
-    const extras = isVendorEntry ? [devClient] : [polyfill, devClient];
+    const extras = isVendorEntry ? [devClient] : [polyfill, hotLoaderPatch, devClient];
     entry[key] = extras.concat(entry[key]);
   }
 }

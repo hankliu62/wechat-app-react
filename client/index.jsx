@@ -5,6 +5,7 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
+import { AppContainer } from 'react-hot-loader';
 
 import store from './store/configureStore';
 import history from './libs/History';
@@ -15,11 +16,13 @@ import './less/index.less';
 const routerHistory = syncHistoryWithStore(history, store);
 
 render(
-  <Provider store={store}>
-    <Router history={routerHistory}>
-      <Routes />
-    </Router>
-  </Provider>,
+  <AppContainer>
+    <Provider store={store}>
+      <Router history={routerHistory}>
+        <Routes />
+      </Router>
+    </Provider>
+  </AppContainer>,
   document.getElementById('root')
 );
 
