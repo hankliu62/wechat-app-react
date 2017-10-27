@@ -1,3 +1,98 @@
+@hl-circle-mask-bg-color: #fff;
+@hl-circle-pathway-border-color: #ddd;
+@hl-stroke-color: #f50;
+
 .hl-circle {
-  display: block;
+  width: 100px;
+  height: 100px;
+  position: relative;
+
+  .hl-circle-mask {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: @hl-circle-mask-bg-color;
+    border-radius: 50%;
+    left: 10px;
+    top: 10px;
+    line-height: 80px;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .hl-circle-pathway {
+    position: absolute;
+    border: 5px solid @hl-circle-pathway-border-color;
+    width: 85px;
+    height: 85px;
+    left: 2.5px;
+    top: 2.5px;
+    z-index: -1;
+    border-radius: 50%;
+    background-color: transparent;
+    box-sizing: content-box;
+  }
+
+  .hl-circle-content {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 10px;
+    top: 10px;
+    z-index: 3;
+
+    .content-percent {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+
+  .hl-circle-left,
+  .hl-circle-right {
+    width: 50px;
+    height: 100px;
+    position: relative;
+    float: left;
+    z-index: 0;
+    overflow: hidden;
+
+    .stroke {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: @hl-stroke-color;
+      z-index: 1;
+      transform: rotateZ(180deg);
+      transition-property: transform;
+      transition-duration: 1s;
+      transition-timing-function: linear;
+      box-sizing: content-box;
+    }
+  }
+
+  .hl-circle-left {
+    border-radius: 50px 0 0 50px;
+
+    .stroke {
+      transform-origin: right center;
+    }
+
+    &.waiting-animation {
+      .stroke {
+        transition-delay: 1s;
+      }
+    }
+  }
+
+  .hl-circle-right {
+    border-radius: 0 50px 50px 0;
+
+    .stroke {
+      transform-origin: left center;
+    }
+  }
 }
